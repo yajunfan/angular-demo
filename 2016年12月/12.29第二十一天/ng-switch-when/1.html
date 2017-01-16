@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script type="text/javascript" src="angular.js"></script>
+    <script>
+        var myApp = angular.module("myApp", []);
+        myApp.controller("testCtrl", function($scope){
+            $scope.data = [{id:1,value:'hello'},{id:2,value:'bye'},{id:3,value:'hmmmm'}];
+        });
+    </script>
+</head>
+
+<body ng-app="myApp">
+<form ng-controller="testCtrl">
+    <select ng-model="selectValue" ng-options="item.id as item.value for item in data"></select><br /><br />
+    <div ng-switch="selectValue">
+        <div ng-switch-when="1">
+            <a href="user.html">1</a>
+
+        </div>
+        <div ng-switch-when="2">
+            <a href="user.html">2</a>
+        </div>
+        <div ng-switch-when="3">
+            <a href="user.html">3</a>
+        </div>
+        <div ng-switch-default>ah?</div>
+    </div>
+</form>
+</body>
+</html>

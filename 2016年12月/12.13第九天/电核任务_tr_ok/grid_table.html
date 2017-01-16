@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+
+        header{
+            width: 100%;
+            height: 45px;
+            background: blue;
+            font-size: 24px;
+            text-align: center;
+            line-height: 45px;
+            color: whitesmoke;
+        }
+
+
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl" class="container">
+    <header>电核任务</header>
+    <form class="form-horizontal" name="addForm">
+        <table class="table table-bordered" >
+            <tr >
+                <th >序号</th>
+                <th >信息</th>
+                <th >类型</th>
+                <th >描述</th>
+            </tr>
+            <tr ng-repeat="use in user track by $index" id="listItem">
+                <td >{{use.id}}</td>
+                <td>{{use.type}}</td>
+                <td>{{use.company}}</td>
+                <td ng-bind-html="use|typeFormatter:$index">
+                    <!--{{|trustHtml}}-->
+                   <!--<input type="{{use.dh_type=='0'?'text':(use.dh_type=='1'?'radio':'checkbox')}}" class="change">-->
+                </td>
+            </tr>
+        </table>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-8">
+                <a ><button class="btn btn-primary" ng-click="add()" >增加</button></a>
+                <a><button class="btn btn-success" ng-click="delete()">删除</button></a>
+
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+
+    var myMod = angular.module('myMod', []);
+    myMod.controller('myCtrl',["$scope","$http",function ($scope,$http) {
+       console.log(angular.element(".change")[0])
+        $scope.radios=null;
+        $http.get('./data/nggrid.json').success(function (data) {
+            $scope.user=angular.fromJson(data);
+            console.log(angular.element("#listItem"))
+            for(var i=0;i<$scope.user.length;i++){
+                var dh_type=$scope.user[i].dh_type;
+            }
+        });
+
+
+        $scope.add=function () {
+            $scope.obj={"id":parseFloat(($scope.user[$scope.user.length-1]).id)+1, "type":"房贷", "time":"2016-11-10 11:49:28", "name":"廖蓉蓉", "id_card":"456546345631514", "autoCheck": "未审核", "rule":"0", "company":"滴滴", "dh_type":"0", "dh_content":"赵武", "report":"查看", "play":"删除"
+            }
+            $scope.user.push($scope.obj)
+        }
+        $scope.delete=function () {
+            $scope.user.length--;
+        }
+    }])
+    myMod.filter('typeFormatter',function ($sce) {
+//        参数1，过滤器的名字，参数2 函数（定义过滤器的方法）
+        return function (data,iii) {
+            var str="";
+                var dh_type=data.dh_type;
+                if(dh_type==0){
+                    str='<input type="text"/>';
+                }else if(dh_type==1){
+                    var radios=data.dh_content.split('_');
+                    for(var i=0;i<radios.length;i++){
+                        str+='<input type="radio" name="content"/>'+radios[i]
+                    }
+
+                }else if(dh_type==2){
+                    var checkboxs = data.dh_content.split('_');
+                    for(var i=0;i<checkboxs.length;i++){
+                        str+='<input type="checkbox"/>'+checkboxs[i]
+                    }
+                }
+
+            return $sce.trustAsHtml(str) ;
+        }
+    });
+</script>
+</body>
+</html>

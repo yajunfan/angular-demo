@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        header {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #c0c0c0;
+            color: #0d17ff;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .info span{display: inline-block;width:100px;height: 45px;line-height: 45px;}
+        table {
+            width: 100%;
+            border: 1px solid darkblue;
+        }
+
+        thead tr th {
+            border: 1px solid darkblue;
+            padding: 10px 20px;
+        }
+
+        tbody tr td {
+            border: 1px solid darkblue;
+            padding: 10px 0;
+            text-align: center;
+        }
+        tbody tr td:hover{
+            background: #98d0ff;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+<div  ng-controller="myCtrl">
+    <header>电核任务</header>
+    <div class="info">
+        <label>姓名：</label>
+        <span style="color: #0d17ff">{{name}}</span>
+        <label>电话：</label>
+        <span style="color: #0d17ff">{{tel}}</span>
+
+    </div>
+    <table>
+        <thead>
+        <tr>
+            <th style="width: 50px">序号</th>
+            <th>电核项</th>
+            <th>描述</th>
+            <th>电核内容</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+            <tr>
+            <td>2</td>
+            <td>基本信息</td>
+            <td>年龄</td>
+            <td>23</td>
+        </tr>
+            <tr>
+            <td>3</td>
+            <td>银行及其他机构信用记录</td>
+            <td>欠款欠费记录</td>
+            <td>
+                <input type="text" value="请输入">
+            </td>
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+            <tr>
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td>
+                <label><input  type="checkbox" value=""/>18-25 </label>
+                <label><input type="checkbox" value=""/>26-30 </label>
+                <label><input  type="checkbox" value=""/>31-35 </label>
+
+            </td>
+        </tr>
+            <tr >
+            <td>1</td>
+            <td>基本信息</td>
+            <td>性别</td>
+            <td id="add">
+                <label><input name="sex" type="radio" value=""/>男 </label>
+                <label><input name="sex" type="radio" value=""/>女 </label>
+
+            </td>
+        </tr>
+        </tbody>
+
+    </table>
+    <script src="jquery.min.js"></script>
+    <script src="angular.js"></script>
+    <script>
+        var oTr=$("tbody").children("tr");
+        for(var i=0;i<oTr.length;i++){
+                switch(i%2){
+                    case 0:
+                        oTr[i].style.background="lightcyan";
+                        break;
+                    default:
+                        oTr[i].style.background="lemonchiffon";
+                }
+            }
+        for(var j=0;j<3;j++) {
+            var oLabel = document.createElement("label");
+            var oInput=document.createElement("input");
+            oInput.type="checkbox";
+            oInput.name="哈哈";
+            oLabel.innerHTML="哈哈啊";
+            oLabel.appendChild(oInput)
+         document.getElementById("add").appendChild(oLabel);
+        }
+
+        var myApp = angular.module('myApp', []);
+        myApp.controller("myCtrl",function ($scope) {
+            $scope.name="张三";
+            $scope.tel="12345678"
+        })
+
+
+
+    </script>
+</div>
+</body>
+</html>

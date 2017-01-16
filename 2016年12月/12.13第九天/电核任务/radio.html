@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input name="sex" type="radio" value=""/>文本
+<input name="sex" type="radio" value=""/>单选
+<input name="sex" type="radio" value=""/>多选
+
+<!--<input type="checkbox" class="uid"name="uid">23-->
+<!--<input type="checkbox" class="uid"name="uid">35-->
+<!--<input type="checkbox" class="uid"name="uid">24-->
+<!--<input type="checkbox" class="uid"name="uid">12-->
+
+<ul>
+    <li ng-repeat="x in radios track by $index">{{x}}</li>
+</ul>
+
+<input type="button" value="增加" id="addTable"/>
+<input type="button" value="删除" id="deleteTable"/>
+<script type="text/javascript" src="./js/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#addTable").click(function(){
+            var tr="<tr><td><input type=\"checkbox\" name=\"check\"/>"+
+                "</td><td>111</td><td>222</td><td>333</td></tr>";
+            $("#table1").append(tr);
+        });
+        $("#deleteTable").click(function(){
+            var check = document.getElementsByName("check");
+            for(var i=0;i<check.length;i++){
+                if(check[i].checked){
+                    document.getElementById('table1').deleteRow(i);
+                    i--;
+                }
+            }
+        })
+    })
+</script>
+</body>
+
+</html>

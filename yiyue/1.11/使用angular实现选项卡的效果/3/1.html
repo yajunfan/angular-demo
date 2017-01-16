@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="com.ngbook.demo">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="DemoCtrl as demo">
+    <dy-compile html="{{demo.html}}">
+    </dy-compile>
+    <button ng-click="demo.change();">change</button>
+</div>
+<script src="../../../angular.js"></script>
+<script>
+    angular.module("com.ngbook.demo", [])
+        .directive("dyCompile", ["$compile", function($compile) {
+            return {
+                replace: true,
+                restrict: 'EA',
+                link: function(scope, elm, iAttrs) {
+                    var DUMMY_SCOPE = {
+                            $destroy: angular.noop
+                        },
+                        root = elm,
+                        childScope,
+                        destroyChildScope = function() {
+                            (childScope || DUMMY_SCOPE).$destroy();
+                        };
+
+                    iAttrs.$observe("html", function(html) {
+                        if (html) {
+                            destroyChildScope();
+                            childScope = scope.$new(false);
+                            var content = $compile(html)(childScope);
+                            root.replaceWith(content);
+                            root = content;
+                        }
+
+                        scope.$on("$destroy", destroyChildScope);
+                    });
+                }
+            };
+        }])
+        .controller("DemoCtrl", [function() {
+            var vm = this;
+
+            vm.html = '<h2>hello : <a ng-href="{{demo.link}}">angular</a></h2>';
+
+            vm.link = 'https://angular.io/';
+            var i = 0;
+            vm.change = function() {
+                vm.html = '<h3>change after : <a ng-href="{{demo.link}}">' + (++i) + '</a></h3>';
+            };
+        }]);
+</script>
+</body>
+</html>

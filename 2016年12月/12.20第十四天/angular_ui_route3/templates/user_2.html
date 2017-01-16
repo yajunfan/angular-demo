@@ -1,0 +1,96 @@
+<div class="right" ng-controller="myUser">
+    <div>
+        <p class="title_rule" id="title_rule">规则集</p>
+        <div class="put" id="put"  ng-mousedown="smallPut()">
+            <div class="follow">
+               <input type="button" value="添加" class="addUser">
+            </div>
+            <div class="warnBorder" name="warnBorder">
+                <h5>添加规则集</h5>
+                <div>
+                    <div class="firstWrite">
+                        <label>名称：<input type="text" class="firstName" ng-model="firstName"></label>
+                        <label>是否可用：
+                            <input type="radio" name="ifUse" value="是">是
+                            <input type="radio" name="ifUse" value="否">否
+                        </label>
+                        <label>业务类型：
+                            <select>
+                                <option value="反欺诈规则">反欺诈规则</option>
+                                <option value="信用反欺诈规则">信用反欺诈规则</option>
+                            </select>
+                        </label>
+                        <label>业务阶段：
+                            <select>
+                                <option value="贷前">贷前</option>
+                                <option value="贷中">贷中</option>
+                                <option value="贷后">贷后</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div class="firstPlay">
+                        <label><input type="button" value="保存" class="btn btn-success" ng-click="firstSave()"></label>
+                        <label><input type="button" value="取消" class="btn btn-warning" ng-click="firstCancel()"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="firstDisplay" ng-mousedown="firstDisplay()">
+                <span aa="是">房贷</span>
+                <div class="curButton">
+                    <input type="button" value="修改" class="use" >
+                </div>
+                <div class="changeInfo" name="changeInfo" ng-click="changeDrag()">
+                    <h5>添加规则集</h5>
+                    <div>
+                        <div class="firstWrite">
+                            <label>名称：<input type="text" class="firstName" ng-model="changeName"></label>
+                            <label>是否可用：
+                                <input type="radio" name="ifUse" value="是">是
+                                <input type="radio" name="ifUse" value="否">否
+                            </label>
+                            <label>业务阶段：
+                                <select>
+                                    <option value="贷前">贷前</option>
+                                    <option value="贷中">贷中</option>
+                                    <option value="贷后">贷后</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="firstPlay">
+                            <label><input type="button" value="修改" class="btn btn-success" ng-click="firstChange()" ></label>
+                            <label><input type="button" value="取消" class="btn btn-warning" ng-click="firstCancel()"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="title_rule">规则</p>
+
+
+
+
+
+
+
+
+
+        <div class="largePut" name="largePut" ng-mousedown="largePut()">
+            <div class="follow">
+                <label><input type="button" value="从已有的规则中选取"></label>
+            </div>
+            <div class="ruleEvent" name="ruleEvent">
+                <h5>添加规则</h5>
+                <div class="ruleList">
+                    <h5>规则列表</h5>
+                    <div class="gridStyle" ng-grid="gridOptions"></div>
+                    <div class="firstPlay">
+                        <label><input type="button" value="保存" class="btn btn-success" ></label>
+                        <label><input type="button" value="取消" class="btn btn-warning" ng-click="ruleClose()"></label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

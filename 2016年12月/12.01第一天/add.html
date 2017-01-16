@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+        body{background:#FFFFFF;}
+    </style>
+    <script type="text/javascript">
+//        function add(){
+//            var oTr = document.getElementById("addtr").rows[1];
+//            var newTr = oTr.cloneNode(true);
+//            document.getElementById("addtr").getElementsByTagName("tbody")[0].appendChild(newTr);
+//            newTr.cells[0].firstChild.value = newTr.rowIndex;
+//            document.getElementById("b1").disabled = newTr.rowIndex ==8 ;
+//        }
+
+        function add() {
+            var oTab=document.getElementById("addtr");
+            var oTr=oTab.rows[1],
+                tBody=oTab.thead;
+            console.log(oTab)
+            console.log(oTr)
+            var newTr=oTr.cloneNode(true);
+            console.log(newTr)
+//            tBody.appendChild(newTr)
+
+
+        }
+    </script>
+</head>
+<body>
+<input type="button" id="b1" value="添加一行" onclick="add()" />
+<table width="700" border="0" cellspacing="0" cellpadding="0" id="addtr">
+    <thead>
+    <tr>
+        <td height="30" align="center" bgcolor="#CCCCCC">ID</td>
+        <td align="center" bgcolor="#CCCCCC">Username</td>
+        <td align="center" bgcolor="#CCCCCC">Usertype</td>
+        <td align="center" bgcolor="#CCCCCC">Other</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td height="30" align="center"><input type="text" size="2" value="1" /></td>
+        <td align="center"><input type="text" name="username" /></td>
+        <td align="center">
+            <select name="type">
+                <option value="1">Administrator</option>
+                <option value="2">Guest</option>
+                <option value="3">2ky.cn</option>
+                <option value="4">特效网</option>
+            </select>
+        </td>
+        <td align="center"><input type="text" name="username2" /></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

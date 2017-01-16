@@ -1,0 +1,50 @@
+1.HTML5 之前的 HTML 版本是？
+您的回答：HTML 4
+正确答案：HTML 4.01
+2.HTML5 的正确 doctype 是？
+您的回答：<!DOCTYPE html>
+3.在 HTML5 中，哪个元素用于组合标题元素？
+您的回答：<hgroup>
+4.HTML5 中不再支持下面哪个元素？
+您的回答：<ins>
+正确答案：<font>
+5.HTML5 中不再支持下面哪个元素？
+您的回答：<base>
+正确答案：<acronym>
+6.在 HTML5 中，onblur 和 onfocus 是：
+您的回答：事件属性
+7.用于播放 HTML5 视频文件的正确 HTML5 元素是：
+您的回答：<video>
+8.用于播放 HTML5 音频文件的正确 HTML5 元素是：
+您的回答：<audio>
+9.在 HTML5 中不再支持 <script> 元素的哪个属性？
+您的回答：rel
+正确答案：type
+10.在 HTML5 中，哪个方法用于获得用户的当前位置？
+您的回答：getCurrentPosition()
+11.新的 HTML5 全局属性，"contenteditable" 用于：
+您的回答：规定元素内容是否是可编辑的。
+12.在 HTML5 中，contextmenu 和 spellcheck 是：
+您的回答：样式属性
+正确答案：HTML 属性
+13.在 HTML5 中，您能够直接将 SVG 元素嵌入 HTML 页面中。
+您的回答：正确
+14.由 SVG 定义的图形是什么格式的？
+您的回答：XML
+15.HTML5 中的 <canvas> 元素用于：
+您的回答：绘制图形
+16.哪个 HTML5 内建对象用于在画布上绘制？
+您的回答：getContext
+17.在 HTML5 中，哪个属性用于规定输入字段是必填的？
+您的回答：required
+18.哪种输入类型定义滑块控件？
+您的回答：slider
+正确答案：range
+19.哪种输入类型用于定义周和年控件（无时区）？
+您的回答：date
+正确答案：week
+20.哪个 HTML5 元素用于显示已知范围内的标量测量？
+您的回答：<range>
+正确答案：<meter>
+21.select：几个个值里面选择1个；只能选
+   datalist：你可以在文本框里填值，也可以在下面几个值里选1个。

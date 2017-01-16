@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="" class="aa">
+<button value="提交" id="sub">提交</button>
+<script src="jquery.min.js"></script>
+<script>
+    document.getElementById("sub").onclick=function () {
+        console.log(1)
+        console.log($('input:text').val())
+    }
+</script>
+</body>
+</html>

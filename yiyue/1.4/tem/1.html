@@ -1,0 +1,32 @@
+<style>
+    #content{
+        width: 90%;
+        height: 300px;
+        border: 1px solid;
+        margin: 0 auto;
+    }
+    #page ul{
+        width: 90%;
+        margin: 0 auto;
+    }
+    #page ul li{
+        display: inline-block;
+        list-style: none;
+        height: 35px;
+        line-height: 35px;
+        font-size: 20px;
+        text-align: center;
+        width: 24%;
+    }
+</style>
+<div id="page" class="rule">
+    <ul  id="btn_group">
+        <li ng-repeat="li in lis" ng-click="show($index,li.links)" ng-class="{selected: $index==selected}">
+            {{li.name}}
+        </li>
+    </ul>
+    <div id="content" >
+        <div ng-repeat="div in divs" class="hide" ng-class="{show:$index==selected}">{{res.link}}</div>
+    </div>
+
+</div>

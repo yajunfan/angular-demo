@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="adv2">
+    <ul>
+        <li><a href="#ani1" class="selected">1</a></li>
+        <li><a href="#ani2">2</a></li>
+        <li class="split"></li>
+        <li><a href="#ani3">3</a></li>
+        <li><a href="#ani4">4</a></li>
+    </ul>
+    <span>
+    <p id="ani1" style="display: block; opacity: 0;">Click on the tabs to see a nice fade.</p>
+    <p id="ani2">You're not impressed?</p>
+    <p id="ani3">But it's so cool... in a nerdy way.</p>
+    <p id="ani4">Download idTabs and have your cake. You can eat it too.</p>
+  </span>
+</div>
+<script src="jquery.min.js"></script>
+<script type="text/javascript">
+    $("#adv2").click(function(id,list,set){
+        $("a",set).removeClass("selected")
+            .filter("[href='"+id+"']",set).addClass("selected");
+        for(i in list)
+            $(list[i]).hide();
+        $(id).fadeIn();
+        return false;
+    });
+</script>
+</body>
+</html>

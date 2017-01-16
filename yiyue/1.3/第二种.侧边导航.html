@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+            list-style-type:none;
+        }
+        a, img {
+            border:0;
+            text-decoration:none;
+        }
+        body,html {
+            font:12px/180% Arial, Helvetica, sans-serif, "新宋体";
+            background:#DCDCDC;
+        }
+        .container_nav {
+            position:fixed;
+            top:0;
+           left:0;
+            z-index:9999;
+            width:140px;
+            cursor:pointer;
+            margin:100px 0 0 0;
+        }
+        *html .container_nav {
+            position:absolute;
+
+        }
+        .container_nav a {
+            display:block;
+            position:relative;
+            height:30px;
+            line-height:30px;
+            margin-bottom:2px;
+            background:#fff;
+            padding-left:10px;
+            width:130px;
+            overflow:hidden;
+            color:#333;
+            cursor:pointer;
+            text-align: center;
+            left:-110px;
+        }
+        .container_nav a:hover {
+            text-decoration:none;
+            color:#1974A1;
+        }
+        .container_nav a:hover span {
+            background:#5FA429
+        }
+        .container_nav a span {
+            display:block;
+            float:right;
+            width:30px;
+            background: #29e617;
+            color:#fff;
+            font-size:16px;
+            text-align:center;
+            margin-right:0px;
+            font-style:normal;
+        }
+    </style>
+</head>
+<body>
+<div class="container_nav">
+    <a href='#'><span>0</span>贷前审核</a>
+    <a href='#'><span>1</span>贷中跟踪</a>
+    <a href='#'><span>2</span>参数设置</a>
+    <a href='#'><span>3</span>数据管理</a>
+    <a href='#'><span>4</span>系统管理</a>
+    <a href='#'><span>5</span>趋势分析</a>
+    <a href='#'><span>6</span>逾期催款</a>
+    <a href='#'><span>7</span>行业资讯</a>
+    <a href='#'><span>8</span>产品说明</a>
+
+</div>
+<script src="../../jquery.min.js"></script>
+<script>
+    var tempS;
+    $(".container_nav").hover(function(){
+        var thisObj = $(this);
+        tempS = setTimeout(function(){
+            thisObj.find("a").each(function(i){
+                var tA=$(this);
+                setTimeout(function(){
+                    tA.animate({left:"0"},300);
+                },50*i);
+            });
+        },200);
+    },function(){
+        if(tempS){
+            clearTimeout(tempS);
+        }
+        $(this).find("a").each(function(i){
+            var tA=$(this);
+            setTimeout(function(){
+                tA.animate({left:"-110"},300,function(){
+                });
+            },50*i);
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    canvas = document.getElementById("myCanvas");
+    ctx = canvas.getContext("2d")
+    ctx.lineWidth = 6;
+    ctx.strokeStyle = "#0090D2";
+    ctx.beginPath();
+    ctx.moveTo(305, 243);
+    ctx.bezierCurveTo(185, 432, 532, 304, 310, 243);
+    ctx.stroke();
+
+</script>
+</body>
+</html>

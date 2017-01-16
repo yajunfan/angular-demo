@@ -1,0 +1,45 @@
+
+<div class="container">
+    <div class="row">
+        <form name="myForm" class="form-horizontal userForm">
+            <div class="form-group">
+                <label class="control-label col-md-2">新密码</label>
+                <div class="col-md-10">
+                    <input type="password" name="user_password" ng-model="password" ng-maxlength="6" ng-minlength="6"
+                           class="form-control" placeholder="请输入密码" required>
+                    <div ng-show="myForm.user_password.$invalid&&myForm.user_password.$dirty">
+                        <div class="alert alert-danger">
+                            <p ng-show="myForm.user_password.$error.required">
+                                该项为必填项，请输入内容
+                            </p>
+                            <p ng-show="myForm.user_password.$error.maxlength">
+                                <!--ng-maxlength验证失败 ，会在$error中存 {maxlength：true} -->
+                                密码不可以超过6位
+                            </p>
+                            <p ng-show="myForm.user_password.$error.minlength">
+                                密码不可以少于6位
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-2">确认密码</label>
+                <div class="col-md-10">
+                    <input type="password" name="user_passwordTwo" ng-model="passwordTwo"
+                           class="form-control" placeholder="请再次输入密码且必须和上面保持一致" required>
+                    <div ng-show="myForm.user_passwordTwo.$invalid&&myForm.user_passwordTwo.$dirty">
+                        <div class="alert alert-danger">
+                            <p ng-show="myForm.user_passwordTwo.$error.required">
+                                该项为必填项，请输入内容
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <input type="button" class="btn btn-primary" style="margin-left: 300px;" value="保存">
+    <input type="button" class="btn btn-danger" style="margin-left: 600px;" value="取消">
+</div>

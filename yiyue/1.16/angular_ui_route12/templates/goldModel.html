@@ -1,0 +1,65 @@
+<div id="page" class="gold" name="page" ng-controller="myGold">
+    <h3><a class="btn btn-info btn-lg" ng-click="shouGold()">
+        <span class="glyphicon glyphicon-home" ></span>
+    </a>评分模型配置<span class="glyphicon glyphicon-globe" style="position: absolute;top:10px;"></span></h3>
+    <ul>
+        <li style="background: lightgreen">评分模型配置</li>
+        <li>评分项与业务类型关系</li>
+    </ul>
+    <div class="container page1" style="display:block">
+        <h5>评分卡列表</h5>
+        <label><span>++</span><input type="button" value="增加" class="btn btn-success" ng-click="goldDisplay()"></label>
+        <div class="addGold">
+            <h5>规则</h5>
+            <!--<label style="margin:10px;"><span>+++</span><input class="goldAdd btn btn-primary" name="goldAdd" type="button" value="增加" ng-click="editgold()" style="display: inline-block; height: 20px;line-height: 8px;"></label>-->
+            <div class="goldWrite">
+                <label class="name">名称： <input type="text" ng-model="name"></label>
+                <label class="type"> 类型：
+                    <select>
+                        <option value="欺诈评分">欺诈评分</option>
+                        <option value="信用评分">信用评分</option>
+                    </select>
+                </label>
+                <label class="leibie">类别：<input type="text"  ng-model="leibie"></label>
+                <label class="proportion">指定读脉源：
+                    <select>
+                        <!--<option value="欺诈评分">欺诈评分</option>-->
+                        <!--<option value="信用评分">信用评分</option>-->
+                    </select>
+                </label>
+                <label>指定读脉源输出参数：
+                    <select name="-请选择-">
+                        <option value="手机实名">手机实名-手机实名</option>
+                        <option value="银行卡实名">银行卡实名-银行卡实名</option>
+                        <option value="同住人信息">同住人信息-同住人信息</option>
+                        <option value="单卡号用户画像">单卡号用户画像-单卡号用户画像</option>
+                        <option value="_借款信息_test">_借款信息_test--test</option>
+                        <option value="_风险名单_test">_风险名单_test--test</option>
+                        <option value="_联系人通话_test">_联系人通话_test--test</option>
+                        <option value="_车辆信息_test">_车辆信息_test--test</option>
+                    </select>
+                </label>
+                <label class="describe">权重百分比：<input type="number" min="1" max="100" >%</label>
+                <label class="describe">业务阶段：
+                    <select>
+                        <option value="欺诈评分">贷前</option>
+                        <option value="信用评分">贷中</option>
+                        <option value="信用评分">贷后</option>
+                    </select>
+                </label>
+                <label class="describe" style="height: 80px; vertical-align: middle">描述：<textarea name="a" style="width:200px;height:80px;"></textarea></label>
+            </div>
+            <input type="button" value="保存" class="btn btn-success" style="display: inline-block; height: 20px;line-height: 8px;">
+            <input type="button" value="取消" class="btn btn-warning" style="display: inline-block; height: 20px;line-height: 8px;" ng-click="yincang()">
+        </div>
+    </div>
+    <div class="container page2" ng-controller="gridCtrl">
+      <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+</div>
+
+
+
+
+
+

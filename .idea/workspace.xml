@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="3292f503-07ae-4f5f-8672-e241857ab70d" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="untitled" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="a.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/a.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="b.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/b.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package_json" />
+        <option value="TypeScript File" />
+        <option value="JavaScript File" />
+        <option value="Less File" />
+        <option value="CSS File" />
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>tvover</find>
+      <find>speed</find>
+      <find>ease</find>
+      <find>tv</find>
+      <find>move</find>
+      <find>larget</find>
+      <find>ruleE</find>
+      <find>war</find>
+      <find>rule</find>
+      <find>ruleClose</find>
+      <find>$scope.ruleLists</find>
+      <find>allPage</find>
+      <find>display</find>
+      <find>background_profil</find>
+      <find>$http</find>
+      <find>menu_smartphone</find>
+      <find>text</find>
+      <find>wrapLogin</find>
+      <find>list-group</find>
+      <find>wrapContainer</find>
+      <find>conta</find>
+      <find>datas</find>
+      <find>MainCtrl</find>
+      <find>setting</find>
+      <find>ruleSet</find>
+      <find>bg</find>
+      <find>list</find>
+      <find>addRuleInfo</find>
+      <find>refer</find>
+      <find>right</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>bg</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/照片墙.html" />
+        <option value="$PROJECT_DIR$/2016年12月/12.29第二十一天/angular_ui_route10/script/dumai/controller.js" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/templates/homePageTop.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/templates/homePage.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/1.6保存1.5controller" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/data/daiqian1.json" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/templates/笔记" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/templates/homePageBottom.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/script/modelJs/controller.js" />
+        <option value="$PROJECT_DIR$/2017年1月/1.6/加载动画.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.6/第二种/1.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.6/Subskill Digital.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.6/第三种/1.html" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/css/load.less" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/css/modelCss_1.less" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/css/load.css" />
+        <option value="$PROJECT_DIR$/2017年1月/1.5/准备工作_1/model_1.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/index.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/tsconfig.json" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/css/public.less" />
+        <option value="$PROJECT_DIR$/yiyue/1.5/prepare/templates/homePageBottom.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.5/prepare/css/modelCss_1.less" />
+        <option value="$PROJECT_DIR$/yiyue/1.5/prepare/script/modelJs/controller.js" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/script/carJs/controller.js" />
+        <option value="$PROJECT_DIR$/yiyue/1.5/prepare/script/modelJs/app.js" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/template/2.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/template/3.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/script/carJs/app.js" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/template/1.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/css/car.less" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/今日总结" />
+        <option value="$PROJECT_DIR$/yiyue/1.10/车贷管家2/1.login.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/列表网格切换.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/列表网格切换-jquery.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/jquery实现鼠标滚轮图片放大缩小.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.5/prepare/model_1.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/1..html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/four.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/three.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/two.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/one.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/2.html" />
+        <option value="$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/templates/user.html" />
+        <option value="$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/css/index11.less" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/index12.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/user.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/css/index12.less" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/four.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/script/dumai/controller.js" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/a.html" />
+        <option value="$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/b.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="width" value="1924" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yiyue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.16" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yiyue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.16" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="不同控制器之间的数据传递" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="study" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="yiyue" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="javascript.nodejs.core.library.configured.version" value="0.10.26" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="SearchEverywhereHistoryKey" value="50&#9;null&#9;null&#10;input&#9;null&#9;null&#10;good&#9;null&#9;null&#10;'my&#9;null&#9;null" />
+    <property name="JavaScriptPreferStrict" value="true" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.16" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.11" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.10" />
+      <recent name="C:\Users\Administrator\Desktop\樊雅君\study\2017年1月\1.5\准备工作_1\data" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.11\使用angular实现选项卡的效果\1" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.11" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.11\jquery实现网格和列表模式的切换" />
+      <recent name="C:\Users\Administrator\Desktop\樊雅君\study\2017年1月\1.6\第一种" />
+      <recent name="C:\Users\Administrator\Desktop\樊雅君\study\2017年1月\1.4\tem" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.1.html">
+    <configuration default="false" name="1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled/第一天12/1.html">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1.html" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.1.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3292f503-07ae-4f5f-8672-e241857ab70d" name="Default" comment="" />
+      <created>1480563369696</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1480563369696</updated>
+      <workItem from="1480563371456" duration="428000" />
+      <workItem from="1480564507930" duration="22250000" />
+      <workItem from="1480668286947" duration="5622000" />
+      <workItem from="1480908112629" duration="13745000" />
+      <workItem from="1480988233286" duration="15426000" />
+      <workItem from="1481007131929" duration="320000" />
+      <workItem from="1481007478339" duration="12000000" />
+      <workItem from="1481073674778" duration="27962000" />
+      <workItem from="1481160294514" duration="28772000" />
+      <workItem from="1481246715334" duration="11585000" />
+      <workItem from="1481263298115" duration="10682000" />
+      <workItem from="1481506238981" duration="27291000" />
+      <workItem from="1481592804629" duration="31430000" />
+      <workItem from="1481686933485" duration="21256000" />
+      <workItem from="1481766365206" duration="27799000" />
+      <workItem from="1481851701455" duration="30772000" />
+      <workItem from="1482111113116" duration="7386000" />
+      <workItem from="1482125961914" duration="13806000" />
+      <workItem from="1482139869169" duration="4633000" />
+      <workItem from="1482197506180" duration="28245000" />
+      <workItem from="1482283715397" duration="29334000" />
+      <workItem from="1482370116044" duration="342000" />
+      <workItem from="1482370484750" duration="4472000" />
+      <workItem from="1482375101438" duration="1860000" />
+      <workItem from="1482377044486" duration="23418000" />
+      <workItem from="1482457061857" duration="18128000" />
+      <workItem from="1482479837637" duration="7770000" />
+      <workItem from="1482716288564" duration="14021000" />
+      <workItem from="1482802311584" duration="22654000" />
+      <workItem from="1482888749048" duration="8992000" />
+      <workItem from="1482905644312" duration="11507000" />
+      <workItem from="1482976041038" duration="23494000" />
+      <workItem from="1483061549006" duration="23789000" />
+      <workItem from="1483407135999" duration="25932000" />
+      <workItem from="1483493694372" duration="1599000" />
+      <workItem from="1483495997142" duration="20511000" />
+      <workItem from="1483579950076" duration="28949000" />
+      <workItem from="1483666124676" duration="17585000" />
+      <workItem from="1484012602336" duration="22364000" />
+      <workItem from="1484098743089" duration="21822000" />
+      <workItem from="1484548171088" duration="418000" />
+      <workItem from="1484548606890" duration="1636000" />
+      <workItem from="1484550274408" duration="13000" />
+      <workItem from="1484550326950" duration="258000" />
+      <workItem from="1484550714803" duration="3341000" />
+      <workItem from="1484554168404" duration="4194000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="679813000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="0" width="1924" height="1047" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21855345" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/2016年12月/12.22第十六天/angular_ui_route5/script/controller.js</url>
+          <line>90</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/2016年12月/12.26第十八天/angular_ui_route7/script/dumai/controller.js</url>
+          <line>136</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="48" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/yiyue/1.10/车贷管家2/images/yjtips.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.5/prepare/images/number1.jpeg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/jquery实现网格和列表模式的切换/jquery.min.js" />
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/列表网格切换.html" />
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/jquery实现网格和列表模式的切换/列表网格切换-jquery.html" />
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/jquery.min.js" />
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/jquery实现鼠标滚轮图片放大缩小.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.29第二十一天/angular_ui_route10/script/dumai/event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="117" column="28" lean-forward="true" selection-start-line="117" selection-start-column="28" selection-end-line="118" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.5/prepare/css/modelCss_1.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="530">
+          <caret line="332" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.5/prepare/model_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="696">
+          <caret line="29" column="16" lean-forward="false" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.06第四天/出现的错误">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="2" lean-forward="true" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/返回效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/1.过滤.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/照片墙.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="101" column="42" lean-forward="false" selection-start-line="101" selection-start-column="42" selection-end-line="101" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular+require/index10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/今日总结">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/angular-route.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="14" column="3" lean-forward="false" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/1/1..html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/four.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/three.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/two.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/one.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.11/使用angular实现选项卡的效果/2/2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="50" column="7" lean-forward="true" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/index11.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7920">
+          <caret line="328" column="17" lean-forward="false" selection-start-line="328" selection-start-column="17" selection-end-line="328" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/script/dumai/event.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/问题">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="2" lean-forward="false" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/user.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="28" lean-forward="true" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/user_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.20第十四天/angular_ui_route3/index3.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.21第十五天/angular_ui_route4/index4.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.13第九天/电核任务/index1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.13第九天/电核任务/index1_1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.09第七天/canvas/字母掉落的效果.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.09第七天/html5_drag/把一个元素drag到另一个指定位置.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.09第七天/canvas/绘制圆弧.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/1自定义覆盖物.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.12/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.12/选项卡/select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.30angular，进行过滤筛选照片墙/angular_ui_route11/css/index11.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="299" column="32" lean-forward="true" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.29第二十一天/angular_ui_route10/css/index10.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1623">
+          <caret line="958" column="4" lean-forward="true" selection-start-line="958" selection-start-column="4" selection-end-line="958" selection-end-column="4" />
+          <folding>
+            <element signature="e#495#6575#0" expanded="false" />
+            <element signature="e#7637#10047#0" expanded="false" />
+            <element signature="e#10057#17410#0" expanded="false" />
+            <element signature="e#17440#17558#0" expanded="false" />
+            <element signature="e#17582#17759#0" expanded="false" />
+            <element signature="e#17777#18062#0" expanded="false" />
+            <element signature="e#18094#18215#0" expanded="false" />
+            <element signature="e#18230#18246#0" expanded="false" />
+            <element signature="e#18290#18491#0" expanded="false" />
+            <element signature="e#18505#18663#0" expanded="false" />
+            <element signature="e#18664#18728#0" expanded="false" />
+            <element signature="e#18733#18818#0" expanded="false" />
+            <element signature="e#18828#18872#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2016年12月/12.29第二十一天/angular_ui_route10/index10.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/dataManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="14" column="167" lean-forward="true" selection-start-line="14" selection-start-column="167" selection-end-line="14" selection-end-column="167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/user_2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="47" column="47" lean-forward="true" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/index12.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="586">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/css/index12.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="753" column="9" lean-forward="true" selection-start-line="753" selection-start-column="9" selection-end-line="753" selection-end-column="9" />
+          <folding>
+            <element signature="e#6656#7447#0" expanded="false" />
+            <element signature="e#7490#9025#0" expanded="false" />
+            <element signature="e#9034#9426#0" expanded="false" />
+            <element signature="e#9435#9900#0" expanded="false" />
+            <element signature="e#9908#15034#0" expanded="false" />
+            <element signature="e#12297#12877#0" expanded="false" />
+            <element signature="e#12900#15032#0" expanded="false" />
+            <element signature="e#13169#14368#0" expanded="false" />
+            <element signature="e#14387#14691#0" expanded="false" />
+            <element signature="e#14708#14762#0" expanded="false" />
+            <element signature="e#14779#15028#0" expanded="false" />
+            <element signature="e#15058#15098#0" expanded="false" />
+            <element signature="e#15128#15704#0" expanded="false" />
+            <element signature="e#15713#15745#0" expanded="false" />
+            <element signature="e#15759#15789#0" expanded="false" />
+            <element signature="e#17005#18137#0" expanded="false" />
+            <element signature="e#18150#18543#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/templates/four.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="86" column="41" lean-forward="true" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#label#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#table#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#label#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/angular_ui_route12/script/dumai/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="683" column="3" lean-forward="true" selection-start-line="683" selection-start-column="3" selection-end-line="683" selection-end-column="3" />
+          <folding>
+            <element signature="e#316#1027#0" expanded="false" />
+            <element signature="e#1114#1286#0" expanded="false" />
+            <element signature="e#1372#1542#0" expanded="false" />
+            <element signature="e#1655#4451#0" expanded="false" />
+            <element signature="e#1743#1879#0" expanded="false" />
+            <element signature="e#1902#2814#0" expanded="false" />
+            <element signature="e#5266#5283#0" expanded="false" />
+            <element signature="e#7272#12237#0" expanded="false" />
+            <element signature="e#7295#8267#0" expanded="false" />
+            <element signature="e#8305#8666#0" expanded="false" />
+            <element signature="e#8701#9281#0" expanded="false" />
+            <element signature="e#12322#12465#0" expanded="false" />
+            <element signature="e#12506#29033#0" expanded="false" />
+            <element signature="e#13004#13988#0" expanded="false" />
+            <element signature="e#16289#17400#0" expanded="false" />
+            <element signature="e#17470#18708#0" expanded="false" />
+            <element signature="e#18743#19986#0" expanded="false" />
+            <element signature="e#20051#21181#0" expanded="false" />
+            <element signature="e#29117#30535#0" expanded="false" />
+            <element signature="e#30621#30809#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/a.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/yiyue/1.16/不同控制器之间的数据传递/b.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="7" lean-forward="true" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

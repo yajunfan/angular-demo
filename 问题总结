@@ -1,0 +1,37 @@
+1.这个拖动框怎么能实现关闭的效果，现在只用easyui-draggable实现拖拽，不能实现关闭效果
+2.关于分页，怎么显示刷新按钮，各种按钮没有出现？
+    没有引入对应的图片的图集（ pagination_icons.png）
+3.关于分页，这个class类名只是一个分页的类名，做的一个分页效果，不可以向其中插入数据
+  $(document).on("mousedown", "div[name='warnBorder']", function () {
+        var $box = $('.warnBorder').children('h5');
+       var that= $('.warnBorder')[0];
+        $box.mousedown(function (e) {
+            var disX = e.clientX - that.offsetLeft;
+            var disY = e.clientY - that.offsetTop;
+            $(document).on('mousemove.move', function (e) {
+                var l = e.clientX - disX;
+                var t = e.clientY - disY;
+                if (l <= 0) {
+                    l = -300;
+                } else if (l >= $(document).width() -  $('.warnBorder').width()) {
+                    l = $(document).width() -  $('.warnBorder').width();
+
+                }
+                if (t <= 0) {
+                    t = 0;
+                } else if (t >= $(document).height() -  $('.warnBorder').height()) {
+                    t = $(document).height() -  $('.warnBorder').height();
+                }
+                $('.warnBorder').css('left', l);
+                $('.warnBorder').css('top', t);
+            });
+            $(document).on('mouseup.move', function () {
+                $(document).off('.move');
+                $box[0].releaseCapture &&  $box[0].releaseCapture();
+            });
+            $box[0].setCapture &&  $box[0].setCapture();
+            return false;
+        })
+
+
+    });

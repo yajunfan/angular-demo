@@ -1,0 +1,122 @@
+@import "public";
+@c1:#51ace6;
+@c2:#99c4ff;
+@c3:white;
+body, html {
+  width: 100%;
+  height: 100%;
+  //background: -webkit-linear-gradient(top, @c2, lightblue,@c3, @c3);
+}
+.title_rule{
+  background: -webkit-linear-gradient(top, @c2, lightblue,@c3, @c3);
+  padding: 2px;
+  margin-top: 4px;
+  border: 1px solid black;
+}
+
+
+#most {
+  position: absolute;
+  bottom:0;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  .navbar-default .navbar-nav {
+    li {
+
+      a {
+        color: whitesmoke;
+      }
+    }
+  }
+}
+#list ul{
+  width: 100%;
+  margin-left:300px;
+}
+#list ul li{
+  padding: 0 15px;
+  margin: 0 30px;
+
+  a{
+    color: red;
+    font-weight: 600;
+    font-size: 24px;
+  }
+}
+
+#list ul li a:hover{
+  color: #1019ff;
+}
+.display{
+  margin-left: 90px;
+  margin-top: 50px;
+}
+.row{
+  margin-top: 30px;
+}
+.list-group{
+  margin-top: 3px;
+}
+.rule_title_left{
+  position: relative;
+  top:30px;
+  left:25px;
+  width: 100%;
+  height: 30px;
+
+}
+.rule_title_right{
+  display: inline-block;
+  position: absolute;
+  right:188px;
+}
+.right{
+  .put{
+      padding:92px 0;
+      border:1px solid black;
+
+    span{
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+      background: lightgreen;
+    }
+    .follow{
+      position: absolute;
+      left: 0;
+      top:0;
+      width: 80px;
+      height: 20px;
+      background: lightblue;
+      display: none;
+      text-align: right;
+    }
+    .warnBorder{
+     display: none;
+     position: absolute;
+      left:0;
+      right:0;
+      bottom:0;
+      top:0;
+      margin: auto;
+      width: 500px;
+      height: 200px;
+      background: yellow;
+      border: 1px solid black;
+      //margin: 0 auto;
+    }
+  }
+  .largePut{
+    padding: 245px 0;
+    border:1px solid black;
+      span{
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin-left: 20px;
+      background: lightgreen;
+    }
+  }
+}

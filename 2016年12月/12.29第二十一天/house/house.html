@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        .house {
+            position: relative;
+            top:780px;
+        }
+
+        .house .flag_whole {
+            position: absolute;
+        }
+        .flag_whole .pole {
+            height: 60px;
+            border: 2px solid rgb(197, 151, 63);
+            position: absolute;
+            top: -125px;
+            left: 297px;
+        }
+        .house2 .flag_whole .pole {
+            top: -125px;
+            left: 192px;
+        }
+
+        .pole:after {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: rgb(231, 183, 91);
+            border-radius: 50%;
+            position: absolute;
+            top: -5px;
+            left: -5px;
+        }
+
+        .flag_whole .flag {
+            width: 45px;
+            height: 28px;
+            background: rgb(215, 33, 33);
+            position: absolute;
+            top: -118px;
+            left: 301px;
+            -webkit-animation: flag_shake 0.6s ease-in-out infinite alternate;
+            -moz-animation: flag_shake 0.6s ease-in-out infinite alternate;
+            -o-animation: flag_shake 0.6s ease-in-out infinite alternate;
+            -ms-animation: flag_shake 0.6s ease-in-out infinite alternate;
+            animation: flag_shake 0.6s ease-in-out infinite alternate;
+        }
+        .house2 .flag_whole .flag {
+            top: -118px;
+            left: 192px;
+        }
+
+        @-webkit-keyframes flag_shake {
+            0% {
+
+            }
+            100% {
+                -webkit-transform: skewY(5deg) translateY(3px);
+            }
+        }
+
+        @-moz-keyframes flag_shake {
+            0% {
+
+            }
+            100% {
+                -moz-transform: skewY(5deg) translateY(3px);
+            }
+        }
+
+        @-o-keyframes flag_shake {
+            0% {
+
+            }
+            100% {
+                -o-transform: skewY(5deg) translateY(3px);
+            }
+        }
+
+        @-ms-keyframes flag_shake {
+            0% {
+
+            }
+            100% {
+                -ms-transform: skewY(5deg) translateY(3px);
+            }
+        }
+
+        @keyframes flag_shake {
+            0% {
+
+            }
+            100% {
+                transform: skewY(5deg) translateY(3px);
+            }
+        }
+
+        .house .wall {
+            width: 260px;
+            height: 200px;
+            background: rgb(112, 151, 194);
+            position: absolute;
+            left: 140px;
+            top: -38px;
+            z-index: 2;
+        }
+        .house2 .wall{
+            width: 72px;
+            height: 100px;
+            left: 138px;
+
+        }
+        .house .roof {
+            width: 45px;
+            height: 45px;
+            background: rgb(120, 145, 199);
+            border: 5px solid rgb(157, 189, 224);
+            border-radius: 3px;
+            position: absolute;
+            top: -67px;
+            left: 270px;
+            z-index: 1;
+            -webkit-transform: rotate(38deg) skew(-15deg);
+            -moz-transform: rotate(38deg) skew(-15deg);
+            -o-transform: rotate(38deg) skew(-15deg);
+            -ms-transform: rotate(38deg) skew(-15deg);
+            transform: rotate(38deg) skew(-15deg);
+        }
+        .house2 .roof {
+            top: -69px;
+            left: 146px;
+
+        }
+
+        .house .secondFloor {
+            width: 280px;
+            height: 94px;
+            border-top: 8px solid rgb(157, 189, 224);
+            border-bottom: 8px solid rgb(157, 189, 224);
+            position: absolute;
+            left: 130px;
+            top: -42px;
+            z-index: 3;
+        }
+        .house2 .secondFloor {
+            width: 88px;
+            height: 94px;
+        }
+
+        .house .firstFloor {
+            width: 280px;
+            height: 94px;
+            position: absolute;
+            left: 130px;
+            top: 68px;
+            z-index: 3;
+        }
+        .house2 .firstFloor {
+            width: 73px;
+            height: 94px;
+            position: absolute;
+            left: 139px;
+            top: 68px;
+            background: rgb(112, 151, 194);
+            z-index: 3;
+        }
+
+        .house .window {
+            position: absolute;
+        }
+
+        .house .window .window_tent {
+            width: 48px;
+            height: 20px;
+            background: rgb(192, 0, 27);
+            position: absolute;
+            top: 0;
+            left: -2px;
+            z-index: 2;
+        }
+
+        .window_tent:before, .window_tent:after {
+            content: '';
+            display: inline-block;
+            width: 7.5px;
+            height: 20px;
+            border-left: 6.5px solid #fff;
+            border-right: 6.5px solid #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .window_tent:after {
+            left: 28.5px;
+        }
+
+        .house .window .window_body {
+            width: 36px;
+            height: 50px;
+            background: rgb(49, 89, 148);
+            border: 4px solid rgb(169, 196, 222);
+            border-radius: 3px;
+            position: absolute;
+        }
+
+        .house .window_body:before {
+            content: '';
+            display: inline-block;
+            width: 36px;
+            border: 2px solid rgba(169, 196, 222, 0.5);
+            position: absolute;
+            top: 38px;
+        }
+
+        .house .window_body:after {
+            content: '';
+            display: inline-block;
+            height: 50px;
+            border: 2px solid rgba(169, 196, 222, 0.5);
+            position: absolute;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+
+
+        .w1 {
+            top: 20px;
+            left: 24px;
+        }
+
+        .w2 {
+            top: 20px;
+            left: 86px;
+        }
+
+        .w3 {
+            top: 20px;
+            left: 147.5px;
+        }
+
+        .w4 {
+            top: 20px;
+            left: 210px;
+        }
+
+        .f-w1 {
+            top: 20px;
+            left: 18px;
+        }
+
+        .f-w2 {
+            top: 20px;
+            left: 74px;
+        }
+
+        .f-w3 {
+            top: 20px;
+            left: 218px;
+        }
+
+        .house .door {
+            position: absolute;
+        }
+
+        .door .door_over {
+            width: 86px;
+            border: 4px solid rgb(212, 78, 69);
+            position: absolute;
+            top: -8px;
+            left: 121px;
+        }
+
+        .door .door_body {
+            width: 76px;
+            height: 94px;
+            background: rgb(198, 44, 34);
+            position: absolute;
+            left: 130px;
+        }
+
+        .door_body:before {
+            content: 'XX别墅';
+            display: inline-block;
+            width: 76px;
+            color: #fff;
+            font-size: 24px;
+            font-weight: bolder;
+            position: absolute;
+            text-align: center;
+            top: 2px;
+        }
+
+        .leftDoor, .rightDoor {
+            width: 26px;
+            height: 58px;
+            background: rgb(49, 89, 148);
+            position: absolute;
+            top: 34px;
+            left: 9px;
+            border-top: 2px solid rgb(112, 151, 194);
+        }
+
+        .leftDoor {
+            border-right: 2px solid rgb(112, 151, 194);
+        }
+
+        .rightDoor {
+            border-left: 2px solid rgb(112, 151, 194);
+            left: 40px;
+        }
+        @keyframes house_dis {
+            0% {
+                opacity: 0;
+            }
+            50%{
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                display: none;
+                z-index:-100;
+            }
+        }
+        .n1{
+            -webkit-animation: house_dis 2s ease-in-out 1s;
+            -moz-animation: house_dis 2s ease-in-out 1s;
+            -o-animation: house_dis 2s ease-in-out 1s;
+            -ms-animation: house_dis 2s ease-in-out 1s;
+            animation:house_dis 2s ease-in-out 1s;
+        }
+        .n2{
+            -webkit-animation: house_dis 2s ease-in-out 2s;
+            -moz-animation: house_dis 2s ease-in-out 2s;
+            -o-animation: house_dis 2s ease-in-out 2s;
+            -ms-animation: house_dis 2s ease-in-out 2s;
+            animation:house_dis 2s ease-in-out 2s;
+        }
+        .n3{
+            -webkit-animation: house_dis 2s ease-in-out 3s;
+            -moz-animation: house_dis 2s ease-in-out 3s;
+            -o-animation: house_dis 2s ease-in-out 3s;
+            -ms-animation: house_dis 2s ease-in-out 3s;
+            animation:house_dis 2s ease-in-out 3s;
+        }
+        .n4{
+            -webkit-animation: house_dis 2s ease-in-out  4s;
+            -moz-animation: house_dis 2s ease-in-out  4s;
+            -o-animation: house_dis 2s ease-in-out  4s;
+            -ms-animation: house_dis 2s ease-in-out  4s;
+            animation:house_dis 2s ease-in-out  4s;
+        }
+        .n5{
+            -webkit-animation: house_dis 2s ease-in-out  5s;
+            -moz-animation: house_dis 2s ease-in-out  5s;
+            -o-animation: house_dis 2s ease-in-out  5s;
+            -ms-animation: house_dis 2s ease-in-out  5s;
+            animation:house_dis 2s ease-in-out  5s;
+        }
+        .n6{
+            -webkit-animation: house_dis 2s ease-in-out  6s;
+            -moz-animation: house_dis 2s ease-in-out  6s;
+            -o-animation: house_dis 2s ease-in-out  6s;
+            -ms-animation: house_dis 2s ease-in-out  6s;
+            animation:house_dis 2s ease-in-out  6s;
+        }
+        .n7{
+            -webkit-animation: house_dis 2s ease-in-out  7s;
+            -moz-animation: house_dis 2s ease-in-out  7s;
+            -o-animation: house_dis 2s ease-in-out  7s;
+            -ms-animation: house_dis 2s ease-in-out  7s;
+            animation:house_dis 2s ease-in-out  7s;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="house house1 n1">
+    <!-- 旗子部分 -->
+    <div class="flag_whole">
+        <!-- 旗杆 -->
+        <div class="pole"></div>
+        <!-- 旗面 -->
+        <div class="flag"></div>
+    </div>
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+        <div class="window w2">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+        <div class="window w3">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+        <div class="window w4">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+    </div>
+    <!--一楼-->
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+        <div class="window f-w2">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+        <!-- 门 -->
+        <div class="door">
+            <!-- 门梁 -->
+            <div class="door_over"></div>
+            <!-- 门主体 -->
+            <div class="door_body">
+                <div class="leftDoor"></div>
+                <div class="rightDoor"></div>
+            </div>
+        </div>
+        <div class="window f-w3">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+    </div>
+</div>
+<div class="house house2 n2" style="left:700px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="house house2 n3" style="left:350px;top:880px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+</div>
+<div class="house house2 n3" style="left:600px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="house house2 n4" style="left:900px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="house house2 n5" style="left:1090px;top:880px;" n4>
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+</div>
+<div class="house house2 n6" style="left:1200px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+
+    </div>
+</div>
+<div class="house house2 n7" style="left:1440px;top:880px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+</div>
+<div class="house house2 n7" style="left:1500px;">
+    <!-- 墙面 -->
+    <div class="wall"></div>
+    <!-- 房顶 -->
+    <div class="roof"></div>
+    <!-- 二楼 -->
+    <div class="secondFloor">
+        <!-- 窗户 -->
+        <div class="window w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+    </div>
+    <div class="firstFloor">
+        <!-- 窗户 -->
+        <div class="window f-w1">
+            <!-- 窗户帐篷 -->
+            <div class="window_tent"></div>
+            <!-- 窗体 -->
+            <div class="window_body"></div>
+        </div>
+
+
+
+    </div>
+</div>
+
+</body>
+</html>

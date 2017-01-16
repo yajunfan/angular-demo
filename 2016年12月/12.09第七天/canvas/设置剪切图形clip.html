@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    ctx.strokeStyle="black";
+    ctx.lineWidth=20;
+    ctx.rect(100,100,200,120); //设置剪切得x,y轴坐标，以及剪切得图形的长宽
+    ctx.stroke();  //  绘制已定义的路径
+    ctx.clip();  //进行剪切
+    // 在 clip() 之后绘制绿色矩形
+    ctx.fillStyle="green";  //填充颜色
+    ctx.fillRect(0,0,500,500); //不剪切得话，这是一个500*500的绿色正方形
+
+</script>
+</body>
+</html>

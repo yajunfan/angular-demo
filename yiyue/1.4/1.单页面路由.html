@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#/beforeCredit">贷前审核</a>
+<a href="#/InCredit">贷中跟踪</a>
+<a href="#/overduePayment">逾期催款</a>
+<div ng-view></div>
+<script src="../../angular.js"></script>
+<script src="../../angular-route.js"></script>
+<script>
+    var myMod = angular.module('myMod', ['ngRoute']);
+    myMod.config(function ($routeProvider) {
+        $routeProvider.when('/beforeCredit',{
+            templateUrl:'./tem/1.html'
+
+        }).when('/InCredit',{
+            templateUrl:'./tem/2.html',
+
+        }).when('/overduePayment',{
+            templateUrl:'./tem/3.html',
+
+        }).when('/user/:id',{
+            template:'我的ID号是{{id}}',
+            controller: function ($scope, $routeParams) {
+//          $routeParams 路由参数（是一个对象） 能够获取到冒号后面的值
+                $scope.id = $routeParams.id
+            }
+
+        }).otherwise('/beforeCredit');
+
+    })
+</script>
+</body>
+</html>

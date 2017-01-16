@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Tab选项卡实例</title>
+    <style type="text/css">
+        .J-tab .active{background-color:#03A9F4;}
+        .J-tab div{display:none;}
+    </style>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="angular.js"></script>
+</head>
+<body>
+<div ng-controller="Aaa">
+    <my-tab my-id="div1" my-data="sports" class="J-tab"></my-tab>
+    <my-tab my-id="div2" my-data="time" class="J-tab"></my-tab>
+</div>
+
+<script type="text/javascript">
+    var m1 = angular.module('myApp', []);
+
+    m1.controller('Aaa',['$scope',function($scope){
+        $scope.sports = [
+            {title : '篮球',content : '111111111'},
+            {title : '足球',content : '222222222'},
+            {title : '排球',content : '333333333'}
+        ];
+        $scope.time = [
+            {title : '上午',content : '444444444'},
+            {title : '中午',content : '555555555'}
+        ];
+    }]);
+
+    m1.directive('myTab',function(){
+        return {
+            restrict : 'E',
+            replace : true,
+            scope : {
+                myId : '@',
+                myData : '='
+            },
+            controller : ['$scope',function($scope){
+                $scope.name = 'this is a xiecg';
+            }],
+            template : '<div id="{{myId}}">\
+                    <input ng-repeat="data in myData" type="button" ng-value="data.title" ng-class="{active:$first}">\
+                    <div ng-repeat="data in myData" ng-style="{display:$first?\'block\':\'none\'}">{{data.content}}</div>\
+                </div>',
+            link : function(scope,element,attr){
+                element.on('click','input',function(){
+                    var self = $(this) , i = self.index();
+                    self.addClass('active').siblings('input').removeClass('active');
+                    self.siblings('div').eq(i).show().siblings('div').hide();
+                });
+            }
+        };
+    });
+
+
+</script>
+</body>
+</html>

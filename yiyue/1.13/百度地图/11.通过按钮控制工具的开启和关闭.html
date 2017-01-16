@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>
+</head>
+<body>
+<!--通过按钮控制工具的开启和关闭  工具类没有提供控制其开启和关闭的UI元素。您可以根据需要自己创建这些元素，把它们放置在地图区域内或者区域外均可。调用工具类的open和close可控制工具的开启和关闭。-->
+<div style="width:1020px;height:440px;border:1px solid gray" id="container"></div>
+<p id="info"></p>
+<input type="button" value="开启" onclick="myDis.open()" />
+<input type="button" value="关闭" onclick="myDis.close()" />
+</body>
+</html>
+<script>
+    //效果：点击开启的时候，会开启测量距离的标尺的工具，关闭的时候就关闭这个标尺
+    var map = new BMap.Map("container");          // 创建地图实例
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 15); // 创建点坐标
+    var myDis = new BMap.DistanceTool(map);
+
+    var myDrag = new BMap.DragAndZoomTool(map, {
+        followText : "拖拽鼠标进行操作"  //本示例为区域缩放工具添加提示文字。 （我没实现）
+    });
+
+    function ZoomControl() { // 设置默认停靠位置和偏移量
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(10, 10);
+    }
+    // 通过JavaScript的prototype属性继承于BMap.Control
+    ZoomControl.prototype = new BMap.Control();
+    // 自定义控件必须实现自己的initialize方法，并且将控件的DOM元素返回
+    // 在本方法中创建个div元素作为控件的容器，并将其添加到地图容器中
+    ZoomControl.prototype.initialize = function (map) {
+        // 创建一个DOM元素
+        var div = document.createElement("div");
+        // 添加文字说明
+        div.appendChild(document.createTextNode("放大2级"));
+        // 设置样式
+        div.style.cursor = "pointer";
+        div.style.border = "1px solid gray";
+        div.style.backgroundColor = "white";
+        // 绑定事件，点击一次放大两级
+        div.onclick = function (e) {
+            map.zoomTo(map.getZoom() +2);
+        };
+        // 添加DOM元素到地图中
+        map.getContainer().appendChild(div);
+        // 将DOM元素返回
+        return div;
+    };
+    // 创建控件
+    var myZoomCtrl = new ZoomControl();    // 添加到地图当中
+    map.addControl(myZoomCtrl);
+
+</script>
+
+

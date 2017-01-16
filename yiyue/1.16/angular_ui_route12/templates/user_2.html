@@ -1,0 +1,149 @@
+
+<div class="right" ng-controller="myUser" id="right">
+    <div>
+        <p class="title_rule" id="title_rule"> {{datas}}集</p>
+        <div class="put" id="put"  ng-mousedown="smallPut()">
+            <div class="follow">
+               <input type="button" value="添加" class="addUser">
+            </div>
+            <div class="mask">
+                <div class="warnBorder" name="warnBorder">
+                    <!--<h5>添加{{asideName}}集</h5>-->
+                    <h5>添加{{datas}}集</h5>
+                    <div>
+                        <div class="firstWrite">
+                            <label>名称：<input type="text" class="firstName" ng-model="firstName"></label>
+                            <label>是否可用：
+                                <input type="radio" name="ifUse" value="是">是
+                                <input type="radio" name="ifUse" value="否">否
+                            </label>
+                            <label class="ruleType">业务类型：
+                                <select>
+                                    <option value="反欺诈规则">反欺诈规则</option>
+                                    <option value="信用反欺诈规则">信用反欺诈规则</option>
+                                </select>
+                            </label>
+                            <label class="jieduan">业务阶段：
+                                <select>
+                                    <option value="贷前">贷前</option>
+                                    <option value="贷中">贷中</option>
+                                    <option value="贷后">贷后</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="firstPlay">
+                            <label><input type="button" value="保存" class="btn btn-success" ng-click="firstSave()"></label>
+                            <label><input type="button" value="取消" class="btn btn-warning" ng-click="firstCancel()"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="firstDisplay" ng-mousedown="firstDisplay()" name="firstDisplay">
+                <ul class="firstList">
+                    <li class="fraud">反欺诈规则：
+                        <span>房贷</span>
+                        <span ng-repeat="fraudItem in fraudGroups" ng-class="{'是':'bg1','否':'bg2'}[fraudItem.ifUser]"                          ng-click="mmm($index)" >{{fraudItem.name}}</span>
+                    </li>
+                    <li class="credit">信用反欺诈规则：
+                        <span ng-repeat="creditItem in creditGroups" ng-class="{'是':'bg1','否':'bg2'}[creditItem.ifUser]" ng-click="mmmx($index)">{{creditItem.name}}</span>
+                    </li>
+                </ul>
+                <div class="curButton">
+                    <input type="button" value="修改" class="use" >
+                </div>
+                <div class="changeInfo" name="changeInfo">
+                    <!--<h5>添加{{asideName}}集</h5>-->
+                    <h5>添加{{datas}}集</h5>
+
+                    <div>
+                        <div class="firstWrite">
+                            <label>名称：<input type="text" class="firstName" ng-model="changeName"></label>
+                            <label>是否可用：
+                                <input type="radio" name="ifUse" value="是">是
+                                <input type="radio" name="ifUse" value="否">否
+                            </label>
+                            <label class="changeType">业务类型：
+                                <select>
+                                    <option value="反欺诈规则">反欺诈规则</option>
+                                    <option value="信用反欺诈规则">信用反欺诈规则</option>
+                                </select>
+                            </label>
+                            <label>业务阶段：
+                                <select>
+                                    <option value="贷前">贷前</option>
+                                    <option value="贷中">贷中</option>
+                                    <option value="贷后">贷后</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div class="firstPlay">
+                            <label><input type="button" value="修改" class="btn btn-success" ng-click="firstChange()" ></label>
+                            <label><input type="button" value="取消" class="btn btn-warning" ng-click="firstCancel()"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="title_rule" style="margin-top: 8px;" >{{datas}}</p>
+        <div class="largePut" name="largePut" ng-mousedown="largePut()">
+            <div class="blankBorder">
+                <ul class="largeDisplay" ng-mousedown="largeDisplay()" ng-mouseover="itemDisplay()" ng-mouseleave="itemN()">
+                    <li >
+                        <span ng-repeat="list in largeRuleLists">{{list.name}}</span>
+                    </li>
+                </ul>
+            </div>
+               <div class="itemDisplay">
+                   <ul>
+                       <li >序号：{{followItemArys.id}}</li>
+                       <li>是否选中：选中</li>
+                       <li>名称：{{followItemArys.name}}</li>
+                       <li>描述：{{followItemArys.describe}}</li>
+                   </ul>
+               </div>
+            <div class="largeDelete">
+                <input type="button" value="删除">
+            </div>
+            <div class="follow">
+                <label><input type="button" value="从已有的{{datas}}中选取"></label>
+            </div>
+            <div class="largeMask">
+                <div class="ruleEvent" name="ruleEvent">
+                <!--<h5>添加{{asideName}}</h5>-->
+                <h5>添加{{datas}}</h5>
+                <div class="ruleList">
+                    <!--<h5>{{asideName}}列表</h5>-->
+                    <h5>{{datas}}列表</h5>
+                    <div class="gridStyle" id="gridStyle" >
+                        <table class="table table-bordered"  >
+                            <thead>
+                                <tr>
+                                    <th>序号</th>
+                                    <th><input type="checkbox" ng-click="selectAll()"></th>
+                                    <th>名称</th>
+                                    <th>说明</th>
+                                 </tr>
+                            </thead>
+                            <tbody>
+                                 <tr ng-repeat="rule in rules track by $index">
+                                    <td> {{rule.id}}</td>
+                                    <td><input type="checkbox"  ng-checked=""></td>
+                                    <td> {{rule.name}}</td>
+                                    <td> {{rule.describe}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="firstPlay">
+                        <label><input type="button" value="保存" class="btn btn-success" ng-click="largeRuleAdd()"></label>
+                        <label><input type="button" value="取消" class="btn btn-warning" ng-click="ruleClose()"></label>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>

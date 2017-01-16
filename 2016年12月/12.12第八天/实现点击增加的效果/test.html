@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            display: none;
+            width: 1200px;
+            height: 100%;
+            border: 1px solid blue;
+        }
+        tr th,tr td{
+            border: 1px solid blue;
+            padding: 10px 20px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="list">
+    <input type="button"  style="width: 70px;height: 45px;background: pink;border: none" value="增加" id="add" onclick="tan()">
+    <div class="hide">
+        <table >
+            <thead>
+            <tr class="tit">
+                <th><input type="checkbox" name="checkAll" id="checkAll" value="1" onclick="checkt()"></th>
+                <th>电核项</th>
+                <th>描述</th>
+                <th>电核内容</th>
+                <th>类型</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td><input type="checkbox" class="uid"name="uid"></td>
+                <td>银行及其他机构信用记录</td>
+                <td>失信老赖名单,限制高消费名单出现的次数</td>
+                <td><input type="text" class="uid"name="uid"></td>
+                <td>
+                    <label><input name="sex" type="radio" value=""/>文本</label>
+                    <label><input name="sex" type="radio" value=""/>单选 </label>
+                    <label><input name="sex" type="radio" value=""/>多选</label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"  class="uid"name="uid"> </td>
+                <td>银行及其他机构信用记录</td>
+                <td>失信老赖名单,限制高消费名单出现的次数</td>
+                <td><input type="text" class="uid"name="uid"></td>
+                <td>
+                    <label><input name="sex" type="radio" value=""/>文本</label>
+                    <label><input name="sex" type="radio" value=""/>单选 </label>
+                    <label><input name="sex" type="radio" value=""/>多选</label>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" class="uid" name="uid" ></td>
+                <td>银行及其他机构信用记录</td>
+                <td>失信老赖名单,限制高消费名单出现的次数</td>
+                <td><input type="text"></td>
+                <td>
+                    <label><input name="sex" type="radio" value=""/>文本</label>
+                    <label><input name="sex" type="radio" value=""/>单选 </label>
+                    <label><input name="sex" type="radio" value=""/>多选</label>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+        <input type="button" value="取消" class="cancel" onclick="cancel()">
+        <input type="button" value="保存" class="save">
+    </div>
+
+
+</div>
+<script src="../电核系统/jquery.min.js"></script>
+<script>
+
+    var uids=document.getElementsByName("uid");
+    var checkAll=document.getElementById("checkAll");
+            //弹出增加选框
+            function tan(){
+                document.getElementById("add").onclick=function () {
+                    $(".hide").css('display','block')
+                };
+            }
+            //全选框或者不全选框
+           function checkt(){
+                var ary=[];
+                checkAll.value==1 ? checkAll.value=2 : checkAll.value=1;
+                for(var i=0;i<uids.length;i++){
+                    if(checkAll.value==1){
+                        uids[i].checked=false;//全不选
+                    }else{
+                        uids[i].checked=true;//全选
+
+                    }
+
+                }
+            }
+            //点击取消隐藏弹出框
+           function cancel() {
+                $(".hide").css('display','none')
+            }
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="ng-grid.css">
+    <style>
+    .gridStyle{
+    margin: 20px auto;
+    border:1px solid green;
+    width:1000px;
+    height:300px;
+    }
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <table>
+        <tr></tr>
+    </table>
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+</div>
+<script src="jquery.min.js"></script>
+<script src="angular.js"></script>
+<script src="ng-grid.js"></script>
+<script>
+    var myApp = angular.module('myApp', ['ngGrid']);
+    myApp.controller('myCtrl',function ($scope) {
+        $scope.users=[{id:1,type:'基本信息',description:"性别"},{id:2,type:'基本信息',description:"年龄"},{id:3,type:'基本信息',description:"籍贯"},{id:4,type:'基本信息',description:"教育情况"}];
+        $scope.pagingOptions={
+            pageSizes:[1,10,20],
+            pageSize:1,
+            currentPage:1
+        };
+        $scope.gridOptions={
+            data:'users',
+            enableRowSelection:false,
+            multiSelect:false,
+            enableCellSelection:true,
+            enableCellEdit:true,
+//            enablePinning:true,
+            columnDefs:[
+                {
+                    field:'id',
+                    displayName:'序号'
+                },
+                {
+                    field:'type',
+                    displayName:'电核项'
+                },
+                {
+                    field:'description',
+                    displayName:'描述'
+                },
+                {
+                    field:'content',
+                    displayName:'电核内容',
+                    cellTemplate:
+                    '<td>'+
+                    '<label>'+
+                        '<input  type="checkbox" value=""/>18-25 '+
+                    '</label>'+
+                      '<label>'+'<input type="checkbox" value=""/>26-30' +
+                    '</label>'+
+                     '<label>'+'<input  type="checkbox" value=""/>31-35' +
+                    '</label>'+
+                        '</td>'
+                }
+            ],
+            enablePaging:true,
+            showFooter:true,
+            pagingOptions:$scope.pagingOptions
+        }
+
+    })
+
+</script>
+</body>
+</html>

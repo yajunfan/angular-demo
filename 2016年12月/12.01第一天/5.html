@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=gb2312">
+    <meta name="keywords" content="站长,网页特效,js特效,js脚本,脚本,广告代码,zzjs,zzjs.net,sky,www.zzjs.net,站长特效 网" />
+    <meta name="description" content="www.zzjs.net,站长特效网，站长必备js特效及广告代码。大量高质量js特效，提供高质量广告代码下载,尽在站长特效网" />
+    <title>网页特效 下拉框控制表格指定行的显隐 站长特效网</title>
+    <script language="javascript">
+        function setChange(classValue)
+        {//欢迎来到站长特效网，我 们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+            var table = document.getElementById('contentTable');
+            for(var rowIndex=0;rowIndex<table.rows.length;rowIndex++)
+            {
+                table.rows[rowIndex].style.display = "none";
+            }
+            table.rows[classValue-1].style.display = "";
+        } //欢迎来到站长特效网，我们的网址是www.zzjs.net，很好记，zz站长，js就是js特效，本站收集大量高质量js代码，还有许多广告代码下载。
+    </script>
+</head>
+<body>
+<a href="http://www.zzjs.net/">站长特效网</a>,站长必备的高质量网页特效和广告代码。zzjs.net，站长js特效。<hr>
+<!--欢迎来到站长特效网，我们网站收集大量高质量js特效，提供许多广告代码下载，网址：www.zzjs.net，zzjs@msn.com,用.net打造靓站-->
+<script type="text/javascript" src="http://www.zzjs.net/ad/tc.js"></script>
+<form name="f">
+    请您选择：<select name="spfl" id="spfl" onchange="setChange(this.value)">
+    <option selected="selected">请选择</option>
+    <option value="1">站长特效一号</option>
+    <option value="2">站长特效二号</option>
+    <option value="3">站长特效三号</option>
+    <option value="4">站长特效四号</option>
+</select>
+    <table cellpadding="2" cellspacing="1" bgcolor="#91B6CF" width="400" id="contentTable">
+        <tr bgcolor="#ffffff">
+            <td>站长特效一号内容</td>
+            <td>站长特效一号内容</td>
+        </tr>
+        <tr bgcolor="#ffffff" id="tb1" style="display:none">
+            <td>站长特效二号内容</td>
+            <td>站长特效二号内容</td>
+        </tr>
+        <tr bgcolor="#ffffff" id="tb2" style="display:none">
+            <td>站长特效三号内容</td>
+            <td>站长特效三号内容</td>
+        </tr>
+        <tr bgcolor="#ffffff">
+            <td>站长特效四号内容</td>
+            <td>站长特效四号内容</td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

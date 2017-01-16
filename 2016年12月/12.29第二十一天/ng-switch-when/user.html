@@ -1,0 +1,54 @@
+<div class="textCss">读脉</div>
+<div class="allPage">
+
+<div class="rule_title_left " id="banner">
+    <span>业务类型</span>
+    <select id="myLink" name="myLink">
+        <option value="房贷">房贷</option>
+        <option value="信用贷">信用贷</option>
+        <option value="车辆抵押">车辆抵押</option>
+    </select>
+    <div class="rule_title_right">
+        <span>用户数: <i>123</i></span>
+        <span>数据流量: <i>456</i></span>
+        <span>资产数量: <i>29</i></span>
+        <span class="glyphicon glyphicon-log-out"><a href="javascript:;">用户退出</a></span>
+    </div>
+    <div class="exit"></div>
+</div>
+    <div class="row ">
+        <div class="col-md-1">
+            <div ui-view="two_1">
+
+            </div>
+        </div>
+        <div class="col-md-10" >
+            <div ui-view="two_2">
+            </div>
+        </div>
+    </div>
+
+    <div id="list">
+        <ul class="nav navbar-nav list_group">
+            <li ><a href="#/first">系统设置 <span>系统设置</span></a></li>
+            <li ><a href="#/two">用户管理<span>用户管理</span></a></li>
+            <li ><a href="#/third">数据源管理<span>数据源管理</span></a></li>
+            <li ng-class="{active:flag=='four'}" ng-click="flag='four'"><a href="#/four">规则池管理<span>规则池管理</span></a></li>
+            <li ng-class="{active:flag=='system'}" ng-click="flag='goldModel'"><a href="#/goldModel">评分模型<span>评分模型</span></a></li>
+        </ul>
+    </div>
+
+    <div class="car">
+        <div class="car_body">
+            <div class="car_top1"></div>
+            <div class="car_top2"></div>
+            <div class="car_win1"></div>
+            <div class="car_win2"></div>
+            <div class="car_bottom1"></div>
+            <div class="car_bottom2"></div>
+        </div>
+        <div class="frontWheel"></div>
+        <div class="endWheel"></div>
+        <div class="exhaust"></div>
+    </div>
+</div>

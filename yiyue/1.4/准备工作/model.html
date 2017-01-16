@@ -1,0 +1,32 @@
+<!doctype html>
+<html id="ng-app">
+<head>
+    <meta charset="utf-8">
+    <link href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <link rel="stylesheet" href="css/ng-animation.css">
+    <link rel="stylesheet/less" href="css/modelCss.less" type="text/less">
+    <link rel="stylesheet" href="http://dreamsky.github.io/main/blog/common/init.css">
+</head>
+<body>
+<div class="contain">
+    <div ui-view></div>
+</div>
+
+
+<script charset="utf-8" type="text/javascript">
+    var less = {
+        env: "development",
+        poll: 500
+    }
+</script>
+<script charset="utf-8" type="text/javascript" src="script/lib/less.min.js"></script>
+<script charset="utf-8" type="text/javascript">
+    less.watch();
+</script>
+
+</body>
+</html>
+
+<script type='text/javascript' src='script/lib/require.js' defer async="true" data-main='script/modelJs/main.js'></script>

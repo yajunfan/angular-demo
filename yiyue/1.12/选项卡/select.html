@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+
+        .tab{
+            position: relative;
+
+            height:100%;
+            background: lightgreen;
+        }
+        .tab ul li{
+            float: left;
+            border: 1px solid;
+            list-style: none;
+            text-align: center;
+            width: 200px;
+        }
+        .tab .listContent{
+            position: absolute;
+            width: 100%;
+            height:100px;
+            top:20px;
+            left:40px;
+            opacity:0;
+        }
+        .tab .listContent div{
+            width: 806px;
+            height: 100%;
+            border: 1px solid red;
+        }
+        .current{
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+<div class="tab" ng-controller="myCtrl">
+<ul class="order-nav">
+    <li data-ng-click="cutoverTab('allState')" data-ng-class="{true:'current'}[selectedIndex == 'allState']" >全部状态</li>
+    <li data-ng-click="cutoverTab('leave')" data-ng-class="{true:'current'}[selectedIndex == 'leave']">离线超时报警</li>
+    <li data-ng-click="cutoverTab('stay')" data-ng-class="{true:'current'}[selectedIndex == 'stay']">停车超时报警</li>
+    <li data-ng-click="cutoverTab('gongneng')" data-ng-class="{true:'current'}[selectedIndex == 'gongneng']">设备功能报警</li>
+</ul>
+    <div class="listContent">
+        <div data-ng-show="selectedIndex == 'allState'" data-ng-include="'allState.html'" ></div>
+        <div data-ng-show="selectedIndex == 'leave'" data-ng-include="'2.html'" ></div>
+        <div data-ng-show="selectedIndex == 'stay'" data-ng-include="'3.html'" ></div>
+        <div data-ng-show="selectedIndex == 'gongneng'" data-ng-include="'4.html'"></div>
+    </div>
+</div>
+<script src="../jquery.min.js"></script>
+<script src="../angular.js"></script>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('myCtrl',function ($scope) {
+        $('.listContent').css('opacity',1);
+        $scope.selectedIndex = "allState";
+        $scope.cutoverTab=function (type) {
+            $scope.selectedIndex=type;
+
+
+        }
+    })
+
+</script>
+</body>
+</html>

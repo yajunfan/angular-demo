@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./reportCss/bootstrap.css">
+    <link rel="stylesheet" href="./reportCss/reCss.css">
+</head>
+<body>
+    <div class="container" ng-controller="myCtrl">
+        <div class="logo">
+            <img src="./images/logo_x.png" alt="logo">
+            <p>风控模型报告</p>
+        </div>
+        <div class="soloInfo">
+            <p>个人详细信息</p>
+            <div class="basicInfo">
+                <h4>个人基本信息</h4>
+                <ul>
+                    <li><span>姓名：</span><span>1</span></li>
+                    <li><span>性别：</span><span>2</span></li>
+                    <li><span>年龄：</span><span>3</span></li>
+                    <li><span>婚姻：</span><span>4</span></li>
+                    <li><span>学历：</span><span>4</span></li>
+                    <li><span>身份证号码：</span><span>1111111111111111111</span></li>
+                    <li><span>手机号码：</span><span>11111111111</span></li>
+                    <li><span>银行卡：</span><span>1111111111111111111</span></li>
+                    <li><span>常住地址：</span><span>北京市什么区什么小区什么楼什么号</span></li>
+                </ul>
+                <img src="./images/boy.jpg" alt="张三">
+                <!--<i></i>-->
+            </div>
+
+
+            <div class="professional">
+                <h4>职业信息</h4>
+                <ul>
+                    <li><span>职业情况 ：</span><span>自由</span></li>
+                    <li><span>固定收入 ：	</span><span>8000</span></li>
+                </ul>
+                <!--<i></i>-->
+            </div>
+
+           <div class="emergency">
+               <h4>紧急联系人</h4>
+               <ul>
+                   <li><span>紧急联系人1：</span><span>哈哈哈</span><span>12345678</span><span>亲戚</span></li>
+                   <li><span>紧急联系人2：	</span><span>呵呵呵</span><span>12345678</span><span>亲戚</span></li>
+               </ul>
+               <!--<i></i>-->
+           </div>
+            <!--<i></i>-->
+           <div class="projectDetails">
+               <h4>项目详情</h4>
+               <ul>
+                   <li><span>业务类型 ：</span><span>滴滴车分期</span></li>
+                   <li><span>借款金额 ：	</span><span>200000</span></li>
+                   <li><span>借款期限 ：	</span><span>12</span></li>
+                   <li><span>家庭住址 ：	</span><span>北京城东</span></li>
+                   <li><span>单位性质 ：	</span><span>民营</span></li>
+                   <li><span>单位名称 ：	</span><span>xxx</span></li>
+                   <li><span>单位地址 ：	</span><span>北京东城</span></li>
+               </ul>
+               <!--<i></i>-->
+           </div>
+            <!--<i></i>-->
+          <div class="dataDetailed">
+              <h4>详细数据</h4>
+              <ul>
+                  <li><span>涉诉：</span><a href="data.html">查看数据</a></li>
+                  <li><span>通信运营商数据:</span><a href="data.html">查看数据</a></li>
+                  <li><span>银行卡验证:</span><a href="#">一致</a></li>
+                  <li><span>车辆基本信息：</span><a href="#">查看数据</a></li>
+                  <li><span>同住人信息：</span><a href="#">查看数据</a></li>
+                  <li><span>公积金：</span><a href="#">查看数据</a></li>
+                  <li><span>犯罪：</span><a href="#">查看数据</a></li>
+              </ul>
+              <!--<i></i>-->
+          </div>
+
+        </div>
+        <div class="fraudScore">
+            <h4>反欺诈评分 <span>总分：12</span></h4>
+            <ul class="first">
+                <li><span>籍贯</span><span>得分：1</span></li>
+                <li><span>年龄</span><span>得分：2</span></li>
+                <li><span>拖欠起始日期</span><span>得分：4</span></li>
+                <li><span>最大逾期金额的逾期天数风险发生时间（最近）</span><span>得分：3</span></li>
+                <li><span>失信老赖名单,限制高消费名单出现的次数</span><span>得分：5</span></li>
+                <li><span>逾期记录数</span><span>得分：4</span></li>
+                <li class="more" ng-click="show()"><span>查看更多▼</span></li>
+            </ul>
+            <ul class="two">
+                <li><span>被机构查询次数（多机构贷款）</span><span>得分：7</span></li>
+                <li><span>收到严重逾期时间（被定为黑名单）</span><span>得分：6</span></li>
+                <li><span>90天以上逾期次数</span><span>得分：11</span></li>
+                <li><span> 案件类别</span><span>得分：11</span></li>
+                <li><span>执行公开信息,限制出入境名单，罪犯及嫌疑人名单出现次数</span><span>得分：11</span></li>
+                <li><span>近6月博彩消费笔数</span><span>得分：11</span></li>
+                <li><span>0 点到6 点的通话次数</span><span>得分：11</span></li>
+                <li><span>联系人按次数分布前5位与紧急联系人相同个数</span><span>得分：11</span></li>
+                <li><span>用户标注标签，被标记为骚扰电话等</span><span>得分：11</span></li>
+                <li><span>借款人提交时间段</span><span>得分：11</span></li>
+                <li><span>借款人提交次数</span><span>得分：11</span></li>
+                <li><span>借款人从填写到提交完成的时间</span><span>得分：11</span></li>
+                <li class="takeUp" ng-click="blank()"><span>收起▲</span></li>
+            </ul>
+        </div>
+        <div class="phoneCheck">
+            <h4>电核</h4>
+            <ul>
+                <li><span>籍贯</span><span>得分：1</span></li>
+                <li><span>年龄</span><span>得分：2</span></li>
+                <li><span>拖欠起始日期</span><span>得分：4</span></li>
+                <li><span>最大逾期金额的逾期天数风险发生时间（最近）</span><span>得分：3</span></li>
+                <li><span>失信老赖名单,限制高消费名单出现的次数</span><span>得分：5</span></li>
+                <li><span>逾期记录数</span><span>得分：4</span></li>
+                <li><span>被机构查询次数（多机构贷款）</span><span>得分：7</span></li>
+                <li><span>收到严重逾期时间（被定为黑名单）</span><span>得分：6</span></li>
+                <li><span>90天以上逾期次数</span><span>得分：11</span></li>
+                <li><span> 案件类别</span><span>得分：11</span></li>
+                <li><span>执行公开信息,限制出入境名单，罪犯及嫌疑人名单出现次数</span><span>得分：11</span></li>
+                <li><span>近6月博彩消费笔数</span><span>得分：11</span></li>
+                <li><span>0 点到6 点的通话次数</span><span>得分：11</span></li>
+                <li><span>联系人按次数分布前5位与紧急联系人相同个数</span><span>得分：11</span></li>
+                <li><span>用户标注标签，被标记为骚扰电话等</span><span>得分：11</span></li>
+                <li><span>借款人提交时间段</span><span>得分：11</span></li>
+                <li><span>借款人提交次数</span><span>得分：11</span></li>
+                <li><span>借款人从填写到提交完成的时间</span><span>得分：11</span></li>
+            </ul>
+        </div>
+        <div></div>
+    </div>
+    <script src="./script/lib/angular.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./script/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./script/reportJs/reportJs.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

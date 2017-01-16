@@ -1,0 +1,73 @@
+<!docType html>
+<html>
+	<head>
+		
+		<meta http-equiv="Content-Type" Content="text/html; Charset=utf-8"/>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<table style="width:300px;border-collapse:collapse;" border="1">
+				<tr>
+					<td><input type="checkbox" ng-change="selectAll()" ng-model="allChecked"/></td>
+					<td>姓名</td>
+					<td>年龄</td>
+				</tr>
+				<tr ng-repeat="item in datas">
+					<td><input type="checkbox" ng-change="select()" ng-model="item.checked"/></td>
+					<td>{{item.name}}</td>
+					<td>{{item.age}}</td>
+				</tr>
+			</table>
+			<button ng-click="getCheckeds()">获取选择的条目</button>
+			<button ng-click="clearCheckeds()">清空</button>
+		</div>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript">
+
+			angular.module("myApp",[]).
+			controller("myCtrl",function  ($scope) {
+				$scope.datas=[
+					{
+						name:"张三",
+						age:18,
+						checked:true
+					},
+					{
+						name:"李四",
+						age:18
+					},
+					{
+						name:"王五",
+						age:18
+					}
+				];
+				$scope.getCheckeds=function(){
+					console.log($scope.allChecked);
+					console.log($scope.datas);
+				}
+				$scope.clearCheckeds=function(){
+					$scope.allChecked=false;
+					for(var i in $scope.datas){
+						$scope.datas[i].checked=false;
+					}	
+				}
+				$scope.selectAll=function(){
+					angular.forEach($scope.datas,function(item,index,arr){
+						item.checked=$scope.allChecked;
+					});
+				}
+				$scope.select=function(){
+					$scope.allChecked=true;
+					angular.forEach($scope.datas,function(item,index,arr){
+						$scope.allChecked = $scope.allChecked ? item.checked : $scope.allChecked;
+					});
+					
+				}
+				console.log($scope);
+			});
+			
+		</script>
+	</body>	
+	
+	
+</html>

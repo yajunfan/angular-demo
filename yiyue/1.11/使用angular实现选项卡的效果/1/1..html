@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="docsTabsExample">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../../bootstrap.css">
+    <style>
+        .active {
+            background: red;
+        }
+    </style>
+</head>
+<body ng-controller="appCon">
+<my-tabs><!--最外层指令-->
+    <my-pane tittle="ONE"><!--内层指令-->
+        <h4>111</h4>
+        <p>1</p>
+    </my-pane>
+    <my-pane tittle="TWO"><!--内层指令-->
+        <h4>222</h4>
+        <p>2</p>
+    </my-pane>
+    <my-pane tittle="THERE"><!--内层指令-->
+        <h4>333</h4>
+        <p>3</p>
+    </my-pane>
+    <my-pane tittle="FIVE"><!--内层指令-->
+        <h4>444</h4>
+        <p>4</p>
+    </my-pane>
+</my-tabs>
+<script src="../jquery.min.js"></script>
+<script src="../../../angular.js"></script>
+<script src="../../../bootstrap.js"></script>
+<script src="../../../angular-route.js"></script>
+<script>
+    var app = angular.module("docsTabsExample", ['template'])
+        .controller("appCon", ["$scope", function ($scope) {
+
+        }])
+        .directive("myTabs", function () {
+            return {
+                restrict: "EA",
+                transclude: true,
+                scope: {},
+                templateUrl: "myTabs.html",
+                controller: ["$scope", function ($scope) {//使用controller让最内层指令来继承外层指令，这样内层就可以通过scope的传导，来与外层指令进行数据之间的传递
+                    var panes = $scope.scopes = [];//
+
+                    $scope.select = function (pane) {//实现tabs功能
+                        angular.forEach(panes, function (scope) { //遍历所有内存指令scope，统一隐藏内容。
+                            scope.selected = false;
+                        });
+                        pane.selected = true;//通过ng-repeat只
+                    };
+
+                    this.addScope = function (scope) {//由内层指令来继承，把内层指令的scope，传到进外层指令进行控制
+                        if (panes.length === 0) {
+                            $scope.select(scope);
+                        }
+                        console.log(panes)
+                        panes.push(scope);//把内层指令数组，传入外层指令scope数组。
+                    }
+                }]
+            }
+        })
+        .directive("myPane", function () {
+            return {
+                restrict: 'EA',
+                scope: {
+                    tittle: '@'
+                },
+                transclude: true,
+                require: '^myTabs',//继承外层指令
+                templateUrl: "myPane.html",
+                link: function (scope, elemenet, attrs, myTabsController) {
+                    myTabsController.addScope(scope);//把内层指令的scope存入到外层指令中，让外层遍历。
+                }
+            }
+        });
+    angular.module("template", []).run(["$templateCache", function ($templateCache) {
+            $templateCache.put("myTabs.html", "<div class='table'>" +
+                "<ul class='nav nav-tabs'>" +
+                "<li ng-repeat='pane in scopes' ng-class='{active:pane.selected}'>" +
+                "<a href='#' ng-click='select(pane)'>{{pane.tittle}}<a/>" +
+                "</li>" +
+                "</ul>" +
+                "<div ng-transclude class='tab-content'></div>" +
+                "</div>")
+        }])
+        .run(["$templateCache", function ($templateCache) {
+            $templateCache.put("myPane.html", "<div class='table-pane' ng-show='selected' ng-transclude>" +
+                "</div>")
+        }])
+
+</script>
+</body>
+</html>

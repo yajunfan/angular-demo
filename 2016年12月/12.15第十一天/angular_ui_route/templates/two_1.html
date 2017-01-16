@@ -1,0 +1,25 @@
+<style>
+    .list-group-item{
+       padding: 108px 0;
+        text-align: center;
+        width: 90px;
+        font-weight: 900;
+        font-size: 24px;
+        margin-left: 20px;
+        border: 1px solid black;
+        margin-top: 1px;
+
+
+    }
+    .list-group-item:nth-child(2){
+        background: #bfe3f9;
+    }
+    .list-group a:hover{
+        background: #bfe3f9;
+    }
+</style>
+<div class="list-group">
+    <a class="list-group-item" ui-sref="two({perGroup:1})" style="height:30%">数据集</a>
+    <a class="list-group-item" ui-sref="two({perGroup:2})" style="height:30%">规则集</a>
+    <a class="list-group-item" ui-sref="two({perGroup:3})" style="height:30%">模型集</a>
+</div>

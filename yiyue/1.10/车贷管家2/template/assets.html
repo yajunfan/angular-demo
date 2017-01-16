@@ -1,0 +1,119 @@
+
+<div class=" assets-content" ng-controller="assetsCtrl">
+    <div class="assets-header">
+        <h4>资产状态</h4>
+        <div><i class="icon refresh"></i><span>刷新</span></div>
+        <div><i class="icon export"></i><span>导出</span></div>
+    </div>
+
+    <div class="list-tit tab">
+        <ul class="nav-tabs clearfix order-nav">
+            <li data-ng-click="cutoverTab('call')" data-ng-class="{true:'current'}[selectedIndex == 'call']" >全部状态</li>
+            <li data-ng-click="cutoverTab('coffline')" data-ng-class="{true:'current'}[selectedIndex == 'coffline']">离线超时报警</li>
+            <li data-ng-click="cutoverTab('cdevice')" data-ng-class="{true:'current'}[selectedIndex == 'cdevice']">停车超时报警</li>
+            <li data-ng-click="cutoverTab('csensitive')" data-ng-class="{true:'current'}[selectedIndex == 'csensitive']">进敏感区域报警</li>
+            <li data-ng-click="cutoverTab('ccommon')" data-ng-class="{true:'current'}[selectedIndex == 'ccommon']" >出行政区域报警</li>
+            <li data-ng-click="cutoverTab('s1')" data-ng-class="{true:'current'}[selectedIndex == 's1']">敏感区域停车超时报警</li>
+            <li data-ng-click="cutoverTab('s2')" data-ng-class="{true:'current'}[selectedIndex == 's2']">未进常用区域超时报警</li>
+            <li data-ng-click="cutoverTab('s4')" data-ng-class="{true:'current'}[selectedIndex == 's4']">出围栏报警</li>
+            <li data-ng-click="cutoverTab('s5')" data-ng-class="{true:'current'}[selectedIndex == 's5']">有线无线分离报警</li>
+            <li data-ng-click="cutoverTab('s6')" data-ng-class="{true:'current'}[selectedIndex == 's6']">异动报警</li>
+            <li data-ng-click="cutoverTab('s7')" data-ng-class="{true:'current'}[selectedIndex == 's7']">设备功能报警</li>
+        </ul>
+        <div class="query-bar">
+            <ul class="query-list clearfix">
+                <li>
+                    <label>设备名称</label>
+                    <input id="deviceName" type="text" value="">
+                </li>
+                <li>
+                    <label>客户姓名</label>
+                    <input id="customerName" type="text" value="">
+                </li>
+                <li>
+                    <label>IMEI/ID</label>
+                    <input id="gpsCord" type="text" value="">
+                </li>
+                <li>
+                    <label>物联网卡号</label>
+                    <input id="simCord" type="text" value="">
+                </li>
+                <li>
+                    <div class="fl">
+                        <label class="fl">
+                            所属组织
+                        </label>
+                    </div>
+                    <div class="fl">
+                        <div class="clientChoose w200 z300 ">
+                            <input id="clientSearchInput" autocomplete="off" type="text" value="" style="width:180px">
+                            <ul class="coption" style="width:190px"></ul>
+                            <input id="selectClient" name="clientid" type="hidden" value="">
+                            <input id="selectClientName" name="clientName" type="hidden" value="">
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <label>在线</label>
+                    <select name="全部" class="choose">全部
+                        <option value="">全部</option>
+                        <option value="">在线</option>
+                        <option value="">离线</option>
+                    </select>
+
+                </li>
+                <li>
+                    <label>跟踪数据</label>
+                    <select name="全部" class="choose">
+                        <option value="">全部</option>
+                        <option value="">正常</option>
+                        <option value="">可疑</option>
+                        <option value="">高危</option>
+                    </select>
+
+                </li>
+                <li>
+                    <label>设备类型</label>
+                    <select name="全部" class="choose">
+                        <option value="">全部</option>
+                        <option value="">有线</option>
+                        <option value="">无线</option>
+                        <option value="">OBD</option>
+                    </select>
+
+                </li>
+                <li>
+                    <label>回款状态</label>
+                    <select name="全部" class="choose">
+                        <option value="">全部</option>
+                        <option value="">正常</option>
+                        <option value="">逾期</option>
+                        <option value="">不良</option>
+                        <option value="">拖车</option>
+                        <option value="">结清</option>
+                    </select>
+
+                </li>
+
+                <input type="button" class="btn btn-primary" value="查询" style="margin-left: 50px;  margin-top: 20px;">
+            </ul>
+        </div>
+
+
+        <div class="listContent">
+            <div data-ng-show="selectedIndex == 'call'" data-ng-include="'allState.html'" ></div>
+            <div data-ng-show="selectedIndex == 'coffline'" data-ng-include="'2.html'" ></div>
+            <div data-ng-show="selectedIndex == 'cdevice'" data-ng-include="'3.html'" ></div>
+            <div data-ng-show="selectedIndex == 'csensitive'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 'ccommon'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's1'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's2'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's4'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's5'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's6'" data-ng-include="'4.html'"></div>
+            <div data-ng-show="selectedIndex == 's7'" data-ng-include="'4.html'"></div>
+        </div>
+    </div>
+
+
+</div>

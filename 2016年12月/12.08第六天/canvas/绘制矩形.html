@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #4b4dff;">
+</canvas>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+//对角线
+            ctx.moveTo(0,200);
+            ctx.lineTo(200,0);
+    //        ctx.stroke();
+
+//圆形
+    ctx.beginPath();
+    ctx.arc(95,50,40,0,2*Math.PI);
+    ctx.stroke();
+
+</script>
+</body>
+</html>

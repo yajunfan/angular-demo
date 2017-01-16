@@ -1,0 +1,74 @@
+<div id="page" class="rule" name="page" ng-controller="myRule">
+    <h3><a class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-home" ng-click="shouRule()"></span>
+    </a>规则<span class="glyphicon glyphicon-th-list" style="position: absolute;top:10px;"></span></h3>
+    <ul>
+        <li style="background: lightgreen">规则管理</li>
+        <li>规则集管理</li>
+        <li>商户业务类型设置</li>
+        <li>业务类型</li>
+    </ul>
+    <div class="container page1" style="display:block">
+        <label>规则状态：
+            <input type="radio" name="status">全部
+            <input type="radio" name="status">启用
+            <input type="radio" name="status">停用
+        </label>
+        <label>名称：<input type="text" ></label>
+        <label ><span></span><input type="button" value="查询"></label>
+        <label ><span></span><input type="button" value="清空"></label>
+        <h5>规则</h5>
+        <label><span>+++</span><input class="ruleAdd" name="ruleAdd" type="button" value="增加" ng-click="editRule()"></label>
+        <div class="addRuleInfo">
+            <span class="left">放大镜</span>
+            <span class="right">关闭</span>
+            <div class="write">
+                <div class="write_1">
+                     <label class="refer"> <input type="button" value="提交" class="btn btn-primary" ng-click="refer()"></label>
+                     <label class="getBack"> <input type="button" value="返回" class="btn btn-info"></label>
+                </div>
+                <div class="write_2">
+                    <label class="name">规则名称：<input type="text" placeholder="请填写规则名称" ng-model="name"></label>
+                    <label class="proportion">权重：<input type="text" placeholder="请填写权重" ng-model="proportion"></label>
+                    <label class="describe">描述：<input type="text" placeholder="请填写规则描述" ng-model="describe"></label>
+                </div>
+                <div class="write_3">
+                    <span>*规则状态：</span>
+                    <label><input type="radio" name="status1">启用</label>
+                    <label><input type="radio" name="status1">停用</label>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered">
+            <tr>
+                <th>序号</th>
+                <th>名称</th>
+                <th>权重</th>
+                <th>描述</th>
+                <th>规则状态</th>
+                <th>逻辑设置</th>
+                <th>编辑</th>
+                <th>删除</th>
+            </tr>
+            <tr ng-repeat="rule in rules">
+                <td>{{rule.id}}</td>
+                <td>{{rule.name}}</td>
+                <td>{{rule.proportion}}</td>
+                <td>{{rule.describe}}</td>
+                <td>{{rule.ruleStatus}}</td>
+                <td>{{rule.logic}}</td>
+                <td>{{rule.edit}}</td>
+                <td>{{rule.delete}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="container page2" ng-controller="gridCtrl" style="display: none" >
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+    <div class="container page3" ng-controller="gridCtrl" style="display: none">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+    <div class="container page4" ng-controller="gridCtrl" style="display: none">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    var gri=ctx.createLinearGradient(0,0,200,200);
+    gri.addColorStop(0,"blue");
+    gri.addColorStop(1,"red");
+    ctx.fillStyle=gri;
+    ctx.fillRect(20,20,200,50)
+    ctx.transform(2,0.5,-0.5,1,100,100);//水平的缩放比例、水平的倾斜比例、垂直倾斜比例、垂直缩放比例、水平移动比例、垂直移动比例
+    ctx.fillStyle="gri";
+    ctx.fillRect(20,20,200,30);
+
+</script>
+</body>
+</html>

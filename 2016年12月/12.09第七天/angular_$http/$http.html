@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <div id="container">
+    <input type="button" ng-click="login()" value="提交">
+  <table>
+      <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>性别</th>
+          <th>年龄</th>
+      </tr>
+
+        <tr ng-repeat="use in user track by $index">
+            <td >{{use.id}}</td>
+            <td ><a href="https://www.baidu.com">{{use.name}}</a></td>
+            <td>{{use.sex}}</td>
+            <td>{{use.age}}</td>
+        </tr>
+
+  </table>
+    </div>
+</div>
+<script src="angular.js"></script>
+<script>
+    var myApp = angular.module('myApp', []),oContainer=document.getElementById("container")
+    myApp.controller("myCtrl",["$scope","$http",function ($scope,$http) {
+        $scope.login=function () {
+            var oInput=document.createElement("input");
+            console.log(oInput)
+            oInput.value="取消";
+            oInput.type="button";
+            oContainer.appendChild(oInput);
+            oInput.onclick=function () {
+               window.close()
+            }
+
+            $http.get('package.json').success(function (data) {
+                $scope.user=angular.fromJson(data);
+                console.log($scope.user)
+            }).error(function (data) {
+                alert("出错喽")
+            })
+        }
+
+    }])
+
+</script>
+</body>
+</html>

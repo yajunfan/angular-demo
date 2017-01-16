@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>JS多级竖向折叠nav导航菜单</title>
+  <style type="text/css">
+	.wrap-menu { overflow:auto; width:300px; background:#F6F6F6; font:12px/1.5 Tahoma,Arial,sans-serif;margin-top: 150px;}
+	.wrap-menu ul{ list-style:none; margin:0; padding:0;}
+	.wrap-menu ul li{ text-indent:3em; white-space:nowrap; }
+	.wrap-menu ul li h2{ cursor:pointer; height:100%; width:100%; margin:0 0 1px 0; font:12px/31px '宋体'; color:#fff; background: #3b88ff;padding: 10px 0 10px 0;}
+	.wrap-menu ul li a{ display:block; outline:none; height:30px; line-height:30px; margin:1px 0; color:#1A385C; text-decoration:none;
+    background:-webkit-linear-gradient(top, #a3cba7,#f6f6f8)}
+
+	.wrap-menu ul li img{ margin-right:10px; margin-left:-17px; margin-top:9px; width:7px; height:7px; background:url(images/arrow.gif) no-repeat; border:none;}
+	.wrap-menu ul li img.unfold{ background-position:0 -9px;}
+	.wrap-menu ul li a:hover{ background-color:#ccc; background-image:none;}
+  </style>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/lanrenzhijia.js"></script>
+ </head>
+ <body>
+	<div class="wrap-menu"></div>
+	<script>
+		var testMenu=[
+    {
+        "name": "业务类型",
+        "submenu": [
+            {
+                "name": "全部",
+                "url": ""
+            },
+            {
+                "name": "车辆抵押",
+                "url": ""
+            },
+            {
+                "name": "信用贷",
+                "url": ""
+            },
+            {
+                "name": "房贷",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "name": "审核状态",
+        "submenu": [
+            {
+                "name": "全部",
+                "url": ""
+            },
+            {
+                "name": "未审核",
+
+            },
+            {
+                "name": "通过",
+                "url": ""
+            },
+            {
+                "name": "拒绝"
+            },
+            {
+                "name": "错误",
+                "url": ""
+            }
+        ]
+    },
+    {
+        "name": "一级菜单",
+        "submenu": [
+            {
+                "name": "二级菜单",
+                "url": ""
+            },
+            {
+                "name": "二级菜单",
+                "url": ""
+            },
+            {
+                "name": "二级菜单",
+                "url": ""
+            }
+        ]
+    }
+];
+	$(function(){
+		new AccordionMenu({menuArrs:testMenu});
+	});
+	</script>
+ </body>
+</html>

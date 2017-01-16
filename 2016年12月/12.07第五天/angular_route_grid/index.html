@@ -1,0 +1,46 @@
+<!doctype html>
+<html id="ng-app">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <link rel="stylesheet/less" href="./css/index.less" type="text/less">
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <nav class="navbar navbar-default"  id="most">
+        <div class="container">
+            <div class="list">
+                <ul class="nav navbar-nav list_group">
+                    <li ng-class="{active:flag=='first'}" ng-click="flag='first'"><a href="#/first" style="color:#ff0f1d; font-weight: 600">贷前审核</a></li>
+                    <li ng-class="{active:flag=='second'}" ng-click="flag='second'"><a href="#/second">贷后跟踪</a></li>
+                    <li ng-class="{active:flag=='third'}" ng-click="flag='third'"><a href="#/third">参数设置</a></li>
+                    <li ng-class="{active:flag=='four'}" ng-click="flag='four'">
+                        <a href="#/four">数据管理</a></li>
+                    <li ng-class="{active:flag=='system'}" ng-click="flag='system'"><a href="#/system">系统管理</a></li>
+                    <li ng-class="{active:flag=='trend'}" ng-click="flag='trend'"><a href="#/trend">趋势分析</a></li>
+                    <li ng-class="{active:flag=='product'}" ng-click="flag='product'"><a href="#/product">行业资讯</a></li>
+                    <li ng-class="{active:flag=='information'}" ng-click="flag='information'"><a href="#/information">产品说明</a>
+                    </li>
+                    <li ng-class="{active:flag=='overdue'}" ng-click="flag='overdue'"><a href="#/overdue">逾期催款</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div>
+        <div ng-view></div>
+    </div>
+</div>
+<script charset="utf-8" type="text/javascript">
+    var less={
+        env:"development",
+        poll:1000
+    }
+</script>
+<script charset="utf-8" type="text/javascript" src="script/lib/less.min.js"></script>
+<script charset="utf-8" type="text/javascript" >
+    less.watch();
+</script>
+<script type='text/javascript' src='script/lib/require.js' data-main='script/main.js'></script>
+</body>
+</html>

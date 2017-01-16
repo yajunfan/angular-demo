@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    var gri=ctx.createLinearGradient(0,0,200,200);
+    gri.addColorStop(0,"blue");
+    gri.addColorStop(1,"red");
+    ctx.strokeStyle=gri;
+    ctx.strokeRect(5,5,50,50);  //这是我的原始矩形的大小
+    ctx.scale(2,2);  //这是我将要缩放的比例
+    //ctx.scale(scalewidth,scaleheight); scalewidth：缩放当前绘图的宽度 (1=100%, 0.5=50%, 2=200%, 依次类推)
+    //scaleheight  缩放当前绘图的高度 (1=100%, 0.5=50%, 2=200%, 依次类推)
+      ctx.strokeRect(5,5,100,100); // 这是我再次绘制，以这个或者前面的图像大小为基础，画出上面的比例*这个基础大小的图
+    ctx.scale(2,2);
+    ctx.strokeRect(5,5,50,50);
+    //绘制一个矩形，如果之后绘制的时候，起点位置和长宽是一样的，那么每次都以上次的长宽作为基础进行缩放
+    //如果每次绘制的时候，坐标以及长宽改变，那么就以这次的长宽作为基础来放大缩小
+    //总结来说，每次都会找与自己长宽相同的上一次 作为自己的基准，要不就以当前的作为基准
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+        #div1 {width:500px; height:200px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
+
+</head>
+<body>
+<p>请把 W3School 的图片拖放到矩形中：</p>
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<!--ondrop 表示元素在拖动的时候发生的事情-->
+<!--ondragover指的是在何处放置被拖动的元素 默认的是不可以将其他元素放在别的元素中， 所以这里要设置阻止默认事件-->
+<br />
+<img id="drag1" src="1.jpg" draggable="true" ondragstart="把一个元素drag到另一个指定位置(event)" />
+<!--draggable 为TRUE设置成可拖拽，ondragstart指当元素被拖动时，会发生什么事；-->
+<script type="text/javascript">
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("Text",ev.target.id);//这里的Text就是指当前的这个id=“drag1”这个元素
+        //dataTransfer.setData() 方法设置被拖数据的数据类型和值
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("Text");
+        //通过 dataTransfer.getData("Text") 方法获得被拖的数据。该方法将返回在 setData() 方法中设置为相同类型的任何数据。
+        ev.target.appendChild(document.getElementById(data));
+    }
+</script>
+</body>
+</html>

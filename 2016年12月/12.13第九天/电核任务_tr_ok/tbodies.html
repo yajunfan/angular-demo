@@ -1,0 +1,7 @@
+<tr ng-repeat="use in user track by $index">
+    <td>{{use.id}}</td>
+    <td>{{use.type}}</td>
+    <td>{{use.company}}</td>
+    <td ng-bind-html="use|typeFormatter:$index">
+    </td>
+</tr>

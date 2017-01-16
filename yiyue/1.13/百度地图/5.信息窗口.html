@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <!--<script type="text/javascript"-->
+            <!--src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>-->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+</head>
+<body>
+<!--信息窗口在地图上方的浮动显示HTML内容。信息窗口可直接在地图上的任意位置打开，也可以在标注对象上打开（此时信息窗口的坐标与标注的坐标一致）。 可以使用BMap.InfoWindow来创建一个信息窗实例，注意同一时刻地图上只能有一个信息窗口处于打开状态。-->
+<div style="width:520px;height:340px;border:1px solid gray" id="container"></div>
+</body>
+</html>
+<script>
+    var map = new BMap.Map("container");          // 创建地图实例
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+    map.centerAndZoom(point, 15);          // 初始化地图，设置中心点坐标和地图级别  地图必须经过初始化才可以执行其他操作。
+
+    var opts = {
+        width: 250,
+        // 信息窗口宽度
+        height: 100,
+        // 信息窗口高度
+        title: "Hello beijing"
+        // 信息窗口标题
+    };
+
+    var infoWindow = new BMap.InfoWindow("这里是北京天安门广场", opts);   // 创建信息窗口对象
+    map.openInfoWindow(infoWindow, map.getCenter());      // 打开信息窗口
+</script>
+
+

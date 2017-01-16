@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    ctx.shadowBlur=40;  //设置阴影的模糊半径
+    ctx.shadowOffsetX=20;  //设置阴影的X轴的偏移量，正数是向右偏移  默认是0.在图像的正下方
+    ctx.shadowOffsetY=20;  //设置阴影的Y轴的偏移量，正数是向下偏移
+    ctx.shadowColor="black";  //设置阴影的颜色
+    ctx.fillStyle="blue";
+    ctx.fillRect(50,50,200,200)
+
+</script>
+</body>
+</html>

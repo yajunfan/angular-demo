@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+        .gridStyle {
+            border: 1px solid rgb(212,212,212);
+            width: 400px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/ng-grid.js"></script>
+<script>
+    var myApp = angular.module('myApp', ['ngGrid']);
+    myApp.controller('myCtrl',function ($scope) {
+        $scope.myData = [{name: "Moroni", age: 50},
+            {firstName: "Tiancum", age: 43},
+            {firstName: "Jacob", age: 27},
+            {firstName: "Nephi", age: 29},
+            {firstName: "Enos", age: 34}];
+        $scope.gridOptions = {
+            data: self.myData,
+            columnDefs: [{ field: 'firstName',
+                displayName: 'First Name',
+                width: 90,
+                cellTemplate: '<div class="ui-grid-cell-contents" >{{grid.getCellValue(row, col)}}</div>'
+            },
+                { field: 'lastName',
+                    displayName: 'Last Name',
+                    width: 80
+                },
+                { field: 'age',
+                    cellClass: 'ageCell', headerClass: 'ageHeader' } ]
+        };
+    })
+
+</script>
+</body>
+</html>

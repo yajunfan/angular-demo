@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="container" style="width:1000px; height:1000px"></div>
+
+
+<script src="http://webapi.amap.com/maps?v=1.3&key=7d878a02dbafec89953d30e9619f095b&callback=init"></script>
+<!--key值是我自己在高德上申请的，使用callback这个来将js文件异步加载-->
+<script>
+    function init(){
+        var map = new AMap.Map('container', {
+//            container是盛放这个地图的容器
+            center: [116.39,39.9],
+//            center是显示的进入地图之后的中心点，可以通过经纬度进行自定义，现在这个坐标是北京的坐标
+            zoom: 6
+        });
+        map.plugin(["AMap.ToolBar"], function() {
+            map.addControl(new AMap.ToolBar()); //在map中添加这个控件的一个实例；
+        });
+//        添加控件：map.plugin([“控件名”]，function(){实例化，添加控件，其它逻辑});
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+1.点击跳转的时候的active:flag=="index",这里是双等号
+2.ng-view 写在最外层div中
+3.ng-grid不对，引用了网页地址之后，就正确了，没在报错；
+4.文件名中有加号，始终显示找不到当前文件夹下的index.html文件，改成下划线就好了
+5.引入angular一直出错，可能是因为require引入angular时候，和我们平时直接使用angular不一样，他这个controller不能像从前一样用
+6.

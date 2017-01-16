@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/icon.css">
+    <link rel="stylesheet" href="css/easyui.css">
+</head>
+<body>
+<div class="easyui-dialog" style="width:400px;height:200px"
+     data-options="title:'My Dialog',collapsible:true,iconCls:'icon-ok',onOpen:function(){}">
+   我是第一个练习的拖拽框</div>
+
+<div id="dd1" class="easyui-droppable" data-options="accept:'#d1,#d3'" style="width:100px;height:100px; background: red">这是一个放置区</div>
+<div id="d2" style="width:100px;height:100px"; class="easyui-draggable"><div id="title" style="background:#ccc; disabled:true">d2</div></div>
+
+<div id="rr" class="easyui-resizable" data-options="maxWidth:1000,minWidth:400" style="width: 100px;height: 200px;border: 1px solid black; "></div>
+
+<div id="pp" class="easyui-pagination"  style="width:700px;background:#e6cbe3;border: 1px solid blue">
+</div>
+
+
+
+<!--<div id="dd" class="easyui-draggable" data-options="handle:'#title'" style="width:100px;height:100px;">    <div id="title" style="background:#ccc;">拖动</div></div>div-->
+
+<!--<div id="p" class="easyui-panel" title="My Panel"-->
+     <!--style="width:500px;height:150px;padding:10px;background:#79faa8;"-->
+     <!--data-options="iconCls:'icon-save',closable:true,-->
+                <!--collapsible:true,minimizable:true,maximizable:true">-->
+    <!--<p>panel content.</p>-->
+    <!--<p>panel content.</p>-->
+<!--</div>-->
+<!--<div style="padding:5px;background:#fafafa;width:500px;border:1px solid #ccc">-->
+    <!--<a href="#" class="easyui-linkbutton" iconCls="icon-cancel">Cancel</a>-->
+    <!--<a href="#" class="easyui-linkbutton" iconCls="icon-reload">Refresh</a>-->
+    <!--<a href="#" class="easyui-linkbutton" iconCls="icon-search">Query</a>-->
+    <!--<a href="#" class="easyui-linkbutton">text button</a>-->
+    <!--<a href="#" class="easyui-linkbutton" iconCls="icon-print">Print</a>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+  $('#pp').pagination({
+    total:2000,
+    pageSize:10,
+      showRefresh:true,
+      showPageList:true
+});
+  var li=document.createElement("li");
+  for(var i=0;i<50;i++){
+      var li=document.createElement("li");
+      $('#pp').appendChild(li)
+  }
+
+
+</script>
+
+</body>
+</html>

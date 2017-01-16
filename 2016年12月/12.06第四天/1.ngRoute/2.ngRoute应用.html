@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myMod">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/ng-grid.css"/>
+    <link rel="stylesheet" href="css/app.css">
+    <style>
+        .list_group{
+            background: lightblue;
+        }
+
+        .list_group li {
+            margin: 0 10px;
+        }
+
+        .list_group li a {
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="list">
+                <ul class="nav navbar-nav list_group">
+                    <li ng-class="{active:flag=='index'}" ng-click="flag='index'"><a href="#/">贷前审核</a></li>
+                    <li ng-class="{active:flag=='flower'}" ng-click="flag='flower'"><a href="#/flower">贷后跟踪</a></li>
+                    <li ng-class="{active:flag=='setting'}" ng-click="flag='setting'"><a href="#/setting">参数设置</a></li>
+                    <li ng-class="{active:flag=='management'}" ng-click="flag='management'"><a
+                            href="#/management">数据管理</a></li>
+                    <li ng-class="{active:flag=='system'}" ng-click="flag='system'"><a href="#/system">系统管理</a></li>
+                    <li ng-class="{active:flag=='trend'}" ng-click="flag='trend'"><a href="#/trend">趋势分析</a></li>
+                    <li ng-class="{active:flag=='product'}" ng-click="flag='product'"><a href="#/product">行业资讯</a></li>
+                    <li ng-class="{active:flag=='information'}" ng-click="flag='information'"><a href="#/information">产品说明</a>
+                    </li>
+                    <li ng-class="{active:flag=='overdue'}" ng-click="flag='overdue'"><a href="#/overdue">逾期催款</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container ">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/angular-route.js"></script>
+<script src="http://cdn.bootcss.com/ng-grid/2.0.11/ng-grid.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controller.js"></script>
+
+</body>
+</html>

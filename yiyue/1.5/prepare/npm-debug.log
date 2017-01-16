@@ -1,0 +1,142 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'less' ]
+2 info using npm@3.10.8
+3 info using node@v6.9.1
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readGlobalPackageData
+7 silly fetchPackageMetaData less
+8 silly fetchNamedPackageData less
+9 silly mapToRegistry name less
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry data Result {
+12 silly mapToRegistry   raw: 'less',
+12 silly mapToRegistry   scope: null,
+12 silly mapToRegistry   escapedName: 'less',
+12 silly mapToRegistry   name: 'less',
+12 silly mapToRegistry   rawSpec: '',
+12 silly mapToRegistry   spec: 'latest',
+12 silly mapToRegistry   type: 'tag' }
+13 silly mapToRegistry uri https://registry.npmjs.org/less
+14 verbose request uri https://registry.npmjs.org/less
+15 verbose request no auth needed
+16 info attempt registry request try #1 at 15:29:16
+17 verbose request id e429636773ee7c4d
+18 verbose etag W/"586da835-1f052"
+19 verbose lastModified Thu, 05 Jan 2017 01:58:13 GMT
+20 http request GET https://registry.npmjs.org/less
+21 http 304 https://registry.npmjs.org/less
+22 verbose headers { date: 'Fri, 06 Jan 2017 07:29:00 GMT',
+22 verbose headers   via: '1.1 varnish',
+22 verbose headers   'cache-control': 'max-age=300',
+22 verbose headers   etag: 'W/"586da835-1f052"',
+22 verbose headers   age: '32',
+22 verbose headers   connection: 'keep-alive',
+22 verbose headers   'x-served-by': 'cache-nrt6122-NRT',
+22 verbose headers   'x-cache': 'HIT',
+22 verbose headers   'x-cache-hits': '1',
+22 verbose headers   'x-timer': 'S1483687740.613248,VS0,VE0',
+22 verbose headers   vary: 'Accept-Encoding' }
+23 silly get cb [ 304,
+23 silly get   { date: 'Fri, 06 Jan 2017 07:29:00 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     etag: 'W/"586da835-1f052"',
+23 silly get     age: '32',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-nrt6122-NRT',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '1',
+23 silly get     'x-timer': 'S1483687740.613248,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose etag https://registry.npmjs.org/less from cache
+25 verbose get saving less to C:\Users\Administrator\AppData\Roaming\npm-cache\registry.npmjs.org\less\.cache.json
+26 verbose correctMkdir C:\Users\Administrator\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+27 silly install normalizeTree
+28 silly loadCurrentTree Finishing
+29 silly loadIdealTree Starting
+30 silly install loadIdealTree
+31 silly cloneCurrentTree Starting
+32 silly install cloneCurrentTreeToIdealTree
+33 silly cloneCurrentTree Finishing
+34 silly loadShrinkwrap Starting
+35 silly install loadShrinkwrap
+36 silly loadShrinkwrap Finishing
+37 silly loadAllDepsIntoIdealTree Starting
+38 silly install loadAllDepsIntoIdealTree
+39 silly resolveWithNewModule less@2.7.2 checking installable status
+40 silly cache add args [ 'less', null ]
+41 verbose cache add spec less
+42 silly cache add parsed spec Result {
+42 silly cache add   raw: 'less',
+42 silly cache add   scope: null,
+42 silly cache add   escapedName: 'less',
+42 silly cache add   name: 'less',
+42 silly cache add   rawSpec: '',
+42 silly cache add   spec: 'latest',
+42 silly cache add   type: 'tag' }
+43 silly addNamed less@latest
+44 verbose addNamed "latest" is being treated as a dist-tag for less
+45 info addNameTag [ 'less', 'latest' ]
+46 silly mapToRegistry name less
+47 silly mapToRegistry using default registry
+48 silly mapToRegistry registry https://registry.npmjs.org/
+49 silly mapToRegistry data Result {
+49 silly mapToRegistry   raw: 'less',
+49 silly mapToRegistry   scope: null,
+49 silly mapToRegistry   escapedName: 'less',
+49 silly mapToRegistry   name: 'less',
+49 silly mapToRegistry   rawSpec: '',
+49 silly mapToRegistry   spec: 'latest',
+49 silly mapToRegistry   type: 'tag' }
+50 silly mapToRegistry uri https://registry.npmjs.org/less
+51 verbose addNameTag registry:https://registry.npmjs.org/less not in flight; fetching
+52 verbose get https://registry.npmjs.org/less not expired, no request
+53 silly addNameTag next cb for less with tag latest
+54 silly addNamed less@2.7.2
+55 verbose addNamed "2.7.2" is a plain semver version for less
+56 silly mapToRegistry name less
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry data Result {
+59 silly mapToRegistry   raw: 'less',
+59 silly mapToRegistry   scope: null,
+59 silly mapToRegistry   escapedName: 'less',
+59 silly mapToRegistry   name: 'less',
+59 silly mapToRegistry   rawSpec: '',
+59 silly mapToRegistry   spec: 'latest',
+59 silly mapToRegistry   type: 'tag' }
+60 silly mapToRegistry uri https://registry.npmjs.org/less
+61 verbose addRemoteTarball https://registry.npmjs.org/less/-/less-2.7.2.tgz not in flight; adding
+62 verbose addRemoteTarball [ 'https://registry.npmjs.org/less/-/less-2.7.2.tgz',
+62 verbose addRemoteTarball   '368d6cc73e1fb03981183280918743c5dcf9b3df' ]
+63 info retry fetch attempt 1 at 15:29:20
+64 info attempt registry request try #1 at 15:29:20
+65 http fetch GET https://registry.npmjs.org/less/-/less-2.7.2.tgz
+66 http fetch 200 https://registry.npmjs.org/less/-/less-2.7.2.tgz
+67 verbose stack Error: kill ENOSYS
+67 verbose stack     at exports._errnoException (util.js:1026:11)
+67 verbose stack     at process.kill (internal/process.js:172:13)
+67 verbose stack     at process.listener (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+67 verbose stack     at emitNone (events.js:91:20)
+67 verbose stack     at process.emit (events.js:185:7)
+67 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+67 verbose stack     at processEmit (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+67 verbose stack     at Signal.wrap.onsignal (internal/process.js:199:44)
+68 verbose cwd C:\Users\Administrator\Desktop\樊雅君\study\2017年1月\1.5\准备工作_1
+69 error Windows_NT 10.0.10240
+70 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "less"
+71 error node v6.9.1
+72 error npm  v3.10.8
+73 error code ENOSYS
+74 error errno ENOSYS
+75 error syscall kill
+76 error kill ENOSYS
+77 error If you need help, you may report this error at:
+77 error     <https://github.com/npm/npm/issues>
+78 verbose exit [ 1, true ]

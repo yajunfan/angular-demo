@@ -1,0 +1,108 @@
+/**
+ * Created by Administrator on 2017/1/4 0004.
+ */
+define(['jquery',"angular","angular-route","angular-ui-router","ng-grid",'angular-animate'],function ($,angular) {
+    var ruleCtrlMod = angular.module('ruleCtrlMod', ['ngGrid']);
+    ruleCtrlMod.controller('loginCtrl',['$scope','$http','$state',function ($scope,$http,$state) {
+        $scope.login=function () {
+            $scope.userInfo={
+                name:$scope.user_name,
+                password:$scope.user_password
+            };
+            $scope.user=[{"email":"fyj@163.com","password":"qwer00"}];
+            angular.forEach($scope.user,function (item) {
+                if(item.email==$scope.userInfo.name&&item.password==$scope.userInfo.password){
+                    $('.wrapContainer').fadeOut('slow',function () {
+                        $state.go('homePage',{creditGroup:1});
+                    });
+
+                    return;
+                }
+                alert('请先注册')
+            })
+        }
+    }]);
+    ruleCtrlMod.controller('myMenu',['$scope','$http','$state',function ($scope,$http,$state) {
+    $scope.shrinkage=function () {
+        if(parseFloat($('.ribbon').css('left')) == 0){
+            $('.ribbon').css({"left":"-1050px","transition":"0.5s all"});
+            $('.arrow span').removeClass('off').addClass('on');
+        }else{
+            $('.ribbon').css({"left":"0px","transition":"0.5s all"});
+            $('.arrow span').removeClass('on').addClass('off');
+        }
+    };
+
+}]);
+    ruleCtrlMod.controller('myContent',['$scope','$http','$state','$stateParams','$rootScope',function ($scope,$http,$state,$stateParams, $rootScope) {
+        function getNowFormatDate() {
+            var date = new Date();
+            var seperator1 = ".";
+            var month = date.getMonth() + 1;
+            var strDate = date.getDate();
+            var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate;
+            return currentdate;
+        }
+
+        var aa=$stateParams.creditGroup;
+        $http.get('./data/daiqian'+aa+".json").success(function (data) {
+            $scope.infos=angular.fromJson(data);
+            console.log($scope.infos);//这是一个数组，数组中有三组数据，这是表示三个路由
+            $scope.arySuccess=[];
+            $scope.aryReject=[];
+            $scope.aryNo=[];
+            $scope.didi=[];
+            $scope.didiObj={};
+            $scope.pinganObj={};
+            $scope.yixinObj={};
+            $scope.pingan=[];
+            $scope.yixin=[];
+            angular.forEach($scope.infos,function (items) {
+                //在这里面的每一个items才代表的是当前路由下的这组数据，我在这里新建对象，赋值date是当前item的date，然后判断如果是符合当前的要求的对象赋值在这个大对象的data里面；
+                $scope.date=items.date;
+                $scope.ruleList=items;
+                angular.forEach($scope.ruleList.data,function (item) {
+                    if(parseFloat(item.check) == 1){
+                        $scope.arySuccess.push(item);
+                    }else if(item.check == 2){
+                        $scope.aryReject.push(item);
+                    }else{
+                        $scope.aryNo.push(item);
+                    }
+                    //相当于是给重新赋值，新创建一个对象，这个对象中将原来的日期保留，但是data要进行改变不用人家的原始数据，日期仍然留着，但是将所有符合要求item的数组赋值给我自己新建的大对象中的data
+                    // $scope.$watch('model1',function(o,n){
+                    //     if(items.date == getNowFormatDate()){
+                    //         if(o == "滴滴"){
+                    //             if(item.company == "滴滴"){
+                    //                 $scope.didi.push(item);
+                    //                 $scope.ruleList=$scope.didi;
+                    //             }
+                    //         }
+                    //     }
+                    //
+                    // })
+
+                });
+
+            });
+            $scope.s=$scope.arySuccess.length;
+            $scope.r=$scope.aryReject.length;
+            $scope.n=$scope.aryNo.length;
+        });
+        $scope.names=['滴滴','宜信','平安'];
+        $scope.clear=function () {
+           $scope.input1="";
+       };
+        if(aa == "1"){
+            $rootScope.datas="贷前审核";
+        }else if(aa == "2"){
+            $rootScope.datas="贷中跟踪";
+        }else if(aa == "3"){
+            $rootScope.datas="逾期催款";
+        }
+        //0:未审核；1：通过 2：拒绝
+
+
+
+    }]);
+});

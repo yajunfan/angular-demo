@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <script type="text/javascript" src="test.js"></script>
+    <title>Test</title>
+    <style>
+        div.main{
+            width: 800px;
+            background: #CCC;
+            margin: 10px auto 0;
+            position: relative;
+        }
+
+        div.content{
+            width: 800px;
+            height: 400px;
+            background: yellow;
+            margin: 10px auto 0;
+        }
+
+        div.navigation{
+            width: 800px;
+            height: 40px;
+            background: red;
+            margin: 4px auto 0;
+            top: 400px;
+            left: 0px;
+            position: absolute;
+        }
+
+        div.tab{
+            width: 195px;
+            height: 40px;
+            background: blue;
+            float: left;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <div class="content">1</div>
+    <div id="nav" class="navigation">
+        <div class="tab">tab1</div>
+        <div class="tab">tab2</div>
+        <div class="tab">tab3</div>
+        <div class="tab">tab4</div>
+    </div>
+    <div class="content">2</div>
+    <div class="content">3</div>
+    <div class="content">4</div>
+    <div class="content">5</div>
+    <div class="content">6</div>
+    <div class="content">7</div>
+</div>
+<script>
+    var naviga_offsetTop = 0;
+    //IE7不识别getElementsByClassName，为了兼容自定义一个
+    function my_getElementsByClassName(class_name) {
+        var el = [];
+//获取所有元素
+        _el = document.getElementsByTagName('*');
+//通过className刷选
+        for (var i=0; i<_el.length; i++ ) {
+            if (_el[i].className == class_name ) {
+                el[el.length] = _el[i];
+            }
+        }
+        return el;
+    }
+
+    //导航条，悬停在顶部
+    function naviga_stay_top(){
+        var a_navigation_bar = [];
+        if(document.getElementsByClassName){//Chrome, FF
+            a_navigation_bar = document.getElementsByClassName("navigation");
+        } else {//IE
+            a_navigation_bar = my_getElementsByClassName("navigation");
+        }
+        var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+
+        if( scrollTop > naviga_offsetTop){
+            a_navigation_bar[0].style.top = scrollTop + "px";
+        } else {
+            a_navigation_bar[0].style.top = naviga_offsetTop + "px";
+        }
+    }
+
+
+    //给导航条上四个tab，加上点击事件。
+    window.onload=function(){
+        var a_tabs = [];
+        if( document.getElementsByClassName ){//Chrome, FF
+            a_tabs = document.getElementsByClassName("tab");
+        }else{ //IE
+            a_tabs = my_getElementsByClassName("tab");
+        }
+
+        var a_contents = [];
+        if( document.getElementsByClassName ){//Chrome, FF
+            a_contents = document.getElementsByClassName("content");
+        }else{//IE
+            a_contents = my_getElementsByClassName("content");
+        }
+
+        a_tabs[0].onclick=function(){
+            window.scrollTo(0, a_contents[2].offsetTop);
+        }
+        a_tabs[1].onclick=function(){
+            window.scrollTo(0, a_contents[3].offsetTop);
+        }
+        a_tabs[2].onclick=function(){
+            window.scrollTo(0, a_contents[4].offsetTop);
+        }
+        a_tabs[3].onclick=function(){
+            window.scrollTo(0, a_contents[5].offsetTop);
+        }
+
+//获取页面上，导航条到顶部的位置
+        var a_navigation_bar = [];
+        if(document.getElementsByClassName){//Chrome, FF
+            a_navigation_bar = document.getElementsByClassName("navigation");
+        } else {//IE
+            a_navigation_bar = my_getElementsByClassName("navigation");
+        }
+        naviga_offsetTop = a_navigation_bar[0].offsetTop;
+
+//给滚动条以及鼠标加上滚动事件
+// window.onscroll= naviga_stay_top;
+// document.onmousewheel= naviga_stay_top;
+        if( window.attachEvent) //IE
+        {
+            window.attachEvent("onmousewheel", naviga_stay_top);
+            window.attachEvent("onscroll", naviga_stay_top);
+
+            document.attachEvent("onmousewheel", naviga_stay_top);
+            document.attachEvent("onscroll", naviga_stay_top);
+        } else {//Chrome ,FF
+            window.addEventListener("mousewheel", naviga_stay_top,false);
+            window.addEventListener("scroll", naviga_stay_top,false);
+
+            document.addEventListener("mousewheel", naviga_stay_top,false);
+            document.addEventListener("scroll", naviga_stay_top,false);
+        }
+
+    }
+</script>
+</body>
+</html> 

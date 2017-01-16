@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>-->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+</head>
+<body>
+<!--浏览器中的JavaScript是“事件驱动的”，这表示JavaScript通过生成事件来响应交互，并期望程序能够“监听”感兴趣的活动。例如，在浏览器中，用户的鼠标和键盘交互可以创建在DOM内传播的事件。对某些事件感兴趣的程序会为这些事件注册JavaScript事件监听器，并在接收这些事件时执行代码。   百度地图API
+拥有一个自己的事件模型，程序员可监听地图API对象的自定义事件，使用方法和DOM事件类似。但请注意，地图API事件是独立的，与标准DOM事件不同。-->
+
+<!--事件的监听   百度地图API中的每一个对象都含有addEventListener方法，您可以通过该方法来监听对象事件。例如，BMap.Map包含click、dblclick等事件。在特定环境下这些事件会被触发，同时监听函数会得到相应的事件参数e，比如当用户点击地图时，e参数会包含鼠标所对应的地理位置point。  有关地图API对象的事件，请参考完整的API参考文档。  -->
+<div style="width:520px;height:340px;border:1px solid gray" id="container"></div>
+    <p id="info"></p>
+</body>
+</html>
+<script>
+    var map = new BMap.Map("container");          // 创建地图实例
+//    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+//    map.centerAndZoom(point, 15);          // 初始化地图，设置中心点坐标和地图级别  地图必须经过初始化才可以执行其他操作。
+
+    //addEventListener方法有两个参数：监听的事件名称和事件触发时调用的函数。下面示例中，每当用户点击地图时，会弹出一个警告框。
+
+
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
+    map.addEventListener("click", function(){
+        alert("您点击了地图。");
+    });
+
+    //通过监听事件还可以捕获事件触发后的状态。下面示例显示用户拖动地图后地图中心的经纬度信息。
+    map.addEventListener("dragend", function(){
+        var center = map.getCenter();
+        document.getElementById("info").innerHTML = center.lng + ", " + center.lat;
+        alert("地图中心点变更为：" + center.lng + ", " + center.lat)
+        //将获取到的经纬度的数值赋值给id为info的html中
+    });
+</script>
+
+

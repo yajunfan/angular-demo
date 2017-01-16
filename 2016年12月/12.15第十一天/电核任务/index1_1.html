@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+        .gridStyle {
+            width: 1200px;
+            margin: 20px auto;
+            height: 200px;
+        }
+
+        .btn-primary {
+            margin-left: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+    <input type="button" value="提交" ng-click="getInfo()" class="btn btn-primary">
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/ng-grid.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var myMod = angular.module('myMod', ['ngGrid']);
+    myMod.controller('myCtrl', ["$scope", "$http", "$sce", function ($scope, $http, $sce) {
+        $scope.types = ["text", "radio", "checkbox"];
+        $http.get('./data/nggrid.json').success(function (data) {
+            $scope.user = angular.fromJson(data);
+        });
+        $scope.gridOptions = {
+            data: 'user',
+            enableRowSelection: false,
+            multiSelect: false,
+            enableCellSelection: true,
+            enableCellEdit: true,
+            enablePinning: false,
+            showSelectionCheckbox: true,
+            columnDefs: [
+                {
+                    field: 'id',//数据中的属性名
+                    displayName: '序号' // 表头显示的内容
+                },
+                {
+                    field: 'type',
+                    displayName: '类型'
+                },
+                {
+                    field: 'time',
+                    displayName: '时间'
+                },
+                {
+                    field: 'name',
+                    displayName: '姓名'
+                },
+                {
+                    field: 'autoCheck',
+                    displayName: '自动审核'
+                },
+                {
+                    field: 'rule',
+                    displayName: '规则'
+                },
+                {
+                    field: 'dh_content',
+                    displayName: '样式',
+                    cellTemplate: '<div ng-bind-html="row|typeFormatter:row.rowIndex"></div>'// 使用过滤器进行过滤
+                }
+            ]
+        };
+
+        $scope.pagingOptions = {
+            pageSizes: [2, 4, 6],//定义下拉框的内容 ，显示当前页的数据个数
+            pageSize: 2,//定义默认下拉框的内容
+            currentPage: 1//定义默认当前页
+        };
+        $scope.getInfo = function () {
+            var aryInput=[] ;   var checkStr="",aryCheckbox=[];
+            var oInput=$("input");
+            //获取所有的input标签
+            for(var s=0;s<oInput.length;s++){
+                if(oInput[s].defaultValue){
+                    aryInput.push(oInput[s])
+                }
+            }
+            for (var i = 0; i < aryInput.length; i++) {
+                if (aryInput[i].type == "text") {//先判断类型是不是text，然后判断当前的id，根据id 将所有的该id下的value值保存在一个数组中
+                    $scope.user[aryInput[i].getAttribute("aa")-1].dh_getcontent=aryInput[i].value;
+                } else if(aryInput[i].type == "radio"){
+                    var aryRadio=[];
+                    if(aryInput[i].getAttribute("aa") == $scope.user[aryInput[i].getAttribute("aa")-1].id){
+                        aryRadio.push(aryInput[i]);
+                    }
+                    if(aryRadio[0].checked){
+                        $scope.user[aryInput[i].getAttribute("aa")-1].dh_getcontent=aryRadio[0].value;
+                    }
+
+                }else if(aryInput[i].type == "checkbox"){
+                    var curCheck=$scope.user[aryInput[i].getAttribute("aa")-1].dh_content;
+                    var curCheckCon=curCheck.split('_');
+                    if(aryInput[i].getAttribute("aa") == $scope.user[aryInput[i].getAttribute("aa")-1].id){
+                        if(aryInput[i].checked){
+                            $scope.user[aryInput[i].getAttribute("aa")-1].str+='-'+aryInput[i].value;
+                            $scope.user[aryInput[i].getAttribute("aa")-1].dh_getcontent=$scope.user[aryInput[i].getAttribute("aa")-1].str.substring(10,$scope.user[aryInput[i].getAttribute("aa")-1].str.length);
+                        }
+                    }
+                }
+            }
+            console.log($scope.user)
+            return $scope.user;
+        };
+
+    }]);
+    //失去了angular特有的数据双向绑定的特性
+    myMod.filter('typeFormatter', function ($sce) {
+        return function (data) {
+            var str = "";
+            var dh_type = data.getProperty('dh_type');
+            var dh_id=data.getProperty('id');
+            var dh_content = data.getProperty('dh_content');
+            if (dh_type == 0) {
+                str = '<input type="text" value="' + dh_content + '" ng-model="name1" aa="'+dh_id+'"/>';
+
+            } else if (dh_type == 1) {
+                var radios = dh_content.split('_');
+                for (var j = 0; j < radios.length; j++) {
+                    str += '<input type="radio" value="'+radios[j]+'" name="content' + data.rowIndex + '" aa="'+dh_id+'"/>' + radios[j]
+                }
+            } else if (dh_type == 2) {
+                var checkboxs = dh_content.split('_');
+                for (var i = 0; i < checkboxs.length; i++) {
+                    str += '<input type="checkbox" value="'+checkboxs[i]+'" aa="'+dh_id+'"/>' + checkboxs[i]
+                }
+            }
+            return $sce.trustAsHtml(str);
+        }
+    });
+
+</script>
+
+</body>
+</html>

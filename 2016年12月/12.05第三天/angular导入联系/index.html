@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    {{greeting}}
+    <ul>
+        <li ng-repeat="type in types">{{type}}</li>
+    </ul>
+</div>
+
+<script src="js/require.js" defer async="true" charset="utf-8"></script>
+<script src="js/require.js" data-main="js/main.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/ng-grid.css">
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <p>房贷</p>
+    {{aa}}
+    <span>商户名称：</span>
+    <input type="text"/>
+    <button>查询</button>
+    <button>清空</button>
+    <div id="pageList" ng-grid="gridOptions"></div>
+</div>
+<script src="js/require.js" defer async="true" charset="utf-8"></script>
+<script src="js/require.js" data-main="js/main.js" charset="utf-8"></script>
+
+</body>
+</html>

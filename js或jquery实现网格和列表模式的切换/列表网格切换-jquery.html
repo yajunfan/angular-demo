@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #box {
+            overflow: hidden;
+            width: 550px;
+            margin: 0 auto;
+            box-shadow: 0 0 5px #aaa;
+            border: 1px solid #eee;
+        }
+
+        p a, p span {
+            display: block;
+            line-height: 23px;
+            padding-left: 10px;
+        }
+
+        #box ul li {
+            width: 164px;
+            border: 1px solid #aaa;
+            box-shadow: 0 0 5px #aaa;
+            margin: 7px;
+        }
+
+        .a-img {
+            width: 164px;
+            display: block;
+            overflow: hidden;
+        }
+
+        .top {
+            height: 40px;
+        }
+
+        .top a {
+            height: 16px;
+            width: 16px;
+            display: block;
+            float: right;
+            margin: 5px;
+        }
+
+        #box li {
+            float: left;
+        }
+
+        .bottom {
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ccc;
+        }
+
+        .small {
+            height: 50px;
+            width: 50px;
+            float: left;
+            margin: 5px;
+        }
+        .small img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .btn-list-off {
+            width: 12px;
+            height: 12px;
+            background: #fff url(icon.png) no-repeat -272px -169px;
+
+        }
+
+        .btn-card-on {
+            width: 12px;
+            height: 12px;
+            background: #fff url(icon.png) no-repeat -411px -381px;
+        }
+
+        .btn-list-on {
+            background: #fff url(icon.png) no-repeat -294px -169px;
+        }
+
+        .btn-card-off {
+
+            background: #fff url(icon.png) no-repeat -358px -351px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="top">
+        <a href="#" title="列表模式" id="btn1" class="btn-list-off"> </a>
+        <a href="#" title="卡片模式" id="btn2" class="btn-card-on"> </a></div>
+    <ul>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+        <li>
+            <div class="con"><a href="#" class="a-img"> <img src="number1.jpeg"/> </a>
+                <p><a href="#">白杨</a> <span>辽宁</span> <span>21个共同朋友</span></p>
+                <div class="bottom"> 未分组的好友</div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $btnList = $("#btn1");
+        $btnCard = $("#btn2");
+        $imgs = $("img");
+        $("#box").css("width","550px");
+        $btnList.on("click",function () {
+            $btnList.addClass('btn-list-on').removeClass('btn-list-off');
+            $btnCard.addClass("btn-card-off").removeClass("btn-card-on");
+            $imgs.each(function ($index) {
+                $(this).attr('src',"boy.jpg");
+                $(this).parent().addClass("aImg").addClass("small");
+                $(this).parent().parent().parent().css({"float":"none","width":" 100%"});
+            });
+        });
+        $btnCard.on("click", function () {
+            $btnList.addClass('btn-list-off').removeClass('btn-list-on');
+            $btnCard.addClass("btn-card-on").removeClass("btn-card-off");
+            $imgs.each(function ($index) {
+                $(this).attr('src',"number1.jpeg");
+                $(this).parent().addClass("aImg").removeClass('small');
+                $(this).parent().parent().parent().css({"float":"left","width":"164px"});
+            });
+        })
+    })
+</script>
+</body>
+</html>

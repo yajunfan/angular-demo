@@ -1,0 +1,5 @@
+1.有了之前的基础，做这个就很好实现了，但是出现了一个TypeError: Cannot set property 'gridDim' of undefined这个错误，原因是因为，我把<div class="gridStyle" ng-grid="gridOptions"></div>这句话应该是在我的third页面，但是我卸载主页面，导致ng-grid这个空间找不到他对应的位置去展示，我将这句话放在third这个页面，就解决了
+
+2.在写templateUrl：引入地址的时候，不能根据我当前文件对于引入文件的路径，不可以写../templates/first.html;这样写可以我们可以通过ctrl找到文件，但是浏览器找不到；应该写上templates/first.html。自己ctrl的时候找不到，但是浏览器可以找到这个问题的报错是angular.js:13920 Error: [$compile:tpload] Failed to load template: ../templates/third.html (HTTP status: 404 Not Found);
+
+3.使用ng-click==flag这句的时候，在app.js中 $scope.flag='first'这里的first前不可以加斜杠，加了斜杠不会报错，但是会有可能的问题出现

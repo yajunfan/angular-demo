@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+        .gridStyle{
+            width: 1200px;
+            margin: 20px auto;
+            height:800px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div ng-controller="myCtrl">
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+    <input type="button" value="增加" ng-click="add()">
+    <input type="button" value="删除" ng-click="delete()">
+    <span ng-repeat="type in types"><input type="{{type}}"> {{type}}</input></span>
+
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/ng-grid.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var myMod = angular.module('myMod', ['ngGrid']);
+    myMod.controller('myCtrl',["$scope","$http","$sce",function ($scope,$http,$sce) {
+        $scope.types=["text","radio","checkbox"]
+        $http.get('./data/nggrid.json').success(function (data) {
+          $scope.user=angular.fromJson(data);
+         });
+        $scope.gridOptions={
+            data:'user',
+            enableRowSelection:false,
+            multiSelect:false,
+            enableCellSelection:true,
+            enableCellEdit:true,
+            enablePinning:false,
+            showSelectionCheckbox:true,
+            columnDefs:[
+                {
+                    field:'id',//数据中的属性名
+                    displayName:'序号' // 表头显示的内容
+                },
+                {
+                    field:'type',
+                    displayName:'类型'
+                },
+                {
+                    field:'time',
+                    displayName:'时间'
+                },
+                {
+                    field:'name',
+                    displayName:'姓名'
+                },
+                {
+                    field:'autoCheck',
+                    displayName:'自动审核'
+                },
+                {
+                    field:'rule',
+                    displayName:'规则'
+                },
+                {
+                    field: 'dh_content',
+                    displayName: '样式',
+                    cellTemplate:'<div ng-bind-html="row|typeFormatter:$index"></div>'// 使用过滤器进行过滤
+                }
+            ]
+        }
+
+        $scope.pagingOptions={
+            pageSizes:[2,4,6],//定义下拉框的内容 ，显示当前页的数据个数
+            pageSize:2,//定义默认下拉框的内容
+            currentPage:1,//定义默认当前页
+        };
+        $scope.add=function () {
+            $scope.obj={"id":parseFloat(($scope.user[$scope.user.length-1]).id)+1, "type":"房贷", "time":"2016-11-10 11:49:28", "name":"廖蓉蓉", "id_card":"456546345631514", "autoCheck": "未审核", "rule":"0", "company":"滴滴", "dh_type":"0", "dh_content":"赵武", "report":"查看", "play":"删除"
+            }
+            $scope.user.push($scope.obj)
+        };
+        $scope.delete=function () {
+            $scope.user.length--;
+        }
+    }])
+    myMod.filter('typeFormatter',function ($sce) {
+        return function (data) {
+            var str="";
+            var dh_type=data.getProperty('dh_type');
+            if(dh_type==0){
+                str='<input type="text"/>';
+            }else if(dh_type==1){
+              console.log(data.getProperty('dh_content'))
+               var radios=data.getProperty('dh_content').split('_');
+                for(var j=0;j<radios.length;j++){
+                    str+='<input type="radio" name="content'+data.rowIndex+'"/>'+radios[j]
+                }
+            }else if(dh_type==2){
+                var checkboxs = data.getProperty('dh_content').split('_');
+                for(var i=0;i<checkboxs.length;i++){
+                    str+='<input type="checkbox"/>'+checkboxs[i]
+                }
+            }
+
+            return $sce.trustAsHtml(str) ;
+
+        }
+    });
+//    出现bug，单选框出现选择了一个，别的都不可以选择，这样别的行的radio选择了
+</script>
+
+</body>
+</html>

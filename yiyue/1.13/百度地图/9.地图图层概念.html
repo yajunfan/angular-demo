@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <!--<script type="text/javascript"-->
+            <!--src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>-->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+</head>
+<body>
+<!--地图可以包含一个或多个图层，每个图层在每个级别都是由若干张图块组成的，它们覆盖了地球的整个表面。 在最低的缩放级别（级别1）中，整个地球由 4 张图块组成。随着级别的增长，地图所使用的图块个数也随之增多。-->
+
+<!--自定义图层   百度地图中提供一个BMap.TileLayer类，可以实现用户自定义图层功能。可以在百度地图上叠加一层自定义的图块。 有关TileLayer类的详细接口，请参考TileLayer的API参考文档。   以下代码在每个图块的所有缩放级别上显示一个简单的透明叠加层，使用浮动红色小水滴表示图块的轮廓。-->
+<div style="width:1020px;height:440px;border:1px solid gray" id="1-map"></div>
+<div id="1-id"></div>
+</body>
+</html>
+<script>
+
+    var map = new BMap.Map("1-map");  // 创建地图实例
+
+    console.log(map)
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+    map.centerAndZoom(point, 15);                 // 初始化地图，设置中心点坐标和地图级别
+    var traffic = new BMap.TrafficLayer();// 创建交通流量图层实例
+    console.log(traffic)
+    map.addTileLayer(traffic);                    // 将图层添加到地图上
+//    map.addTileLayer(tilelayer);                  // 将图层添加到地图上
+
+</script>
+
+

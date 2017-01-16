@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet/less" href="css/drag.less" type="text/less">
+</head>
+<body>
+<div class="container">
+    <div class="box1">
+        <img src="img/wen.png" alt="good">
+        <p>文件夹</p>
+    </div>
+
+    <!--<div class="box2" style="position: absolute; left:150px;">-->
+        <!--<img src="img/wen.png" alt="good">-->
+        <!--<p>文件夹</p>-->
+    <!--</div>-->
+    <!--<div class="box3" style="position: absolute; left:300px;">-->
+        <!--<img src="img/wen.png" alt="good">-->
+        <!--<p>文件夹</p>-->
+    <!--</div>-->
+</div>
+<script src="js/jquery.min.js"></script>
+<script charset="utf-8" type="text/javascript">
+    var less={
+        env:"development",
+        poll:1000
+    }
+</script>
+<script charset="utf-8" type="text/javascript" src="./js/less.min.js"></script>
+<script charset="utf-8" type="text/javascript" >
+    less.watch();
+</script>
+<script>
+    function fn(curEle) {
+        var $box = $(curEle);
+        $box.mousedown(function (e) {
+            var disX = e.clientX - this.offsetLeft;
+            var disY = e.clientY - this.offsetTop;
+            $(document).on('mousemove.move', function (e) {
+                var l = e.clientX - disX;
+                var t = e.clientY - disY;
+                if (l <= 0) {
+                    l = 0;
+                } else if (l >= $(document).width() - $box.width()) {
+                    l = $(document).width() - $box.width();
+                }
+                if (t <= 0) {
+                    t = 0;
+                } else if (t >= $(document).height() - $box.height()) {
+                    t = $(document).height() - $box.height();
+                }
+                $box.css('left', l-50);
+                $box.css('top', t-50);
+            });
+            $(document).on('mouseup.move', function () {
+                $(document).off('.move');
+                $box[0].releaseCapture && $box[0].releaseCapture();
+            });
+            $box[0].setCapture && $box[0].setCapture();
+            return false;
+        })
+    }
+    fn(".box1")
+    fn(".box2")
+    fn(".box3")
+</script>
+</body>
+</html>

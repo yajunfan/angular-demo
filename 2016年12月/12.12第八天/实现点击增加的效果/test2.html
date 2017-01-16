@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hide{
+            width: 100%;
+        }
+        tr td{
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        .tan{
+            display: none;
+            border: 1px solid black;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="button" value="增加" onclick="add()">
+    <table class="hide">
+        <thead>
+        <tr class="tit">
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>成绩</th>
+            <th>类型</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>张三</td>
+            <td>女</td>
+            <td>29</td>
+            <td>55</td>
+            <td>
+                <label><input name="sex" type="radio" value=""/>文本</label>
+                <label><input name="sex" type="radio" value=""/>单选 </label>
+                <label><input name="sex" type="radio" value=""/>多选</label>
+            </td>
+        </tr>
+
+        </tbody>
+
+    </table>
+    <div class="tan">
+        <form action="">
+        <label> 姓名：</label>
+        <input type="text" id="name"><br>
+        <label> 性别：</label>
+        <input type="text" class="sex"><br>
+        <label> 年龄：</label>
+        <input type="text" class="age"><br>
+        <label>成绩：</label>
+        <input type="text" class="grade"><br>
+        <label>类型：</label>
+        <input type="text" class="type"><br>
+        </form>
+        <input type="button" onclick="addPerson()" value="保存">
+    </div>
+
+</div>
+<script src="../电核系统/jquery.min.js"></script>
+<script>
+    function add() {
+       $(".tan").css("display","block")
+    }
+    function addPerson() {
+        var ary=[];
+      console.log($(".name").val)
+        ary.push($("#"))
+    }
+</script>
+</body>
+</html>

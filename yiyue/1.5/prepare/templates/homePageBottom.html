@@ -1,0 +1,90 @@
+<div style="display: block" ng-controller="myContent">
+    <div class="side">
+        <div class="selectType">
+            <select name="businessTypes" ng-model="model1" ng-options="x for x in names" ng-change="changervar()">
+                <option value="">--请选择--</option>
+            </select>
+            <div><input type="button" value="未审核" ng-model="no" ng-click="no()"><span>{{n}}</span></div>
+            <div><input type="button" value="通过" ng-model="success" ng-click="success()"><span>{{s}}</span></div>
+            <div><input type="button" value="拒绝" ng-model="reject"><span>{{r}}</span></div>
+        </div>
+        <div class="setting" >
+            <div class="ruleSet" style="background: #6263ff;
+  box-shadow: 2px 2px 2px blue;"><a href="javaScript:;">规则设定</a></div>
+            <div  class="modelSet" ><a href="javaScript:;">模型设定</a></div>
+        </div>
+    </div>
+    <div class="searchBox">
+        <input class="keyWord" type="text" placeholder="请输入关键字搜索" ng-model="input1">
+        <span ng-click="clear()">X</span>
+        <input class="button" type="button" value="搜索">
+    </div>
+    <div  class="content" >
+        <div class="icon">
+            <a href="#" title="缩略图">11</a>
+            <a href="" title="列表">22</a>
+        </div>
+        <div class="modelReport">
+            <div class="logo">
+                <img src="./images/logo_x.png" alt="logo">
+                <p>风控模型报告</p>
+                <span ng-click="close()">关闭 X</span>
+            </div>
+            <div class="soloInfo">
+                <h4>个人基本信息</h4>
+                <ul>
+                    <li><span>姓名：</span><span>{{person.name}}</span></li>
+                    <li><span>年龄：</span><span>{{person.age}}</span></li>
+                    <li><span>性别：</span><span>{{person.sex}}</span></li>
+                    <li><span>户籍：</span><span>{{person.home}}</span></li>
+                    <li><span>电话：</span><span>{{person.tel}}</span></li>
+                </ul>
+                <img src="./images/boy.jpg" alt="张三">
+            </div>
+            <div class="fraudScore">
+                <h4>反欺诈评分 <span>总分：12</span></h4>
+                <ul class="first">
+                    <li><span>籍贯</span><span>得分：1</span></li>
+                    <li><span>年龄</span><span>得分：2</span></li>
+                    <li><span>拖欠起始日期</span><span>得分：4</span></li>
+                    <li><span>最大逾期金额的逾期天数风险发生时间（最近）</span><span>得分：3</span></li>
+                    <li><span>失信老赖名单,限制高消费名单出现的次数</span><span>得分：5</span></li>
+                    <li><span>逾期记录数</span><span>得分：4</span></li>
+                    <li class="more" ng-click="show()"><span>查看更多▼</span></li>
+                </ul>
+                <ul class="two">
+                    <li><span>被机构查询次数（多机构贷款）</span><span>得分：7</span></li>
+                    <li><span>收到严重逾期时间（被定为黑名单）</span><span>得分：6</span></li>
+                    <li><span>90天以上逾期次数</span><span>得分：11</span></li>
+                    <li><span> 案件类别</span><span>得分：11</span></li>
+                    <li><span>执行公开信息,限制出入境名单，罪犯及嫌疑人名单出现次数</span><span>得分：11</span></li>
+                    <li><span>近6月博彩消费笔数</span><span>得分：11</span></li>
+                    <li><span>0 点到6 点的通话次数</span><span>得分：11</span></li>
+                    <li><span>联系人按次数分布前5位与紧急联系人相同个数</span><span>得分：11</span></li>
+                    <li><span>用户标注标签，被标记为骚扰电话等</span><span>得分：11</span></li>
+                    <li><span>借款人提交时间段</span><span>得分：11</span></li>
+                    <li><span>借款人提交次数</span><span>得分：11</span></li>
+                    <li><span>借款人从填写到提交完成的时间</span><span>得分：11</span></li>
+                    <li class="takeUp" ng-click="blank()"><span>收起▲</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="firstRow" ng-repeat="info in infos">
+            <h4>{{info.date}}</h4>
+            <ul>
+                <li ng-repeat="aa in info.data|filter:input1">
+                        <a href="javascript:;" ng-click="modelReport()">
+                            <img src={{aa.address}} alt={{aa.name}}/>
+                            <span>姓名：{{aa.name}}</span>
+                            <span>身份证号：{{aa.id_card}}</span>
+
+                        </a>
+
+                        <a-i class="mark"  x="{{aa.check}}"></a-i>
+
+                 </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

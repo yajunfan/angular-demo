@@ -1,0 +1,17 @@
+.userForm input.ng-pristine {
+    border-color: blue
+}
+
+.userForm input.ng-dirty.ng-invalid {
+    border-color: red
+}
+
+.userForm input.ng-valid {
+    border-color: green
+}
+.gridStyle{
+    /*margin: 20px auto;*/
+    border:1px solid green;
+    width:1000px;
+    height:300px;
+}

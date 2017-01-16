@@ -1,0 +1,37 @@
+<div class="allPage">
+<div class="rule_title_left" id="banner">
+    <span>业务类型</span>
+    <select id="myLink" name="myLink">
+        <option value="房贷" >房贷</option>
+        <option value="信用贷">信用贷</option>
+        <option value="车辆抵押">车辆抵押</option>
+    </select>
+    <div class="rule_title_right">
+        <span>用户数：123</span>
+        <span>数据流量：456</span>
+        <span>资产数量：29</span>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-1">
+        <div ui-view="two_1">
+
+        </div>
+    </div>
+    <div class="col-md-10" >
+        <div ui-view="two_2">
+        </div>
+    </div>
+</div>
+<div>
+    <div id="list">
+        <ul class="nav navbar-nav list_group">
+            <li ng-class="{active:flag=='first'}" ng-click="flag='first'"><a href="#/first">系统设置</a></li>
+            <li ng-class="{active:flag=='two'}" ng-click="flag='two'"><a href="#/two">用户管理</a></li>
+            <li ng-class="{active:flag=='third'}" ng-click="flag='third'"><a href="#/third">数据源管理</a></li>
+            <li ng-class="{active:flag=='four'}" ng-click="flag='four'"><a href="#/four">规则池管理</a></li>
+            <li ng-class="{active:flag=='system'}" ng-click="flag='goldModel'"><a href="#/goldModel">评分模型</a></li>
+        </ul>
+    </div>
+</div>
+</div>

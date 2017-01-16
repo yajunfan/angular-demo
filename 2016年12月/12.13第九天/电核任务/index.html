@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+        .gridStyle{
+            width: 80%;
+            margin: 20px auto;
+            height:800px;
+        }
+        header{
+            width: 100%;
+            height: 45px;
+            background: blue;
+            font-size: 24px;
+            text-align: center;
+            line-height: 45px;
+            color: whitesmoke;
+        }
+
+
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <header>电核任务</header>
+    <div class="gridStyle" ng-grid="gridOptions">
+        <input type="button" value="增加" ng-click="add()" class="btn btn-group">
+        <input type="button" value="删除" ng-click="delete()" class="btn bg-danger">
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/ng-grid.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var myMod = angular.module('myMod', ['ngGrid']);
+    myMod.controller('myCtrl',["$scope","$http",function ($scope,$http) {
+        $scope.radios=null;
+        $http.get('./data/nggrid.json').success(function (data) {
+            $scope.user=angular.fromJson(data);
+            for(var i=0;i<$scope.user.length;i++){
+                $scope.rec=$scope.user[i];
+                var dh_type=$scope.rec.dh_type;
+                if(dh_type== '1'){
+                    $scope.dh_id="input";
+                }else if (dh_type== '0') {
+                    $scope.radios = $scope.rec.dh_content.split('_');
+                    for(var i=0;i<$scope.radios.length;i++){
+                        str+='<input type="radio" name="content"/>'+$scope.radios[i]
+                    }
+
+
+                }else if( dh_type== '2'){
+                    $scope.checkboxs = $scope.rec.dh_content.split('_');
+                    for(var i=0;i<$scope.checkboxs.length;i++){
+                        str+='<input type="checkbox"/>'+$scope.checkboxs[i]
+                    }
+
+                }
+            }
+        });
+        $scope.gridOptions={
+            data:'user',
+            enableRowSelection:false,
+            multiSelect:false,
+            enableCellSelection:true,
+            enableCellEdit:true,
+            enablePinning:false,
+            columnDefs:[
+                {
+                    field:'id',//数据中的属性名
+                    displayName:'序号' // 表头显示的内容
+                },
+                {
+                    field:'type',
+                    displayName:'类型'
+                },
+                {
+                    field:'time',
+                    displayName:'时间'
+                },
+                {
+                    field:'name',
+                    displayName:'姓名'
+                },
+                {
+                    field:'id_card',
+                    displayName:'身份证号'
+                },
+                {
+                    field:'rule',
+                    displayName:'规则'
+                },
+                {
+                    field:'dh_content',
+                    displayName:'样式',
+                    cellTemplate:' <span ng-repeat="x in checkboxs track by $index"><input type={{str}} name="sex"  /> {{x}}</span>'
+//                    cellTemplate:'<input type={{str}}  ng-repeat="x in radios track by $index"/>{{x}}'
+////                    <span ng-cell-text> {{dh_value}}</span>
+                }
+            ]
+        }
+        $scope.pagingOptions={
+            pageSizes:[2,4,6],//定义下拉框的内容 ，显示当前页的数据个数
+            pageSize:2,//定义默认下拉框的内容
+            currentPage:1,//定义默认当前页
+        };
+        $scope.add=function () {
+            $scope.obj={"id":parseFloat(($scope.user[$scope.user.length-1]).id)+1, "type":"房贷", "time":"2016-11-10 11:49:28", "name":"廖蓉蓉", "id_card":"456546345631514", "autoCheck": "未审核", "rule":"0", "company":"滴滴", "dh_type":"0", "dh_content":"赵武", "report":"查看", "play":"删除"
+            }
+            $scope.user.push($scope.obj)
+        }
+        $scope.delete=function () {
+            $scope.user.length--;
+        }
+    }])
+
+</script>
+</body>
+</html>

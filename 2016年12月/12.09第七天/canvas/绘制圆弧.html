@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    var gri=ctx.createLinearGradient(0,0,200,200);
+    gri.addColorStop(0,"blue");
+    gri.addColorStop(1,"red");
+    ctx.strokeStyle=gri;
+    ctx.beginPath();
+
+    ctx.arc(100,75,50,0,2*Math.PI);
+
+    ctx.lineWidth=20;
+    ctx.stroke();
+
+//    ctx.strokeRect(0,0,100,5)
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+[
+  {
+    "id":1,
+    "dh_type": "0",
+    "dh_description": "12345",
+    "dh_content": "男_女"
+  },
+  {
+    "id":2,
+    "dh_type": "1",
+    "dh_description": "564184",
+    "dh_content": "23_45_86_78"
+  }
+]
+
+

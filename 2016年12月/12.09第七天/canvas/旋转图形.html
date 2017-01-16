@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    var gri=ctx.createLinearGradient(0,0,200,200);
+    gri.addColorStop(0,"blue");
+    gri.addColorStop(1,"red");
+    ctx.strokeStyle=gri;
+    ctx.rotate(20*Math.PI/180);
+    ctx.strokeRect(50,50,300,20);  //这是我的原始矩形的大小
+//    ctx.save();
+    ctx.rotate(20*Math.PI/180);   //旋转的角度
+    ctx.strokeRect(50,50,300,20);
+    ctx.rotate(20*Math.PI/180);
+    ctx.translate(100,-50); // 这个是移动到这个点的坐标，但是是以这个矩形的中心来找点的。
+    ctx.strokeRect(50,50,300,20);
+    //和缩放一个道理
+
+</script>
+</body>
+</html>

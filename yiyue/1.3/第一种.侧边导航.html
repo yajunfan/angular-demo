@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menu_smartphone
+        {
+            height: 100%;
+            position: absolute;
+            background: #ffffff;
+            top: 0;
+            bottom: 0;
+            left: -400px;
+            width: 400px;
+        }
+        #menu_smartphone ul
+        {
+            padding: 10px;
+            margin-top: -20px;
+            list-style: none;
+            color: #999999;
+            overflow-y: auto;
+            background: #cde8ff;
+        }
+        #menu_smartphone ul li
+        {
+            height: 50px;
+            padding-left: 10px;
+            line-height: 50px;
+        }
+        #menu_smartphone ul li:hover
+        {
+            background: #f7f7f7;
+        }
+        #menu_smartphone ul li a
+        {
+            color: #999999;
+            text-decoration: none;
+            font-family: 'Roboto';
+            font-weight: 400;
+            font-size: 25px;
+        }
+        .background_profil
+        {
+            background: lightgreen;
+            height: 200px;
+        }
+        .pics_profil
+        {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background-size: cover;
+            background: lightpink;
+            margin-top: -65px;
+        }
+        .name_profil
+        {
+            font-size: 37px;
+            font-family: 'Roboto';
+            font-weight: 400;
+            color: #666666;
+            margin-top: -50px;
+            margin-left: 140px;
+            margin-bottom: -35px;
+        }
+        .top
+        {
+            background-color: #e51c23;
+            height: 70px;
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            line-height: 15px;
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: 400;
+            font-family: 'Roboto';
+            padding-left: 10px;
+            text-align: left;
+        }
+        #grey_back
+        {
+            display: none;
+            background-color: #000000;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+        .card
+        {
+            width: 90%;
+            height: 300px;
+            background-color: #ffffff;
+            margin: 10px;
+            padding: 20px;
+            color: #666666;
+            font-weight: 300;
+            font-size: 36px;
+            text-align: center;
+            font-family: 'Roboto';
+            box-shadow: 0 0 2px #999999;
+        }
+        .menu_btn
+        {
+            cursor: pointer;
+            left: 0px;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+<div style="position: relative; overflow: hidden;">
+    <div class="top">
+        <img src="./images/menu.png" height="35" class="menu_btn" align="left" />
+        <h4 style="padding-left: 10px;">读脉科技</h4>
+    </div>
+    <div id="grey_back"></div>
+    <div id="menu_smartphone" class="menu_mobile_app" align="left">
+        <ul style="overflow-y: auto;">
+            <div class="background_profil">
+            </div>
+            <div class="pics_profil">
+            </div>
+            <div class="name_profil">某某用户<h4 style="font-weight: 300; color: #999999;"></h4></div>
+            <li><a href="./templates/first.html">贷前审核</a></li>
+            <li><a href="./templates/two.html">贷中跟踪</a></li>
+            <li><a href="./templates/three.html">参数设置</a></li>
+            <li><a href="./templates/four.html">数据管理</a></li>
+            <li><a href="#">系统管理</a></li>
+            <li><a href="#">趋势分析</a></li>
+            <li><a href="#">逾期催款</a></li>
+            <li><a href="#">行业资讯</a></li>
+            <li><a href="#">产品说明</a></li>
+        </ul>
+    </div>
+    <div class="card"></div>
+    <div class="card"></div>
+</div>
+<script src="../../jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var isMenuOpen = false;
+
+        $('.menu_btn').click(function () {
+            if (isMenuOpen == false) {
+                $("#menu_smartphone").clearQueue().animate({
+                    left: '0px'
+                })
+                $("#grey_back").fadeIn('fast');
+                $(this).fadeOut(200);
+                $(".close").fadeIn(300);
+
+                isMenuOpen = true;
+            }
+        });
+        $('#grey_back').click(function () {
+            if (isMenuOpen == true) {
+                $("#menu_smartphone").clearQueue().animate({
+                    left: '-570px'
+                })
+                $("#page").clearQueue().animate({
+                    "margin-left": '0px'
+                })
+                $("#grey_back").fadeOut('fast');
+                $(this).fadeOut(200);
+                $(".menu_btn").fadeIn(300);
+
+                isMenuOpen = false;
+            }
+        });
+    });
+</script>
+</body>
+</html>

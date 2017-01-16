@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Chomo" />
+    <link rel="start" href="http://www.14px.com" title="Home" />
+    <title>三级级联菜单</title>
+    <style type="text/css">
+        * { margin:0; padding:0; list-style:none;}
+        .c_subNav { width:150px; }
+        .c_subNav table { width:100%; border-collapse:collapse;}
+        .c_subNav a { text-decoration:none; color:#333;}
+        .c_subNav a:hover { color:#f60;}
+        .c_subNav ul ul { position:absolute; visibility:hidden; right:-150px; top:-1px;}
+        .c_subNav li { border-bottom:1px solid #ccc; position:relative; _position:static; float:left; width:100%;}
+        .c_subNav a.li { position:relative;}
+        .c_subNav li .option { display:block; line-height:15px; padding:5px 5px 5px 25px; background:no-repeat 5px 4px; cursor:pointer; font:12px Verdana; zoom:1; background:url(img/ico.gif) no-repeat;}
+        .c_subNav li .option:hover { color:#f60; background-color:#ffa;}
+        .c_subNav li .option span { display:block; padding-right:15px; background:url(img/ico.gif) no-repeat right 0;}
+        .c_subNav li .option:hover span { background-position:right -15px;}
+        .c_subNav .li:hover { z-index:2; background:transparent;}
+        .c_subNav .li:hover ul { visibility:visible;}
+        .c_subNav .li:hover ul ul { visibility:hidden;}
+        .c_subNav .li:hover ul { border:1px solid #ccc; border-width:1px 2px 2px 1px; width:150px; background:#fff; padding:1px;}
+        .c_subNav .li:hover li { border-bottom:none;}
+        .c_subNav .li:hover li .option { padding:2px 5px; background:transparent;}
+        .c_subNav .li:hover li .option:hover { background:#0096ff; color:#fff;}
+        .c_subNav .li:hover li .option:hover span { background-position:right -30px;}
+        .c_subNav .li:hover .li:hover ul { visibility:visible; left:145px; top:-2px;}
+        /*---图标差异---*/
+        .c_subNav .charges .option { background-position:4px -45px;}
+        .c_subNav .biz .option { background-position:4px -70px;}
+        .c_subNav .change .option { background-position:4px -95px;}
+        .c_subNav .score .option { background-position:4px -120px;}
+        .c_subNav .server .option { background-position:4px -145px;}
+        .c_subNav .edit .option { background-position:4px -170px;}
+        .c_subNav .sms .option { background-position:4px -195px;}
+    </style>
+</head>
+<body>
+<div class="c_subNav">
+    <ul>
+        <li class="li charges">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>话费服务</span></a>
+            <ul>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>话费查询</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">实时话费查询</a></li>
+                        <li class="li"><a href="#nogo" class="option">话费余额查询</a></li>
+                        <li class="li"><a href="#nogo" class="option">月账单查询</a></li>
+                        <li class="li"><a href="#nogo" class="option">月详单查询</a></li>
+                        <li class="li"><a href="#nogo" class="option">缴费历史查询</a></li>
+                        <li class="li"><a href="#nogo" class="option">资费优选推荐</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>定制话费信息</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">定制短信账单</a></li>
+                        <li class="li"><a href="#nogo" class="option">话费余额短信提醒</a></li>
+                        <li class="li"><a href="#nogo" class="option">定制Email账单</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>网上交费</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">网上缴费</a></li>
+                        <li class="li"><a href="#nogo" class="option">充值卡缴费</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li biz">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>业务办理</span></a>
+            <ul>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>日常业务办理</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">来电显示</a></li>
+                        <li class="li"><a href="#nogo" class="option">呼叫等待</a></li>
+                        <li class="li"><a href="#nogo" class="option">呼叫转移</a></li>
+                        <li class="li"><a href="#nogo" class="option">三方通话</a></li>
+                        <li class="li"><a href="#nogo" class="option">来电提醒</a></li>
+                        <li class="li"><a href="#nogo" class="option">呼叫保持</a></li>
+                        <li class="li"><a href="#nogo" class="option">呼叫转移设置</a></li>
+                        <li class="li"><a href="#nogo" class="option">主叫隐藏</a></li>
+                        <li class="li"><a href="#nogo" class="option">彩铃</a></li>
+                        <li class="li"><a href="#nogo" class="option">国内漫游</a></li>
+                        <li class="li"><a href="#nogo" class="option">短信回执</a></li>
+                        <li class="li"><a href="#nogo" class="option">12580综合信息</a></li>
+                        <li class="li"><a href="#nogo" class="option">关爱一线通</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>数据业务</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">手机上网</a></li>
+                        <li class="li"><a href="#nogo" class="option">GPRS</a></li>
+                        <li class="li"><a href="#nogo" class="option">飞信</a></li>
+                        <li class="li"><a href="#nogo" class="option">手机报</a></li>
+                        <li class="li"><a href="#nogo" class="option">无线音乐俱乐部</a></li>
+                        <li class="li"><a href="#nogo" class="option">手机邮箱</a></li>
+                        <li class="li"><a href="#nogo" class="option">号簿管家</a></li>
+                        <li class="li"><a href="#nogo" class="option">WLAN业务</a></li>
+                        <li class="li"><a href="#nogo" class="option">彩乐短信</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="li">
+                    <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+                    <a href="#nogo" class="option"><span>手机报停/报开</span></a>
+                    <ul>
+                        <li class="li"><a href="#nogo" class="option">手机报停</a></li>
+                        <li class="li"><a href="#nogo" class="option">手机复机</a></li>
+                    </ul>
+                    <!--[if IE 6]></td></tr></table></a><![endif]-->
+                </li>
+                <li class="li">
+                    <a href="#nogo" class="option">梦网查询与退订</a>
+                </li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li change">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>套餐办理与变更</span></a>
+            <ul>
+                <li class="li"><a href="#nogo" class="option">GPRS套餐变更</a></li>
+                <li class="li"><a href="#nogo" class="option">产品变更</a></li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li score">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>积分计划</span></a>
+            <ul>
+                <li class="li"><a href="#nogo" class="option">积分查询</a></li>
+                <li class="li"><a href="#nogo" class="option">积分兑换</a></li>
+                <li class="li"><a href="#nogo" class="option">积分明细查询</a></li>
+                <li class="li"><a href="#nogo" class="option">积分兑换话费</a></li>
+                <li class="li"><a href="#nogo" class="option">积分兑换历史查询</a></li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li server">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>在线客服</span></a>
+            <ul>
+                <li class="li"><a href="#nogo" class="option">号码归属地查询</a></li>
+                <li class="li"><a href="#nogo" class="option">营业厅查询</a></li>
+                <li class="li"><a href="#nogo" class="option">手机仿真</a></li>
+                <li class="li"><a href="#nogo" class="option">在线咨询</a></li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li edit">
+            <!--[if IE 6]><a class="li" href="#nogo"><table><tr><td><![endif]-->
+            <a href="#nogo" class="option"><span>个人信息管理</span></a>
+            <ul>
+                <li class="li"><a href="#nogo" class="option">个人资料修改</a></li>
+                <li class="li"><a href="#nogo" class="option">服务密码变更</a></li>
+                <li class="li"><a href="#nogo" class="option">服务密码重置</a></li>
+                <li class="li"><a href="#nogo" class="option">PUK码查询</a></li>
+                <li class="li"><a href="#nogo" class="option">套餐使用状态查询</a></li>
+                <li class="li"><a href="#nogo" class="option">业务开通状态查询</a></li>
+            </ul>
+            <!--[if IE 6]></td></tr></table></a><![endif]-->
+        </li>
+        <li class="li sms">
+            <a href="#nogo" class="option">短信息服务</a>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

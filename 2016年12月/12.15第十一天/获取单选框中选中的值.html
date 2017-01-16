@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label> <input type="radio" value="张三" name="name1">张三</label>
+<label> <input type="radio" value="李四" name="name1">李四</label>
+<label> <input type="radio" value="赵五" name="name1">赵五</label>
+<label> <input type="radio" value="马六" name="name1">马六</label>
+<input type="button" value="提交" class="sub">
+<script src="jquery.min.js"></script>
+<script>
+$(".sub").on("click",function(){
+//    console.log($('input:radio:checked').val())
+    //console.log($("input[type='radio']:checked").val())
+        console.log($("input[name='name1']:checked").val())
+
+    }
+)
+</script>
+</body>
+</html>

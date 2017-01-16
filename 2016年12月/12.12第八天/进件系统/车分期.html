@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        body{
+            height: 200%;
+            background:-webkit-linear-gradient(top,#5dd6ff, #a8ebff,white) ;
+        }
+        .header{
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #0EB0FF;
+            color: white;
+            text-align: center;
+            font-size: 26px;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+       .container{
+           border: 1px solid blue;
+           border-radius: 10%;
+           box-shadow:4px 4px 4px black ;
+
+       }
+       h3{
+           width: 93%;
+           font-size: 20px;
+           color: whitesmoke;
+          margin-left: 43px;
+           padding-left: 30px;
+           height:35px;
+           line-height: 35px;
+           font-family: "微软雅黑";
+           border-radius: 30%;
+
+       }
+        .baseInfo h3{ background: #1eb413
+        }
+        .form-group{
+            height: 35px;
+            margin-bottom: 10px;
+        }
+        .emergency h3{
+            background: #ff22f7
+        }
+        .information h3{
+            background: #225bff
+        }
+        .tijiao{
+            display: block;
+            margin: 10px auto 30px;
+            width: 200px;
+            height: 35px;
+            color: whitesmoke;
+            background: blue;
+            outline: none;
+            border: none;
+        }
+        .right,.left{
+            position: absolute;
+            right:50px;
+            top:50%;
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 50px solid #0eb0ff;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid transparent;
+            border-top: 50px solid transparent;
+
+        }
+        .left{
+           left:50px;
+            border-right: 50px solid #0eb0ff;
+            border-left: 50px solid transparent;
+            }
+        .userForm input.ng-pristine{
+            border-color:blue
+        }
+        .userForm input.ng-dirty.ng-invalid{
+            border-color:red
+        }
+        .userForm input.ng-valid{
+            border-color:green
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">车分期</div>
+<a href="https://www.baidu.com"><span class="left"></span></a>
+ <div class="container">
+     <form  name="myForm" class="form-horizontal userForm">
+     <div class="baseInfo">
+         <h3>基本信息</h3>
+         <div class="form-group">
+             <label class="control-label col-md-2" >公司名称：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="融租公司名称" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">姓名：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入您的姓名" name="user_name" ng-model="name" required>
+                 <div ng-show="myForm.user_name.$invalid&&myForm.user_name.$dirty">
+                     <div class="alert alert-danger">
+                         <p ng-show="myForm.user_name.$error.required">
+                             该项为必填项，请输入内容
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">身份证号：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入您的身份证号" name="user_idCard" ng-model="idCard"required>
+                 <div ng-show="myForm.user_idCard.$invalid&&myForm.user_idCard.$dirty">
+                     <div class="alert alert-danger">
+                         <p ng-show="myForm.user_idCard.$error.required">
+                             该项为必填项，请输入内容
+                         </p>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">手机号：</label>
+             <div class="col-md-10">
+                 <input type="number"  class="form-control" placeholder="请输入您的手机号" name="user_tel" ng-model="tel" required>
+                 <div ng-show="myForm.user_tel.$invalid&&myForm.user_tel.$dirty">
+                     <div class="alert alert-danger">
+                         <p ng-show="myForm.user_tel.$error.required">
+                             该项为必填项，请输入内容
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">银行卡号：</label>
+             <div class="col-md-10">
+                 <input type="number"  class="form-control" placeholder="请输入您的银行卡号" name="user_card" ng-model="card" required>
+                 <div ng-show="myForm.user_card.$invalid&&myForm.user_card.$dirty">
+                     <div class="alert alert-danger">
+                         <p ng-show="myForm.user_card.$error.required">
+                             该项为必填项，请输入内容
+                         </p>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="form-group">
+         <label class="control-label col-md-2">职业：</label>
+         <div class="col-md-10">
+             <input type="text"  class="form-control" placeholder="请输入您的职业" required>
+         </div>
+     </div>
+         <div class="form-group">
+         <label class="control-label col-md-2">固定收入：</label>
+         <div class="col-md-10">
+             <input type="text"  class="form-control" placeholder="请输入您的固定收入" required>
+         </div>
+     </div>
+     </div>
+     <div class="emergency">
+         <h3>紧急联系人</h3>
+         <div class="form-group">
+             <label class="control-label col-md-2" >紧急联系人1：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入紧急联系人姓名" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">与本人关系</label>
+             <div class="col-md-10">
+                 <select style="height: 32px">
+                     <option>亲戚</option>
+                     <option>朋友</option>
+                     <option>父子</option>
+                     <option>母子</option>
+                     <option>父女</option>
+                     <option>母女</option>
+                     <option>夫妻</option>
+                     <option>其他</option>
+                 </select>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">手机号：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入紧急联系人手机号" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2" >紧急联系人2：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入紧急联系人姓名" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">与本人关系</label>
+             <div class="col-md-10">
+                 <select style="height: 32px">
+                     <option>亲戚</option>
+                     <option>朋友</option>
+                     <option>父子</option>
+                     <option>母子</option>
+                     <option>父女</option>
+                     <option>母女</option>
+                     <option>夫妻</option>
+                     <option>其他</option>
+                 </select>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">手机号：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入紧急联系人手机号" required>
+             </div>
+         </div>
+     </div>
+     <div class="information">
+         <h3>业务信息</h3>
+         <div class="form-group">
+             <label class="control-label col-md-2" >首次取得驾照日期：</label>
+             <div class="col-md-10">
+                 <input type="date"  class="form-control" placeholder="日期格式" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">车牌号：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入车牌号" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">车牌种类：</label>
+             <div class="col-md-10">
+                 <select style="height: 32px">
+                     <option value="01">大型汽车</option>
+                     <option value="02">小型汽车</option>
+                     <option value="03">使馆汽车</option>
+                     <option value="04">领馆汽车</option>
+                     <option value="05">境外汽车</option>
+                     <option value="06">外籍汽车</option>
+                     <option value="07">两、三轮摩托车</option>
+                     <option value="08">轻便摩托车</option>
+                     <option value="09">使馆摩托车</option>
+                     <option value="10">领馆摩托车</option>
+                     <option value="11">境外摩托车</option>
+                     <option value="12">外籍摩托车</option>
+                     <option value="13">农⽤用运输车</option>
+                     <option value="14">拖拉机</option>
+                     <option value="15">挂车</option>
+                     <option value="16">教练汽车</option>
+                     <option value="17">教练摩托车</option>
+                     <option value="18">试验汽车</option>
+                     <option value="19">试验摩托车</option>
+                     <option value="20">临时⼊入境汽车</option>
+                     <option value="21">临时⼊入境摩托车</option>
+                     <option value="22">临时⾏行驶车</option>
+                 </select>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">行驶证编号：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入车辆行驶证号" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">借款金额：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入借款金额" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">首付金额：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入首付金额" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">保证金金额：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="请输入保证金金额" required>
+             </div>
+         </div>
+         <div class="form-group">
+             <label class="control-label col-md-2">借款期限：</label>
+             <div class="col-md-10">
+                 <input type="text"  class="form-control" placeholder="以月为单位" required>
+             </div>
+         </div>
+
+
+
+     </div>
+     </form>
+     <input type="button" value="提交" class="tijiao">
+
+ </div>
+<a href="tel.html"><span class="right"></span></a>
+<script src="angular.js"></script>
+<script>
+    var myMod = angular.module('myMod', []);
+</script>
+</body>
+</html>

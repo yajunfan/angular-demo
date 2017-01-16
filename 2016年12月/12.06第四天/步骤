@@ -1,0 +1,18 @@
+1.首先先配置angular-->在app.js中进行依赖，定义-->在main.js中进行调用，直接require(['app'],function(angular){ 区域})-->在区域中写函数，调用ok
+    出现的问题：没效果，报错
+a.报的错误：Failed to instantiate module myApp due to:
+       Error: [$injector:modulerr] Failed to instantiate module ngRoute due to:
+       Error: [$injector:nomod] Module 'ngRoute' is not available! You either misspelled the module name or forgot to load it. If registering a         module ensure that you specify the dependencies as the second argument.(没有实例化模块myApp由于: 错误:[$注射器:modulerr]模块实例化失败ngRoute由于:错误:[$注射器:nomod]模块“ngRoute”不可用!你拼错模块名称或忘了加载它。如果注册模块确保您指定作为第二个参数的依赖关系。)
+       http://errors.angularjs.org/1.5.8/$injector/nomod?p0=ngRoute
+           at http://localhost:63342/study/%E7%AC%AC%E5%9B%9B%E5%A4%A9/angular_require/js/angular.js:68:12
+           at http://localhost:63342/study/%E7%AC%AC%E5%9B%9B%E5%A4%A9/angular_require/js/angular.js:2082:17
+
+ 怎么解决的：在app.js中，module中注入其他模块，在此时，并没有引入依赖，所以报错，直接删除就好
+ 2.进行增加配置；
+    问题：引入jquery-->可以使用jquery中的对象，但是报错，angular不可以使用了
+   b.angular.js:68 Uncaught Error: [$injector:modulerr] Failed to instantiate module myApp due to:
+     Error: [$injector:nomod] Module 'myApp' is not available! You either misspelled the module name or forgot to load it. If registering a module ensure that you specify the dependencies as the second argument.([$注射器:modulerr]没有实例化模块myApp由于:错误:[$注射器:nomod]模块“myApp”不可用!你拼错模块名称或忘了加载它。如果注册模块确保您指定作为第二个参数的依赖关系。)
+ 3.发现app.js这个模块，如果依赖了angular，不可以依赖已有的模块，可以依赖我自己写的模块
+ 4.可以通过别的来模块来进行加载ng-grid和angular-route这两个模块，注入ngRoute也没问题，但是注入ngGrid会报错。
+ 5.引入的模块的顺序和参数的顺序一定要一致，否则就会报错，可以没有参数，但是不可以顺序错误
+ 6.

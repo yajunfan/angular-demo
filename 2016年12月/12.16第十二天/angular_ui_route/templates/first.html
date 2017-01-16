@@ -1,0 +1,59 @@
+<div id="page" class="system" name="page">
+    <h3>系统设置</h3>
+    <ul>
+        <li>修改密码</li>
+        <li style="background: lightgreen">系统设置</li>
+        <li>日志</li>
+    </ul>
+    <div class="container page1">
+        <div class="row">
+            <form  name="myForm" class="form-horizontal userForm">
+                <div class="form-group">
+                    <label class="control-label col-md-2">新密码</label>
+                    <div class="col-md-10">
+                        <input type="password" name="user_name" ng-model="name" ng-maxlength="6" ng-minlength="6" class="form-control" placeholder="请输入6位数密码" required>
+                        <div ng-show="myForm.user_name.$invalid&&myForm.user_name.$dirty">
+                            <div class="alert alert-danger">
+                                <p ng-show="myForm.user_name.$error.required">
+                                    该项为必填项，请输入内容
+                                </p>
+                                <p ng-show="myForm.user_name.$error.maxlength">
+                                    字符不可以超过6位
+                                </p>
+                                <p ng-show="myForm.user_name.$error.minlength">
+                                    字符不可以少于6位
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2">确认密码</label>
+                    <div class="col-md-10">
+                        <input type="password" ng-model="password" class="form-control" required>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="container page2" ng-controller="gridCtrl" style="display: block">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+    <div class="container page3" ng-controller="gridCtrl">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-1">
+        <div ui-view="two_1">
+
+        </div>
+    </div>
+    <div class="col-md-10" >
+        <div ui-view="two_2">
+        </div>
+    </div>
+</div>

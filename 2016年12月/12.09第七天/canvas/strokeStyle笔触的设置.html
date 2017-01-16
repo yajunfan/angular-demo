@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+    #myCanvas{
+        background: black;
+    }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    ctx.strokeStyle="red";//设置边框的颜色
+    ctx.lineWidth=20;
+    ctx.strokeRect(20,20,300,300);   //设置边框的起点坐标和宽度和高度
+
+   var aa=ctx.createLinearGradient(0,0,170,0); //起点x坐标，起点y坐标，终点x坐标、终点y坐标
+    aa.addColorStop(0,"blue");
+    aa.addColorStop(0.5,"pink");
+    aa.addColorStop(1,"yellow");
+    ctx.strokeStyle=aa;  //将渐变赋值
+    ctx.lineWidth=20;  //设置边框的宽度  下面字体不重新设置的话，会影响之后字体的宽度
+    ctx.strokeRect(50,50,200,200)
+
+
+    ctx.font="100px 微软雅黑";
+   var abb=ctx.createLinearGradient(0,0,200,0); //起点x坐标，起点y坐标，终点x坐标、终点y坐标
+    abb.addColorStop(0,"blue");
+    abb.addColorStop(0.5,"pink");
+    abb.addColorStop(1,"yellow");
+    ctx.strokeStyle=abb;
+    ctx.lineWidth=1;//这里设置了，不管上面有没有设置，都不会影响上面的边框，但是上面设置了，下面没设置，就会影响到
+    ctx.strokeText("读脉吧",400,400)
+
+
+</script>
+</body>
+</html>

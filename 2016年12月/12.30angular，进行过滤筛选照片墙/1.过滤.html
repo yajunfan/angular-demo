@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        .container{
+            position: absolute;
+            width: 800px;
+            height:800px;
+            background: lightblue;
+            margin-left:-400px;
+            margin-top:-400px;
+            left:50%;
+            top:50%;
+        }
+        .container ul li{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            float: left;
+        }
+        .container ul li img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div class="container" ng-controller="myCtrl">
+    <input type="text" ng-model="value">
+    <ul>
+        <li ng-repeat="aa in names|filter:value">
+            <img src={{aa.address}} alt="">
+            <p>{{aa.name}}</p>
+        </li>
+
+
+    </ul>
+</div>
+<script src="../angular.js"></script>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('myCtrl',function ($scope) {
+        $scope.names=[{address:"img/1%20(1).png",'name':'张三'},{address:'img/1%20(2).png','name':'九分裤'},{address:'img/1%20(3).png','name':'大幅度'},{address:'img/1%20(1).png','name':'地方'},{address:'img/1%20(1).png','name':'高度个'},{address:'img/1%20(1).png','name':'突然'},{address:'img/1%20(4).png','name':'更换'},{address:'img/1%20(5).png','name':'韩国锦湖'},{address:'img/1%20(6).png','name':'突然'},{address:'img/1%20(7).png','name':'那边'},{address:'img/1%20(8).png','name':'热'},{address:'img/1%20(9).png','name':'与价格'},{address:'img/1%20(10).png','name':'规范合格'},{address:'img/1%20(11).png','name':'右键'},{address:'img/1%20(12).png','name':'工会技能'},{address:'img/1%20(11).png','name':'恢复'},{address:'img/1%20(10).png','name':'如图'},{address:'img/1%20(5).png','name':'敢不敢'},{address:'img/1%20(8).png','name':'大概'},{address:'img/1%20(6).png','name':'大房贷'},]
+    })
+</script>
+</body>
+</html>

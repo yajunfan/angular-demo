@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+body,html{
+    font-family: "微软雅黑", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+.container{
+    height: 100%;
+    padding:10px;
+    border: 1px solid black;
+}
+/*表头*/
+.logo{
+    background: #cde8ff;
+    text-align: center;
+}
+.logo img{
+    width: 150px;
+    height: 60px;
+    float: left;
+}
+.logo p{
+    height: 50px;
+    line-height: 60px;
+    font-size: 24px;
+    display: inline-block;
+}
+/*个人信息*/
+.soloInfo,.fraudScore{
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid;
+}
+.soloInfo li{
+    width: 300px;
+    margin-bottom: 5px;
+}
+.soloInfo li span,.fraudScore li span{
+    font-size: 16px;
+}
+.soloInfo img{
+    float: right;
+    position: relative;
+    top:-158px;
+    width:150px;
+    height:150px;
+}
+.soloInfo div{
+    background: lightblue;
+    border: 5px solid black;
+    width: 500px;
+    padding: 20px;
+
+
+}
+.soloInfo p{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+}
+.soloInfo span{
+    padding: 0 23px 0 0 ;
+    display: inline-block;
+
+}
+.soloInfo li span:nth-child(1){
+    padding: 0 20px;
+}
+.soloInfo li span:nth-child(2){
+    text-align: center;
+}
+.soloInfo li span:nth-child(3){
+    text-align: center;
+}
+.soloInfo div li{
+    width: 100%;
+}
+
+.soloInfo{
+    position: relative;
+}
+.basicInfo{
+    position: relative;
+}
+.soloInfo a{
+    display: inline-block;
+    float: right;
+}
+.basicInfo img{
+    position:absolute;
+    left: 60%;
+    top:13%;
+    border-radius: 20%;
+}
+.soloInfo i{
+    position: absolute;
+    display: inline-block;
+    background: blue;
+}
+.basicInfo i {
+    width: 100px;
+    height: 4px;
+    left:100%;
+    top:68px;
+
+}
+.professional{
+    position: absolute;
+    left: 590px;
+    top:50px;
+}
+.professional i{
+    width: 4px;
+    height: 100px;
+    left:235px;
+    z-index: -2;
+}
+.professional span:nth-child(2){
+    width: 70%;
+}
+.emergency{
+    position: absolute;
+    left: 590px;
+    top:236px;
+}
+.emergency i{
+    width: 4px;
+    height: 100px;
+    left:235px;
+    z-index: -2;
+}
+.emergency span:nth-child(1){
+    width: 35%;
+}
+.emergency span{
+    padding: 0 10px;
+    width: 21%;
+    text-align: center;
+}
+.projectDetails{
+    position: absolute;
+    left:590px;
+    top:408px;
+}
+.projectDetails i{
+    width: 100px;
+    height: 4px;
+    left:-100px;
+    top:120px;
+    z-index: -2;
+}
+.projectDetails span:nth-child(2){
+   width: 70%;
+}
+.dataDetailed{
+    margin-top: 20px;
+}
+
+
+/*反欺诈评分*/
+.fraudScore{
+    position: relative;
+}
+
+.fraudScore li span:nth-child(2),.fraudScore h4 span{
+    position: absolute;
+    right:20px;
+}
+.fraudScore li{
+    margin-bottom: 5px;
+    background: lightgreen;
+}
+.fraudScore  ul.two{
+    margin-top: -5px;
+    display: none;
+
+}

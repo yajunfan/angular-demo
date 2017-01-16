@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+
+    //创建线性渐变
+//    var gri=ctx.createLinearGradient(20,20,200,200);
+//    gri.addColorStop(0,"pink");
+//    gri.addColorStop(0.5,"lightblue");
+//    gri.addColorStop(1,"plum");
+//    ctx.fillStyle=gri;
+//    ctx.fillRect(20,20,200,200)
+
+
+    //创建发射性渐变
+//    var gri=ctx.createRadialGradient(80,80,200,200,200,200);
+//        gri.addColorStop(0,"pink");
+//        gri.addColorStop(0.5,"lightblue");
+//        gri.addColorStop(1,"plum");
+//        ctx.fillStyle=gri;
+//        ctx.fillRect(80,80,200,200)
+
+    var grd=ctx.createRadialGradient(150,0,10,100,20,200);//前两个参数是渐变的开始坐标，第三个是开始的圆半径，第四个，五个是结束的坐标（相对于第一个开始的圆的），第六个是结束的圆半径，之后的覆盖面积
+    grd.addColorStop(0,"red");
+    grd.addColorStop(0.5,"yellow");
+    grd.addColorStop(1,"grey");
+
+    // Fill with gradient
+    ctx.fillStyle=grd;
+    ctx.fillRect(0,0,150,150);
+</script>
+
+</body>
+</html>

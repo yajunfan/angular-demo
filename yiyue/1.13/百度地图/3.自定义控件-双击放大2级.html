@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+</head>
+<body>
+<div style="width:520px;height:340px;border:1px solid gray" id="container"></div>
+</body>
+</html>
+<script>
+    var map = new BMap.Map("container");          // 创建地图实例
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+    map.centerAndZoom(point, 15);          // 初始化地图，设置中心点坐标和地图级别  地图必须经过初始化才可以执行其他操作。
+    window.setTimeout(function () {
+        map.panTo(new BMap.Point(116.420, 39.918));
+    }, 2000);
+    var opts = {type:BMAP_NAVIGATION_CONTROL_ZOOM}  //写了这个的话，就是等于添加了一个更改过样式之后的控件，那么前面的添加就不需要了，否则会冲突；
+    map.addControl(new BMap.NavigationControl(opts));
+    //百度地图API允许您通过继承BMap.Control来创建自定义地图控件。（注意JavaScript是通过prototype属性进行继承的）   要创建可用的自定义控件，您需要实现类定义中的一个抽象方法并给两个属性赋值，它们是：initialize()和defaultAnchor、defaultOffset。initialize()方法必须返回控件容器的DOM元素，defaultAnchor为控件默认的停靠位置，defaultOffset为控件默认的间隔距离。  所有自定义的地图控件中的DOM元素最终都应该添加到地图容器（即地图所在的DOM元素）中去，这个地图容器可以通过BMap.Map.getContainer()方法获得。
+    function ZoomControl() { // 设置默认停靠位置和偏移量
+        this.defaultAnchor = BMAP_ANCHOR_TOP_LEFT;
+        this.defaultOffset = new BMap.Size(10, 10);
+    }
+    // 通过JavaScript的prototype属性继承于BMap.Control中的方法和属性
+    ZoomControl.prototype = new BMap.Control();
+    // 自定义控件必须实现自己的initialize方法，并且将控件的DOM元素返回
+    // 在本方法中创建个div元素作为控件的容器，并将其添加到地图容器中
+    ZoomControl.prototype.initialize = function (map) {
+        // 创建一个DOM元素
+        var div = document.createElement("div");
+        // 添加文字说明
+        div.appendChild(document.createTextNode("放大2级"));
+        // 设置样式
+        div.style.cursor = "pointer";
+        div.style.border = "1px solid gray";
+        div.style.backgroundColor = "white";
+        // 绑定事件，点击一次放大两级
+        div.onclick = function (e) {
+            map.zoomTo(map.getZoom()- 2);
+        };
+        // 添加DOM元素到地图中
+        map.getContainer().appendChild(div);
+        // 将DOM元素返回
+        return div;
+    };
+    // 创建控件
+    var myZoomCtrl = new ZoomControl();    // 添加到地图当中
+    map.addControl(myZoomCtrl);
+
+
+</script>
+
+

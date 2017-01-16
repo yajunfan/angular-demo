@@ -1,0 +1,207 @@
+@import "public";
+
+@w: 100%;
+@c1: #51ace6;
+@c2: #99c4ff;
+@c3: white;
+@c4: #0a16ff;
+@c5: lightblue;
+@c6: #d32346;
+// 预加载页面的效果
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+#loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  /* COLOR 1 */
+  border-top-color: #FFF;
+  -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -ms-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -moz-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -o-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+  z-index: 1001;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  /* COLOR 2 */
+  border-top-color: #FFF;
+  -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -moz-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -o-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -ms-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #FFF;
+  /* COLOR 3 */
+  -moz-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -o-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -ms-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+  animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg); /* IE 9 */
+    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg); /* IE 9 */
+    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(0deg); /* IE 9 */
+    transform: rotate(0deg); /* Firefox 16+, IE 10+, Opera */
+  }
+  100% {
+    -webkit-transform: rotate(360deg); /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: rotate(360deg); /* IE 9 */
+    transform: rotate(360deg); /* Firefox 16+, IE 10+, Opera */
+  }
+}
+
+#loader-wrapper .loader-section {
+  position: fixed;
+  top: 0;
+  width: 51%;
+  height: 100%;
+  background: #1abc9c; /* Old browsers */
+  z-index: 1000;
+  -webkit-transform: translateX(0); /* Chrome, Opera 15+, Safari 3.1+ */
+  -ms-transform: translateX(0); /* IE 9 */
+  transform: translateX(0); /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+  left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+  right: 0;
+}
+
+//登录页面
+.header {
+  height: 70px;
+  border-bottom: 1px solid @c6;
+  img {
+    width: 400px;
+    height: 41px;
+    margin-top: 15px;
+  }
+}
+
+.bodies {
+  width: 350px;
+  padding:10px 20px;
+  border: 1px solid @c6;
+  float:right;
+  margin-right:300px;
+  margin-top:100px;
+  .loading{
+    label{
+      margin-top: 20px;
+      margin-left: 26px;
+      margin-bottom: 4px;
+      display: block;
+      font-size: 14px;
+      color:@c6;
+      input{
+        margin-top: 5px;
+        width: 90%;
+        height: 30px;
+        border: 1px solid @c6;
+        &.three{
+          width: 50%;
+        }
+      }
+    }
+    .yzm{
+      position: relative;
+      width: 30%;
+      height: 30px;
+      border: 1px solid @c6;
+      left:61%;
+      top:-35px;
+    }
+    .stay{
+      font-size: 14px;
+      text-align:right;
+      position: relative;
+      display: inline-block;
+      width: 40%;
+      top:-20px;
+      left:25px;
+      span{
+        margin-left: 5px;
+      }
+      input{
+        margin-top: 2px;
+      }
+    }
+  .tijiao{
+    margin-top: 5px;
+    margin-left: 24px;
+    margin-bottom: 15px;
+    width: 84%;
+    height: 30px;
+  }
+  }
+}
+
+//首页
+
+//.header .logo{
+//  line-height: 47px;
+//}
+
+
+
+
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="200" style="border:1px solid #4b4dff;"></canvas>
+<script>
+
+    window.onload=function(){
+        var canvas = document.getElementById("myCanvas");
+        var context=canvas.getContext("2d");
+        var img = new Image();
+        img.src="./img/1.jpg";
+        img.onload=function() {
+            var pattern = context.createPattern(img, "repeat");
+            context.fillStyle=pattern;
+            context.fillRect(0, 0, 200, 200)
+            ctx.font="30px Arial";
+            ctx.strokeText("Hello World",10,50);
+        }
+
+
+    }
+
+
+//        var c=document.getElementById("myCanvas");
+//        var ctx=c.getContext("2d");
+//        var aa=ctx.createLinearGradient(0,0,200,200);
+//        aa.addColorStop(0,"white");
+//        aa.addColorStop(1,"black");
+//        ctx.fillStyle=aa;
+//        ctx.fillRect(0,0,200,200);
+
+    //绘制空心字体
+    ctx.font="30px Arial";
+    ctx.strokeText("Hello World",10,50);
+
+    //绘制实心字体
+//    ctx.font="30px Arial";
+//    ctx.fillText("Hello World",10,50);
+</script>
+</body>
+</html>

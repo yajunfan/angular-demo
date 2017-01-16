@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800"></canvas>
+<script>
+    var myCanvas=document.getElementById("myCanvas");
+    var ctx=myCanvas.getContext("2d");
+    ctx.beginPath();
+    ctx.lineWidth=20;
+    //ctx.lineCap="round";//圆形的线帽
+    ctx.lineCap="butt";//默认的线帽
+    ctx.lineCap="square";//向线条的每个末端添加正方形线帽。
+    //"round" 和 "square" 会使线条略微变长。
+
+    ctx.moveTo(20,20);
+    ctx.lineTo(200,20);
+    ctx.stroke();
+
+</script>
+</body>
+</html>

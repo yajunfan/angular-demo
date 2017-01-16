@@ -1,0 +1,44 @@
+<div id="menu" ng-controller="myMenu">
+    <div class="header">
+        <div class="ribbon">
+            <ul>
+                <li><a href="#"><img src="images/ads.png" width="48" height="48" alt="Ads"/><br/>
+                    Ads</a></li>
+                <li><a href="#"><img src="images/users.png" width="48" height="48" alt="Users"/><br/>
+                    Users</a></li>
+                <li><a href="#"><img src="images/images.png" width="48" height="48" alt="Images"/><br/>
+                    Images</a></li>
+                <li><a href="#"><img src="images/settings.png" width="48" height="48" alt="General Settings"/><br/>
+                    General Settings</a></li>
+                <li><a href="#"><img src="images/tools.png" width="48" height="48" alt="Tools"/><br/>
+                    Tools</a></li>
+                <li><a href="#"><img src="images/errors.png" width="48" height="48" alt="Errors"/><br/>
+                    Errors</a></li>
+                <li><a href="#"><img src="images/tools.png" width="48" height="48" alt="Errors"/><br/>
+                    Errors</a></li>
+                <li><a href="#"><img src="images/errors.png" width="48" height="48" alt="Errors"/><br/>
+                    Errors</a></li>
+                <li><a href="#"><img src="images/settings.png" width="48" height="48" alt="Errors"/><br/>
+                    Errors</a></li>
+                <li><a href="#"><img src="images/settings.png" width="48" height="48" alt="Errors"/><br/>
+                    Errors</a></li>
+
+            </ul>
+            <a href="javascript:;" class="arrow" ng-click="shrinkage()"><span class="on"></span></a>
+
+        </div>
+        <input type="button" value="退出">
+
+    </div>
+
+
+    <div class="row ">
+        <div>
+            <div ui-view="homePageTop"></div>
+        </div>
+        <div>
+            <div ui-view="homePageBottom"></div>
+        </div>
+    </div>
+
+</div>

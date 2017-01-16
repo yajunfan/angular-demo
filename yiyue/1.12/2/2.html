@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{ margin:0;padding:0;}
+        #btn_group{list-style:none; margin:0 auto; width:850px;}
+        #btn_group li{ width:200px; height:40px; line-height:40px; border:1px solid black; float:left; margin:5px; text-align:center;}
+        #content{ width:800px; height:800px;  border:1px solid black; overflow:hidden; clear:both; margin:0 auto; position:relative;}
+        #content div{ position:absolute; top:0; left:0;}
+        .btn_in{ background:blue;}
+        .selected {background-color: lightgreen;}
+        .hide{display:none;}
+        .show{display:block;}
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myCtr">
+<ul  id="btn_group" >
+    <li ng-repeat="li in lis" ng-click="show($index,li.links)" ng-class="{selected: $index==selected}" >
+        {{li.name}}
+
+    </li>
+</ul>
+<div id="content"  >
+    <!--<div  ng-class="{show:$index==selected}" ng-bind-html="res.link|to_trusted">{{res.templateUrl}}</div>-->
+    <!--<div  ng-class="{show:$index==selected}" >{{res.templateUrl}}</div>-->
+    <!--<div ng-repeat="div in divs" class="hide" ng-class="{show:$index==selected}"> </div>-->
+    <my-tab ng-class="{show:$index==selected}" ng-repeat="div in divs" aa="div.aa">{{$index}}</my-tab>
+
+</div>
+<script src="../jquery.min.js"></script>
+<script src="../angular.js"></script>
+<script>
+    var app=angular.module('myApp',[]);
+    app.controller('myCtr',function($scope){
+        $scope.res={link:'one.html'};
+        $scope.aa=$scope.res.link;
+        //这里的link是为了你在页面引入模板而写的，这里没有引入模板，是假数据divs
+        $scope.selected=0;
+        $scope.lis=[{name:'按钮一',links:'<div>1233</div>','bb':1},{name:'按钮二',links:'two.html','bb':2},{name:'按钮三',links:'three.html','bb':3},{name:'按钮四',links:'four.html','bb':4}];
+        $scope.divs=[{html:'我是页面一',links:'one.html',aa:1},{html:'我是页面二',links:'one.html',aa:2},{html:"我是页面三",links:'one.html',aa:3},{html:"我是页面四",links:'one.html',aa:4}];
+
+     //  $scope.res=[{link:'one.html'},{link:'two.html'},{link:'three.html'},{link:'four.html'}];
+        $scope.show=function(row,str){
+            $scope.selected=row;
+            $scope.res.link=str;
+
+        }
+    })
+        .directive('myTab',function () {
+        return {
+            restrict: 'ECMA',
+
+            template:"<div id='{{aa}}'><a href={{}}></a>{{aa}}</div>",
+////            link:function (scope,element,attrs) {
+////               var node=element.find("myTab");
+////               var m=attrs.aa
+////                console.log(m)
+////                return m
+////            },
+            templateUrl:function (o,attrs) {
+              console.log(o.index)
+                        if(attrs.aa == 1){
+                            return "one.html";
+                        }else if(attrs.aa== 2){
+                            return "two.html";
+                        }else if(attrs.aa ==3){
+                            return "three.html";
+                        }else {
+                            return "four.html";
+                        }
+                    }
+
+    }
+    });
+//    app.filter('to_trusted', ['$sce', function ($sce) {
+//        console.log($sce)
+//        return function (text) {
+//            return $sce.trustAsHtml(text);
+//
+//        };
+//    }]);
+</script>
+</body>
+</html>

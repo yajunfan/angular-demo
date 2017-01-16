@@ -1,0 +1,11 @@
+1.由于版本的不同
+    1.2之前的引用 <script type="text/javascript"  src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>
+    2.0的版本引用  <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+    关键点：一个是key---ak，services
+
+2.在使用自定义标注，得到bounds的最大最小的XY值，1.2--2.0
+    maxX -- Ee， maxY -- De，minX -- Je，minY -- Ie；
+
+3.在使用控件的时候
+    1.2版本的没有MapTypeControl()这个方法；不可以更高地图的样式
+    2.0版本的可以使用这个方法。增加这个控件；

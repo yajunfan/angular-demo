@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=kihvyMa8GU9DfmtKb9aviBq8IsuG5gjT&v=1.0&services=false"></script>
+</head>
+<body>
+<!--
+地图服务是指那些提供数据信息的接口，比如本地搜索、路线规划等等。百度地图API提供的服务有：
+      LocalSearch：本地搜索，提供某一特定地区的位置搜索服务，比如在北京市搜索“公园”。
+      TransitRoute：公交导航，提供某一特定地区的公交出行方案的搜索服务。
+      DrivingRoute：驾车导航，提供驾车出行方案的搜索服务。
+      WalkingRoute：步行导航，提供步行出行方案的搜索服务。
+      Geocoder：地址解析，提供将地址信息转换为坐标点信息的服务。
+      LocalCity：本地城市，提供自动判断您所在城市的服务。
+      TrafficControl：实时路况控件，提供实时和历史路况信息服务。
+     搜索类的服务接口需要指定一个搜索范围，否则接口将不能工作。
+-->
+
+<!--本地搜索  BMap.LocalSearch提供本地搜索服务，在使用本地搜索时需要为其设置一个检索区域，检索区域可以是BMap.Map
+对象、BMap.Point对象或者是省市名称（比如："北京市"）的字符串。BMap.LocalSearch构造函数的第二个参数是可选的，您可以在其中指定结果的呈现。BMap.RenderOptions类提供了若干控制呈现的属性，其中map指定了结果所展现的地图实例，panel指定了结果列表的容器元素。
+  下面这个示例展示了在北京市检索天安门。搜索区域设置为地图实例，并告知结果需要展现在地图实例上
+  BMap.LocalSearch还提包含searchNearby和searchInBounds方法，为您提供周边搜索和范围搜索服务-->
+<div style="width:1020px;height:440px;border:1px solid gray" id="container"></div>
+</body>
+</html>
+<script>
+    var map = new BMap.Map("container");// 创建地图实例
+    console.log(BMap)
+    var point = new BMap.Point(116.404, 39.915);  // 创建点坐标
+    map.centerAndZoom(point, 15);          // 初始化地图，设置中心点坐标和地图级别  地图必须经过初始化才可以执行其他操作。级别越高，地图放大的倍数越大
+    console.log(new BMap.LocalSearch());
+    var local = new BMap.LocalSearch(map, {
+        renderOptions:{map: map}
+    });
+
+    local.search("平安里");
+</script>
+
+

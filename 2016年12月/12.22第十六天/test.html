@@ -1,0 +1,49 @@
+<!docType html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" Content="text/html; Charset=utf-8"/>
+	</head>
+	<body ng-app="myApp">
+		<div ng-controller="myCtrl">
+			<div>
+				<div style="background:red;margin:10px;width:30px;height:30px;float:left"
+					ng-click='$parent.selected=$index' ng-repeat="item in datas">{{$index}}</div>
+			</div>
+			<div style="clear:both"></div>
+			<div>
+				<div style="background:yellow;margin:10px;width:30px;height:30px;float:left" 
+					ng-repeat="item in datas[selected].children">{{item.name}}</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript">
+
+			angular.module("myApp",[]).
+			controller("myCtrl",function  ($scope) {
+				$scope.datas=[
+					{
+						name:"a",
+						children:[
+							{name:"一"},
+							{name:"二"}
+						]
+					},
+					{
+						name:"b",
+						children:[
+							{name:"三"},
+							{name:"四"},
+							{name:"哈"},
+							{name:"里"}
+						]
+					}
+				];
+				$scope.selected = 0;
+				
+			});
+			
+		</script>
+	</body>	
+	
+	
+</html>

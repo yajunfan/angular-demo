@@ -1,0 +1,7 @@
+1.当我给 cellTemplate:'<span ng-cell-text> {{dh_value}}</span>'这里进行绑定数据的时候，这里的{{}}中不需要写$scope.什么什么，只需要直接写上变量就行
+2.一进行条件判断，就出现数据获取不全的情况
+3.使用editableCellTemplate：这个属性中的模板是当我双击这个表格的时候，会出现这个模板
+4.使用celltemplate这个模板，可以直接引入外界的html文件，也可以直接在这里面写上脚本，当需要进行判断的时候，需要加过滤器，'<div ng-bind-html="row|typeFormatter"></div>'.typeFormatter就是我自定义的过滤器，里面对我获取的数据进行判断，然后根据不同的结果绑定不同的模板；
+row这个是我的当前的这一行的一个属性，通过这个行属性，获取我这一行的想要的数据，获得里面某个数据的方法是row.getProperty('获取到的数据的属性名')；通过这些就可以进行我们想要的操作！在自定义的过滤器的函数中的参数data就是我ng-bind-html="row|typeFormatter"中的斜线前面的row这个数据！
+ng-bind-html="这里放着我的模板"
+5.在angular进行字符串拼接绑定是很不方便的，因为指令可能不会执行，所以，这时候需要使用自定义指令来进行这项操作，将我需要地模板放在该指令下，那么ok

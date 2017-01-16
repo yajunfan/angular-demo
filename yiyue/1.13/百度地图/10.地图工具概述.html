@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Hello, World</title>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/api?key=46ce9d0614bf7aefe0ba562f8cf87194&v=1.0&services=false"></script>-->
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+
+</head>
+<body>
+<!--百度地图提供了交互功能更为复杂的“工具”，它包括：
+   PushpinTool：标注工具。通过此工具用户可在地图任意区域添加标注。
+   DistanceTool：测距工具。通过此工具用户可测量地图上任意位置之间的距离。
+   DragAndZoomTool：区域缩放工具。此工具将根据用户拖拽绘制的矩形区域大小对地图进行放大或缩小操作。   工具类在初始化时需要提供地图实例参数，以便使工具在该地图上生效。您可以在地图上添加多个工具，但同一时刻只能有一个工具处于开启状态。标注工具和测距工具在完成一次操作后将自动退出开启状态，而区域缩放工具可以自行配置是否自动关闭。
+-->
+<div style="width:1020px;height:640px;border:1px solid gray;border-radius: 50% " id="container"></div>
+</body>
+</html>
+<script>
+    //效果，点击第一下的时候，会提示要标注的这个坐标，然后给这个点增加一个标注图标
+    var map = new BMap.Map("container");
+    console.log(BMap)
+    map.centerAndZoom(new BMap.Point(116.404, 39.915), 15);
+    var myPushpin = new BMap.PushpinTool(map);
+    // 创建标注工具实例
+     myPushpin.addEventListener("markend", function(e){  // 监听事件，提示标注点坐标信息
+         alert("您标注的位置：" + e.marker.getPoint().lng + ", " +  e.marker.getPoint().lat);
+     });
+     myPushpin.open();
+</script>
+
+
