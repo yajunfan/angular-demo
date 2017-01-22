@@ -1,0 +1,15 @@
+1.jquery的closer方法：获取到当前元素的最近的祖父元素
+2.jquery的trigger方法：激活input的select方法，事先要先写好select方法，然后使用这个方法激活 $("input").select(function(){ $("input").after("文本被选中！");});   $("button").click(function(){ $("input").trigger("select");});
+3.jquery的select方法：当 textarea 或文本类型的 input 元素中的文本被选择时，会发生 select 事件。
+4.使用jquery必须使用$(document).ready(function(){})来执行;
+5.学习arbor笔记
+  1.arbor是什么？
+  2.screenSize(width, height)；协调帮助-宽度和高度是正整数
+    定义您将绘图的尺寸的屏幕区域。
+    调用该方法可以自动从粒子坐标转换系统显示的坐标系统。这可以提供的点。eachNode和。eachEdge迭代器/ fromScreen和最近的方法
+    你将几乎总是想叫这一次当设置ParticleSystem和渲染器以及每当显示区域的尺寸变化。
+  3.fromScreen(screenPoint)
+    原文：screenPoint is a Point object whose x and y values are using the screen’s pixel coordinates.
+         Converts the x and y to system coordinates on the basis of the current screen size and padding, returning the result           as a new Point object. If the size hasn’t been set or the system hasn’t started yet, undefined will be returned instead.
+    翻译：screenPoint Point对象的x和y值使用屏幕上的像素坐标。
+          转换系统的x和y坐标的基础上目前的屏幕尺寸和填充,返回的结果作为一个新的点对象。如果没有设置或系统尚未开始,将返回未定义。
