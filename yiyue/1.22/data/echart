@@ -1,0 +1,13 @@
+1.首先要引入三个文件
+<script src="../../jquery.min.js"></script>
+<script src="echarts.min.js"></script>
+<script src="dataTool.js"></script>
+2.在body中设置一个画布大小
+<div id="main" style="height: 100%; width:100%; border: 1px solid #ccc; padding: 10px;"></div>
+3.script中初始化echart
+var myChart = echarts.init(document.getElementById('main'));
+4.接下来就是讲echart中想要的例子的代码copy下来
+
+------分割线-------
+1.改变人际图中线条的颜色
+    在edges中设置lineStyle：{normal：{color:"颜色值"}}

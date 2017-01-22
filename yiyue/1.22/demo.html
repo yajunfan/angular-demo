@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div id="main" style="height: 100%; width:100%; border: 1px solid #ccc; padding: 10px;"></div>
+<script src="../../jquery.min.js"></script>
+<script src="echarts.min.js"></script>
+<script src="dataTool.js"></script>
+<script>
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.showLoading();
+    $.getJSON('data/bbbb.json', function (json) {
+        console.log(json)
+        myChart.hideLoading();
+        myChart.setOption(option = {
+            title: {
+                text: 'NPM Dependencies'
+            },
+            animationDurationUpdate: 200,
+            // animationEasingUpdate: 'quinticInOut',
+            series : [
+                {
+                    type: 'graph',
+                    layout: 'force',
+                    force:{
+                        repulsion:1000
+
+                    },
+                    // progressiveThreshold: 700,
+                    data: json.nodes.map(function (node) {
+                        return {
+                            x: node.x,
+                            y: node.y,
+                            id: node.id,
+                            name: node.label,
+                            symbolSize:10,
+                            edgeSymbol:['circle', 'arrow'],
+                            itemStyle: {
+                                normal: {
+                                    color: node.color
+                                }
+                            }
+                        };
+                    }),
+                    edges: json.edges.map(function (edge) {
+                        return {
+                            source: edge.sourceID,
+                            target: edge.targetID,
+                            lineStyle: {
+                                normal: {
+                                    color: "black"
+                                }
+                            }
+                        };
+                    }),
+                    label: {
+                        emphasis: {
+                            position: 'right',
+                            show: true
+                        }
+                    },
+                    roam: true,
+                    focusNodeAdjacency: true,
+                    draggable:true,
+                    lineStyle: {
+                        normal: {
+                            width:0.5,
+                            curveness: 0.3,
+                            opacity: 1
+                        }
+                    }
+                }
+            ]
+        }, true);
+    });
+</script>
+</body>
+</html>
