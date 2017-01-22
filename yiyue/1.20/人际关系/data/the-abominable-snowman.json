@@ -1,0 +1,13 @@
+{
+  "_id": "the-abominable-snowman",
+  "_rev": "1-cb224d9fc9d466d9e3cc358bbb410cbc",
+  "sys": {
+    "repulsion": 2600,
+    "friction": 0.5,
+    "stiffness": 512,
+    "gravity": true
+  },
+  "src": ";\n; CYOA 13 (1982)\n; The Abominable Snowman\n; by R.A. Montgomery\n;\n; Each node is a page in the book, with\n; the lines between them representing \n; choices. The first page is drawn in\n; black and marked with a dot.\n;\n; Pages that contain an ending are color- \n; coded based on the goodness of that \n; ending. red is catastrophic, warm colors \n; are of varying levels of mediocrity, and \n; blue is the ideal, \u2018winning\u2019 ending.\n;\n\n; don\u2019t color in the decision pages\n{color:none}\n\n; choices\n1 -> 7\n1 -> 8\n7 -> 9\n7 -> 13\n8 -> 10\n9 -> 20\n9 -> 15\n10 -> 16\n10 -> 19\n13 -> 14\n14 -> 23\n14 -> 22\n112 -> 107\n\n; endings\n116 {color:#b01700}",
+  "example": "cyoa",
+  "title": "The Abominable Snowman"
+}

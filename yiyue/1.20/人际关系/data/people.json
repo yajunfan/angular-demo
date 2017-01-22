@@ -1,0 +1,13 @@
+{
+  "_id": "people",
+  "_rev": "1-e8ceaebda42a2c5a76d6684ff9d867da",
+  "sys": {
+    "repulsion": 2600,
+    "friction": 0.5,
+    "stiffness": 512,
+    "gravity": true
+  },
+  "src": ";\n; CYOA 53 (1986)\n; Case Of The Silk King\n; by Shannon Gilligan\n;\n; Each node is a page in the book, with\n; the lines between them representing \n; choices. The first page is drawn in\n; black and marked with a dot.\n;\n; Pages that contain an ending are color- \n; coded based on the goodness of that \n; ending. red is catastrophic, warm colors \n; are of varying levels of mediocrity, and \n; blue is the ideal, \u2018winning\u2019 ending.\n;\n\n; don\u2019t color in the decision pages\n{color:none}\n\n; choices\n张三 -> 张思\n张三 -> 赵武\n赵武 -> 刘意义\n张思 -> 柳依依\n柳依依 -> 刘意义",
+  "example": "cyoa",
+  "title": "Case Of The Silk King"
+}
