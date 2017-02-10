@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,html{
+            height: 200%;
+        }
+        .content{
+            width: 100%;
+            position: relative;
+        }
+        .upMark{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            /*background: rgba(255, 24, 41, 0.3);*/
+            z-index: -1;
+        }
+        .base{
+            position:absolute;
+            width: 50%;
+            height:800px;
+            left:0%;
+            border: 1px solid red;
+            z-index: 10;
+            top:40px;
+
+        }
+        #ViewDiv {
+            position:absolute;
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            z-index: 10;
+            left:50%;
+            display: none;
+            overflow: hidden;
+
+        }
+        #ViewDiv img{
+            display: inline-block;
+            width: 234%;
+            height: 234%;
+            position: absolute;
+            left:0px;
+            top:0px;
+            border: 1px solid;
+
+        }
+        #bgDiv {
+            position: absolute;
+            width: 50%;
+            height: 800px;
+            right:0;
+            border: 1px solid;
+        }
+        #canvas{  position: absolute;top:900px; border: 1px solid;opacity: 0}
+        input{
+
+            cursor: pointer;
+        }
+        .mark{
+            position: absolute;
+            left: 0;
+            top:50px;
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            background: rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: none;
+        }
+        .perInfo{
+            position: absolute;
+            border: 1px  solid;
+            left:0;
+            top:0;
+            display: none;
+        }
+        .perInfo h5{
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            background: yellow;
+        }
+        .perInfo ul{
+            margin: 0;
+            width: 200px;
+            padding: 0;
+        }
+
+        .perInfo ul li{
+            width: 100%;
+            list-style: none;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            margin-top: 5px;
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+<div class="content" ng-controller="myCtrl">
+    <div class="base" id="base" >
+        <div id="bgDiv" style="position:absolute;height: 800px; width:100%; border: 1px solid #ccc; padding: 10px;right:0;"></div>
+        <div class="upMark"></div>
+    </div>
+    <div id="ViewDiv" style="position: absolute"></div>
+    <canvas id="canvas"></canvas>
+    <div class="perInfo">
+        <h5>{{name}}的个人信息</h5>
+        <ul>
+            <li ng-repeat="ary in arys">{{ary}}</li>
+        </ul>
+    </div>
+    <input type="button" value="选区工具" ng-click="picDisplay1()">
+    <input type="button" value="取消选区" ng-click="picDisplay2()">
+    <div id="mark" class="mark"></div>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/drag.js"></script>
+
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller("myCtrl",function ($scope,$http) {
+        var srcCan;
+        var myChart = echarts.init(document.getElementById('bgDiv'));
+        var canvas = document.getElementById("canvas");
+        canvas.width = 1058;
+        canvas.height = 800;
+        var ctx = canvas.getContext('2d');
+        myChart.showLoading();
+        $.get('data/bbbb.json', function (json) {
+            myChart.hideLoading();
+            myChart.setOption(option = {
+
+//            backgroundColor: 'lightblue', //背景色
+                // 图表标题
+                title: {
+                    text: '人际关系',
+                    subtext: '数据来自...',
+                    x: 'center',
+                    y: 'top',
+                    backgroundColor: 'yellow',
+                    borderColor: 'black',// 标题边框颜色
+                    borderWidth: 2, // 标题边框线宽，单位px，默认为0（无边框）
+                    padding: 6, // 标题内边距，单位px，默认各方向内边距为5，
+                    // padding: [5,3,4,5],       四个不同的内边距
+                    itemGap: 10,               // 主副标题纵向间隔，单位px，默认为10，
+                    textStyle: {
+                        fontSize: 18,
+                        fontWeight: 'bolder',
+                        color: '#333'          // 主标题文字颜色
+                    },
+                    subtextStyle: {
+                        color: '#aaa'          // 副标题文字颜色
+                    }
+                },
+                tooltip: { //触发鼠标移入事件的时候需要用的样式的格式
+                    trigger: 'item',
+                    formatter: '{b} : {c}'
+                },
+                // 图例
+                legend: {
+                    orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：'horizontal' ¦ 'vertical'
+                    x: 'left',   // 水平安放位置，默认为全图居中，可选为：'center' ¦ 'left' ¦ 'right'¦ {number}（x坐标，单位px）
+                    y: 'top',// 垂直安放位置，默认为全图顶端，可选为：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+                    backgroundColor: 'rgba(0,0,0,0)',
+                    borderColor: '#ccc',       // 图例边框颜色
+                    borderWidth: 0,            // 图例边框线宽，单位px，默认为0（无边框）
+                    padding: 5,                // 图例内边距，单位px，默认各方向内边距为5，// 接受数组分别设定上右下左边距，同css
+                    itemGap: 10,               // 各个item之间的间隔，单位px，默认为10，
+                    // 横向布局时为水平间隔，纵向布局时为纵向间隔
+                    itemWidth: 20,             // 图例图形宽度
+                    itemHeight: 14,            // 图例图形高度
+                    textStyle: {
+                        color: '#7f86ff'          // 图例文字颜色
+                    },
+                    selected:{'朋友':true,'家人':true},
+                    data:['家人','朋友']
+                },
+
+
+                isShowScrollBar: false,
+                animation:false,
+//            animationDurationUpdate: 200, //动画延迟
+//            animationEasingUpdate: 'quinticInOut',
+                series: [
+                    {
+                        type: 'graph',
+                        layout: 'force',
+                        attractiveness: 0.8,
+                        force: {
+                            repulsion:5000,
+                            coolDown :10,
+                            layoutAnimation:true
+
+                        },
+                        categories : [
+                            {
+                                value: '人物',
+                                itemStyle: {
+                                    normal: {
+                                        color : '#1e11ff'
+                                    }
+                                }
+                            },
+                            {
+                                value: '家人',
+                                itemStyle: {
+                                    normal: {
+                                        color : '#ff7f50'
+                                    }
+                                }
+                            },
+                            {
+                                value:'朋友',
+                                itemStyle: {
+                                    normal: {
+                                        color : '#87cdfa'
+                                    }
+                                }
+                            }
+
+                        ],
+                        edgeSymbol: ['arrow'], //增加箭头
+                        edgeSymbolSize: [15], //箭头的大小
+                        // progressiveThreshold: 700,
+                        label: {
+                            type: 'image',
+                            style: {
+                                image: './images/5.jpg',
+                                width: 500,
+                                height: 500
+                            },
+                            normal: {
+                                position: 'top',
+//                            formatter: '{a}:{b}'
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    position:"right",
+                                    show: true,
+                                    textStyle: {
+                                        color: 'black'
+                                    }
+                                },
+                                nodeStyle : {
+                                    brushType : 'both',
+                                    strokeColor : 'rgba(255,215,0,0.4)',
+                                    lineWidth : 2
+                                }
+                            },
+                            emphasis:{
+                                linkStyle : { strokeColor : 'yellow'}
+                            }
+                        },
+                        nodes: json.nodes.map(function (node) {
+                            return {
+//                            x: node.x,
+//                            y: node.y,
+                                id: node.id,
+
+                                name: node.label,
+                                category:node.category,
+                                value:node.value,
+                                //symbol:node.shapeType,
+                                // 设置节点的形状样式  ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'  也可以通过 'image://url' 设置为图片，其中 url 为图片的链接。
+                                symbol:'image://'+node.image,
+                                symbolSize: 150,
+                                itemStyle: {
+                                    normal: {
+                                        nodeStyle:{
+                                            brushType: 'both',
+                                            strokeColor: 'green',
+                                            lineWidth: 2
+                                        },
+                                    },
+                                    style: {
+                                        image: './images/5.jpg',
+                                        width: 500,
+                                        height: 500
+                                    }
+                                },
+
+                            };
+                        }),
+                        edges: json.edges.map(function (edge) {
+
+                            return {
+                                source: edge.sourceID,
+                                target: edge.targetID,
+                                value:22222,//鼠标移到线上面出现的提示框
+                                lineStyle: {
+                                    normal: {
+                                        color: "yellow",
+                                        width:4,
+
+                                    }
+                                },
+                                itemStyle:{
+                                    normal:{
+                                        lineWidth:10,
+                                        text:'丽萨-乔布斯',
+                                        textColor:'#030303',
+                                        textFont:'bold 15px verdana',
+                                        textPosition:'inside'
+                                    }
+                                },
+                                label:{
+                                    normal: {
+                                        position: 'right',
+                                        show:true,
+                                        textStyle: {
+                                            color: 'black'
+                                        },
+                                        formatter: '{c}'
+                                    }
+                                }
+
+                            };
+
+
+                        }),
+
+
+                        roam: true,
+                        focusNodeAdjacency: true,
+                        draggable: true,
+                        lineStyle: {
+                            width: 1,
+                            curveness: 0.3,
+                            opacity: 1,
+                            linkSymbol: 'arrow',
+                            name:"111",
+
+                        },
+//
+
+
+                    }
+                ]
+            }, true);
+            var images;
+            var automove=function () {
+                ctx.clearRect(0,0,1058,800);
+                if(!image){
+                    var image = new Image();
+                }
+                if(!image1){
+                    var image1 = new Image();
+                }
+                var offcanvas = myChart.getRenderedCanvas({
+                    pixelRatio: 1,
+                });
+//            console.log(offcanvas)
+                ctx.drawImage(offcanvas,0,10,1058,800);//每一秒创建一个canvas，怎么样才能只要创建出的最新的一个canvas
+                images=convertCanvasToImage(canvas,image);
+//           var images1=convertCanvasToImage(canvas,image1)
+
+//           console.log(jQuery(".base"))
+//            jQuery(".base").append(images)
+
+//           jQuery(".base").css("background","url("+srcCan+") no-repeat");
+//            jQuery(".base").css("backgroundSize","100% 100%")
+                jQuery("#ViewDiv").html(images);
+
+                bigger()
+
+            };
+            myChart.on('mouseup', function () {
+                setTimeout(automove,1000)
+
+            });
+
+        }).success(function (e) {
+            myChart.on('click', function (params) {
+                console.log(params.event.offsetX);
+                $scope.l=params.event.offsetX+70+"px";
+                $scope.t=params.event.offsetY+40+"px";
+                $('.perInfo').css({'left':''+$scope.l+'','top':''+$scope.t+'','zIndex':10}).show('slow');
+                var arys=[];
+                arys.push(params.name);
+                arys.push(params.color);
+                $scope.$apply(function () {
+                    $scope.name=params.name;
+                    $scope.arys=arys
+
+
+                });
+            });
+        });
+
+
+        function bigger() {
+            var oS=document.getElementById('base');
+            var oM=document.getElementById('mark');
+            var oB=document.getElementById('ViewDiv');
+            var oImg=oB.getElementsByTagName('img')[0];
+            oS.onmousemove=function(e){
+                if(oM.style.display){
+                    e=e||window.event;
+                    var l= e.clientX-this.offsetLeft-oM.offsetWidth;
+                    var t= e.clientY-this.offsetTop-oM.offsetHeight;
+
+                    //进行边界值的判断
+                    if(l<=0){
+                        l=0;
+                    }else if(l>=oS.offsetWidth-oM.offsetWidth){
+                        l=oS.offsetWidth-oM.offsetWidth
+                    }
+                    if(t<=50){
+                        t=50;
+                    }else if(t>=oS.offsetHeight-oM.offsetHeight){
+                        t=oS.offsetHeight-oM.offsetHeight
+                    }
+                    oM.style.left=l+'px';
+                    oM.style.top=t+'px';
+                    //核心比例计算公式：l/(oS.width-oM.width)=x/(img.width-oB.width)
+                    oImg.style.left=-l/(oS.offsetWidth-oM.offsetWidth)*(oImg.offsetWidth-oB.offsetWidth)-150+'px';
+                    oImg.style.top=-t/(oS.offsetHeight-oM.offsetHeight)*(oImg.offsetHeight-oB.offsetHeight)-50+'px';
+                };
+            };
+        }
+        function convertCanvasToImage(canvas,image) {
+            //判断有image这个标签就不在创建了，没有 再创建
+            srcCan=canvas.toDataURL("image/png");  //获取到图片信息
+            image.src =srcCan;
+            return image;
+        }
+        $scope.picDisplay1=function() {
+            $("#ViewDiv").css('display','block');
+            $('.mark').css('display','block');
+            $('.upMark').css('zIndex',10)
+
+        };
+        $scope.picDisplay2=function() {
+            $("#ViewDiv").css('display','none');
+            $('.mark').css('display','none');
+            $('.upMark').css('zIndex',-1)
+
+        };
+
+    })
+
+
+
+</script>
+</body>
+</html>
