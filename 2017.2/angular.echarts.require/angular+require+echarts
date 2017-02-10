@@ -1,0 +1,4 @@
+1.问题 使用require和angular的时候引用echarts，报错，说明echarts这个服务没有被注入
+    解决：在app中进行配置服务app.factory('echarts',function(){return echarts;});
+          然后要注意的是，要引用3.0以上的echarts的版本，使用低版本的不可，不需要对echarts中进行改变，直接引用就可， 不需要写defined
+2.
