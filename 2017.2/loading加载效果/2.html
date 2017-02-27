@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .loading {
+            display: inline-block;
+            overflow: hidden;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: text-bottom;
+            border: 1px solid;
+            font-size:30px;
+        }
+
+        .loading::after {
+            display: inline-table;
+            white-space: pre;
+            text-align: left;
+        }
+        .loading.rhomb::after {
+            content: "◇◇◇◇◇\A◈◇◇◇◇\A◇◈◇◇◇\A◇◇◈◇◇\A◇◇◇◈◇\A◇◇◇◇◈\A◇◇◇◇◇";
+            animation: spin6 2s steps(6) infinite;
+        }
+        @keyframes spin4  { to { transform: translateY( -80px); } }
+        @keyframes spin6  { to { transform: translateY( -180px); } }
+    </style>
+</head>
+<body>
+<span class="loading rhomb"></span>
+</body>
+</html>

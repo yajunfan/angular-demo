@@ -1,0 +1,76 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix="common" tagdir="/WEB-INF/tags/common"%>
+<%@ include file="/WEB-INF/views/common/taglibs.jsp" %>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>线下</title>
+
+    <link rel="stylesheet" href="${ctx}/static/css/bootstrap.css">
+    <link rel="stylesheet" href="${ctx}/static/css/ng-grid.css">
+    <style>
+        .gridStyle{
+            margin:20px auto;
+            width: 700px;
+            height: 500px;
+            border:1px solid green;
+        }
+        .ngRow{
+            border-top:1px solid #d4d4d4;
+        }
+        .ngHeaderScroller{
+            text-align:center;
+        }
+        .ngRow.odd{
+            background: #cde8ff;
+        }
+        .ngTotalSelectContainer{
+            display:none;
+        }
+    </style>
+</head>
+<div ng-controller="myCtrl">
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+</div>
+<script src="${ctx}/static/script/lib/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="${ctx}/static/script/lib/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="${ctx}/static/script/lib/ng-grid.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    var myApp = angular.module('myApp', ['ngGrid']);
+    var page_url = "${ctx}/auditingTask/dmList.do";
+
+    myApp.controller("myCtrl",["$scope","$http","cfpLoadingBar",function($scope,$http){
+        $http.post("${ctx}/auditingTask/dmList.do").success(function(data){
+            console.log(data);
+            $scope.users=angular.fromJson(data.body);
+        });
+        $scope.pagingOptions={
+            pageSizes:[2,4,6],
+            pageSize:2,
+            currentPage:1
+        };
+        $scope.gridOptions={
+            data:'users',
+            columnDefs:[
+                {
+                    field:'name_zh',
+                    displayName:'类别',
+                },
+                {
+                    field:'value',
+                    displayName:'结果'
+                }
+            ],
+            showFilter:true,
+            enablePaging:true,
+            showFooter:true,
+            pagingOptions:$scope.pagingOptions //显示分页的信息
+
+        };
+
+    }]);
+</script>
+
+
+</body>
+</html>
