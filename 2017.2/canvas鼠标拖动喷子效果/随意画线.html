@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="button"  value="自由画笔" onclick="drawPen()"/>
+    <canvas id="can" width="800" height="600" style="border:1px solid #999;" >您的浏览器不支持canvas画图功能，推荐使用Google浏览器!</canvas>
+</div>
+
+<script type="text/javascript">
+    var layer=0;    //图层索引
+
+        function drawPen(canvasId,penColor,penWidth) {
+            var that = this;
+            //canvas DOM对象
+            var canvas = document.getElementById("can");
+            //canvas 的矩形框
+            var ctx = canvas.getContext("2d");
+            var canvasRect = canvas.getBoundingClientRect();
+
+            //矩形框的左上角坐标
+            var canvasLeft = canvasRect.left;
+            var canvasTop = canvasRect.top;
+
+            //画图坐标原点
+            var sourceX = 0;
+            var sourceY = 0;
+
+            var layerIndex = layer;
+            var layerName = "layer";
+
+
+            //鼠标点击按下事件，画图准备
+            canvas.onmousedown = function (e) {
+                ctx.lineWidth = 3;
+                ctx.strokeStyle = "red";
+
+                //设置原点坐标
+                sourceX = e.clientX - canvasLeft;
+                sourceY = e.clientY - canvasTop;
+
+                //鼠标移动事件，画图
+                canvas.onmousemove = function (e) {
+
+                    layerIndex++;
+                    layer++;
+                    layerName += layerIndex;
+                    //当前坐标
+                    var currX = e.clientX - canvasLeft;
+                    var currY = e.clientY - canvasTop;
+
+                    //画线
+
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(sx,sy);
+                    ctx.lineTo(ex,ey);
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = randC();
+                    ctx.stroke();
+                    ctx.closePath();
+                    ctx.restore();
+
+//                        x1: sourceX, y1: sourceY,
+//                        x2: currX,
+//                        y2: currY
+
+                    //设置原点坐标
+                    sourceX = currX;
+                    sourceY = currY;
+                }
+            };
+            //鼠标没有按下了，画图结束
+//            canvas.onmouseup = function (e) {
+//                ctx.drawLayers().saveCanvas();
+//                canvas.onmousemove = null;
+//            };
+        }
+
+
+</script>
+</body>
+</html>

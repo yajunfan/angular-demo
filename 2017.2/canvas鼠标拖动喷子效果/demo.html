@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>鼠标拖动喷字效果</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+    <style type="text/css">
+        body{
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    var Xin = (function(){
+        var canvas,ctx,W,H,fontsize,texts,isMouseDown,mouse,position,pos;
+        function init(){
+            canvas = document.createElement("canvas");
+            ctx = canvas.getContext("2d");
+            canvas.width = W = window.innerWidth;
+            canvas.height = H = window.innerHeight;
+            document.body.appendChild(canvas);
+            fontsize = 3; //最小字号
+            texts = '观自在菩萨,行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。舍利子，色不异空，空不异色，色即是空，空即是色，受想行识，亦复如是。舍利子，是诸法空相，不生不灭，不垢不净，不增不减。是故空中无色，无受想行识，无眼耳鼻舌身意，无色声香味触法，无眼界，乃至无意识界。无无明，亦无无明尽，乃至无老死，亦无老死尽。无苦集灭道，无智亦无得。以无所得故，菩提萨埵，依般若波罗蜜多故，心无罣碍，无罣碍故，无有恐怖，远离颠倒梦想，究竟涅磐。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。故知般若波罗蜜多，是大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。故说般若波罗蜜多咒，即说咒曰：揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃。 ';
+            isMouseDown = false;
+            mouse = {x : 0, y : 0 };
+            position = {x : 0, y : 0 };
+            pos = 0;
+            bindEvents();
+        }
+        function bindEvents(){
+            window.onmousedown = handleMouseDown;
+            window.onmousemove = handleMouseMove;
+            window.onmouseup = handleMouseUp;
+            window.onmouseout = handleMouseUp;
+            window.onresize = handleResize;
+        }
+        function handleResize(){
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        function handleMouseDown(){
+            isMouseDown = true;
+            position.x = event.pageX;
+            position.y = event.pageY;
+        }
+        function handleMouseMove(){
+            if(isMouseDown){
+                mouse.x  = event.pageX;
+                mouse.y  = event.pageY;
+                var d = caculateLength(mouse,position),
+                    fontSize = fontsize + d /2, //计算在不同鼠标速度下的文字字号
+                    text = texts[pos],
+                    stepSize = textWidth(ctx,fontSize,text); //计算位置的宽度
+                if(d>stepSize){
+                    //计算偏离角度
+                    var angle = Math.atan2(mouse.y-position.y,mouse.x-position.x);
+                    //绘制文字
+                    ctx.font = fontSize + "px Arial";
+                    ctx.fillStyle = randC();
+                    ctx.save();
+                    ctx.translate(position.x,position.y);
+                    ctx.rotate(angle);
+                    ctx.fillText(text,0,0);
+                    ctx.restore();
+                    pos++;
+                    if(pos==texts.length){
+                        pos = 0;
+                    }
+                    //更新位置
+                    position.x += stepSize * Math.cos(angle);
+                    position.y += stepSize * Math.sin(angle);
+                }
+            }
+        }
+        function handleMouseUp(){
+            isMouseDown = false;
+        }
+        function caculateLength(p1,p2){
+            return Math.sqrt(Math.pow(p2.x-p1.x,2)+Math.pow(p2.y-p1.y,2));
+        }
+        function textWidth(ctx,fontSize,text){
+            ctx.font = fontSize + "px Arial";
+            if(ctx.fillText){
+                return ctx.measureText(text).width;
+            }else if(ctx.mozDrawText){
+                return ctx.mozMeasureText(text);
+            }
+        }
+        function randC(){
+            return 'rgb(' + (~~(Math.random()*255)) + "," + (~~(Math.random()*255)) + "," + (~~(Math.random()*255)) + ")";
+        }
+        return { init : init }
+    })();
+    Xin.init();
+</script>
+</body>
+</html>

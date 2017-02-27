@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canv" width="1000" height="1000" style="border: 1px solid"></canvas>
+<script>
+    var canvas = document.getElementById('canv');
+    var ctx = canvas.getContext("2d");
+    //    ctx.beginPath();
+    //    ctx.lineWidth = 3;
+    var oX,oY,oEX,oEY;
+    var flag = false;
+    function draw(sx,sy,ex,ey){
+        ctx.clearRect(0,0,1000,1000);
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(sx,sy);
+        ctx.lineTo(ex,ey);
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = randC();
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+
+
+
+    }
+
+    canvas.onclick=function (e) {
+        if(!flag){
+            oX=e.pageX;
+            oY=e.pageY;
+            console.log(1,oX,oY)
+        }else{
+            oEX=e.pageX;
+            oEY=e.pageY;
+            console.log(2,oEX,oEY)
+        }
+        draw(oX,oY,oEX,oEY);
+        flag=!flag;
+
+
+    }
+
+    function randC(){
+        return 'rgb(' + (~~(Math.random()*255)) + "," + (~~(Math.random()*255)) + "," + (~~(Math.random()*255)) + ")";
+    }
+</script>
+
+</body>
+</html>
