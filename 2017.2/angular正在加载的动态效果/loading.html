@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- angular -->
+    <script src="../../angular.js"></script>
+    <script src="js/angular-animate.min.js"></script>
+    <!--loadingbar-->
+    <script src="js/loading.js"></script>
+    <link rel="stylesheet" href="css/load.css">
+    <!--bootstrap-->
+    <link rel="stylesheet" href="../../bootstrap.css">
+    <!--app-->
+    <style>
+        .form-control{
+            margin-top:20px!important;
+        }
+        .form-horizontal .control-label{
+            margin-top:20px!important;
+        }
+    </style>
+</head>
+<body ng-app="LoadingBarExample" ng-controller="ExampleCtrl">
+<div id="loading-bar-container"></div>
+
+<form action="" class="form-horizontal" role="form">
+    <div class="form-group" style="width:98%">
+        <div ng-repeat="demo_data in resume_en">
+            <label class="col-md-1 col-sm-2 control-label">{{demo_data.key}}</label>
+            <div class="col-md-3 col-sm-2">
+                <input type={{demo_data.type}} class="form-control" placeholder="">
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div class="table-responsive">
+    <caption>TABLE</caption>
+    <table class="table">
+        <thead>
+        <tr ng-repeat="tableH in tableH">
+            <th>
+                <input type="checkbox">
+            </th>
+            <th>{{tableH.tHone}}</th>
+            <th>{{tableH.tHtwo}}</th>
+            <th>{{tableH.tHthree}}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="tableD in tableD">
+            <td>
+                <input type="checkbox">
+            </td>
+            <th>{{tableD.trone}}</th>
+            <th>{{tableD.trtwo}}</th>
+            <th>{{tableD.trthree}}</th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var app = angular.module('LoadingBarExample', ['chieffancypants.loadingBar', 'ngAnimate']);
+
+    app.config(['cfpLoadingBarProvider', function(cfpLoadingBarProvider) {
+        cfpLoadingBarProvider.includeSpinner = true;
+        cfpLoadingBarProvider.spinnerTemplate = '<div>Loading...</div>';
+    }]);
+
+
+    app.controller('ExampleCtrl', function($scope, $http, $timeout ,cfpLoadingBar) {
+        $scope.start = function() {
+            cfpLoadingBar.start();
+        };
+
+        $scope.complete = function () {
+            cfpLoadingBar.complete();
+        }
+        cfpLoadingBar.start();
+        $http.post("data/demo.json")
+            .success(function(data) {
+                $scope.complete();
+                $timeout(function() {
+                    $scope.resume_en = data.resume_en;
+                    $scope.tableD = data.tableD;
+                    $scope.tableH = data.tableH;
+                }, 750);
+
+            })
+            .error(function(){
+                console.log("an unexpected error ocurred resume_pc")
+            })
+    });
+</script>
+</body>
+</html>
