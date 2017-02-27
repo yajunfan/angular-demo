@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .content{
+            width: 100%;
+            position: relative;
+        }
+        #ViewDiv {
+            /*top:0;*/
+            /*right:0;*/
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+
+        }
+        #bgDiv
+        {
+            float: left;
+            width: 500px;
+            height: 600px;
+            position: absolute;
+            right:0;
+            border: 1px solid;
+        }
+        #dragDiv {
+            position: absolute;
+            width: 100px;
+            height: 80px;
+            left: 50px;
+            top: 50px;
+            border: solid 1px #fff;
+            cursor: move;
+        }
+        #dRightDown, #dLeftDown, #dLeftUp, #dRightUp, #dRight, #dLeft, #dUp, #dDown {
+            position: absolute;
+            background: #FFF;
+            border: 1px solid #333;
+            width: 6px;
+            height: 6px;
+            z-index: 500;
+            font-size: 0;
+            opacity: 0.5;
+            filter: alpha(opacity=50);
+        }
+        #dLeftDown, #dRightUp{
+            cursor: ne-resize;
+        }
+        #dRightDown, #dLeftUp {
+            cursor: nw-resize;
+        }
+        #dRight, #dLeft{
+            cursor: e-resize;
+        }
+        #dUp, #dDown{
+            cursor: n-resize;
+        }
+        #dLeftDown{
+            left: 0px;
+            bottom: 0px;
+        }
+        #dRightUp{
+            right: 0px;
+            top: 0px;
+        }
+        #dRightDown{
+            right: 0px;
+            bottom: 0px;
+            background-color: #00F;
+        }
+        #dLeftUp{
+            left: 0px;
+            top: 0px;
+        }
+        #dRight{
+            right: 0px;
+            top: 50%;
+            margin-top: -4px;
+        }
+        #dLeft{
+            left: 0px;
+            top: 50%;
+            margin-top: -4px;
+        }
+        #dUp{
+            top: 0px;
+            left: 50%;
+            margin-left: -4px;
+        }
+        #dDown{
+            bottom: 0px;
+            left: 50%;
+            margin-left: -4px;
+        }
+        #canvas{
+            position: absolute;
+            top:800px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <div id="bgDiv" style="position:absolute;height: 800px; width:50%; border: 1px solid #ccc; padding: 10px;right:0;">
+        <!--<div id="main" style="position:absolute;height: 800px; width:60%; border: 1px solid #ccc; padding: 10px;top:0;right:0">-->
+    </div>
+    <div id="dragDiv">
+        <div id="dRightDown">
+        </div>
+        <div id="dLeftDown">
+        </div>
+        <div id="dRightUp">
+        </div>
+        <div id="dLeftUp">
+        </div>
+        <div id="dRight">
+        </div>
+        <div id="dLeft">
+        </div>
+        <div id="dDown">
+        </div>
+        <div id="dUp">
+        </div>
+    </div>
+    <div id="ViewDiv" style="position: absolute"></div>
+    <canvas id="canvas"></canvas>
+    <!--<div id="aaa" style="width: 500px;height: 500px;border: 1px solid;position: absolute;top:1000px;"></div>-->
+</div>
+
+<!--<div id="main" style="position:absolute;height: 800px; width:100%; border: 1px solid #ccc; padding: 10px;"></div>-->
+<script src="js/jquery.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script language="javascript" type="text/javascript" src="js/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="js/Drag.js"></script>
+<script language="javascript" type="text/javascript" src="js/ImgCropper.js"></script>
+<script language="javascript" type="text/javascript" src="js/Resize.js"></script>
+<script language="javascript" type="text/javascript" src="js/my.js"></script>
+
+<script>
+
+    var srcCan;
+    var isIE = (document.all) ? true : false; // 是否ie
+    var isIE6 = isIE && ([/MSIE (\d)\.0/i.exec(navigator.userAgent)][0][1] == 6);
+    var $ = function(id) {
+//返回id对象
+        return "string" == typeof id ? document.getElementById(id) : id;
+    };
+    var myChart = echarts.init(document.getElementById('bgDiv'));
+    myChart.showLoading();
+    jQuery.getJSON('data/bbbb.json', function (json) {
+        myChart.hideLoading();
+        myChart.setOption(option = {
+
+            backgroundColor: 'lightblue', //背景色
+            // 图表标题
+            title: {
+                text: '人际关系',
+                subtext: '数据来自...',
+                x: 'center',
+                y: 'top',
+                backgroundColor: 'yellow',
+                borderColor: 'black',// 标题边框颜色
+                borderWidth: 2, // 标题边框线宽，单位px，默认为0（无边框）
+                padding: 6, // 标题内边距，单位px，默认各方向内边距为5，
+                // padding: [5,3,4,5],       四个不同的内边距
+                itemGap: 10,               // 主副标题纵向间隔，单位px，默认为10，
+                textStyle: {
+                    fontSize: 18,
+                    fontWeight: 'bolder',
+                    color: '#333'          // 主标题文字颜色
+                },
+                subtextStyle: {
+                    color: '#aaa'          // 副标题文字颜色
+                }
+            },
+            tooltip: { //触发鼠标移入事件的时候需要用的样式的格式
+                trigger: 'item',
+                formatter: '{b} : {c}'
+            },
+            // 图例
+            legend: {
+                orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：'horizontal' ¦ 'vertical'
+                x: 'left',   // 水平安放位置，默认为全图居中，可选为：'center' ¦ 'left' ¦ 'right'¦ {number}（x坐标，单位px）
+                y: 'top',// 垂直安放位置，默认为全图顶端，可选为：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+                backgroundColor: 'rgba(0,0,0,0)',
+                borderColor: '#ccc',       // 图例边框颜色
+                borderWidth: 0,            // 图例边框线宽，单位px，默认为0（无边框）
+                padding: 5,                // 图例内边距，单位px，默认各方向内边距为5，// 接受数组分别设定上右下左边距，同css
+                itemGap: 10,               // 各个item之间的间隔，单位px，默认为10，
+                // 横向布局时为水平间隔，纵向布局时为纵向间隔
+                itemWidth: 20,             // 图例图形宽度
+                itemHeight: 14,            // 图例图形高度
+                textStyle: {
+                    color: '#7f86ff'          // 图例文字颜色
+                },
+                selected:{'朋友':true,'家人':true},
+                data:['家人','朋友']
+            },
+
+
+            isShowScrollBar: false,
+            animationDurationUpdate: 200, //动画延迟
+            animationEasingUpdate: 'quinticInOut',
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'force',
+                    attractiveness: 0.8,
+                    force: {
+                        repulsion:5000
+
+                    },
+                    categories : [
+                        {
+                            value: '人物',
+                            itemStyle: {
+                                normal: {
+                                    color : '#1e11ff'
+                                }
+                            }
+                        },
+                        {
+                            value: '家人',
+                            itemStyle: {
+                                normal: {
+                                    color : '#ff7f50'
+                                }
+                            }
+                        },
+                        {
+                            value:'朋友',
+                            itemStyle: {
+                                normal: {
+                                    color : '#87cdfa'
+                                }
+                            }
+                        }
+
+                    ],
+                    edgeSymbol: ['arrow'], //增加箭头
+                    edgeSymbolSize: [15], //箭头的大小
+                    // progressiveThreshold: 700,
+                    label: {
+                        type: 'image',
+                        style: {
+                            image: './images/1.jpg',
+                            width: 45,
+                            height: 45
+                        },
+                        normal: {
+                            position: 'top',
+//                            formatter: '{a}:{b}'
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position:"right",
+                                show: true,
+                                textStyle: {
+                                    color: 'black'
+                                }
+                            },
+                            nodeStyle : {
+                                brushType : 'both',
+                                strokeColor : 'rgba(255,215,0,0.4)',
+                                lineWidth : 2
+                            }
+                        },
+                        emphasis:{
+                            linkStyle : { strokeColor : 'yellow'}
+                        }
+                    },
+                    nodes: json.nodes.map(function (node) {
+                        return {
+//                            x: node.x,
+//                            y: node.y,
+                            id: node.id,
+
+                            name: node.label,
+                            category:node.category,
+                            value:node.value,
+                            //symbol:node.shapeType,
+                            // 设置节点的形状样式  ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'  也可以通过 'image://url' 设置为图片，其中 url 为图片的链接。
+                            symbol:'image://'+node.image,
+                            symbolSize: 100,
+                            itemStyle: {
+                                normal: {
+                                    nodeStyle:{
+                                        brushType: 'both',
+                                        strokeColor: 'green',
+                                        lineWidth: 2
+                                    },
+                                },
+                                style: {
+                                    image: './images/1.jpg',
+                                    width: 60,
+                                    height: 60
+                                }
+                            },
+
+                        };
+                    }),
+                    edges: json.edges.map(function (edge) {
+
+                        return {
+                            source: edge.sourceID,
+                            target: edge.targetID,
+                            value:22222,//鼠标移到线上面出现的提示框
+                            lineStyle: {
+                                normal: {
+                                    color: "yellow",
+                                    width:4,
+
+                                }
+                            },
+                            itemStyle:{
+                                normal:{
+                                    lineWidth:10,
+                                    text:'丽萨-乔布斯',
+                                    textColor:'#030303',
+                                    textFont:'bold 15px verdana',
+                                    textPosition:'inside'
+                                }
+                            },
+                            label:{
+                                normal: {
+                                    position: 'right',
+                                    show:true,
+                                    textStyle: {
+                                        color: 'black'
+                                    },
+                                    formatter: '{c}'
+                                }
+                            }
+
+                        };
+
+
+                    }),
+
+
+                    roam: true,
+                    focusNodeAdjacency: true,
+                    draggable: true,
+                    lineStyle: {
+                        width: 1,
+                        curveness: 0.3,
+                        opacity: 1,
+                        linkSymbol: 'arrow',
+                        name:"111",
+
+                    },
+//
+
+
+                }
+            ]
+        }, true);
+        var canvas = document.getElementById("canvas");
+        canvas.width = 500;
+        canvas.height = 500;
+        var ctx = canvas.getContext('2d');
+        if(!image){
+            var image = new Image();
+        }
+        setInterval(function () {
+            var offcanvas = myChart.getRenderedCanvas({
+                pixelRatio: 0.4,
+            });
+
+            ctx.drawImage(offcanvas,100,10);
+
+            var images=convertCanvasToImage(canvas,image);
+            var imgCropper = new ImgCropper("bgDiv", "dragDiv", ''+srcCan+'', {
+                Width: 500,
+                Height: 600,
+                Color: "#FFF",
+                Resize: true,
+                Right: "dRight",
+                Left: "dLeft",
+                Up: "dUp",
+                Down: "dDown",
+                RightDown: "dRightDown",
+                LeftDown: "dLeftDown",
+                RightUp: "dRightUp",
+                LeftUp: "dLeftUp",
+                Preview: "ViewDiv"
+// viewWidth: 200, //这里要是不写的话预览截图就等同大
+// viewHeight: 200
+            });
+
+        },1000)
+
+        myChart.on('click', function (params) {
+            console.log(params);
+        });
+
+
+
+    });
+
+    function convertCanvasToImage(canvas,image) {
+        //判断有image这个标签就不在创建了，没有 再创建
+        srcCan=canvas.toDataURL("image/png");  //获取到图片信息
+        image.src =srcCan;
+        return image;
+    }
+
+
+
+
+
+
+</script>
+</body>
+</html>

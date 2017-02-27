@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myMod">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            list-style: none;
+        }
+        body,html{
+            width: 100%;
+            height: 100%;
+
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+        }
+        .navButton{
+            width: 100%;
+            height: 30px;
+        }
+        .navButton div{
+            padding-left: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            height: 100%;
+            line-height: 30px;
+        }
+        .navButton div span{
+            position: relative;
+            left:-5px;
+            top:4px;
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("./images/icon.png") no-repeat -382px -81px;
+            cursor: pointer;
+        }
+        .navButton input{
+            float: right;
+        }
+        .gridStyle{
+            border:1px solid green;
+            width:100%;
+            height:96%;
+            /*text-align: center;*/
+        }
+        .ngSelectionCheckbox{
+            margin-right: 2px;
+        }
+        .ngHeaderButton{
+            top:-22px;
+            right:10px;
+            background: none;
+        }
+        .ngHeaderButtonArrow{
+            width: 15px;
+            height: 15px;
+            background: url("images/icon.png") no-repeat -74px -82px;
+            transform: rotate(2deg);
+            top:-2px;
+            border-style:none;
+        }
+            /*更改了搜索框的位置*/
+        .ngColMenu{
+            position: absolute;
+            right:25px;
+            top:-35px;
+            border: none;
+            background: none;
+        }
+        .play{
+            text-align: center;
+            line-height: 35px;
+        }
+        .play a{
+            display: inline-block;
+            margin: 0 10px;
+        }
+        .editGrid{
+            position: absolute;
+            width: 99%;
+            height: 100%;
+            z-index:100;
+            top:0;
+            background: white;
+            display: none;
+        }
+        .ngRow.odd{
+            background: lemonchiffon;
+        }
+        .editGrid h4{
+            width: 100%;
+            height: 30px;
+            background: -webkit-linear-gradient(top, #c3edfc, #8dc4d7, #c3edfc);
+            font-size: 14px;
+            line-height: 30px;
+            padding-left: 5px;
+            color: #143bcc;
+            font-weight: bold;
+            margin: 0;
+            border: 1px solid;
+        }
+        .editGrid .content{
+            width: 100%;
+            border: 1px solid;
+        }
+        .editGrid .content .can_save{
+            background: lightgrey;
+            padding: 5px 0;
+        }
+        .can_save span{
+            display: inline-block;
+            padding: 0 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .content .list li{
+            position: relative;
+            display: inline-block;
+            width: 32%;
+            margin-left: 5px;
+            margin-bottom: 10px;
+        }
+        .content .list li input,.content .list li select{
+            position: absolute;
+            left:32%;
+            top:3px;
+            width:320px ;
+        }
+        .ngRow {
+            border: 1px solid #d4d4d4;
+        }
+    </style>
+</head>
+<body>
+<div ng-controller="myCtrl" class="container">
+    <div class="navButton">
+        <div><span></span>操作说明</div>
+        <div><span style="background-position: -190px -120px" ng-click="addGrid()"></span>新增</div>
+        <div><span style="background-position: -320px -120px"></span>导入表</div>
+        <!--<input type="text"><i></i><input type="button" value="查询">-->
+    </div>
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+    <div class="editGrid">
+        <h4>编辑</h4>
+        <div class="content">
+            <div class="can_save" ng-click="yinc()"><span>确定</span> <span>取消</span></div>
+            <ul class="list">
+                <li><label>菜单ID <input type="text"></label></li>
+                <li><label>菜单名称 <input type="text"></label></li>
+                <li><label>对应地址 <input type="text"></label></li>
+                <li><label>显示位置
+                    <select name="dis_positi" id="dis_positi">
+                        <option value="aa">一级菜单显示</option>
+                        <option value="aa">三级按钮显示</option>
+                        <option value="aa">不显示</option>
+                    </select>
+                </label></li>
+                <li><label>打开图标<input type="text"></label></li>
+                <li><label>关闭图标 <input type="text"></label></li>
+                <li><label>提示信息 <input type="text"></label></li>
+                <li><label>菜单级别
+                    <select name="menu_range" id="menu_range">
+                        <option value="bb">一级菜单显示</option>
+                        <option value="bb">三级按钮显示</option>
+                        <option value="bb">不显示</option>
+                    </select>
+                </label></li>
+                <li><label>上级菜单 <input type="text"></label></li>
+                <li><label>排序号 <input type="text"></label></li>
+                <li><label>操作名称 <input type="text"></label></li>
+                <li><label>查询提示信息<input type="text"></label></li>
+                <li><label>备注 <input type="text"></label></li>
+                <li><label>显示表名<input type="text"></label></li>
+                <li><label>查询列字段 <input type="text"></label></li>
+                <li><label>弹出框宽度 <input type="text"></label></li>
+                <li><label>弹出框高度 <input type="text"></label></li>
+                <li><label>按钮类型
+                    <select name="button_type" id="button_type">
+                        <option value="cc">请选择...</option>
+                        <option value="cc">一级菜单显示</option>
+                        <option value="cc">三级按钮显示</option>
+                        <option value="cc">不显示</option>
+                    </select>
+                </label></li>
+                <li><label>获取数据URL <input type="text"></label></li>
+                <li><label>新增页显示烈数 <input type="text"></label></li>
+                <li><label>按钮弹出类型
+                    <select name="button_alert_type" id="button_alert_type">
+                        <option value="dd">请选择...</option>
+                        <option value="dd">一级菜单显示</option>
+                        <option value="dd">三级按钮显示</option>
+                        <option value="dd">不显示</option>
+                    </select>
+                </label></li>
+                <li><label>保存或更新URL <input type="text"></label></li>
+                <li><label>模板编号 <input type="text"></label></li>
+                <li><label>额外查询列 <input type="text"></label></li>
+                <li><label>orderby语句 <input type="text"></label></li>
+                <li><label>选择罪犯过滤条件 <input type="text"></label></li>
+                <li><label>包含复选框
+                    <select name="con_checkbox" id="con_checkbox">
+                        <option value="ee">请选择...</option>
+                        <option value="ee">是</option>
+                        <option value="ee">否</option>
+                    </select>
+                </label></li>
+                <li><label>是否显示
+                    <select name="dis_if" id="dis_if">
+                        <option value="ff">请选择...</option>
+                        <option value="ff">是</option>
+                        <option value="ff">否</option>
+                    </select>
+                </label></li>
+
+
+
+
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<script src="js/jquery.js"></script>
+<script src="js/angular.js"></script>
+<script src="js/ng-grid.js"></script>
+<script>
+    var myMod = angular.module('myMod', ['ngGrid']);
+    //    注入 ngGrid 模块
+    myMod.controller('myCtrl',['$scope','$http',function ($scope,$http) {
+        $scope.addGrid=function () {
+            $('.editGrid').css('display','block')
+        };
+        $scope.yinc=function () {
+            $('.editGrid').css('display','none')
+        }
+        $http.get('data/tsconfig.json').success(function (data) {
+            $scope.users=data.data;
+        });
+        $scope.pagingOptions={
+            pageSizes:[1,10,20],
+//            设置下拉空的内容
+            pageSize:1,
+//            设置下拉框的默认值
+            currentPage:1
+//            设置当前页的默认值
+        };
+        $scope.gridOptions={
+            data:'users',//要显示的数据，只能是字符串
+//            enableRowSelection:false,//不让选中行
+//            multiSelect:false,//不可以复选
+            enableCellSelection:true,//可以选中单元格
+            enableCellEdit:true,//可编辑单元格
+//            enablePinning:true,//单元格可固定
+            columnDefs:[
+                {
+                    field:'id',
+                    displayName:'菜单ID'
+                },
+                {
+                    field:'name',
+                    displayName:'菜单名称'
+
+                },
+                {
+                    field:'range',
+                    displayName:'菜单级别'
+
+                },
+                {
+                    field:'lastMenu',
+                    displayName:'上级菜单'
+
+                },
+                {
+                    field:'sorts',
+                    displayName:'排序号',
+                    width:80
+
+                },
+                {
+                    field:'modelNum',
+                    displayName:'模板编号'
+
+                },
+                {
+                    field:'dis_play',
+                    displayName:'是否显示',
+                    headerClass:"aaa",
+                    resizable:true,
+
+                },
+                {
+                    field:'id',
+                    displayName:'操作',
+                    cellTemplate:'<div class="play"><a>详情</a><a href="">修改</a><a href="">菜单配置</a><a href="">配置导入</a></div>',
+                    width:400
+
+
+                }
+            ],
+
+//            jqueryUIDraggable: true,
+            showFilter:true,
+            showGroupPanel:true, //显示一个标题列
+            showSelectionCheckbox:true,
+            enablePaging:true,
+            showFooter:true,
+            pagingOptions:$scope.pagingOptions
+        }
+
+    }])
+
+</script>
+
+</body>
+</html>
+
+<!--
+  ng-grid的地址 : https://angular-ui.github.io/ui-grid/
+-->

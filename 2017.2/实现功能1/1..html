@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+body,html{
+    width: 100%;
+    height: 100%;
+}
+.info{
+    position: absolute;
+    top:20%;
+    right:0;
+    width:200px;
+    border: 1px solid red;
+    /*display: none;*/
+
+}
+
+        .info ul li{
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: yellow;
+            margin: 4px 0;
+            list-style: none;
+        }
+    </style>
+
+</head>
+<body ng-controller="myCtrl">
+{{name}}
+<div id="trend" style="height:100%; width:100%;"></div>
+<div class="info">
+    <ul>
+        <li>地名：{{name}}</li>
+        <li>经度：2</li>
+        <li>纬度：3</li>
+
+    </ul>
+</div>
+<script src="../../jquery.min.js"></script>
+<script src="../../angular.js"></script>
+<script src="echarts.min.js"></script>
+<script src="china.js"></script>
+<script>
+    var myApp = angular.module('myApp', []);
+    myApp.controller('myCtrl',function ($scope) {
+        $.get('china.json', function (usaJson) {
+            console.log(usaJson)
+            myChart.hideLoading();
+
+        });
+        var dom = document.getElementById("trend");
+        var myChart = echarts.init(dom);
+        var planePath = 'path://M1705.06,1318.313v-89.254l-319.9-221.799l0.073-208.063c0.521-84.662-26.629-121.796-63.961-121.491c-37.332-0.305-64.482,36.829-63.961,121.491l0.073,208.063l-319.9,221.799v89.254l330.343-157.288l12.238,241.308l-134.449,92.931l0.531,42.034l175.125-42.917l175.125,42.917l0.531-42.034l-134.449-92.931l12.238-241.308L1705.06,1318.313z';
+        var convertData = function (data) {
+            var res = [];
+            for (var i = 0; i < data.length; i++) {
+                var dataItem = data[i];
+                var fromCoord = geoCoordMap[dataItem[0].name];
+                var toCoord = geoCoordMap[dataItem[1].name];
+                if (fromCoord && toCoord) {
+                    res.push({
+                        fromName: dataItem[0].name,
+                        toName: dataItem[1].name,
+                        coords: [fromCoord, toCoord]
+                    });
+                }
+            }
+            return res;
+        };
+        var  option = {
+            backgroundColor: '#404a59',
+            title : {
+                text: '回款实时风险分布图',
+                // subtext: '数据纯属虚构',
+                left: 'left',
+                top:'top',
+                textStyle : {
+                    color: '#fff',
+                    fontSize:'22',
+                    fontWeight:'normal'
+
+                }
+            },
+            tooltip : {
+                trigger: 'item'
+            },
+            legend: {
+                orient: 'vertical',
+                top: 'bottom',
+                left: 'right',
+                data:['北京 Top10', '上海 Top10', '广州 Top10'],
+                textStyle: {
+                    color: '#fff'
+                },
+                selectedMode: 'single'
+            },
+            geo: {
+                map: 'china',
+                label: {
+                    emphasis: {
+                        show: false
+                    }
+                },
+                roam: true,
+                itemStyle: {
+                    normal: {
+                        areaColor: '#323c48',
+                        borderColor: '#404a59'
+                    },
+                    emphasis: {
+                        areaColor: '#2a333d'
+                    }
+                }
+            },
+        };
+        if (option && typeof option === "object") {
+            myChart.setOption(option, true);
+        }
+
+        myChart.on('click', function (usaJson) {
+            console.log(usaJson)
+            a=usaJson.name;
+            $scope.name=a;
+            $scope.$apply(function () {
+                $scope.name=a;
+            })
+
+        });
+    })
+
+
+</script>
+</body>
+</html>

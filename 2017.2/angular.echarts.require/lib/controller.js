@@ -31,6 +31,12 @@ define(['jquery', "angular", "echarts"], function ($, angular,echarts) {
             },
             toolbox: {
                 feature: {
+                    dataZoom: {
+                        yAxisIndex: 'none'
+                    },
+                    dataView: {readOnly: false},
+                    magicType: {type: ['line', 'bar']},
+                    restore: {},
                     saveAsImage: {}
                 }
             },

@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d5968e8e-8b5d-4f31-b2ef-837a651c71a2" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="yiyue" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="tsconfig.json" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>refre</find>
+      <find>stat</find>
+      <find>assets-content</find>
+      <find>nav-tabs</find>
+      <find>bMap_assets</find>
+      <find>current</find>
+      <find>assets-header</find>
+      <find>bMap_profileData</find>
+      <find>chase-content</find>
+      <find>list-tit</find>
+      <find>tab</find>
+      <find>tipBox</find>
+      <find>query</find>
+      <find>bodies</find>
+      <find>50</find>
+      <find>assetss-content</find>
+      <find>50px</find>
+      <find>listContent</find>
+      <find>ngROW</find>
+      <find>chasePlay</find>
+      <find>gridStyle</find>
+      <find>.chase-content</find>
+      <find>assets-right</find>
+      <find>grid</find>
+      <find>.gridStyle</find>
+      <find>list-box</find>
+      <find>back</find>
+      <find>state-content</find>
+      <find>.back</find>
+      <find>addChaseCtrl</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/1.13/百度地图/自定义控件-双击放大两倍.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/自定义标注的图片" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/4.地图覆盖物.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/6.添加折现.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/7.地图事件的监听.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/8.事件.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/11.通过按钮控制工具的开启和关闭.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/12.地图服务、GPS等.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/12.地图服务-本地服务.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/3.自定义控件-双击放大2级.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/4_1.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/4.地图覆盖物、标注、自定义标注.html" />
+        <option value="$PROJECT_DIR$/1.16/地图问题" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/4_1实现自定义标注.html" />
+        <option value="$PROJECT_DIR$/1.16/1自定义覆盖物.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/7.地图事件的点击和拖动.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/6.添加折线.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/5.信息窗口.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/9.地图图层概念.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/1.初步学习地图.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/2.认识控件，使用定位，比例尺，鹰眼.html" />
+        <option value="$PROJECT_DIR$/1.16/2.地图图层概念.html" />
+        <option value="$PROJECT_DIR$/1.13/百度地图/10.地图工具概述.html" />
+        <option value="$PROJECT_DIR$/1.16/热力图.html" />
+        <option value="$PROJECT_DIR$/1.16/4.gps-单个点运动.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/changeChase.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/detailChaseRecord.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/addChase.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/logCar.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_list.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_detail.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/main.js" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/lib/jquery.cityselect.js" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/解决坑问题" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_change.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/1.login.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/accManagement.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/app.js" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/annInform.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/trainCenter.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/equCenter.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/profileData.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/css/ng-grid.css" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/carChase.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/assets.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/Statistics.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/controller.js" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/followPosition.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/index.html" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/css/car.less" />
+        <option value="$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/changeChaseRecord.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="车贷管家2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="车贷管家2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="车贷管家2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="车贷管家2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="script" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="carJs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="2017.1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="1.10-车贷管家" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="车贷管家2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/1.10-车贷管家" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.13\高德地图" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.12" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.6\第一种" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.6\Subskill Digital_files" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\2017.1\1.10-车贷管家\车贷管家2\css" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\2017.1\1.10-车贷管家\车贷管家2\script\lib" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\2017.1\1.10-车贷管家\车贷管家2\images" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.16" />
+      <recent name="C:\Users\Administrator\Desktop\fyj\study\yiyue\1.13\百度地图" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d5968e8e-8b5d-4f31-b2ef-837a651c71a2" name="Default" comment="" />
+      <created>1483688265267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1483688265267</updated>
+      <workItem from="1483688266477" duration="8840000" />
+      <workItem from="1483926010967" duration="2826000" />
+      <workItem from="1483955281053" duration="487000" />
+      <workItem from="1484126500301" duration="4196000" />
+      <workItem from="1484185659086" duration="25292000" />
+      <workItem from="1484271576225" duration="16568000" />
+      <workItem from="1484530374783" duration="12769000" />
+      <workItem from="1486956124616" duration="21354000" />
+      <workItem from="1487036367622" duration="10599000" />
+      <workItem from="1487050159005" duration="18988000" />
+      <workItem from="1487123147014" duration="14000" />
+      <workItem from="1487136074149" duration="7823000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="129756000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2484375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/controller.js</url>
+          <line>612</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/1.16/地图问题" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/4.地图覆盖物、标注、自定义标注.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/4_1实现自定义标注.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/8.添加、移除事件.html" />
+    <entry file="file://$PROJECT_DIR$/1.16/1自定义覆盖物.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/6.添加折线.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/7.地图事件的点击和拖动.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/1.初步学习地图.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/2.认识控件，使用定位，比例尺，鹰眼.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/9.地图图层概念.html" />
+    <entry file="file://$PROJECT_DIR$/1.16/2.地图图层概念.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/5.信息窗口.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/11.通过按钮控制工具的开启和关闭.html" />
+    <entry file="file://$PROJECT_DIR$/1.13/百度地图/10.地图工具概述.html" />
+    <entry file="file://$PROJECT_DIR$/1.16/热力图.html" />
+    <entry file="file://$PROJECT_DIR$/1.16/4.gps-单个点运动.html" />
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/car.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/images/车贷管家.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-600">
+          <caret line="77" column="40" lean-forward="true" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/lib/city.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="0" column="1013" lean-forward="false" selection-start-line="0" selection-start-column="1013" selection-end-line="0" selection-end-column="1013" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/lib/jquery.cityselect.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="21" column="10" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/解决坑问题">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="6" column="61" lean-forward="false" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/detailChaseRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="76" column="53" lean-forward="true" selection-start-line="76" selection-start-column="53" selection-end-line="76" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/trainCenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="43" lean-forward="false" selection-start-line="3" selection-start-column="43" selection-end-line="3" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/equCenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/logCar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="43" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/profileData.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="34" lean-forward="false" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="27" lean-forward="false" selection-start-line="1" selection-start-column="26" selection-end-line="1" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/css/ng-grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="327" column="16" lean-forward="false" selection-start-line="327" selection-start-column="16" selection-end-line="327" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/Statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="73" column="14" lean-forward="true" selection-start-line="73" selection-start-column="14" selection-end-line="73" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/trend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="19" column="53" lean-forward="false" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/accManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/annInform.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-59">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="47" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/assets.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/call.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-28">
+          <caret line="1" column="25" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/cusManagement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_change.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="117" lean-forward="true" selection-start-line="23" selection-start-column="117" selection-end-line="23" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/customer_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="18" lean-forward="true" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/eventCenter.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/followPosition.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <marker date="1487144006173" expanded="true" signature="61:4082" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/css/car.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="601">
+          <caret line="726" column="23" lean-forward="false" selection-start-line="726" selection-start-column="23" selection-end-line="726" selection-end-column="23" />
+          <folding>
+            <element signature="e#284#361#0" expanded="false" />
+            <element signature="e#379#472#0" expanded="false" />
+            <element signature="e#482#1115#0" expanded="false" />
+            <element signature="e#1132#1714#0" expanded="false" />
+            <element signature="e#1730#2326#0" expanded="false" />
+            <element signature="e#2328#2745#0" expanded="false" />
+            <element signature="e#2747#3156#0" expanded="false" />
+            <element signature="e#3190#3488#0" expanded="false" />
+            <element signature="e#3626#3795#0" expanded="false" />
+            <element signature="e#3804#5622#0" expanded="false" />
+            <element signature="e#5632#5701#0" expanded="false" />
+            <element signature="e#5717#8216#0" expanded="false" />
+            <element signature="e#8360#12600#0" expanded="false" />
+            <element signature="e#12836#13868#0" expanded="false" />
+            <element signature="e#13603#13862#0" expanded="false" />
+            <element signature="e#13892#14862#0" expanded="false" />
+            <element signature="e#14010#14369#0" expanded="false" />
+            <element signature="e#14405#14856#0" expanded="false" />
+            <element signature="e#17720#17800#0" expanded="false" />
+            <element signature="e#17821#23699#0" expanded="false" />
+            <element signature="e#23832#24816#0" expanded="false" />
+            <element signature="e#24832#25908#0" expanded="false" />
+            <element signature="e#25955#29391#0" expanded="false" />
+            <element signature="e#29421#29525#0" expanded="false" />
+            <element signature="e#29660#40776#0" expanded="false" />
+            <element signature="e#29713#37565#0" expanded="false" />
+            <element signature="e#29733#31359#0" expanded="false" />
+            <element signature="e#31381#31854#0" expanded="false" />
+            <element signature="e#31876#37064#0" expanded="false" />
+            <element signature="e#37082#37355#0" expanded="false" />
+            <element signature="e#37376#37453#0" expanded="false" />
+            <element signature="e#37582#39267#0" expanded="false" />
+            <element signature="e#38286#38579#0" expanded="false" />
+            <element signature="e#39307#40582#0" expanded="false" />
+            <element signature="e#40609#40770#0" expanded="false" />
+            <element signature="e#40802#45047#0" expanded="false" />
+            <element signature="e#41345#41551#0" expanded="false" />
+            <element signature="e#42049#42653#0" expanded="false" />
+            <element signature="e#43109#43728#0" expanded="false" />
+            <element signature="e#43774#44210#0" expanded="false" />
+            <element signature="e#44020#44184#0" expanded="false" />
+            <element signature="e#44473#44699#0" expanded="false" />
+            <element signature="e#45064#45096#0" expanded="false" />
+            <element signature="e#45143#47051#0" expanded="false" />
+            <element signature="e#45158#46309#0" expanded="false" />
+            <element signature="e#47061#47183#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/script/carJs/controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="3" lean-forward="false" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding>
+            <marker date="1487143477748" expanded="false" signature="0:53" ph="/** Created by Administrator on 2017/1/6 0006. ...*/" />
+            <marker date="1487143477748" expanded="true" signature="54:107" ph="/** Created by Administrator on 2017/1/4 0004. ...*/" />
+            <marker date="1487143477748" expanded="true" signature="255:37216" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="398:550" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="447:542" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="607:2648" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="648:680" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="746:1255" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="817:1244" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="921:1072" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="1076:1229" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="1323:1598" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="1368:1587" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="1667:2640" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="1717:2142" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="2015:2127" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="2146:2629" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="2420:2615" ph="//..." />
+            <marker date="1487143477748" expanded="false" signature="2712:4272" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="2848:4053" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="2862:2925" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="2947:2994" ph="{&quot;trigger&quot;: 'axis'...}" />
+            <marker date="1487143477748" expanded="true" signature="3008:3099" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="3118:3255" ph="{&quot;left&quot;: '3%'...}" />
+            <marker date="1487143477748" expanded="true" signature="3278:3610" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="3305:3596" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="3337:3403" ph="{&quot;yAxisIndex&quot;: 'none'...}" />
+            <marker date="1487143477748" expanded="true" signature="3631:3766" ph="{&quot;type&quot;: 'category'...}" />
+            <marker date="1487143477748" expanded="true" signature="3787:3832" ph="{&quot;type&quot;: 'value'...}" />
+            <marker date="1487143477748" expanded="true" signature="3854:4043" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="3873:4029" ph="{&quot;name&quot;: '客户数据'...}" />
+            <marker date="1487143477748" expanded="true" signature="4105:4161" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="4201:4263" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="4340:9868" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="4937:5500" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="5015:5466" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="5223:5452" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="5254:5432" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="5525:6806" ph="{&quot;backgroundColor&quot;: '##404a59'...}" />
+            <marker date="1487143477748" expanded="true" signature="5587:5891" ph="{&quot;text&quot;: '回款实时风险分布图'...}" />
+            <marker date="1487143477748" expanded="true" signature="5747:5877" ph="{&quot;color&quot;: '##fff'...}" />
+            <marker date="1487143477748" expanded="true" signature="5915:5962" ph="{&quot;trigger&quot;: 'item'...}" />
+            <marker date="1487143477748" expanded="true" signature="5984:6277" ph="{&quot;orient&quot;: 'vertical'...}" />
+            <marker date="1487143477748" expanded="true" signature="6170:6223" ph="{&quot;color&quot;: '##fff'...}" />
+            <marker date="1487143477748" expanded="true" signature="6296:6795" ph="{&quot;map&quot;: 'china'...}" />
+            <marker date="1487143477748" expanded="true" signature="6351:6460" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="6383:6442" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="6517:6781" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="6547:6663" ph="{&quot;areaColor&quot;: '##323c48'...}" />
+            <marker date="1487143477748" expanded="true" signature="6695:6763" ph="{&quot;areaColor&quot;: '##2a333d'...}" />
+            <marker date="1487143477748" expanded="true" signature="6858:6914" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7071:7122" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7167:7218" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7263:7316" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="7362:9067" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7376:7439" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="7461:7508" ph="{&quot;trigger&quot;: 'axis'...}" />
+            <marker date="1487143477748" expanded="true" signature="7530:7588" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7608:7745" ph="{&quot;left&quot;: '3%'...}" />
+            <marker date="1487143477748" expanded="true" signature="7768:8100" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7795:8086" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="7827:7893" ph="{&quot;yAxisIndex&quot;: 'none'...}" />
+            <marker date="1487143477748" expanded="true" signature="8121:8255" ph="{&quot;type&quot;: 'category'...}" />
+            <marker date="1487143477748" expanded="true" signature="8276:8321" ph="{&quot;type&quot;: 'value'...}" />
+            <marker date="1487143477748" expanded="true" signature="8343:9057" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="8361:8515" ph="{&quot;name&quot;: '逾期'...}" />
+            <marker date="1487143477748" expanded="true" signature="8533:8695" ph="{&quot;name&quot;: '不良'...}" />
+            <marker date="1487143477748" expanded="true" signature="8713:8871" ph="{&quot;name&quot;: '拖车'...}" />
+            <marker date="1487143477748" expanded="true" signature="8889:9043" ph="{&quot;name&quot;: '结清'...}" />
+            <marker date="1487143477748" expanded="true" signature="9121:9179" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="9218:9280" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="9341:9860" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="9390:9618" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="9622:9849" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="9928:10131" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="10067:10125" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="10172:13829" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="10242:13828" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="10331:10467" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="10490:11604" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="10491:10717" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="10719:10945" ph="{&quot;id&quot;: &quot;2&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="11162:11388" ph="{&quot;id&quot;: &quot;4&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="11633:13339" ph="{&quot;data&quot;: 'users'...}" />
+            <marker date="1487143477748" expanded="true" signature="11684:13286" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="11707:11815" ph="{&quot;field&quot;: 'id'...}" />
+            <marker date="1487143477748" expanded="true" signature="11833:11923" ph="{&quot;field&quot;: 'type'...}" />
+            <marker date="1487143477748" expanded="true" signature="11941:12031" ph="{&quot;field&quot;: 'time'...}" />
+            <marker date="1487143477748" expanded="true" signature="12049:12139" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="12157:12252" ph="{&quot;field&quot;: 'id_card'...}" />
+            <marker date="1487143477748" expanded="true" signature="12270:12367" ph="{&quot;field&quot;: 'autoCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="12385:12475" ph="{&quot;field&quot;: 'rule'...}" />
+            <marker date="1487143477748" expanded="true" signature="12493:12586" ph="{&quot;field&quot;: 'company'...}" />
+            <marker date="1487143477748" expanded="true" signature="12604:12703" ph="{&quot;field&quot;: 'personCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="12721:12819" ph="{&quot;field&quot;: 'checkPeople'...}" />
+            <marker date="1487143477748" expanded="true" signature="12837:13271" ph="{&quot;field&quot;: 'report'...}" />
+            <marker date="1487143477748" expanded="true" signature="13375:13435" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="13491:13566" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="13605:13720" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="13758:13822" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="13867:17919" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="13895:17918" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14041:14561" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14090:14318" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14322:14550" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14597:14942" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14645:14784" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="14788:14931" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="15302:15562" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="15353:15551" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="15409:15473" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="15806:15958" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="15811:15875" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="16154:17047" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="16316:17035" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="16641:16921" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="16723:16903" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="16770:16875" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="16959:17015" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17078:17108" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17178:17596" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17225:17404" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17408:17586" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17766:17816" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17860:17911" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="17967:21843" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="17995:21842" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="18181:18320" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="18397:18928" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="18447:18682" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="18686:18918" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="18970:19236" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="19061:19143" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="19147:19227" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="19324:19460" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="19483:19952" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="19497:19723" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="19725:19951" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="19981:21299" ph="{&quot;data&quot;: 'users'...}" />
+            <marker date="1487143477748" expanded="false" signature="20110:21117" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="20133:20225" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="20243:20334" ph="{&quot;field&quot;: 'type'...}" />
+            <marker date="1487143477748" expanded="true" signature="20352:20444" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="20462:20552" ph="{&quot;field&quot;: 'time'...}" />
+            <marker date="1487143477748" expanded="true" signature="20570:20663" ph="{&quot;field&quot;: 'company'...}" />
+            <marker date="1487143477748" expanded="true" signature="20681:20780" ph="{&quot;field&quot;: 'personCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="20798:20897" ph="{&quot;field&quot;: 'checkPeople'...}" />
+            <marker date="1487143477748" expanded="true" signature="20915:21009" ph="{&quot;field&quot;: 'report'...}" />
+            <marker date="1487143477748" expanded="true" signature="21011:21103" ph="{&quot;field&quot;: 'play'...}" />
+            <marker date="1487143477748" expanded="true" signature="21336:21831" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="21386:21602" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="21606:21820" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="21886:27447" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="21914:27446" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="22070:22199" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="22244:22295" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="22418:22554" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="22577:23046" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="22591:22817" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="22819:23045" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="false" signature="23074:24567" ph="{&quot;data&quot;: 'users'...}" />
+            <marker date="1487143477748" expanded="true" signature="23203:24384" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="23226:23318" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="23336:23427" ph="{&quot;field&quot;: 'type'...}" />
+            <marker date="1487143477748" expanded="true" signature="23445:23537" ph="{&quot;field&quot;: 'time'...}" />
+            <marker date="1487143477748" expanded="true" signature="23555:23647" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="23666:23761" ph="{&quot;field&quot;: 'company'...}" />
+            <marker date="1487143477748" expanded="true" signature="23779:23878" ph="{&quot;field&quot;: 'personCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="23896:23995" ph="{&quot;field&quot;: 'checkPeople'...}" />
+            <marker date="1487143477748" expanded="true" signature="24013:24370" ph="{&quot;field&quot;: 'play'...}" />
+            <marker date="1487143477748" expanded="false" signature="24632:24736" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="24773:25293" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="24823:25051" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="25055:25282" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="25333:25466" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="25507:25579" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="25619:25679" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="25719:25792" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="25824:25883" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="25915:25974" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="26008:26423" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="26200:26278" ph="//..." />
+            <marker date="1487143477748" expanded="false" signature="26456:27439" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="26529:27426" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="26640:27412" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="26662:26755" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="26890:27099" ph="//..." />
+            <marker date="1487143477748" expanded="true" signature="27496:32663" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="27524:32662" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="27774:28810" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="27797:27844" ph="{&quot;trigger&quot;: 'axis'...}" />
+            <marker date="1487143477748" expanded="true" signature="27864:28001" ph="{&quot;left&quot;: '3%'...}" />
+            <marker date="1487143477748" expanded="true" signature="28024:28356" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="28051:28342" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="28083:28149" ph="{&quot;yAxisIndex&quot;: 'none'...}" />
+            <marker date="1487143477748" expanded="true" signature="28377:28519" ph="{&quot;type&quot;: 'category'...}" />
+            <marker date="1487143477748" expanded="true" signature="28540:28585" ph="{&quot;type&quot;: 'value'...}" />
+            <marker date="1487143477748" expanded="true" signature="28607:28800" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="28626:28786" ph="{&quot;name&quot;: '客户数据'...}" />
+            <marker date="1487143477748" expanded="false" signature="28830:29908" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="28853:28900" ph="{&quot;trigger&quot;: 'axis'...}" />
+            <marker date="1487143477748" expanded="false" signature="28920:29057" ph="{&quot;left&quot;: '3%'...}" />
+            <marker date="1487143477748" expanded="false" signature="29080:29412" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="29107:29398" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="29139:29205" ph="{&quot;yAxisIndex&quot;: 'none'...}" />
+            <marker date="1487143477748" expanded="false" signature="29433:29605" ph="{&quot;type&quot;: 'category'...}" />
+            <marker date="1487143477748" expanded="false" signature="29626:29671" ph="{&quot;type&quot;: 'value'...}" />
+            <marker date="1487143477748" expanded="true" signature="29693:29898" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="29712:29884" ph="{&quot;name&quot;: '客户数据'...}" />
+            <marker date="1487143477748" expanded="true" signature="29963:30021" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="30074:30132" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="30249:30622" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="30408:30493" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="30526:30612" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="30654:30790" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="30813:31282" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="30827:31053" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="31055:31281" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="false" signature="31311:32655" ph="{&quot;data&quot;: 'users'...}" />
+            <marker date="1487143477748" expanded="false" signature="31466:32473" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="31489:31581" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="31599:31690" ph="{&quot;field&quot;: 'type'...}" />
+            <marker date="1487143477748" expanded="true" signature="31708:31800" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="31818:31908" ph="{&quot;field&quot;: 'time'...}" />
+            <marker date="1487143477748" expanded="true" signature="31926:32019" ph="{&quot;field&quot;: 'company'...}" />
+            <marker date="1487143477748" expanded="true" signature="32037:32136" ph="{&quot;field&quot;: 'personCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="32154:32253" ph="{&quot;field&quot;: 'checkPeople'...}" />
+            <marker date="1487143477748" expanded="true" signature="32271:32365" ph="{&quot;field&quot;: 'report'...}" />
+            <marker date="1487143477748" expanded="true" signature="32367:32459" ph="{&quot;field&quot;: 'play'...}" />
+            <marker date="1487143477748" expanded="true" signature="32708:35227" ph="[...]" />
+            <marker date="1487143477748" expanded="false" signature="32736:35226" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="32767:32903" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="32926:33395" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="32940:33166" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="33168:33394" ph="{&quot;id&quot;: &quot;1&quot;...}" />
+            <marker date="1487143477748" expanded="true" signature="33424:35219" ph="{&quot;data&quot;: 'users'...}" />
+            <marker date="1487143477748" expanded="true" signature="33579:35037" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="33602:33694" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="33712:33805" ph="{&quot;field&quot;: 'type'...}" />
+            <marker date="1487143477748" expanded="true" signature="33823:33915" ph="{&quot;field&quot;: 'name'...}" />
+            <marker date="1487143477748" expanded="true" signature="33933:34023" ph="{&quot;field&quot;: 'time'...}" />
+            <marker date="1487143477748" expanded="true" signature="34041:34136" ph="{&quot;field&quot;: 'company'...}" />
+            <marker date="1487143477748" expanded="true" signature="34154:34253" ph="{&quot;field&quot;: 'personCheck'...}" />
+            <marker date="1487143477748" expanded="true" signature="34271:34550" ph="{&quot;field&quot;: 'checkPeople'...}" />
+            <marker date="1487143477748" expanded="true" signature="34400:34418" ph="..." />
+            <marker date="1487143477748" expanded="true" signature="34433:34514" ph="..." />
+            <marker date="1487143477748" expanded="true" signature="34568:34662" ph="{&quot;field&quot;: 'report'...}" />
+            <marker date="1487143477748" expanded="true" signature="34664:35023" ph="{&quot;field&quot;: 'play'...}" />
+            <marker date="1487143477748" expanded="true" signature="35273:35342" ph="[...]" />
+            <marker date="1487143477748" expanded="true" signature="35301:35341" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="35381:36494" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="35497:35723" ph="{&quot;keypoint&quot;: keypoint...}" />
+            <marker date="1487143477748" expanded="true" signature="35740:36485" ph="{&quot;url&quot;: url1...}" />
+            <marker date="1487143477748" expanded="true" signature="35952:36475" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="36077:36461" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="36178:36400" ph="{...}" />
+            <marker date="1487143477748" expanded="false" signature="36524:37214" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="37030:37207" ph="{...}" />
+            <marker date="1487143477748" expanded="true" signature="37068:37157" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/addChase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="5" column="48" lean-forward="false" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/carChase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="142" column="6" lean-forward="false" selection-start-line="142" selection-start-column="6" selection-end-line="142" selection-end-column="6" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#1;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/changeChase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/template/changeChaseRecord.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="31" lean-forward="false" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1.10-车贷管家/车贷管家2/1.login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding>
+            <element signature="n#div#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#1;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

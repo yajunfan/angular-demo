@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background:#CFCFCF;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/plug-ins/28e7751dbec/integration/bootstrap/3/dataTables.bootstrap.css" />
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" language="javascript" src="js/dataTables.bootstrap.js"></script>
+</head>
+<body>
+<div id="container">
+    <!-- 定义一个表格元素 -->
+    <button id="redraw">更换数据源</button>
+    <table id="example" class="table table-striped table-bordered">
+        <thead>
+        <tr>
+            <th></th>
+            <th>序号</th>
+            <th>标题</th>
+            <th>连接</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+        <tr>
+            <th></th>
+            <th>序号</th>
+            <th>标题</th>
+            <th>连接</th>
+        </tr>
+        </tfoot>
+        <!-- tbody是必须的 -->
+    </table>
+</div>
+</body>
+
+<!-- HTML代码片段中请勿添加<body>标签 //-->
+
+<script>
+
+    var t = $('#example').DataTable({
+        ajax: {
+            //指定数据源
+            url: "data/tsconfig.json"
+        },
+        //每页显示三条数据
+        pageLength: 3,
+        columns: [{
+            "data": null //此列不绑定数据源，用来显示序号
+        },
+            {
+                "data": "id"
+            },
+            {
+                "data": "title"
+            },
+            {
+                "data": "url"
+            }],
+        "columnDefs": [{
+            // "visible": false,
+            //"targets": 0
+        },
+            {
+                "render": function(data, type, row, meta) {
+                    //渲染 把数据源中的标题和url组成超链接
+                    return '<a href="' + data + '" target="_blank">' + row.title + '</a>';
+                },
+                //指定是第三列
+                "targets": 2
+            }]
+
+    });
+
+    //前台添加序号
+    t.on('order.dt search.dt',
+        function() {
+            t.column(0, {
+                "search": 'applied',
+                "order": 'applied'
+            }).nodes().each(function(cell, i) {
+                cell.innerHTML = i + 1;
+            });
+        }).draw();
+
+    $.extend( $.fn.dataTable.defaults, {
+        searching: false,
+        ordering:  false
+    } );
+
+    // 这样初始化，排序将会打开
+    // 搜索功能仍然是关闭
+//    $('#example').DataTable( {
+//        ordering: true
+//    } );
+    //更换数据源（相同格式，但是数据内容不同）
+//    $("#redraw").click(function() {
+//        var url = table.api().ajax.url("http://www.gbtags.com/gb/networks/uploads/a7bdea3c-feaf-4bb5-a3bd-f6184c19ec09/newData.txt");
+//        url.load();
+//    });
+</script>
+
+</html>

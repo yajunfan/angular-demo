@@ -1,0 +1,7 @@
+1.出现了使用ng-grid的多选框showSelectionCheckbox这个属性和表格错开一列的问题？
+        --解决：因为使用了data-ng-include这个指令，会创建一个dom元素，最后使表格增加一行空白列，也不能删，因为是angular的ng-grid自动生成的，所以只能找到当前的那个复选框，进行位置的位移。而且表头的多选框和表身的多选框的class命不一样，所以要相应的进行更改！
+2.写css的时候，父级给的百分比的宽高，子节点继承的时候，如果父级使用到了定位，那么子节点也必须加上定位，且不可以写relative，否则出现无效的情况
+3.使用jquery的三级联动地区的插件的时候，出现的问题
+    1）require中不需要引入city.min.js
+    2）jquery.cityselect这个js需要进行define才能进行使用
+    3）jquery.cityselect这个中的默认配置中的url是相对于我的基本html来进行找路径的，否则，报错

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            position: relative;
+            width:100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .bing{
+            width: 800px;
+            height: 800px;
+            position: relative;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            margin: auto;
+            /*left:118px;*/
+            /*top:222px;*/
+            /*background: -webkit-radial-gradient(#3c1c01 58%, #b76620 66%, #150a00 75%)*/
+        }
+        .people{
+            position: absolute;
+            background: url("ren2.jpg") no-repeat 49% 0;
+            background-size: 50% 100%;
+            width: 250px;
+            height: 250px;
+            border: 1px solid;
+            border-radius: 50%;
+            background-color: white;
+            left:50%;
+            top:50%;
+            margin-left: -142px;
+            margin-top: -32px;
+            z-index: 100;
+        }
+
+        .hold{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            }
+        .outer{
+              position: absolute;
+              width: 600px;
+              height: 600px;
+              transform: rotate(135deg);
+              clip:rect(auto,auto,auto,auto);
+              border-radius: 50%;
+              background: yellow;
+          }
+        .pie{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            transform: rotate(180deg) !important;
+            clip:rect(0,100px,200px,0);
+            border-radius: 50%;
+            background: transparent;
+        }
+        .left,.right,.top,.bottom{
+                position: absolute;
+                width: 600px;
+                height: 600px;
+                transform: rotate(135deg) ;
+                clip:rect(0,300px,300px,0);
+                border-radius: 50%;
+                background:#cdd5ff;
+                border: 1px solid;
+            }
+        .leftadd{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            transform: rotate(180deg) !important;
+            clip:rect(0,300px,300px,0);
+            border-radius: 50%;
+            background: #cdd5ff;
+        }
+        .add{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            transform: rotate(225deg) ;
+            clip:rect(0,300px,300px,0);
+            border-radius: 50%;
+            background: #cdd5ff;
+        }
+        .bottom{
+            top:196px;
+            left:82px;
+            transform: rotate(224deg);
+        }
+        .top{
+            top:180px;
+            left:82px;
+            transform: rotate(44deg);
+            background: #bffff3;
+            /*background: -webkit-radial-gradient(#979bff 30%, #404dff 70%);*/
+        }
+        .right{
+            top:190px;
+            left:92px;
+            transform: rotate(134deg);
+            background: #ccffc3;
+        }
+        .left{
+            top:190px;
+            left:70px;
+            transform: rotate(314deg);
+            background: greenyellow;
+            /*background: -webkit-radial-gradient(#ec99ff 50%, #c100ff 70%);*/
+
+        }
+        span{
+            position: absolute;
+            display: inline-block;
+            text-align: center;
+            line-height: 184px;
+            font-size: 40px;
+            transform: rotate(45deg);
+            left:82px;
+            top:76px;
+            cursor: pointer;
+        }
+        .listLeft{
+            display: none;
+            position: absolute;
+            width: 160px;
+            padding: 20px;
+            border: 1px solid;
+            background: lightblue;
+
+        }
+        p{
+            position: absolute;
+            background: black;
+            width: 400px;
+            height: 1px;
+            left: -100px;
+            top:-100px;
+
+
+        }
+
+        .bg{
+            color: whitesmoke;
+            background: -webkit-radial-gradient(#7898d3, #2922ff, #d3203e);
+        }
+        .bg1{
+            box-shadow: 100px 100px 100px 10px black;
+            background: -webkit-linear-gradient(top left,lightgrey,grey,lightgrey);
+        }
+    </style>
+</head>
+<body>
+<!--<div class="hold" style="margin-top: 100px;margin-left: 200px">-->
+    <!--<div class="outer"></div>-->
+    <!--<div class="pie"></div>-->
+<!--</div>-->
+<div class="container" ng-controller="myCtrl">
+    <div class="people"></div>
+    <div class="bing" ng-click="aa()">
+        <div class="left mm" >
+            <span style="left:82px;top:76px">基本信息</span>
+            <div class="add"></div>
+            <div class="leftadd"></div>
+
+        </div>
+        <div class="top mm" >
+            <span style="left:132px;transform: rotate(-45deg)">电核</span>
+            <div class="add"></div>
+            <div class="leftadd"></div>
+        </div>
+        <div class="right mm" >
+            <span style="left:114px;transform: rotate(-135deg)">反欺诈</span>
+            <div class="add"></div>
+            <div class="leftadd"></div>
+        </div>
+        <div class="bottom mm">
+            <span style="left:136px;transform: rotate(135deg)">信用</span>
+            <div class="add"></div>
+            <div class="leftadd"></div>
+        </div>
+    </div>
+    <div class="listLeft">
+        <ul>
+            <li ng-repeat="list in lists">{{list}}</li>
+
+        </ul>
+
+    </div>
+    <p  class="base"></p>
+</div>
+<script src="../../../jquery.min.js"></script>
+<script src="../../../angular.js"></script>
+<script>
+    var myApp = angular.module('myApp', []);
+    
+
+//    $('.left').on('click',function () {
+//     $('.listLeft').toggle('slow');
+//    })
+
+    myApp.controller('myCtrl',function ($scope) {
+        $('.mm').on('click',function (e) {
+            $('.listLeft').show('slow');
+            e=e||window.event;
+            $(this).addClass('bg').siblings().removeClass('bg');
+            console.log($(this).children('span').html())
+            if($(this).children('span').html() == "电核"){
+                $scope.lists=['zhangsan000','lisi000','zhaowu000','maliu000'];
+                $('.listLeft').css({"left":"20%","top":"10%"});
+                $('.base').css({"left":"20%","top":"30%"})
+            }else if($(this).children('span').html() == "反欺诈"){
+                $scope.lists=['zhangsan111','lisi111','zhaowu111','maliu111'];
+                $('.listLeft').css({"left":"70%","top":"50%"});
+                $('.base').css({"left":"60%","top":"70%"})
+            }else if($(this).children('span').html() == "基本信息"){
+                $scope.lists=['zhangsan222','lisi222','zhaowu222','maliu222'];
+                $('.listLeft').css({"left":"16%","top":"50%"});
+                $('.base').css({"left":"16%","top":"70%"})
+            }else if($(this).children('span').html() == "信用"){
+                $scope.lists=['zhangsan333','lisi333','zhaowu333','maliu333'];
+                $('.listLeft').css({"left":"70%","top":"75%"});
+                $('.base').css({"left":"54%","top":"94%"})
+            }
+            e.preventDefault();
+        })
+    })
+
+</script>
+</body>
+</html>

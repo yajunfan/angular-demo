@@ -1,0 +1,25 @@
+js中如何获取上个页面的Url，域名和端口号
+1
+获取上一个页面的一个URL，这个URL一般做一个页面的跳转
+window.location.href
+<script>window.location.href="http://www.baidu.com"</script>
+2
+获取一个页面的主机名
+window.location.hostname
+3
+获取一个页面的主机名和端口号相当于是hostname和port
+window.location.host
+4
+获取主机的端口号
+window.location.port
+5
+获取URL的路径部分
+window.location.pathname
+6
+获取查询部分的URL
+window.location.searchURL
+7
+获取html中的第一个#（描点）
+window.location.hash
+
+8.http://www.webhek.com/convert-canvas-image/  canvas和图片之间的转换

@@ -15,14 +15,14 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            /*background: rgba(255, 24, 41, 0.3);*/
+            background: rgba(152, 192, 255, 0.6);
             z-index: -1;
         }
         .base{
             position:absolute;
-            width: 50%;
+            width: 100%;
             height:800px;
-            left:0%;
+            left:0;
             border: 1px solid red;
             z-index: 10;
             top:40px;
@@ -34,15 +34,16 @@
             height: 500px;
             border: 1px solid black;
             z-index: 10;
-            left:50%;
+            left:0;
             display: none;
             overflow: hidden;
+
 
         }
         #ViewDiv img{
             display: inline-block;
-            width: 234%;
-            height: 234%;
+            width: 654%;
+            height: 334%;
             position: absolute;
             left:0px;
             top:0px;
@@ -56,7 +57,7 @@
             right:0;
             border: 1px solid;
         }
-        #canvas{  position: absolute;top:900px; border: 1px solid;opacity: 0}
+        #canvas{  position: absolute;width:100%;height:800px;top:900px; border: 1px solid;opacity: 1}
         input{
 
             cursor: pointer;
@@ -65,11 +66,11 @@
             position: absolute;
             left: 0;
             top:50px;
-            width: 400px;
-            height: 400px;
+            width: 300px;
+            height: 300px;
             border: 1px solid black;
             background: rgba(0, 0, 0, 0.3);
-            z-index: 1000;
+            z-index: 100;
             display: none;
         }
         .perInfo{
@@ -109,6 +110,7 @@
     <div class="base" id="base" >
         <div id="bgDiv" style="position:absolute;height: 800px; width:100%; border: 1px solid #ccc; padding: 10px;right:0;"></div>
         <div class="upMark"></div>
+        <div id="mark" class="mark"></div>
     </div>
     <div id="ViewDiv" style="position: absolute"></div>
     <canvas id="canvas"></canvas>
@@ -120,7 +122,7 @@
     </div>
     <input type="button" value="选区工具" ng-click="picDisplay1()">
     <input type="button" value="取消选区" ng-click="picDisplay2()">
-    <div id="mark" class="mark"></div>
+
 
 </div>
 
@@ -135,14 +137,14 @@
         var srcCan;
         var myChart = echarts.init(document.getElementById('bgDiv'));
         var canvas = document.getElementById("canvas");
-        canvas.width = 1058;
+        canvas.width = 2100;
         canvas.height = 800;
+        var e0;
         var ctx = canvas.getContext('2d');
         myChart.showLoading();
         $.get('data/bbbb.json', function (json) {
             myChart.hideLoading();
             myChart.setOption(option = {
-
 //            backgroundColor: 'lightblue', //背景色
                 // 图表标题
                 title: {
@@ -188,12 +190,8 @@
                     selected:{'朋友':true,'家人':true},
                     data:['家人','朋友']
                 },
-
-
                 isShowScrollBar: false,
                 animation:false,
-//            animationDurationUpdate: 200, //动画延迟
-//            animationEasingUpdate: 'quinticInOut',
                 series: [
                     {
                         type: 'graph',
@@ -202,7 +200,7 @@
                         force: {
                             repulsion:5000,
                             coolDown :10,
-                            layoutAnimation:true
+                            layoutAnimation:false
 
                         },
                         categories : [
@@ -330,11 +328,7 @@
                                 }
 
                             };
-
-
                         }),
-
-
                         roam: true,
                         focusNodeAdjacency: true,
                         draggable: true,
@@ -346,32 +340,20 @@
                             name:"111",
 
                         },
-//
-
-
                     }
                 ]
             }, true);
             var images;
             var automove=function () {
-                ctx.clearRect(0,0,1058,800);
+                ctx.clearRect(0,0,2100,800);
                 if(!image){
                     var image = new Image();
-                }
-                if(!image1){
-                    var image1 = new Image();
                 }
                 var offcanvas = myChart.getRenderedCanvas({
                     pixelRatio: 1,
                 });
-//            console.log(offcanvas)
-                ctx.drawImage(offcanvas,0,10,1058,800);//每一秒创建一个canvas，怎么样才能只要创建出的最新的一个canvas
+                ctx.drawImage(offcanvas,0,10,2100,800);//每一秒创建一个canvas，怎么样才能只要创建出的最新的一个canvas
                 images=convertCanvasToImage(canvas,image);
-//           var images1=convertCanvasToImage(canvas,image1)
-
-//           console.log(jQuery(".base"))
-//            jQuery(".base").append(images)
-
 //           jQuery(".base").css("background","url("+srcCan+") no-repeat");
 //            jQuery(".base").css("backgroundSize","100% 100%")
                 jQuery("#ViewDiv").html(images);
@@ -379,58 +361,76 @@
                 bigger()
 
             };
+            setTimeout(automove,500)
             myChart.on('mouseup', function () {
-                setTimeout(automove,1000)
-
+                setTimeout(automove,500)
             });
 
         }).success(function (e) {
+            e=e||window.event;
+            var events=e;
             myChart.on('click', function (params) {
-                console.log(params.event.offsetX);
                 $scope.l=params.event.offsetX+70+"px";
                 $scope.t=params.event.offsetY+40+"px";
-                $('.perInfo').css({'left':''+$scope.l+'','top':''+$scope.t+'','zIndex':10}).show('slow');
+                $('.perInfo').css({'left':''+$scope.l+'','top':''+$scope.t+'','zIndex':10,"display":"block"});
+                e0.stopPropagation?e0.stopPropagation(): e0.cancelBubble=true;
                 var arys=[];
                 arys.push(params.name);
                 arys.push(params.color);
                 $scope.$apply(function () {
                     $scope.name=params.name;
-                    $scope.arys=arys
-
-
+                    $scope.arys=arys;
                 });
             });
-        });
+            $(document).on("mousedown",function () {
+                $('.perInfo').css("display","none")
+            })
 
+        });
 
         function bigger() {
             var oS=document.getElementById('base');
             var oM=document.getElementById('mark');
             var oB=document.getElementById('ViewDiv');
             var oImg=oB.getElementsByTagName('img')[0];
-            oS.onmousemove=function(e){
-                if(oM.style.display){
-                    e=e||window.event;
-                    var l= e.clientX-this.offsetLeft-oM.offsetWidth;
-                    var t= e.clientY-this.offsetTop-oM.offsetHeight;
 
+            oS.onmousemove=function(e){
+
+                    e=e||window.event;
+                    var l= e.clientX-this.offsetLeft-oM.offsetWidth/2;
+                    var t= e.clientY-this.offsetTop-oM.offsetHeight/2;
+                    var bl=l+305,bt=t+40;
                     //进行边界值的判断
                     if(l<=0){
                         l=0;
+                        bl=oM.offsetWidth;
+                    }else if(l>=oS.offsetWidth-oB.offsetWidth-oM.offsetWidth && l<=oS.offsetWidth-oM.offsetWidth){
+                        bl=l-oB.offsetWidth;
                     }else if(l>=oS.offsetWidth-oM.offsetWidth){
-                        l=oS.offsetWidth-oM.offsetWidth
+
+                        l=oS.offsetWidth-oM.offsetWidth;
+                        bl=oS.offsetWidth-oB.offsetWidth-oM.offsetWidth;
                     }
-                    if(t<=50){
-                        t=50;
-                    }else if(t>=oS.offsetHeight-oM.offsetHeight){
-                        t=oS.offsetHeight-oM.offsetHeight
+                    if(t<=0){
+                        t=0;
+                        bt=40;
+                    }else if(t>=oS.offsetHeight-oB.offsetHeight && t<=oS.offsetHeight-oM.offsetHeight){
+                        bt=oM.offsetTop+oM.offsetHeight-oB.offsetHeight+40;
                     }
+                    else if(t>=oS.offsetHeight-oM.offsetHeight){
+                        t=oS.offsetHeight-oM.offsetHeight;
+                        bt=oS.offsetHeight-oB.offsetHeight+40;
+                    }
+
+
+                    oB.style.left=bl+'px';
+                    oB.style.top=bt+'px';
                     oM.style.left=l+'px';
                     oM.style.top=t+'px';
                     //核心比例计算公式：l/(oS.width-oM.width)=x/(img.width-oB.width)
-                    oImg.style.left=-l/(oS.offsetWidth-oM.offsetWidth)*(oImg.offsetWidth-oB.offsetWidth)-150+'px';
-                    oImg.style.top=-t/(oS.offsetHeight-oM.offsetHeight)*(oImg.offsetHeight-oB.offsetHeight)-50+'px';
-                };
+                    oImg.style.left=-(l*(oB.offsetWidth-oImg.offsetWidth)/(oM.offsetWidth-oS.offsetWidth))+'px';
+                    oImg.style.top=-t/(oS.offsetHeight-oM.offsetHeight)*(oImg.offsetHeight-oB.offsetHeight)+'px';
+
             };
         }
         function convertCanvasToImage(canvas,image) {
@@ -439,13 +439,21 @@
             image.src =srcCan;
             return image;
         }
-        $scope.picDisplay1=function() {
+        function getE(e) {
+            e=e||window.event;
+            e0=e;
+        }
+        getE();
+        $scope.picDisplay1=function(e) {
+
             $("#ViewDiv").css('display','block');
             $('.mark').css('display','block');
             $('.upMark').css('zIndex',10)
 
         };
-        $scope.picDisplay2=function() {
+        $scope.picDisplay2=function(e) {
+            e=e||window.event;
+
             $("#ViewDiv").css('display','none');
             $('.mark').css('display','none');
             $('.upMark').css('zIndex',-1)

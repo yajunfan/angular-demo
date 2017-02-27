@@ -1,0 +1,39 @@
+<div class="bMap_customer_list" ng-controller="customerCtrl">
+    <div class="customer-right common-right">
+        <div class="customer-right-tit">
+            <div class="tit">
+                <h5>客户管理</h5>
+                <div class="stat-btn" style="right: 250px;">
+                    <span class="icon icon-add"></span>
+                    <input type="button" class="btn btn-success" style="background: #34ab1c" value="添加" >
+                </div>
+                <div class="stat-btn" style="right: 150px;">
+                    <span class="icon icon-sub"></span>
+                    <input type="button" class="btn" value="删除">
+                </div>
+                <div class="stat-btn">
+                    <span class="icon icon-export1"></span>
+                    <input type="button" class="btn" value="导出">
+                </div>
+            </div>
+            <div class="enterBor">
+                <ul>
+                    <li>客户姓名 <input type="text"></li>
+                    <li>车牌号码 <input type="text"></li>
+                    <li>所属组织 <input type="text"></li>
+                    <li>贷款类型
+                        <select >
+                            <option value="">全部</option>
+                            <option value="">抵押贷款</option>
+                            <option value="">按揭贷款</option>
+                        </select>
+                    </li>
+                    <li><input type="button" value="查询" class="btn btn-success"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="customer-content common-content">
+            <div class="gridStyle" ng-grid="gridOptions"></div>
+        </div>
+    </div>
+</div>

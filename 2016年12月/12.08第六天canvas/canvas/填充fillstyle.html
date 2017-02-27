@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800" style="border:1px solid #4b4dff;">
+    <!--<img src="12.jpg" alt="" id="cute">-->
+</canvas>
+
+<script>
+    var c=document.getElementById("myCanvas");
+    var ctx=c.getContext("2d");
+//第一种，纯色的填充
+//    ctx.fillStyle="#FF0000";
+//    ctx.fillRect(0,0,150,75);
+
+//第二种 渐变色的填充
+    var aa=ctx.createLinearGradient(0,0,10,10);
+    aa.addColorStop(0,"white");
+    aa.addColorStop(1,"black");
+    ctx.fillStyle=aa;
+    ctx.fillRect(0,0,10,10);
+
+//第三种  填充图片
+//    window.onload=function(){
+//        var canvas = document.getElementById("myCanvas");
+//        var context=canvas.getContext("2d");
+//        var img = new Image();
+//        img.src="./img/12.jpg";
+//        img.onload=function() {
+//            var pattern = context.createPattern(img, "repeat");
+//            context.fillStyle=pattern;
+//            context.fillRect(0, 0, 800, 800)
+//        }
+//    }
+
+
+</script>
+
+</body>
+</html>

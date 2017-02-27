@@ -1,0 +1,112 @@
+{
+  "data": [
+    {
+      "id": 10005,
+      "name":"办公室助理",
+      "range":"一级菜单",
+      "lastMenu":"10007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"档案管理",
+      "range":"一级菜单",
+      "lastMenu":"1000009",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"1"
+    },
+    {"id": 10005,
+      "name":"刑罚执行",
+      "range":"不显示",
+      "lastMenu":"1006",
+      "sorts":"3",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"系统管理",
+      "range":"一级菜单",
+      "lastMenu":"1000007",
+      "sorts":"2",
+      "modelNum":"",
+      "dis_play":"1"
+    },
+    {
+      "id": 10005,
+      "name":"新增",
+      "range":"三级按钮",
+      "lastMenu":"1000005",
+      "sorts":"1",
+      "modelNum":"",
+      "dis_play":"1"
+    }, {
+      "id": 10005,
+      "name":"修改",
+      "range":"三级按钮",
+      "lastMenu":"102",
+      "sorts":"1",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"删除",
+      "range":"一级菜单",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"档卡登记",
+      "range":"三级按钮",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    } ,{
+      "id": 10005,
+      "name":"电子档案",
+      "range":"一级菜单",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"文书打印",
+      "range":"三级按钮",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    } ,{
+      "id": 10005,
+      "name":"贷政管理",
+      "range":"一级菜单",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    },
+    {
+      "id": 10005,
+      "name":"新增",
+      "range":"不显示",
+      "lastMenu":"1000007",
+      "sorts":"0",
+      "modelNum":"",
+      "dis_play":"0"
+    }
+
+
+
+
+  ]
+}

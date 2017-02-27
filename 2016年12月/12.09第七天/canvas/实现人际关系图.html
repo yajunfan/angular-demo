@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Document</title>
+    <style>
+        #box{ width:500px; height:500px; position: relative}
+        .host{ position:absolute; width:100px; height:50px; line-height:50px; text-align:center; color:#000000; background-color:#eeeeee ; border:#000000 1px solid; font-weight:bolder}
+        .guest{position:absolute; width:80px; height:40px; line-height:40px;text-align:center; color: #999999; background-color:#FFFFFF ; border:#000000 1px solid; cursor:pointer}
+        .relationship{position:absolute; width:60px; height:20px;  color: #aaa; line-height:20px; font-size:12px; text-align:center}
+    </style>
+    <script src="../../../jquery.min.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>-->
+    <script src="jquery.corner.js"></script>
+    <script>
+        var relationName = [
+            {name:"成龙",friend:[
+                {name:"房祖名",relationship:"父子"},
+                {name:"林凤娇",relationship:"夫妻"},
+                {name:"吴绮莉",relationship:"绯闻"},
+                {name:"徐静蕾",relationship:"激吻"}]
+            },
+            {name:"房祖名",friend:[
+                {name:"成龙",relationship:"父子"},
+                {name:"林凤娇",relationship:"母子"},
+                {name:"方大同",relationship:"情敌"},
+                {name:"薛凯琪",relationship:"女友"},
+                {name:"陈坤",relationship:"朋友"},
+                {name:"赵薇",relationship:"朋友"}]
+            },
+            {name:"林凤娇",friend:[
+                {name:"成龙",relationship:"夫妻"},
+                {name:"房祖名",relationship:"母子"},
+                {name:"吴绮莉",relationship:"情敌"}]
+            },
+            {name:"吴绮莉",friend:[
+                {name:"成龙",relationship:"绯闻"},
+                {name:"林凤娇",relationship:"情敌"},
+                {name:"吴卓林",relationship:"母女"}]
+            },
+            {name:"徐静蕾",friend:[
+                {name:"李亚鹏",relationship:"电影"},
+                {name:"韩寒",relationship:"娱乐圈"},
+                {name:"成龙",relationship:"激吻"},
+                {name:"黄立行",relationship:"电影"}]
+            },
+            {name:"方大同",friend:[
+                {name:"房祖名",relationship:"情敌"},
+                {name:"薛凯琪",relationship:"否认拍拖"},
+                {name:"林宥嘉",relationship:"歌手"},
+                {name:"韩庚",relationship:"演唱会"}]
+            },
+            {name:"薛凯琪",friend:[
+                {name:"方大同",relationship:"否认拍拖"},
+                {name:"房祖名",relationship:"女友"}]
+            }
+        ]
+
+        var relation = {
+            radius:150,
+            boxW:500,
+            boxH:500,
+            hostW:100,
+            hostH:50,
+            guestW:80,
+            guestH:40,
+            relationW:60,
+            relationH:20,
+            angle:0,
+            id:"box",
+            init:function(array,n){//传入参数1：数组 参数2：第几个
+                this.array = array;
+                this.appendHost(this.array,n);
+                this.appendQuest(this.array,n);
+                this.appendRelationShip(this.array,n);
+            },
+
+            appendHost:function(array,n){
+                var box = $("#"+this.id);
+                var host ="<span class='host'>"+array[n].name+"</span>";
+                box.append(host)
+                this.postHost();
+            },
+
+            postHost:function(){
+                var x = (this.boxW - this.hostW)/2;
+                var y = (this.boxH - this.hostH)/2;
+                $(".host").css({
+                    left:x,
+                    top:y
+                })
+            },
+
+            appendQuest:function(array,n){
+                var box = $("#"+this.id);
+                var guests="";
+                var that = this;
+                for(var i=0; i<array[n].friend.length; i++){
+                    guests+="<span class='guest'>"+array[n].friend[i].name+"</span>";
+                }
+                $(guests).appendTo(box);
+                $(".guest").on("click",function(){
+                    that.move(that,this);
+                })
+                this.postQuest();
+            },
+
+            postQuest:function(){
+                var guests = $(".guest");
+                var that = this;
+                guests.each(function(i){
+                    guests.eq(i).css({
+                        left:that.setQuestPose(guests.length,that.radius,i,that.guestW,that.guestH,that.angle).left,
+                        top:that.setQuestPose(guests.length,that.radius,i,that.guestW,that.guestH,that.angle).top
+                    }).attr("angle",i/guests.length)
+                })
+            },
+
+            setQuestPose:function(n,r,i,w,h,d){//n:代表共几个对象 r代表周长 i代表第几个对象 w代表外面对象的宽带 h代表外面对象的高度 d代表其实角度
+                var p = i/n*Math.PI*2+Math.PI*2*d;
+                var x = r * Math.cos(p);
+                var y = r * Math.sin(p);
+                return {
+                    "left":parseInt(this.boxW/2+ x - w/2),
+                    "top":parseInt(this.boxH/2 + y - h/2)
+                }
+            },
+
+            appendRelationShip:function(array,n){
+                var box = $("#"+this.id);
+                var relation="";
+                for(var i=0; i<array[n].friend.length; i++){
+                    relation+="<span class='relationship'>"+array[n].friend[i].relationship+"</span>";
+                }
+                box.append(relation);
+                this.postRelationShip();
+            },
+
+            postRelationShip:function(){
+                var guests = $(".relationship");
+                var that = this;
+                guests.each(function(i){
+                    guests.eq(i).css({
+                        left:that.setQuestPose(guests.length,that.radius/2,i,that.relationW,that.relationH,that.angle).left,
+                        top:that.setQuestPose(guests.length,that.radius/2,i,that.relationW,that.relationH,that.angle).top
+                    })
+                })
+            },
+
+            move:function(t,i){
+                var n = $(".guest").index($(i));
+                this.angle = parseFloat($(i).attr("angle"))+0.5;
+
+                this.delect(n);
+
+                this.moveHost(i);
+                this.moveQuest(i);
+                this.moveRelationship(i);
+
+                this.changeClass();
+
+                setTimeout(function(){t.newAppend(i)},500);
+            },
+
+            newAppend:function(i){
+                this.newAppendGuest(i,"guest","name",this.guestW,this.guestH,this.radius);
+                this.newAppendGuest(i,"relationship","relationship",this.relationW,this.relationH,this.radius/2);
+
+            },
+
+
+            newAppendGuest:function(i,className,name,w,h,r){
+                var host = $(i).html();
+                var guest = $(".guest").html();
+                var box = $("#"+this.id);
+                var that = this;
+                var next=0;
+                for(var i=0; i<this.array.length; i++){
+                    if(host == this.array[i].name){
+                        for(var j=0;j<this.array[i].friend.length; j++){
+                            if(guest !== this.array[i].friend[j].name){
+                                next++;
+                                var guests ="<span class='"+className+"'>"+this.array[i].friend[j][name]+"</span>";
+                                $(guests).appendTo(box).css({
+                                    left:that.setQuestPose(this.array[i].friend.length,r,next,w,h,that.angle).left,
+                                    top:that.setQuestPose(this.array[i].friend.length,r,next,w,h,that.angle).top
+                                }).attr("angle",that.angle+next/this.array[i].friend.length).hide().fadeIn(1000);
+                            }
+                        }
+                    }
+                }
+            },
+
+
+            moveHost:function(i){
+                var hLeft = parseInt($(".host").css("left")) + this.hostW/2;
+                var hTop = parseInt($(".host").css("top"))  + this.hostH/2;
+                var gLeft = parseInt($(i).css("left")) + this.guestW/2;
+                var gTop = parseInt($(i).css("top")) + this.guestH/2;
+                var l = gLeft - hLeft;
+                var t = gTop - hTop;
+                var left = (hLeft - l - this.guestW/2)+"px";
+                var top = (hTop - t - this.guestH/2)+"px";
+                this.animate(".host",left,top);
+            },
+
+            moveRelationship:function(i){
+                var hLeft = parseInt($(".host").css("left")) + this.hostW/2;;
+                var hTop = parseInt($(".host").css("top")) + this.hostH/2;
+                var gLeft = parseInt($(".relationship").css("left")) + this.relationW/2;
+                var gTop = parseInt($(".relationship").css("top"))  + this.relationH/2;
+                var l = gLeft - hLeft;
+                var t = gTop - hTop;
+                var left = (hLeft - l - this.relationW/2)+"px";
+                var top = (hTop - t - this.relationH/2)+"px";
+                this.animate(".relationship",left,top);
+            },
+
+            moveQuest:function(i){
+                var left = $(".host").css("left");
+                var top = $(".host").css("top");
+                this.animate(i,left,top);
+            },
+
+            delect:function(n){
+                $(".guest").slice(0,n).remove();
+                $(".guest").slice(1).remove();
+                $(".relationship").slice(0,n).remove();
+                $(".relationship").slice(1).remove();
+            },
+
+            animate:function(i,left,top){
+                $(i).animate({
+                    left:left,
+                    top:top
+                },500);
+            },
+
+            changeClass:function(){
+                var that =this;
+                $(".guest").addClass("abcdef").removeClass("guest");
+                $(".host").addClass("guest").removeClass("host").attr("angle",that.angle);
+                $(".abcdef").addClass("host").removeClass("abcdef").attr("angle",null);
+            }
+
+        }
+
+        $(document).ready(function(){
+            relation.init(relationName,0)
+            $("span").corner("round60px");
+        })
+    </script>
+</head>
+
+<body>
+<div id="box"></div>
+
+</body>
+</html>

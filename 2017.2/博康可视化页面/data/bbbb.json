@@ -1,0 +1,264 @@
+{
+  "nodes":[
+   {
+      "shapeType":"ellipse",
+     "label": "个人住房",
+     "attributes": {},
+     "y": 294.88266,
+     "x": -933.4234,
+     "id": "个人住房",
+     "size": 40,
+     "category":2,
+     "image":"images/house.jpg",
+     "value":"家人"
+
+   },
+   {
+
+     "label": "个人车辆",
+     "attributes": {},
+     "y": -230.14833,
+     "x": -644.2716,
+     "id": "个人车辆",
+     "size": 40,
+     "category":1,
+     "image":"images/car3.png",
+     "value":"二度好友"
+
+   },
+   {
+     "shapeType":"rectangle",
+     "label": "担保",
+     "attributes": {},
+     "y": 380.12103,
+     "x": -1005.2705,
+     "id": "担保",
+     "size":100,
+     "category":1,
+     "image":"images/daikuan.png",
+     "value":"一度朋友"
+
+   },
+   {
+
+     "label": "亲属情况",
+     "attributes": {},
+     "y": -224.0287,
+     "x": 317.77667,
+     "id": "亲属情况",
+     "size": 23.713282,
+     "category":1,
+     "image":"images/qinqi.jpg",
+     "value":"家人"
+   },
+   {
+
+     "label": "张三",
+     "attributes": {},
+     "y": -404.62427,
+     "x": -338.03128,
+     "id": "张三",
+     "size": 8.163814,
+     "category":0,
+     "image":"images/1.jpg",
+     "value":"人物"
+
+   },
+   {
+
+     "label": "工作单位",
+     "attributes": {},
+     "y": -734.4221,
+     "x": -75.53079,
+     "id": "工作单位",
+     "size": 100.0,
+     "category":2,
+     "image":"images/bag.jpg",
+     "value":"兄弟"
+
+   },
+    {
+
+      "label": "信用卡",
+      "attributes": {},
+      "y": -734.4221,
+      "x": -75.53079,
+      "id": "信用卡",
+      "size": 100.0,
+      "category":2,
+      "image":"images/card.jpg",
+      "value":"兄弟"
+
+    },
+    {
+
+      "label": "aa",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "aa",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    },
+    {
+
+      "label": "bb",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "bb",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    },
+    {
+
+      "label": "cc",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "cc",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    },
+    {
+
+      "label": "dd",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "dd",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    },
+    {
+
+      "label": "ee",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "ee",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    },
+    {
+
+      "label": "ff",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "ff",
+      "size": 20,
+      "category":0,
+      "image":"images/link1.png",
+      "value":"人物"
+
+    }
+ ],
+  "edges":[
+    {
+      "sourceID": "贷款",
+      "attributes": {},
+      "targetID": "张三",
+      "size":100
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "工作单位",
+
+      "size":100
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "亲属情况",
+      "size":10
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "信用卡",
+      "size": 10
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "个人住房",
+      "size": 10
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "个人情况",
+      "size": 10
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "担保",
+      "size": 10
+    },
+    {
+      "sourceID": "张三",
+      "attributes": {},
+      "targetID": "个人车辆",
+      "size": 10
+    },
+    {
+      "sourceID": "个人车辆",
+      "attributes": {},
+      "targetID": "aa",
+      "size": 10
+    }
+  ,
+    {
+      "sourceID": "工作单位",
+      "attributes": {},
+      "targetID": "bb",
+      "size": 10
+    }
+  ,
+    {
+      "sourceID": "担保",
+      "attributes": {},
+      "targetID": "cc",
+      "size": 10
+    }
+  ,
+    {
+      "sourceID": "个人住房",
+      "attributes": {},
+      "targetID": "dd",
+      "size": 10
+    }
+  ,
+    {
+      "sourceID": "亲属情况",
+      "attributes": {},
+      "targetID": "ee",
+      "size": 10
+    }
+  ,
+    {
+      "sourceID": "信用卡",
+      "attributes": {},
+      "targetID": "ff",
+      "size": 10
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+<div class="bMap_carChase" ng-controller="myMapChase" >
+    <div class="list-box">
+        <ul class="chase-list">
+            <h4 class="trend-tit">暗访追车</h4>
+            <li data-ng-click="cutoverTab7('chaseCar')" data-ng-class="{true:'current3'}[selectedIndex7 == 'chaseCar']">
+                暗访记录
+            </li>
+            <li data-ng-click="cutoverTab7('logCar')"
+                data-ng-class="{true:'current3'}[selectedIndex7 == 'logCar']">追车日志
+            </li>
+        </ul>
+        <div class="trend-button" ng-click="chaseOn()"></div>
+    </div>
+    <div class="chase-right common-right">
+        <div class="chase-content common-content">
+            <div data-ng-show="selectedIndex7 == 'chaseCar'">
+                <div class="chase-right-tit">
+                    <div class="tit">
+                        <h5>{{chaseTit}}</h5>
+                        <a class="stat-btn" style="right: 250px;" href="#/carChase/addChase">
+                            <span class="icon icon-add"></span>
+                            <input type="button" class="btn btn-success" style="background: #34ab1c" value="添加">
+                        </a>
+                        <a class="stat-btn" style="right: 150px;">
+                            <span class="icon icon-sub"></span>
+                            <input type="button" class="btn" value="删除" ng-click="detelePlay()">
+                        </a>
+                        <a class="stat-btn">
+                            <span class="icon icon-export1"></span>
+                            <input type="button" class="btn" value="导出">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-tit tab" >
+                    <ul class="nav-tabs clearfix order-nav"  >
+                        <li data-ng-click="cutoverTab8('chaseAll')" data-ng-class="{true:'current'}[selectedIndex8 == 'chaseAll']" >全部状态</li>
+                        <li data-ng-click="cutoverTab8('homeAdd')" data-ng-class="{true:'current'}[selectedIndex8 == 'homeAdd']">常住地址不真实（0）</li>
+                        <li data-ng-click="cutoverTab8('workAdd')" data-ng-class="{true:'current'}[selectedIndex8 == 'workAdd']">工作地址不真实（0）</li>
+                        <li data-ng-click="cutoverTab8('thHome')" data-ng-class="{true:'current'}[selectedIndex8 == 'thHome']">3天以上未回家（1）</li>
+                        <li data-ng-click="cutoverTab8('wrHome')" data-ng-class="{true:'current'}[selectedIndex8 == 'wrHome']" >3天以上未上班</li>
+                    </ul>
+                    <div class="query-bar">
+                        <ul class="query-list clearfix">
+                            <li>
+                                <label>车牌号码</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <label>客户姓名</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <label>所属组织</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <input  class="ask" type="button" value="查询">
+                            </li>
+                            <li>
+                                <label>选择时间</label>
+                                <input type="date"> —— <input type="date">
+                            </li>
+                            <input type="button" class="btn btn-primary" value="查询" style="margin-left: 50px;  margin-top: 20px;">
+                        </ul>
+                    </div>
+                    <div class="listContent"  >
+                        <div data-ng-show="selectedIndex8 == 'chaseAll'" >
+                            <div class="gridStyle" ng-grid="gridOptions"></div>
+                        </div>
+                        <div data-ng-show="selectedIndex8 == 'homeAdd'">
+                            <div class="gridStyle" ng-grid="gridOptions"></div>
+                        </div>
+                        <div data-ng-show="selectedIndex8 == 'workAdd'">
+                            <div class="gridStyle" ng-grid="gridOptions"></div>
+                        </div>
+                        <div data-ng-show="selectedIndex8 == 'thHome'">
+                            <div class="gridStyle" ng-grid="gridOptions"></div>
+                        </div>
+                        <div data-ng-show="selectedIndex8 == 'wrHome'">
+                            <div class="gridStyle" ng-grid="gridOptions"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div data-ng-show="selectedIndex7 == 'logCar'" >
+                <div class="chase-right-tit">
+                    <div class="tit">
+                        <h5>{{chaseTit}}</h5>
+                        <a class="stat-btn" style="right: 250px;" href="#/carChase/logCar">
+                            <span class="icon icon-add"></span>
+                            <input type="button" class="btn btn-success" style="background: #34ab1c" value="添加">
+                        </a>
+                        <a class="stat-btn" style="right: 150px;">
+                            <span class="icon icon-sub"></span>
+                            <input type="button" class="btn" value="删除" ng-click="detelePlay()">
+                        </a>
+                        <a class="stat-btn">
+                            <span class="icon icon-export1"></span>
+                            <input type="button" class="btn" value="导出">
+                        </a>
+                    </div>
+                </div>
+                <div class="list-tit tab" style="position: absolute">
+                    <div class="query-bar" style="position: relative;top:-20px;">
+                        <ul class="query-list clearfix" >
+                            <li>
+                                <label>车牌号码</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <label>客户姓名</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <label>所属组织</label>
+                                <input type="text" value="">
+                            </li>
+                            <li>
+                                <input  class="ask" type="button" value="">
+                            </li>
+                            <li>
+                                <input type="date"> —— <input type="date">
+                            </li>
+                            <input type="button" class="btn btn-primary" value="查询" style="margin-left: 50px;  margin-top: 20px;">
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tipBox">
+                <h4>提示</h4>
+                <div>
+                    <p>你确定要删除这条记录吗？</p>
+                    <label><input type="button" class="btn btn-success" value="确定" ng-click="Ok()"></label>
+                    <label><input type="button" class="btn btn-primary" value="取消" style="left:200px;" ng-click="No()"></label>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

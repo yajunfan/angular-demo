@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp.services">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div ng-controller="ServiceController">
+    <label for="username">
+        Type in a GitHub username
+    </label>
+    <input type="text"
+           ng-model="username"
+           placeholder="Enter a GitHub username" />
+    <ul>
+        <li ng-repeat="event in events">
+            <!--
+            event.actor and event.repo are returned
+            by the github API. To view the raw
+            API, uncomment the next line:
+            -->
+             <!--{{ event | json }}-->
+            {{ event.actor.login }} {{ event.repo.name }}
+        </li>
+    </ul>
+</div>
+<script src="../../../angular.js"></script>
+<script>
+
+    angular.module('myApp.services', [])
+        .factory('githubService', function($http) {
+            var githubUrl = 'https://api.github.com';
+            var runUserRequest = function(username, path) {
+// 从使用JSONP调用Github API的$http服务中返回promise
+                return $http({
+                    method: 'JSONP',
+                    url: githubUrl + '/users/' +
+                    username + '/' +
+                    path + '?callback=JSON_CALLBACK'
+                });
+            };
+            return {
+                events: function(username) {
+                    return runUserRequest(username, 'events');
+
+                }
+            };
+        }).controller('ServiceController', function($scope, $timeout,githubService) { //在自定义服务之前注入所有的AngularJS内置服务，这是约定俗成的规则。
+// 我们可以调用对象的事件函数
+        $scope.$watch('username', function(newUsername) {
+            var timeout;
+
+ //从使用JSONP调用Github API的$http服务中返回promise
+            if(newUsername){
+                console.log(newUsername)
+                if (timeout){ $timeout.cancel(timeout)};
+                timeout = $timeout(function() {
+                    githubService.events(newUsername)
+                        .success(function(data, status) {
+                            // success函数在数据中封装响应
+                            // 因此我们需要调用data.data来获取原始数据
+                            $scope.events = data.data;
+
+                        });
+                }, 350);
+            }
+//            console.log(newUsername)
+//            githubService.events(newUsername)
+//                .success(function(data, status, headers) {
+//// success函数在数据中封装响应
+//
+//// 因此我们需要调用data.data来获取原始数据
+//                    $scope.events = data.data;
+//                })
+        });
+
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<div class="bMap_changeCus" ng-controller="changeCusCtrl">
+    <div class="addChase-right common-right">
+            <div class="addChase-right-tit">
+                <div class="tit">
+                    <h5>暗访详情</h5>
+                    <a href="#/profileData/customer" class="back"><span class="icon icon-back"></span>返回上一级</a>
+                </div>
+            </div>
+        <div class="addChase-content common-content">
+            <div class="add-chase-record" style="display: block;top:0;">
+                <div class="add-chase-content">
+                    <div class="topChase">
+                        <div class="addChase-right-tit">
+                            <div class="tit">
+                                <h5>暗访详情</h5>
+                                <a href="#/carChase" class="back"><span class="icon icon-back"></span>返回上一级</a>
+                            </div>
+                        </div>
+                        <ul class="top-left-chase">
+                            <li><label>车牌号码</label> <input type="text" style="width: 65%" ><i>*</i></li>
+                            <li><label>暗访人员</label> <input type="text" style="width: 65%"><i>*</i></li>
+                            <li><label>常住地址</label>
+                                <input type="radio" checked="checked" name="Sex" value="真实" /><span>真实</span>
+                                <input type="radio" name="Sex" value="虚假"  style="margin-left: 40px"/><span>虚假</span>
+
+                            </li>
+                            <li><label>工作地址</label>
+                                <input type="radio" checked="checked" name="Sex1" value="真实" /><span>真实</span>
+                                <input type="radio" name="Sex1" value="虚假" style="margin-left: 40px"/><span>虚假</span>
+                            </li>
+
+                        </ul>
+                        <ul class="top-right-chase">
+                            <li><label>暗访时间</label> <input type="date" style="width: 262px" ><i>*</i></li>
+                            <li><label>暗访结果</label>
+                                <input type="radio" checked="checked" name="resolute" value="正常" /><span>正常</span>
+                                <input type="radio" name="resolute" value="异常"  style="margin-left: 40px"/><span>异常</span>
+                            </li>
+                            <li><label>3天以上未回家</label>
+                                <input type="radio" checked="checked" name="noHome" value="是" /><span>是</span>
+                                <input type="radio" name="noHome" value="否"  style="margin-left: 40px"/><span>否</span>
+
+                            </li>
+                            <li><label>3天以上未上班</label>
+                                <input type="radio" checked="checked" name="noWork" value="是" /><span>是</span>
+                                <input type="radio" name="noWork" value="否"  style="margin-left: 40px"/><span>否</span></span>
+                            </li></ul>
+                    </div>
+                    <div class="eventDescripte"><label >事件描述</label>
+                        <textarea  rows="行数" cols="列数">暗访发现问题</textarea>
+                    </div>
+                    <div class="addPic" >
+                        <label >添加图片</label>
+                        <div class="Addbox">
+                            <img src="./images/addPic.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="btn btn-success" value="保存" ng-click="Changesave()">
+            </div>
+        </div>
+            <div class="guestInfo">
+                <div class="guestInfo-title"><h4>客户信息修改</h4></div>
+                <ul style="width: 48%" class="guest_list">
+                    <li><label>车牌号码</label> <input type="text" ><i>*</i></li>
+                    <li><label>手机号码</label> <input type="text"><i>*</i></li>
+                    <li><label>证件类型</label>
+                        <select>
+                            <option value="身份证">身份证</option>
+                            <option value="护照">护照</option>
+                        </select>
+                    </li>
+                    <li><label>证件号码</label> <input type="text" ></li>
+                    <li><label>年龄</label> <input type="text" ></li>
+                    <li><label>性别</label>
+                        <select>
+                            <option value="男">男</option>
+                            <option value="女">女</option>
+                        </select>
+                    </li>
+                    <li><label>所属组织</label> <input type="text"><i>*</i></li>
+                </ul>
+                <ul style="width: 48%" class="guest_list_addre">
+                  <li>
+                      <label>常住地址</label>
+                      <div id="city">
+                          <select class="prov"></select>
+                          <select class="city" disabled="disabled"></select>
+                          <select class="dist" disabled="disabled"></select>
+                      </div>
+                  </li>
+                </ul>
+            </div>
+            <div class="carBaseInfo">
+                <div class="guestInfo-title"><h4>汽车基本信息</h4></div>
+            </div>
+            <div class="daikInfo">
+                <div class="guestInfo-title"><h4>贷款基本信息</h4></div>
+            </div>
+
+    </div>
+</div>

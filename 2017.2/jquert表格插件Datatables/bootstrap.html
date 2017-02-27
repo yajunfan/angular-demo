@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../bootstrap.css">
+    <link href="//cdn.bootcss.com/bootstrap-table/1.11.0/bootstrap-table.css" rel="stylesheet">
+</head>
+<body>
+<div class="btn-group btn-default">
+<button class="btn btn-success" id="transform">Transform</button>
+<button class="btn btn-danger" id="destroy">Destroy</button>
+</div>
+<table id="table-transform" data-url="dat.json" data-height="246">
+    <thead>
+    <tr>
+        <th data-field="id">Item ID</th>
+        <th data-field="name">Item Name</th>
+        <th data-field="price">Item Price</th>
+    </tr>
+    </thead>
+</table>
+
+<script src="../../jquery.min.js"></script>
+<script src="//cdn.bootcss.com/bootstrap-table/1.11.0/bootstrap-table.js"></script>
+<script>
+    $(function() {
+        $('#transform').click(function() {
+            $('#table-transform').bootstrapTable();
+        });
+        $('#destroy').click(function() {
+            $('#table-transform').bootstrapTable('destroy');
+        });
+        $('#table-transform').bootstrapTable({
+            url: 'dat.json'
+        });
+    });
+</script>
+</body>
+</html>

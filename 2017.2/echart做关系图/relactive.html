@@ -15,26 +15,15 @@
 <script src="../../jquery.min.js"></script>
 <script src="echarts.min.js"></script>
 
-<script src="esl.js"></script>
-<script src="echarts-map.js"></script>
-<script src="./echarts/src/chart/kforce.js"></script>
-<script src="dataTool.js"></script>
+<!--<script src="esl.js"></script>-->
+<!--<script src="echarts-map.js"></script>-->
+<!--<script src="./echarts/src/chart/kforce.js"></script>-->
+<!--<script src="zrender.js"></script>-->
+<!--<script src="dataTool.js"></script>-->
 <script>
     var myChart = echarts.init(document.getElementById('main'));
     myChart.showLoading();
-    var shape = {
-        id : zr.newShapeId(self.type),
-        shape : 'line',
-        hoverable : false,
-        style : {
-            xStart : 0,
-            yStart : 0,
-            xEnd : 0,
-            yEnd : 0
-        },
-        clickable : true,
-        highlightStyle : {}
-    };
+
     $.getJSON('data/bbbb.json', function (json) {
         myChart.hideLoading();
         myChart.setOption(option = {
@@ -164,18 +153,19 @@
 //                            x: node.x,
 //                            y: node.y,
                             id: node.id,
-                            icon:'image://images/1.jpg',
+
                             name: node.label,
                             category:node.category,
                             value:node.value,
-                            //symbol:node.shapeType, //设置节点的形状样式  ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'  也可以通过 'image://url' 设置为图片，其中 url 为图片的链接。
+                            //symbol:node.shapeType,
+                            // 设置节点的形状样式  ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'  也可以通过 'image://url' 设置为图片，其中 url 为图片的链接。
                            symbol:'image://'+node.image,
                             symbolSize: 100,
                             itemStyle: {
                                 normal: {
                                     nodeStyle:{
                                         brushType: 'both',
-                                        strokeColor: 'rgba(255,215,0,0.4)',
+                                        strokeColor: 'green',
                                         lineWidth: 2
                                     },
                                 },
@@ -197,8 +187,8 @@
                             lineStyle: {
                                 normal: {
                                     color: "yellow",
-                                    width:10,
-                                    formatter: '{b}'
+                                    width:4,
+
                                 }
                             },
                             itemStyle:{
@@ -247,6 +237,14 @@
         myChart.on('click', function (params) {
             console.log(params);
         });
+
+        myChart.on('mousemove', function (params) {
+            console.log(1);
+        });
+        myChart.on('mousedown', function (params) {
+            console.log(2);
+        });
+
     });
 </script>
 </body>

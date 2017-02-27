@@ -1,0 +1,33 @@
+<div ng-controller="gridCtrl" class="girdOne">
+    <div class="gridStyle" ng-grid="gridOptions"></div>
+    <div class="zt-list" style="">
+        <h4 id="gpsName">体验客户 [ 浙A6610W ]</h4>
+        <div class="zt-content">
+            <p>跟踪数据</p>
+            <ul class="switch gzsj clearfix">
+                <li id="t1" class="on">正常</li>
+                <li id="t2" class="">可疑</li>
+                <li id="t3" class="">高危</li>
+            </ul>
+            <p>回款状态</p>
+            <ul class="switch hkzt clearfix">
+                <li id="p1" class="on">正常</li>
+                <li id="p2" class="">逾期</li>
+                <li id="p3" class="">不良</li>
+                <li id="p4" class="">拖车</li>
+                <li id="p5" class="">结清</li>
+            </ul>
+            <div class="f12 mt10">备注：请根据客观数据准确做出状态判断，此数据将用于领导决策辅助，请务必慎重操作。</div>
+            <input class="save btn w150 mc btn-primary" type="button" value="确定" ng-click="closeOne()">
+        </div>
+    </div>
+    <div class="messageboxT">
+        <h4>提示</h4>
+        <div class="messagebox-text">
+            <p id="pc" class="mt20">修改成功！</p>
+            <div class="mt40 mc">
+                <input id="confirm" class="save btn w120 fl fr" value="确定" type="submit" style="bottom:-20px;left:80%" ng-click="closeZtn()">
+            </div>
+        </div>
+    </div>
+</div>

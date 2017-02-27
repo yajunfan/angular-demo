@@ -1,0 +1,74 @@
+<div class="bMap_addChase">
+    <div class="addChase-right common-right">
+        <div class="addChase-right-tit">
+            <div class="tit">
+                <h5>添加暗访记录</h5>
+                   <a href="#/carChase" class="back"><span class="icon icon-back"></span>返回上一级</a>
+            </div>
+        </div>
+        <div class="addChase-content common-content">
+            <div class="add-chase-record" style="display: block;top:0;">
+                <div class="add-chase-content">
+                    <div class="topChase">
+                        <ul class="top-left-chase">
+                            <li><label>车牌号码</label> <input type="text" style="width: 65%" ><i>*</i></li>
+                            <li><label>暗访人员</label> <input type="text" style="width: 65%"><i>*</i></li>
+                            <li><label>常住地址</label>
+                                <input type="radio" checked="checked" name="Sex" value="真实" /><span>真实</span>
+                                <input type="radio" name="Sex" value="虚假"  style="margin-left: 40px"/><span>虚假</span>
+
+                            </li>
+                            <li><label>工作地址</label>
+                                <input type="radio" checked="checked" name="Sex1" value="真实" /><span>真实</span>
+                                <input type="radio" name="Sex1" value="虚假" style="margin-left: 40px"/><span>虚假</span>
+                            </li>
+
+                        </ul>
+                        <ul class="top-right-chase">
+                            <li><label>暗访时间</label> <input type="date" style="width: 262px" ><i>*</i></li>
+                            <li><label>暗访结果</label>
+                                <input type="radio" checked="checked" name="resolute" value="正常" /><span>正常</span>
+                                <input type="radio" name="resolute" value="异常"  style="margin-left: 40px"/><span>异常</span>
+                            </li>
+                            <li><label>3天以上未回家</label>
+                                <input type="radio" checked="checked" name="noHome" value="是" /><span>是</span>
+                                <input type="radio" name="noHome" value="否"  style="margin-left: 40px"/><span>否</span>
+
+                            </li>
+                            <li><label>3天以上未上班</label>
+                                <input type="radio" checked="checked" name="noWork" value="是" /><span>是</span>
+                                <input type="radio" name="noWork" value="否"  style="margin-left: 40px"/><span>否</span></span>
+                            </li></ul>
+                    </div>
+                    <div class="eventDescripte"><label >事件描述</label>
+                        <textarea  rows="行数" cols="列数">暗访发现问题</textarea>
+                    </div>
+                    <div class="addPic" >
+                        <label >添加图片</label>
+                        <div class="Addbox">
+                            <img src="./images/addPic.png" alt="">
+                        </div>
+                        <!--<ul id="imgs" class="up-pic">-->
+                        <!--<li id="simg1" style="display: none;" ondblclick="delPic(this)">-->
+                        <!--<img src="http://www.cdguanjia.com/vehicleCloud//risk-manager/investigation/investigation-edit.html?id=166" id="img1" name="img1">-->
+                        <!--<input id="isimg1" type="hidden" value="">-->
+                        <!--<input id="upFile1" class="file_up" type="file" name="image" onchange="addPic(this)">-->
+                        <!--</li>-->
+                        <!--<li id="simg2" style="display: none;" ondblclick="delPic(this)">-->
+                        <!--<img src="http://www.cdguanjia.com/vehicleCloud//risk-manager/investigation/investigation-edit.html?id=166" id="img2" name="img2">-->
+                        <!--<input id="isimg2" type="hidden" value="">-->
+                        <!--<input id="upFile2" class="file_up" type="file" name="image" onchange="addPic(this)">-->
+                        <!--</li>-->
+                        <!--<li id="simg3" style="display: none;" ondblclick="delPic(this)">-->
+                        <!--<img src="http://www.cdguanjia.com/vehicleCloud//risk-manager/investigation/investigation-edit.html?id=166" id="img3" name="img3">-->
+                        <!--<input id="isimg3" type="hidden" value="">-->
+                        <!--<input id="upFile3" class="file_up" type="file" name="image" onchange="addPic(this)">-->
+                        <!--</li>-->
+                        <!--</ul>-->
+                    </div>
+                </div>
+                <input type="button" class="btn btn-success" value="保存" ng-click="Changesave()">
+            </div>
+        </div>
+    </div>
+</div>

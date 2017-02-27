@@ -1,0 +1,44 @@
+<div class="bMap_addLog" >
+    <div class="addChase-right common-right">
+        <div class="addChase-right-tit">
+            <div class="tit">
+                <h5>添加追车日志</h5>
+                <a href="#/carChase" class="back"><span class="icon icon-back"></span>返回上一级</a>
+            </div>
+        </div>
+        <div class="addChase-content common-content">
+            <div class="add-chase-record" style="display: block;top:0;">
+                <div class="add-chase-content">
+                    <div class="topChase">
+                        <ul class="top-left-chase">
+                            <li><label>车牌号码</label> <input type="text" style="width: 65%" ><i>*</i></li>
+                            <li><label>追车负责人</label> <input type="text" style="width: 65%" placeholder="输入追车负责人（至少两个字符）"><i>*</i></li>
+                            <li><label>追车费用</label>
+                                <input type="text" style="width: 65%" placeholder="输入追车费用（最多保留两位小数）">元
+                            </li>
+                        </ul>
+                        <ul class="top-right-chase">
+                            <li><label>追车时间</label> <input type="date" style="width: 262px" ><i>*</i></li>
+                            <li><label>其他成员</label><input type="text" style="width: 35%" ></li>
+                            <li><label>追车结果</label>
+                                <input type="radio" checked="checked" name="noHome" value="成功" /><span>成功</span>
+                                <input type="radio" name="fail" value="失败"  style="margin-left: 40px"/><span>失败</span>
+
+                            </li>
+                           </ul>
+                    </div>
+                    <div class="eventDescripte"><label >追车描述</label>
+                        <textarea  rows="行数" cols="列数">暗访发现问题</textarea>
+                    </div>
+                    <div class="addPic" >
+                        <label >添加图片</label>
+                        <div class="Addbox">
+                            <img src="./images/addPic.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <input type="button" class="btn btn-success" value="保存" ng-click="Changesave()">
+            </div>
+        </div>
+    </div>
+</div>

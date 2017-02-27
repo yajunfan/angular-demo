@@ -1,0 +1,120 @@
+<div class="bMap_mask" ng-controller="myMap" >
+    <div class="map-right common-right">
+    <div class="map-content  common-content">
+        <div class="map-head" style="line-height: 29px;">
+            <div class="map-information"><span>关注：</span><span>鄂AHM570-1:浙江省杭州市下城区石祥路59-12号</span></div>
+            <div class="fl ml10" id="word" style="color:red; width:40px;"></div>
+            <div class="fr">
+                <span id="autoDir" class="fl pl10"><span color="red">{{timeValue}}</span> 秒后刷新</span>
+                <div id="mapChoose" class="mapChoose w90">
+                    <div class="mapTit">百度地图</div>
+                    <ul class="mapListShow none" style="display: none;">
+                        <li><a href="" target="mapShow" >百度地图</a></li>
+                        <li><a href="" target="mapShow">谷歌地图</a></li>
+                    </ul>
+                </div>
+                <em class="ml10">|</em>
+                <label ><input class="chk-check-wrap chk-checked device icon" type="checkbox" >设备名</label>
+                <label ><input class="chk-check-wrap chk-checked icon" type="checkbox">敏感区域[公]</label>
+                <label ><input class="chk-check-wrap chk-checked icon" type="checkbox">敏感区域[私]</label>
+                <label ><input class="chk-check-wrap chk-checked icon" type="checkbox"><span class="mr10">常用区域</span></label>
+            </div>
+            <div id="pointGpsRoute" style="height:29px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;"></div>
+        </div>
+        <div class="searchDiFang">
+            <input class="shuru" type="text" ng-model="localInfo" placeholder="搜地点>看这里" value="">
+            <input class="zhixing btn btn-success" type="button" ng-click="searchDi()" value="搜索">
+        </div>
+        <div class="left-direct">
+            <div class="direct-top">
+                <div class="direct-top-tit">
+                    <span class="icon icon-refresh fl ml5" onclick="location.reload()"></span>
+                    <span id="treeTitle" class="fl ht">车贷管家(4/2)</span>
+                    <span id="updown" class="icon icon-upblack fr mr5" ng-click="upDown()"></span>
+                </div>
+                <div id="wrapper1" class="wrapper1 wrapper-common" >
+                    <ul class="zTree">
+                        <li><i class="group_1_ico"></i><a href="javascript:;">车贷管家(4/2)</a></li>
+                        <li style="margin-left:5px">
+                            <ul class="car-detailList">
+                                <span class="guanjia carGuan-close" ng-click="changeGroup()"></span><i class="group_1_ico"></i><a href="javascript:;">车贷管家(4/2)</a>
+                                <li><i class="group_1_ico"></i><a href="javascript:;">车贷管家(0/0)</a></li>
+                                <li><i class="group_1_ico"></i><a href="javascript:;">车贷管家(0/0)</a></li>
+                            </ul>
+
+
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="direct-bottom">
+                <ul>
+                    <li data-ng-click="cutoverTab('allState')" data-ng-class="{true:'current'}[selectedIndex == 'allState']" >全部（2）</li>
+                    <li data-ng-click="cutoverTab('leave')" data-ng-class="{true:'current'}[selectedIndex == 'leave']">离线（2）</li>
+                    <li data-ng-click="cutoverTab('stay')" data-ng-class="{true:'current'}[selectedIndex == 'stay']">关注（1）</li>
+                    <li data-ng-click="cutoverTab('gongneng')" data-ng-class="{true:'current'}[selectedIndex == 'gongneng']">搜索</li>
+                </ul>
+                <div class="direct-head">
+                    <div data-ng-show="selectedIndex == 'allState'" class="number1">
+                        <ul class="allChoice">
+                            <li data-ng-click="cutoverTab1('all')" data-ng-class="{true:'current1'}[selectedIndex1 == 'all']" >全部(2)</li>
+                            <li data-ng-click="cutoverTab1('offline')" data-ng-class="{true:'current1'}[selectedIndex1 == 'offline']">正常(2)</li>
+                            <li data-ng-click="cutoverTab1('focus')" data-ng-class="{true:'current1'}[selectedIndex1 == 'focus']">可疑(1)</li>
+                            <li data-ng-click="cutoverTab1('hunt')" data-ng-class="{true:'current1'}[selectedIndex1 == 'hunt']">高危</li>
+                        </ul>
+                        <ul class="xuanze">
+                            <li>全选</li>
+                            <li>设备名称</li>
+                            <li><a href="javascript:location.reload();">刷新</a></li>
+                            <li>库存</li>
+                            <li >状态</li>
+                        </ul>
+                        <div class="direct-head-head">
+                            <div data-ng-show="selectedIndex1 == 'all'">222</div>
+                            <div data-ng-show="selectedIndex1 == 'offline'">222</div>
+                            <div data-ng-show="selectedIndex1 == 'focus'">3333</div>
+                            <div data-ng-show="selectedIndex1 == 'hunt'">444</div>
+                        </div>
+
+                    </div>
+                    <div data-ng-show="selectedIndex == 'leave'" class="number2">
+                        <p>显示当前与服务器没有通讯的设备</p>
+                        <ul class="xuanze">
+                            <li>全选</li>
+                            <li>设备名称</li>
+                            <li><a href="javascript:location.reload();">刷新</a></li>
+                            <li>库存</li>
+                            <li >状态</li>
+                        </ul>
+                    </div>
+                    <div data-ng-show="selectedIndex == 'stay'" class="number3">
+                        <p>注: 关注数目不得超过200</p>
+                        <ul class="xuanze">
+                            <li>全选</li>
+                            <li>设备名称</li>
+                            <li><a href="javascript:location.reload();">刷新</a></li>
+                            <li>库存</li>
+                            <li >状态</li>
+                        </ul>
+                    </div>
+                    <div data-ng-show="selectedIndex == 'gongneng'" class="number4">
+                        <input type="text" placeholder="请输入客户姓名/车牌号码/IMEI" class="searchText">
+                        <input id="sbt" class="btn" type="button"/>
+                        <ul class="xuanze">
+                            <li>全选</li>
+                            <li>设备名称</li>
+                            <li><a href="javascript:location.reload();">刷新</a></li>
+                            <li>库存</li>
+                            <li >状态</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-btn on crp" ng-click="rowOn()"></div>
+        <div id="allmap"></div>
+    </div>
+    </div>
+
+</div>

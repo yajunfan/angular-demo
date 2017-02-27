@@ -1,0 +1,109 @@
+<!doctype html>
+<html id="ng-app">
+<head>
+    <meta charset="utf-8">
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/ng-grid.css">
+    <link rel="stylesheet/less" href="css/car.less" type="text/less">
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<script src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s" type="text/javascript"></script>
+<!--<script src="script/lib/jquery.min.js"></script>-->
+<!--<script type="text/javascript">-->
+    <!--// 等待所有加载-->
+    <!--$(window).load(function(){-->
+        <!--$('body').addClass('loaded');-->
+        <!--$('#loader-wrapper .load_title').remove();-->
+    <!--});-->
+<!--</script>-->
+
+<!--<body>-->
+<!--<div id="loader-wrapper">-->
+    <!--<div id="loader"></div>-->
+    <!--<div class="loader-section section-left"></div>-->
+    <!--<div class="loader-section section-right"></div>-->
+    <!--<div class="load_title">正在加载车贷管家站点<br></div>-->
+<!--</div>-->
+<div class="header" ng-controller="myIndex">
+    <div>
+        <img src="./images/logo.png" alt="" realSrc="./images/logo.png">
+    </div>
+    <span>专注于汽车金融风控</span>
+    <ul class="navList">
+        <li><i class="icon phone"></i><a href="JavaScript:;">手机版</a></li>
+        <li><a href="JavaScript:;">Access Key</a></li>
+        <li ng-click="information()"><i class="icon information"></i><a href="JavaScript:;">消息</a></li>
+        <li><i class="icon center"></i><a href="JavaScript:;">预警中心<i class="infoNum">3</i></a></li>
+        <li><i class="icon tongzhi"></i><a href="JavaScript:;">公告通知</a><i class="new"></i></li>
+        <li><a href="JavaScript:;">培训中心</a></li>
+        <li><a href="JavaScript:;">testuser</a><i class="icon down"></i></li>
+    </ul>
+</div>
+<div class="containe">
+    <div class="menu-left-wrap " >
+        <div class="first" >
+            <div class="menu"><span class="icon"></span></div>
+            <div class="list" >
+                <ul class="server">
+                    <h4><i class="icon server"></i>风控服务</h4>
+                    <li><a href="#/assets" ><i class="icon icon-state"></i>资产状态</a></li>
+                    <li><a href="#/followPosition" ><i class="icon icon-location"></i>位置跟踪</a></li>
+                    <li><i ></i><a href="#/trend" ><i class="icon icon-trend"></i>趋势分析</a></li>
+                    <li><i ></i><a href="#/statistics" ><i class="icon icon-tongji"></i>报表统计</a></li>
+                    <li><i ></i><a href="#/carChase" ><i class="icon icon-zhuiche"></i>暗访追车</a></li>
+
+                </ul>
+                <ul class="dataCenter">
+                    <h4><i class="icon server"></i>数据中心</h4>
+                    <li><a href="#/profileData"><i class="icon icon-shuju"></i>数据概况</a></li>
+                    <li><a href="#/cusManagement"><i class="icon icon-customer"></i>客户管理</a></li>
+                    <li><a href="#/equCenter"><i class="icon icon-device"></i>设备中心</a></li>
+                    <li><a href="#/regManagement"><i class="icon icon-area"></i>区域管理</a></li>
+                    <li><a href="#/eventCenter"><i class="icon icon-event"></i>事件中心</a></li>
+                </ul>
+                <ul >
+                    <h4><i class="icon server"></i>用户中心</h4>
+                    <li><a href="#/accManagement"><i class="icon icon-account"></i>账号管理</a></li>
+                    <li><a href="#/annInform"><i class="icon icon-message"></i>公告通知</a></li>
+                    <li><a href="#/workManagement"><i class="icon icon-manage"></i>工单管理</a></li>
+                    <li><a href="#/trainCenter"><i class="icon icon-train"></i>培训中心</a></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="menu-right-wrap">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+
+
+<script charset="utf-8" type="text/javascript">
+    var less = {
+        env: "development",
+        poll: 500
+    }
+</script>
+<script charset="utf-8" type="text/javascript" src="script/lib/less.min.js"></script>
+<script charset="utf-8" type="text/javascript">
+    less.watch();
+</script>
+
+</body>
+</html>
+
+<script type='text/javascript' src='script/lib/require.js' defer async="true" data-main='script/carJs/main.js'></script>
+<script>
+    function login() {
+        window.location.href="./template/main.html";
+        var hre = './main';
+
+    }
+</script>

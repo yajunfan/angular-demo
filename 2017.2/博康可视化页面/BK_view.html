@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      #myCanvas{
+          position: absolute;
+          left: 50%;
+          top:50%;
+          margin-top: -250px;
+          margin-left: -250px;
+      }
+        img{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+<div id="bgDiv" style="position:absolute;height: 100%; width:100%; border: 1px solid #ccc;"></div>
+<script src="js/jquery.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('bgDiv'));
+    $.get('data/bbbb.json', function (json) {
+        myChart.hideLoading();
+        myChart.setOption(option = {
+            backgroundColor: 'lightgrey', //背景色
+            // 图表标题
+            title: {
+                text: '人际关系',
+                subtext: '数据来自...',
+                x: 'center',
+                y: 'top',
+                backgroundColor: 'white',
+                borderColor: 'black',// 标题边框颜色
+                borderWidth: 2, // 标题边框线宽，单位px，默认为0（无边框）
+                padding: 6, // 标题内边距，单位px，默认各方向内边距为5，
+                // padding: [5,3,4,5],       四个不同的内边距
+                itemGap: 10,               // 主副标题纵向间隔，单位px，默认为10，
+                textStyle: {
+                    fontSize: 18,
+                    fontWeight: 'bolder',
+                    color: '#333'          // 主标题文字颜色
+                },
+                subtextStyle: {
+                    color: '#aaa'          // 副标题文字颜色
+                }
+            },
+
+//            tooltip: { //触发鼠标移入事件的时候需要用的样式的格式
+//                trigger: 'item',
+//                formatter: '{b} : {c}'
+//            },
+            // 图例
+//            legend: {
+//                orient: 'horizontal',      // 布局方式，默认为水平布局，可选为：'horizontal' ¦ 'vertical'
+//                x: 'left',   // 水平安放位置，默认为全图居中，可选为：'center' ¦ 'left' ¦ 'right'¦ {number}（x坐标，单位px）
+//                y: 'top',// 垂直安放位置，默认为全图顶端，可选为：'top' ¦ 'bottom' ¦ 'center' ¦ {number}（y坐标，单位px）
+//                backgroundColor: 'rgba(0,0,0,0)',
+//                borderColor: '#ccc',       // 图例边框颜色
+//                borderWidth: 0,            // 图例边框线宽，单位px，默认为0（无边框）
+//                padding: 5,                // 图例内边距，单位px，默认各方向内边距为5，// 接受数组分别设定上右下左边距，同css
+//                itemGap: 10,               // 各个item之间的间隔，单位px，默认为10，
+//                // 横向布局时为水平间隔，纵向布局时为纵向间隔
+//                itemWidth: 20,             // 图例图形宽度
+//                itemHeight: 14,            // 图例图形高度
+//                textStyle: {
+//                    color: '#7f86ff'          // 图例文字颜色
+//                },
+//                selected:{'朋友':true,'家人':true},
+//                data:['家人','朋友']
+//            },
+//            isShowScrollBar: false,
+            animation:false,
+            borderColor:"#000",
+            series: [
+                {
+                    type: 'graph',
+                    layout: 'force',
+                    attractiveness: 0.8,
+                    force: {
+                        repulsion:2000,
+//                        coolDown :100,
+                        layoutAnimation:false
+
+                    },
+                    categories : [
+                        {
+                            value: '人物',
+                            itemStyle: {
+                                normal: {
+                                    color : '#1e11ff'
+                                }
+                            }
+                        },
+                        {
+                            value: '家人',
+                            itemStyle: {
+                                normal: {
+                                    color : '#ff7f50'
+                                }
+                            }
+                        },
+                        {
+                            value:'朋友',
+                            itemStyle: {
+                                normal: {
+                                    color : '#87cdfa'
+                                }
+                            }
+                        }
+
+                    ], //根据不同的关系显示不同的颜色
+                    edgeSymbol: ['arrow'], //增加箭头
+                    edgeSymbolSize: [10], //箭头的大小
+//                   progressiveThreshold: 700,
+                    label: {
+                        type: 'image'
+                    },
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position:"right",
+                                show: true,
+                                textStyle: {
+                                    color: 'black'
+                                }
+                            }
+                        },
+                        emphasis:{
+                            linkStyle : { strokeColor : 'yellow'}
+                        }
+
+                    },
+                    nodes: json.nodes.map(function (node) {
+                        return {
+                            id: node.id,
+                           name: node.label, //这里是给自己的节点上加上自己的label的内容
+//                            category:node.category,
+//                            value:node.value,
+                            // 设置节点的形状样式  ECharts 提供的标记类型包括 'circle', 'rect', 'roundRect', 'triangle', 'diamond', 'pin', 'arrow'  也可以通过 'image://url' 设置为图片，其中 url 为图片的链接。
+                          symbol:'image://'+node.image,
+//                            symbol:'arrow',
+                            symbolSize: 100,
+//                            symbolRotate:30, 图形的旋转角度
+                            itemSymbol:'circle',
+                            itemStyle: {
+                                normal: {
+                                    nodeStyle:{
+//                                        brushType: 'both',
+//                                        strokeColor: 'green',
+//                                        lineWidth: 2,
+
+                                    }
+                                }
+                            }
+
+
+                        };
+                    }),
+                    edges: json.edges.map(function (edge) {
+
+                        return {
+                            source: edge.sourceID,
+                            target: edge.targetID,
+                            //value:22222,//鼠标移到线上面出现的提示框
+                            lineStyle: {
+                                normal: {
+                                    color: "black",
+                                    width:2,
+
+                                }
+                            },
+                            label:{
+                                normal: {
+                                    position: 'right',
+                                    show:false,  //这里控制是否显示与它相关的节点的关系，false就不显示，true就是显示
+                                    textStyle: {
+                                        color: 'black'
+                                    },
+//                                    formatter: '{c}'  //这里是线上的内容
+                                }
+                            }
+
+                        };
+                    }),
+                   roam: true,
+//                    focusNodeAdjacency: true,  //表示显示与他直接相关的节点高亮，false表示没有这个效果
+                    draggable: true  //表示可拖动
+
+                }
+            ]
+        }, true);
+
+    }).success(function (e) {
+        e=e||window.event;
+        var events=e;
+
+    });
+
+</script>
+</body>
+</html>

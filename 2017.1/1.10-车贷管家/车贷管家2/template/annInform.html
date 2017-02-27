@@ -1,0 +1,48 @@
+<div class="bMap_statistics" ng-controller="myMapStatistics" >
+    <div class="list-box">
+        <ul class="statistics-list trend-list">
+            <h4 class="statistics-tit">公告通知</h4>
+            <li class="policeRep" ng-click="statisticsTr()"><i class="icon icon-down-black"></i>公告通知</li>
+            <ul class="policeRep-list">
+                <li data-ng-click="cutoverTab6('polOfflineRep')" data-ng-class="{true:'current3'}[selectedIndex6 == 'polOfflineRep']">全部通知</li>
+                <li data-ng-click="cutoverTab6('polStayRep')" data-ng-class="{true:'current3'}[selectedIndex6 == 'polStayRep']">未读通知</li>
+                <li data-ng-click="cutoverTab6('polSensRep')" data-ng-class="{true:'current3'}[selectedIndex6 == 'polSensRep']">已读通知</li>
+            </ul>
+        </ul>
+        <div class="statistics-button trend-button" ng-click="statisticsOn()"> </div>
+    </div>
+    <div class="statistics-right common-right">
+        <div class="statistics-right-tit">
+            <div class="tit">
+                <h5>{{statisticsTit}}</h5>
+                <div class="stat-btn">
+                    <span class="icon icon-export"></span>
+                    <input type="button" class="btn btn-success" style="background: #34ab1c" value="导出">
+                </div>
+            </div>
+            <div class="enterBor">
+                <ul>
+                    <li> <input type="date"> —— <input type="date"></li>
+                    <li>客户姓名 <input type="text"></li>
+                    <li>设备名称 <input type="text"></li>
+                    <li>所属组织 <input type="text"></li>
+                    <li><input type="button" value="查询" class="btn btn-success"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="statistics-content common-content" >
+
+            <div data-ng-show="selectedIndex6 == 'polOfflineRep'">
+                <div class="gridStyle" ng-grid="gridOptions"></div>
+            </div>
+            <div data-ng-show="selectedIndex6 == 'mileageRep'">
+                <div class="gridStyle" ng-grid="gridOptions"></div>
+            </div>
+            <div data-ng-show="selectedIndex6 == 'offlineRep'">
+                <div class="gridStyle" ng-grid="gridOptions"></div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

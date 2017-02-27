@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reports.css">
+</head>
+<body>
+<div class="container" ng-controller="myCtrl">
+    <div class="logo">
+        <img src="image/logo_x.png" alt="logo">
+        <p>风控模型报告</p>
+    </div>
+
+    <div class="soloInfo">
+        <p>个人详细信息</p>
+        <div class="basicInfo">
+            <h4>个人基本信息</h4>
+            <ul>
+                <li><span>姓名：</span><span>{{basics.name}}</span></li>
+                <li><span>性别：</span><span>{{personinfos.sex}}</span></li>
+                <li><span>年龄：</span><span>{{personinfos.age}}</span></li>
+                <li><span>婚姻：</span><span>{{basicInputs.marital_status}}</span></li>
+                <li><span>学历：</span><span>{{personinfos.education}}</span></li>
+                <li><span>身份证号码：</span><span>{{basics.card_num}}</span></li>
+                <li><span>手机号码：</span><span>{{basics.mobile}}</span></li>
+                <li><span>银行卡：</span><span>{{basics.bank_num}}</span></li>
+                <li><span>常住地址：</span><span>{{basicInputs.address}}</span></li>
+                <li><span>籍贯：</span><span>{{personinfos.birthplace}}</span></li>
+
+            </ul>
+            <img src="data:image/gif;base64,{{personinfos.PHOTO}}" alt={{basics.name}}>
+        </div>
+        <div class="projectDetails">
+            <h4>项目详情</h4>
+            <ul>
+                <li><span>业务类型 ：</span><span>{{personinfos.thetype_name}}</span></li>
+                <li><span>借款金额 ：	</span><span>{{basics.sqje}}</span></li>
+                <li><span>借款期限 ：	</span><span>{{basics.Jkqx}}</span></li>
+                <li><span>家庭住址 ：	</span><span>{{basicInputs.address}}</span></li>
+                <li><span>单位性质 ：	</span><span>{{basicInputs.enterprise_nature}}</span></li>
+                <li><span>单位名称 ：	</span><span>{{basics.organization}}</span></li>
+                <li><span>单位地址 ：	</span><span>{{basicInputs.enterprise_address}}</span></li>
+
+
+            </ul>
+        </div>
+
+        <div class="professional">
+            <h4>职业信息</h4>
+            <ul>
+                <li><span>职业情况 ：</span><span>{{personinfos.profession}}</span></li>
+                <li><span>固定收入 ：</span><span>{{personinfos.income}}</span></li>
+            </ul>
+        </div>
+
+        <div class="emergency">
+            <h4>紧急联系人</h4>
+            <ul>
+                <li><span>紧急联系人1：</span><span>{{personinfos.linkname1}}</span><span>{{personinfos.linkphone1}}</span><span>{{personinfos.linkReation1}}</span></li>
+                <li><span>紧急联系人2：</span><span>{{personinfos.linkname2}}</span><span>{{personinfos.linkphone2}}</span><span>{{personinfos.linkReation2}}</span></li>
+            </ul>
+        </div>
+
+
+
+        <!--  <div class="dataDetailed">
+            <h4>详细数据</h4>
+             <ul>
+                 <li><span>涉诉：</span><a href="data.html">查看数据</a></li>
+                 <li><span>通信运营商数据:</span><a href="data.html">查看数据</a></li>
+                 <li><span>银行卡验证:</span><a href="#">一致</a></li>
+                 <li><span>车辆基本信息：</span><a href="#">查看数据</a></li>
+                 <li><span>同住人信息：</span><a href="#">查看数据</a></li>
+                 <li><span>公积金：</span><a href="#">查看数据</a></li>
+                 <li><span>犯罪：</span><a href="#">查看数据</a></li>
+             </ul>
+         </div>  -->
+
+    </div>
+
+    <div class="fraudScore">
+        <h4 my-directive>反欺诈评分 <span>总分：{{totals|aa|number:2}}</span></h4>
+        <ul class="first " ng-repeat="cheat in cheats">
+            <li><span>{{cheat.manager_item_name}}</span><span>得分：{{cheat.weight_score|aa|number:2}}</span></li>
+        </ul>
+
+    </div>
+
+    <div class="creditCheck">
+        <h4 my-directive>信用评分 <span>总分：{{creditTotals|aa|number:2}}</span></h4>
+        <ul class="first" ng-repeat="credit in credits">
+            <li><span>{{credit.manager_item_name}}</span><span>得分：{{credit.weight_score|aa|number:2}}</span></li>
+        </ul>
+
+    </div>
+
+    <div class="phoneCheck">
+        <h4>电核</h4>
+        <ul>
+            <li><span>籍贯</span><span>得分：1</span></li>
+
+        </ul>
+    </div>
+    <audio controls>    <source src="song.ogg" type="audio/ogg">    <source src="song.mp3" type="audio/mpeg">    您的浏览器不支持 audio 标签。</audio>
+    <video controls="controls" width="500" height="500" autoplay="autoplay" loop="loop" poster="PLMM.jpg">
+        　　<source src="" type="video/ogg" />
+        　　<source src="" type="video/webm" />
+    </video>
+</div>
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/reportJs.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+</html>

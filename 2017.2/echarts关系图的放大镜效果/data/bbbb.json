@@ -1,0 +1,146 @@
+{
+  "nodes":[
+   {
+      "shapeType":"ellipse",
+     "label": "connect",
+     "attributes": {},
+     "y": 294.88266,
+     "x": -933.4234,
+     "id": "connect",
+     "size": 40,
+     "category":2,
+     "image":"images/5.jpg",
+     "value":"家人"
+
+   },
+   {
+
+     "label": "express",
+     "attributes": {},
+     "y": -230.14833,
+     "x": -644.2716,
+     "id": "express",
+     "size": 40,
+     "category":1,
+     "image":"images/2.jpg",
+     "value":"二度好友"
+
+   },
+   {
+     "shapeType":"rectangle",
+     "label": "bytes",
+     "attributes": {},
+     "y": 380.12103,
+     "x": -1005.2705,
+     "id": "bytes",
+     "size":100,
+     "category":1,
+     "image":"images/5.jpg",
+     "value":"一度朋友"
+
+   },
+   {
+
+     "label": "mkdirp",
+     "attributes": {},
+     "y": -224.0287,
+     "x": 317.77667,
+     "id": "mkdirp",
+     "size": 23.713282,
+     "category":1,
+     "image":"images/1.jpg",
+     "value":"家人"
+   },
+   {
+
+     "label": "cheerio",
+     "attributes": {},
+     "y": -404.62427,
+     "x": -338.03128,
+     "id": "cheerio",
+     "size": 8.163814,
+     "category":0,
+     "image":"images/1.jpg",
+     "value":"人物"
+
+   },
+   {
+
+     "label": "underscore",
+     "attributes": {},
+     "y": -734.4221,
+     "x": -75.53079,
+     "id": "underscore",
+     "size": 100.0,
+     "category":2,
+     "image":"images/1.jpg",
+     "value":"兄弟"
+
+   }
+  ,
+    {
+
+      "label": "ajhdj",
+      "attributes": {},
+      "y": -166.62427,
+      "x": -233.03128,
+      "id": "ajhdj",
+      "size": 20,
+      "category":0,
+      "image":"images/1.jpg",
+      "value":"人物"
+
+    }
+ ],
+  "edges":[
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "underscore",
+      "size":100
+    },
+    {
+      "sourceID": "underscore",
+      "attributes": {},
+      "targetID": "ajhdj",
+
+      "size":100
+    },
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "mkdirp",
+      "size":10
+    },
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "htmlparser2",
+      "size": 10
+    },
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "express",
+      "size": 10
+    },
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "connect",
+      "size": 10
+    },
+    {
+      "sourceID": "cheerio",
+      "attributes": {},
+      "targetID": "bytes",
+      "size": 10
+    },
+    {
+      "sourceID": "bytes",
+      "attributes": {},
+      "targetID": "cheerio",
+      "size": 10
+    }
+  ]
+}

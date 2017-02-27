@@ -1,0 +1,111 @@
+<div class="bMap_statistics" ng-controller="myMapStatistics">
+    <div class="list-box">
+        <ul class="statistics-list trend-list">
+            <h4 class="statistics-tit">报表统计</h4>
+            <li class="policeRep" ng-click="statisticsTr()"><i class="icon icon-down-black"></i>报警报表</li>
+            <ul class="policeRep-list">
+                <li data-ng-click="cutoverTab6('polOfflineRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polOfflineRep']">离线超时报警
+                </li>
+                <li data-ng-click="cutoverTab6('polStayRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polStayRep']">停车超时报警
+                </li>
+                <li data-ng-click="cutoverTab6('polSensRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polSensRep']">进敏感区域报警
+                </li>
+                <li data-ng-click="cutoverTab6('polAdminRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polAdminRep']">出行政区域报警
+                </li>
+                <li data-ng-click="cutoverTab6('polSensStayRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polSensStayRep']">敏感区域停车超时
+                </li>
+                <li data-ng-click="cutoverTab6('polNoStayRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polNoStayRep']">未进常用区域超时
+                </li>
+                <li data-ng-click="cutoverTab6('polFenceRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polFenceRep']">出围栏报警
+                </li>
+                <li data-ng-click="cutoverTab6('polLineRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polLineRep']">有线无线分离报警
+                </li>
+                <li data-ng-click="cutoverTab6('polEquRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polEquRep']">设备功能报警
+                </li>
+                <li data-ng-click="cutoverTab6('polDetRep')"
+                    data-ng-class="{true:'current3'}[selectedIndex6 == 'polDetRep']">单车报警明细
+                </li>
+            </ul>
+            <li data-ng-click="cutoverTab6('mileageRep')"
+                data-ng-class="{true:'current3'}[selectedIndex6 == 'mileageRep']">里程报表
+            </li>
+            <li data-ng-click="cutoverTab6('offlineRep')"
+                data-ng-class="{true:'current3'}[selectedIndex6 == 'offlineRep']">离线报表
+            </li>
+            <li data-ng-click="cutoverTab6('stayRep')" data-ng-class="{true:'current3'}[selectedIndex6 == 'stayRep']">
+                停留报表
+            </li>
+            <li data-ng-click="cutoverTab6('installRep')"
+                data-ng-class="{true:'current3'}[selectedIndex6 == 'installRep']">安装报表
+            </li>
+            <li data-ng-click="cutoverTab6('removeRep')"
+                data-ng-class="{true:'current3'}[selectedIndex6 == 'removeRep']">拆卸报表
+            </li>
+        </ul>
+        <div class="statistics-button trend-button" ng-click="statisticsOn()"></div>
+    </div>
+    <div class="statistics-right common-right">
+        <div class="statistics-right-tit">
+            <div class="tit">
+                <h5>{{statisticsTit}}</h5>
+                <div class="stat-btn">
+                    <span class="icon icon-export"></span>
+                    <input type="button" class="btn btn-success" style="background: #34ab1c" value="导出">
+                </div>
+            </div>
+            <div class="enterBor">
+                <ul>
+                    <li><input type="date"> —— <input type="date"></li>
+                    <li>客户姓名 <input type="text"></li>
+                    <li>设备名称 <input type="text"></li>
+                    <li>所属组织 <input type="text"></li>
+                    <li><input type="button" value="查询" class="btn btn-success"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="statistics-content common-content">
+            <div class="list-tit tab">
+                <div class="listContent">
+                    <div data-ng-show="selectedIndex6 == 'polOfflineRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'mileageRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'offlineRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'stayRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'installRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'removeRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'polStayRep'">
+                        <div class="gridStyle" ng-grid="gridOptions"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex6 == 'polSensRep'">9</div>
+                    <div data-ng-show="selectedIndex6 == 'polAdminRep'">10</div>
+                    <div data-ng-show="selectedIndex6 == 'polSensStayRep'">11</div>
+                    <div data-ng-show="selectedIndex6 == 'polNoStayRep'">12</div>
+                    <div data-ng-show="selectedIndex6 == 'polFenceRep'">13</div>
+                    <div data-ng-show="selectedIndex6 == 'polLineRep'">14</div>
+                    <div data-ng-show="selectedIndex6 == 'polEquRep'">15</div>
+                    <div data-ng-show="selectedIndex6 == 'polDetRep'">16</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

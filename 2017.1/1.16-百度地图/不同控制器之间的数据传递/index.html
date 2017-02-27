@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myMod">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../../../bootstrap.css"/>
+</head>
+<body>
+<div ng-controller="myCtrl">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li ng-class="{active:flag=='index'}" ng-click="flag='index'"><a href="#/">首页</a></li>
+                <li ng-class="{active:flag=='a'}" ng-click="flag='a'"><a href="#/a">关于</a></li>
+                <li ng-class="{active:flag=='c'}" ng-click="flag='c'"><a href="#/c">联系</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <div ng-view></div>
+    </div>
+</div>
+
+
+
+<script src="../../../angular.js"></script>
+<script src="../../../angular-route.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

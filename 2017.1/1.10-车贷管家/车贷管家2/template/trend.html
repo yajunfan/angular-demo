@@ -1,0 +1,143 @@
+<div class="bMap_risk" ng-controller="myMapTrend">
+    <div class="list-box">
+        <ul class="trend-list">
+            <h4 class="trend-tit">趋势分析</h4>
+            <li data-ng-click="cutoverTab3('riskMap')" data-ng-class="{true:'current3'}[selectedIndex3 == 'riskMap']">
+                风险地图
+            </li>
+            <li data-ng-click="cutoverTab3('riskTrend')"
+                data-ng-class="{true:'current3'}[selectedIndex3 == 'riskTrend']">风险趋势
+            </li>
+        </ul>
+        <div class="trend-button" ng-click="trendOn()"></div>
+    </div>
+    <div class="trend-right common-right">
+        <div class="trend-content common-content">
+            <div data-ng-show="selectedIndex3 == 'riskMap'">
+                <div id="trend" style="position:absolute;height:100%; width:100%;"></div>
+                <div class="qs-right">
+                    <div class="data-title">
+                        <div class="state-btn"></div>
+                        <ul class="switch-data">
+                            <li data-ng-click="cutoverTab4('dataDynamic')"
+                                data-ng-class="{true:'current4'}[selectedIndex4 == 'dataDynamic']">数据实时动态
+                            </li>
+                            <li data-ng-click="cutoverTab4('receivableDynamic')"
+                                data-ng-class="{true:'current4'}[selectedIndex4 == 'receivableDynamic']">回款实时动态
+                            </li>
+                        </ul>
+                        <div class="data-content">
+                            <div data-ng-show="selectedIndex4 == 'dataDynamic'" class="data-dynamic">
+                                <ul class="data-dynamic-list">
+                                    <li data-ng-click="cutoverTab5('dataNormal')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataNormal']">正常
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataSuspicious')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataSuspicious']">可疑
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataHighRisk')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataHighRisk']">高危
+                                    </li>
+                                </ul>
+                                <div class="data-risk-content">
+                                    <ul>
+                                        <li style="width: 10%">排名</li>
+                                        <li style="width: 55%">所属组织</li>
+                                        <li style="width: 15%">数量</li>
+                                        <li style="width: 20%">比例</li>
+                                    </ul>
+                                    <div data-ng-show="selectedIndex5 == 'dataNormal'">
+
+                                    </div>
+                                    <div data-ng-show="selectedIndex5 == 'dataSuspicious'">Suspicious</div>
+                                    <div data-ng-show="selectedIndex5 == 'dataHighRisk'">Risk</div>
+                                </div>
+                            </div>
+                            <div data-ng-show="selectedIndex4 == 'receivableDynamic'" class="receivable-dynamic">
+                                <ul class="data-dynamic-list">
+                                    <li data-ng-click="cutoverTab5('dataNormal')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataNormal']">正常
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataOverdue')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataOverdue']">逾期
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataBadness')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataBadness']">不良
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataTrailer')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataTrailer']">拖车
+                                    </li>
+                                    <li data-ng-click="cutoverTab5('dataSettle')"
+                                        data-ng-class="{true:'current5'}[selectedIndex5 == 'dataSettle']">结清
+                                    </li>
+                                </ul>
+                                <div class="data-risk-content">
+                                    <ul>
+                                        <li style="width: 10%">排名</li>
+                                        <li style="width: 55%">所属组织</li>
+                                        <li style="width: 15%">数量</li>
+                                        <li style="width: 20%">比例</li>
+                                    </ul>
+                                    <div data-ng-show="selectedIndex5 == 'dataNormal'"></div>
+                                    <div data-ng-show="selectedIndex5 == 'dataOverdue'">Suspicious</div>
+                                    <div data-ng-show="selectedIndex5 == 'dataBadness'">Risk</div>
+                                    <div data-ng-show="selectedIndex5 == 'dataTrailer'">Risk</div>
+                                    <div data-ng-show="selectedIndex5 == 'dataSettle'">Risk</div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div data-ng-show="selectedIndex3 == 'riskTrend'" class="risk-trend">
+                <ul class="trend-selection">
+                    <li class="selectTime">
+                        <label>选择时间：
+                            <input type="date" value="2017-01-29"> —— <input type="date" value="2017-02-05">
+                        </label>
+                        <ul>
+                            <li>最近一周</li>
+                            <li>最近一月</li>
+                            <li>最近三月</li>
+                            <li>最近半年</li>
+                        </ul>
+                    </li>
+                    <li class="organization">
+                        <label>所属组织：<input type="text" value="车贷管家"></label>
+                        <label style="margin-left: 25px">风险类型
+                            <select>
+                                <option value="回款">回款</option>
+                                <option value="回款">数据</option>
+                            </select>
+                        </label>
+                        <label style="margin-left: 25px"><input type="button" value="查询"
+                                                                style="width:70px;background: -webkit-linear-gradient(top,lightblue,#98c0ff,lightblue)"></label>
+                    </li>
+                </ul>
+                <div class="trend-left">
+                    <ul>
+                        <li>
+                            <div class="mycircle blue-mark">
+                                <div class="pie_left">
+                                    <div class="onleft"
+                                         style="transition: all 1s ease-in-out; transform: rotate(180deg);"></div>
+                                </div>
+                                <div class="pie_right">
+                                    <div class="onright"
+                                         style="transition: all 1s ease-in-out; transform: rotate(180deg);"></div>
+                                </div>
+                                <div class="mask">
+                                    <span>100</span>%
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="trend-right">
+                    <div id="canvas2" style="height:400px; width:100%;border: 1px solid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

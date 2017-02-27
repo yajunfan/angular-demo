@@ -1,0 +1,118 @@
+<div class="bMap_profileData" ng-controller="profileDataCtrl" style="margin-top: 40px;">
+    <!--上半部分-->
+    <div class="upperPart" style="border-bottom: 1px dashed #dcdcdc">
+        <div class="upperLePart" style="border-right:1px dashed #dcdcdc">
+            <div class="diff-tit">
+                <h3>客户一览</h3>
+                <a href="#/profileData/customer" class="profileDetail">详情 》</a>
+            </div>
+            <div class="profile-clearfix">
+                <input type="text" placeholder="车贷管家">
+                <ul>
+                    <li data-ng-click="cutoverTab9('sixMonth')" data-ng-class="{true:'current'}[selectedIndex9 == 'sixMonth']" >最近6个月</li>
+                    <li data-ng-click="cutoverTab9('allYear')" data-ng-class="{true:'current'}[selectedIndex9 == 'allYear']" >最近一年</li>
+                </ul>
+                <input type="button" value="查询" style="width:10%;margin-left: 128px;background: #f7f3ff">
+                <div class="clearfix-content">
+                    <div data-ng-show="selectedIndex9 == 'sixMonth'">
+                        <div id="mychart-six" style="height:280px; width:600px;"></div>
+                    </div>
+                    <div data-ng-show="selectedIndex9 == 'allYear'">
+                        <div id="mychart-year" style="height:280px; width:600px;"></div>
+                    </div>
+                </div>
+                <div class="guestmath">
+                    <div class="circlrMath"> {{mathAll}}</div>
+                    <h4>客户总数</h4>
+                </div>
+            </div>
+        </div>
+        <div class="upperRiPart">
+            <div class="diff-tit">
+                <h3>设备一览</h3>
+                <a href="JavaScript:;" class="profileDetail">详情 》</a>
+            </div>
+            <div class="profile-clearfix">
+                <input type="text" placeholder="车贷管家">
+                <input type="button" value="查询" style="position:absolute;right:10px;width:10%;background: #f7f3ff">
+                <div class="guestmath">
+                    <div class="circlrMath"> {{mathAll}}</div>
+                    <h4>设备总数</h4>
+                </div>
+                <div class="clearfix-content uppRiContent">
+                    <ul>
+                        <li>
+                            <span><img src="./images/l1.png"></span>
+                            <span>有线设备</span>
+                            <span><i>1</i>/2</span>
+                        </li>
+                        <li>
+                            <span><img src="./images/l2.png"></span>
+                            <span>无线设备</span>
+                            <span><i>1</i>/2</span>
+                        </li>
+                        <li>
+                            <span><img src="./images/l3.png"></span>
+                            <span>ODB设备</span>
+                            <span><i>1</i>/2</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--下半部分-->
+    <div class="lowerPart">
+        <div class="lowerLePart" style="border-right:1px dashed #dcdcdc">
+            <div class="diff-tit">
+                <h3>系统动态</h3>
+            </div>
+            <div class="profile-clearfix">
+                <ul class="low-left-list">
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                    <li><span class="dot"></span><a href="">2017-01-04 13:26:55 车贷管家增加了客户 :体验客户 车牌号：浙A6610W 车型：奔驰C200L</a><a class="detail">详情></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="lowerRiPart">
+            <div class="diff-tit">
+                <h3>报警动态</h3>
+                <a href="JavaScript:;" class="profileDetail">详情 》</a>
+            </div>
+            <div class="profile-clearfix">
+                <input type="text" placeholder="车贷管家">
+                <input type="button" value="查询" style="position:absolute;right:10px;width:10%;background: #f7f3ff">
+                <div class="guestmath">
+                    <div class="circlrMath"> {{mathAll}}</div>
+                    <h4>设备总数</h4>
+                </div>
+                <div class="clearfix-content lowRiContent">
+                    <ul class="low-ri-list">
+                        <li><span>离线超时报警</span><span>1</span></li>
+                        <li><span>停车超时报警</span><span>1</span></li>
+                        <li><span>进敏感区域报警</span><span>1</span></li>
+                        <li><span>出行政区域报警</span><span>1</span></li>
+                        <li><span>敏感区域停车超时报警</span><span>1</span></li>
+                        <li><span>未进常用区域超时报警</span><span>1</span></li>
+                        <li><span>设备功能报警</span><span>1</span></li>
+                        <li><span>出围栏报警</span><span>1</span></li>
+                        <li><span>有线无线分离报警</span><span>1</span></li>
+                        <li><span>异动报警</span><span>1</span></li>
+                    </ul>
+                    <ul class="low-ri-img-list">
+                        <li><img src="./images/icon1@x.png" alt="有线设备"><span>0%</span></li>
+                        <li><img src="./images/icon2@x.png" alt="无线设备"><span>100%</span></li>
+                        <li><img src="./images/icon3@x.png" alt="OBD设备"><span>0%</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
