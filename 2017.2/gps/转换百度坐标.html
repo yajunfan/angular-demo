@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=zmAWIlHnn8qQ4qMKkBGtypeoZio5q86s"></script>
+    <!--<script type="text/javascript" src="http://api.map.baidu.com/library/RectangleZoom/1.2/src/RectangleZoom_min.js"></script>-->
+    <title>google转百度</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script src="../../jquery.min.js"></script>
+<script type="text/javascript">
+    // 百度地图API功能
+    //谷歌坐标
+    var map = new BMap.Map("allmap");
+    $.ajax('dian.json').success(function (data) {
+        var pointArr = [];
+        $.each(data,function (index,value) {
+            var x = value["X"];
+            var y = value["Y"];
+            var ggPoint = new BMap.Point(x,y);
+            pointArr.push(ggPoint);
+            map.centerAndZoom(ggPoint,16);
+            map.addControl(new BMap.NavigationControl());
+            map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+            map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+        });
+
+
+        var myIcon = new BMap.Icon("car.png", new BMap.Size(70, 32), {
+            //offset: new BMap.Size(0, -5),    //相当于CSS精灵
+            imageOffset: new BMap.Size(0, 0)    //图片的偏移量。为了是图片底部中心对准坐标点。
+        });
+
+        window.run = function (){
+            var  str= "";
+            for(var i=0;i<pointArr.length;i++){
+                var tem,myP1,myP2,polyline;
+                if(i === 0){
+                    myP1 = new BMap.Point(pointArr[0].lng,pointArr[0].lat);    //起点
+                    myP2 = new BMap.Point(pointArr[1].lng,pointArr[1].lat);
+                    console.log(myP1)
+                    str+=(map.getDistance(myP1,myP2)).toFixed(2)+",";
+                    var point1 = new BMap.Point(pointArr[0].lng, pointArr[0].lat);
+                    var marker = new BMap.Marker(point1);
+                 // 创建标注
+                    map.addOverlay(marker);
+                    var label = new BMap.Label("起点",{offset:new BMap.Size(-5,-20)});
+                    marker.setLabel(label);
+                    tem=myP2;
+                }else if(i>0 && i<pointArr.length-1){
+                    myP1=tem;
+                    myP2 = new BMap.Point(pointArr[i+1].lng,pointArr[i+1].lat);
+                    tem=myP2;
+                    str+=(map.getDistance(myP1,myP2)).toFixed(2)+",";
+                }else if(i=pointArr.length-1){
+                    myP1=new BMap.Point(pointArr[pointArr.length-2].lng,pointArr[pointArr.length-2].lat);
+                    myP2 = new BMap.Point(pointArr[pointArr.length-1].lng,pointArr[pointArr.length-1].lat);
+                    var point2 = new BMap.Point(pointArr[pointArr.length-1].lng, pointArr[pointArr.length-1].lat);
+                    var marker2 = new BMap.Marker(point2);
+                    var ary222=eval((str.split(",")).join('+')+"0").toFixed(2)+"米";
+//                    alert("总路程是："+ary222)
+                    var label2 = new BMap.Label("终点 | 总路程是："+ary222,{offset:new BMap.Size(-5,-20)});
+
+                    marker2.setLabel(label2);
+                    map.addOverlay(marker2);
+                    str+=(map.getDistance(myP1,myP2)).toFixed(2)+",";
+                }
+
+               //定义折线
+                 polyline = new BMap.Polyline([myP1,myP2], {strokeColor:"black", strokeWeight:3, strokeOpacity:0.8});
+                 map.addOverlay(polyline);
+
+            }
+
+
+            var driving = new BMap.DrivingRoute(map);
+            driving.search(myP1, myP2);
+            driving.setSearchCompleteCallback(function(){
+                var pts = pointArr;
+                var paths = pts.length;    //获得有几个点
+                var carMk = new BMap.Marker(pts[0],{icon:myIcon});
+                map.addOverlay(carMk);
+                i=0;
+                function resetMkPoint(i){
+                    carMk.setPosition(pts[i]);
+                    if(i < paths){
+                        setTimeout(function(){
+                            i++;
+                            resetMkPoint(i);
+
+                        },1000);
+                    }
+                }
+                setTimeout(function(){
+                    resetMkPoint(0);
+                },1000)
+
+            });
+        }
+        setTimeout(function(){
+            run();
+        },100);
+    })
+
+
+    //地图初始化
+
+</script>
