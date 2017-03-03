@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas"  width="1000" height="1000" style="border: 1px solid"></canvas>
+<script src="../../jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+    ctx.clearRect(0,0,1000,1000);
+    function draw(x,y,r,x1,y1,text,w,bgImg) {
+        if(bgImg){
+            var img = new Image();
+            img.src=bgImg;
+                img.onload = function(){
+                  ctx.drawImage(img,x-61,y-62,110,110)
+            }
+        }else{
+            ctx.beginPath();
+            ctx.arc(x,y,r,0,2*Math.PI,false);
+            ctx.fillStyle="lightblue";
+            ctx.fill();
+            ctx.stroke();
+            ctx.font = 'bold 16px Arial';
+            ctx.fillStyle = "red";
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.moveTo(x, y);  // 文字填充位置
+            ctx.fillText(text,x,y,w);
+        }
+        ctx.stroke();
+        ctx.closePath()
+    }
+    function draw1(lx1,ly1,lx2,ly2,lx3,ly3,rx1,ry1,r1,r2,rx2,ry2,bgImg,text) {
+        if(bgImg) {
+            var img = new Image();
+            img.src = bgImg;
+            img.onload = function () {
+                ctx.drawImage(img, rx2 - 61, ry2 - 62, 110, 110)
+            }
+        }
+        ctx.beginPath();
+        ctx.lineTo(lx1,ly1);
+        ctx.strokeStyle = "blue";
+        ctx.arc(rx1,ry1,r1,0,2*Math.PI,true);　　//定义圆形路径
+        ctx.fillStyle="blue";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.arc(rx2,ry2,r2,0,2*Math.PI,true);
+//        ctx.fillStyle="blue";  //这个不写的话，那么第二个圆就没有背景色
+//        ctx.fill();
+        ctx.moveTo(lx2,ly2);
+        ctx.lineTo(lx3,ly3);
+        ctx.stroke();
+    }
+    function draw2() {
+        var img = new Image();
+        img.src = "55.png";
+        img.onload = function () {
+            ctx.drawImage(img, 800 - 61, 700 - 62, 110, 110)
+        };
+        ctx.beginPath();
+        ctx.lineTo(200,400);
+        ctx.strokeStyle = "blue";
+        ctx.arc(500,700,50,0,2*Math.PI,true);　　//定义圆形路径
+        ctx.fillStyle="blue";
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.arc(800,700,50,0,2*Math.PI,true);
+        ctx.fillStyle="blue";
+        ctx.fill();
+        ctx.closePath();
+        ctx.moveTo(500,700);
+        ctx.lineTo(800,700);
+        ctx.stroke();
+    }
+    function drawFont(text,x,y,color,angle,x1,y1) {
+        if(angle ||x1 || y1){
+            ctx.save();
+            ctx.translate(x,y);
+            ctx.rotate(Math.PI/angle);
+            ctx.fillText(text,x1,y1);
+            ctx.restore();
+        }else{
+            ctx.font = "30px Courier New";
+            ctx.fillStyle =color;
+            ctx.fillText(text,x,y);
+        }
+    }
+//    后面两排的线和圆
+     draw1(200,400,400,400,800,400,500,400,50,50,800,400,"33.png");
+     draw1(200,400,500,250,800,250,500,250,50,50,800,250,"33.png");
+     draw1(200,400,500,550,800,550,500,550,50,50,800,550,"33.png");
+     draw1(200,400,500,100,800,100,500,100,50,50,800,100,"33.png");
+     draw2()
+//  横排的字体，不要旋转
+    drawFont("aaa",600,100,"red");
+    drawFont("bbb",600,250,"red");
+    drawFont("ccc",600,400,"red");
+    drawFont("ddd",600,550,"red");
+    drawFont("eee",600,700,"red");
+//    前面一排的字体，需要进行旋转
+    drawFont("eee",300,250,"red",-4,10,30);
+    drawFont("eee",300,350,"red",-8,0,0);
+    drawFont("eee",300,400,"red",360,0,-10);
+    drawFont("eee",300,450,"red",8,0,-15);
+    drawFont("eee",300,550,"red",4,-10,-10);
+//展示图片
+      draw(200,400,45,200, 400,"张三",40);
+     draw(500,100,45,200, 400,"李四",40,"33.png");
+     draw(500,250,45,200, 400,"赵六",40,"66.png");
+     draw(500,400,45,200, 400,"马五",40,"33.png");
+    draw(500,550,45,200, 400,"杨七",40,"66.png");
+    draw(500,700,45,200, 400,"候八",40,"55.png");
+
+
+</script>
+</body>
+</html>
